@@ -1,0 +1,8 @@
+{
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "deadline": "2026-10-29",
+  "amount": "45.00",
+  "action": "Pay the fictional parking charge by the deadline.",
+  "image_effects": []
+}

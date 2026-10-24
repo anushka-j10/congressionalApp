@@ -1,0 +1,8 @@
+{
+  "synthetic": true,
+  "doc_type": "utility_bill",
+  "deadline": "2026-11-04",
+  "amount": "82.35",
+  "action": "Pay the fictional electric bill by the due date.",
+  "image_effects": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": "/",
+  "name": "Notice Decoder",
+  "short_name": "Notice Decoder",
+  "description": "Understand official notices in plain language.",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f5f4ee",
+  "theme_color": "#163e37",
+  "icons": [
+    {"src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}
+  ]
+}

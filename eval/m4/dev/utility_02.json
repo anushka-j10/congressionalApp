@@ -1,0 +1,40 @@
+{
+  "id": "utility_02",
+  "synthetic": true,
+  "doc_type": "utility_bill",
+  "expected": {
+    "deadline": "2026-11-06",
+    "amount_due": "37.20",
+    "required_action": "Pay the fictional water bill by the due date.",
+    "contact": "placeholder only; do not send money or personal data."
+  },
+  "text": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nWATER UTILITY BILL\n\nFictional Notice Decoder Demonstration Office\nRecipient: Invented Resident F\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-006\nIssued: 2026-10-21\n\nDeadline: 2026-11-06\nAmount due: $37.20\n\nWhat to do: Pay the fictional water bill by the due date.\n\nThis invented document is for software testing only.\nNo real agency, person, case, account, or payment is\ninvolved.\nContact: placeholder only; do not send money or personal\ndata.",
+  "edge_cases": [
+    "original_m1_fixture"
+  ],
+  "expected_state": {
+    "deadline": "present",
+    "amount_due": "present",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "variants": [
+    {
+      "name": "clean",
+      "image": "utility_02__clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "utility_02__degraded.jpg"
+    }
+  ],
+  "additional_page_images": [],
+  "degradation": [
+    "rotation_1.3deg",
+    "affine_skew",
+    "blur_0.45",
+    "shadow_gradient",
+    "seeded_speckles",
+    "jpeg_quality_48"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "synthetic": true,
+  "doc_type": "court_notice",
+  "deadline": "2026-11-05",
+  "amount": null,
+  "action": "Return the fictional response form by the deadline.",
+  "image_effects": [
+    "rotation",
+    "uneven_lighting",
+    "mild_blur"
+  ]
+}

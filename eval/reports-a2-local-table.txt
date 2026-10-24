@@ -1,0 +1,13 @@
+reader         condition      n      CER  text recall  shown-candidate recall   matched  errors
+----------------------------------------------------------------------------------------------------------
+tesseract      clean          8    0.00%      100.00%                     N/A  28/28        0
+tesseract      degraded      56   29.09%       64.29%                     N/A 126/196       0
+tesseract      handwriting    0      N/A          N/A                     N/A   0/0         0
+tesseract      legacy_m1      8    0.05%      100.00%                     N/A  28/28        0
+preprocessed   clean          8    0.00%      100.00%                     N/A  28/28        0
+preprocessed   degraded      56    0.59%      100.00%                     N/A 196/196       0
+preprocessed   handwriting    0      N/A          N/A                     N/A   0/0         0
+preprocessed   legacy_m1      8    0.27%      100.00%                     N/A  28/28        0
+CER: lower is better. Key-token recall: higher is better. N/A is not a pass.
+Hybrid CER/text recall score its local transcript; candidate recall scores only values shown for review.
+Formal gate: PENDING reader selection and review. No extraction has been started.

@@ -1,0 +1,79 @@
+[
+  {
+    "english": "summons",
+    "translation": "patawag ng hukuman",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "citation",
+    "translation": "sipi ng paglabag",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "violation",
+    "translation": "paglabag",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "hearing",
+    "translation": "pagdinig",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "late fee",
+    "translation": "dagdag na bayad sa pagkaantala",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "balance due",
+    "translation": "natitirang babayaran",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "municipal court",
+    "translation": "hukumang munisipal",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "appeal",
+    "translation": "apela",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "plea",
+    "translation": "pahayag sa hukuman",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "penalty",
+    "translation": "parusa",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "due date",
+    "translation": "takdang petsa",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  }
+]

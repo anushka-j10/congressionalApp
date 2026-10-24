@@ -1,0 +1,48 @@
+{
+  "id": "parking_03",
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "expected": {
+    "deadline": "2026-11-19",
+    "amount_due": "48.50",
+    "required_action": "Return the fictional review form.",
+    "contact": "Fictional help desk; use this notice only for testing."
+  },
+  "text": "SYNTHETIC ONLY - NOT A REAL NOTICE\nPARKING CITATION\nInvented Civic Demonstration Office\nResident: Invented Person Q\nAddress: 400 Example Way, Demo Town, ZZ 00000\nReference: DEMO-ONLY-123\nIssued: October 20, 2026\n\nAmount due now: $48.50\nDeadline: within 30 days of the date above.\nWhat to do: Return the fictional review form.\n\nContact: Fictional help desk; use this notice only for testing.",
+  "edge_cases": [
+    "relative_deadline"
+  ],
+  "expected_state": {
+    "deadline": "present",
+    "amount_due": "present",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "expected_aliases": {
+    "deadline": [
+      "within 30 days of the date above."
+    ],
+    "contact": [
+      "Fictional help desk"
+    ]
+  },
+  "variants": [
+    {
+      "name": "clean",
+      "image": "parking_03__clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "parking_03__degraded.jpg"
+    }
+  ],
+  "additional_page_images": [],
+  "degradation": [
+    "rotation_1.3deg",
+    "affine_skew",
+    "blur_0.45",
+    "shadow_gradient",
+    "seeded_speckles",
+    "jpeg_quality_48"
+  ]
+}

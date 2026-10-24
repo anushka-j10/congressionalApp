@@ -1,0 +1,25 @@
+{
+  "synthetic": true,
+  "samples": [
+    "parking_01.json",
+    "parking_02.json",
+    "court_01.json",
+    "court_02.json",
+    "utility_01.json",
+    "utility_02.json",
+    "school_01.json",
+    "school_02.json",
+    "parking_03.json",
+    "parking_04.json",
+    "parking_05.json",
+    "court_03.json",
+    "court_04.json",
+    "court_05.json",
+    "utility_03.json",
+    "utility_04.json",
+    "utility_05.json",
+    "school_03.json",
+    "school_04.json",
+    "unknown_01.json"
+  ]
+}

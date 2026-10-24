@@ -1,0 +1,11 @@
+{
+  "contacts": [
+    {
+      "name": "TODO",
+      "phone": null,
+      "address": null,
+      "url": null,
+      "configured": false
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+
+REAL READER — student signal lists EMPTY; unknown predictions expected
+sample        expected         predicted        confidence  reader
+------------------------------------------------------------------------------
+court_01      court_notice     unknown          0.000       tesseract
+  signals: none
+court_02      court_notice     unknown          0.000       tesseract
+  signals: none
+parking_01    parking_ticket   unknown          0.000       tesseract
+  signals: none
+parking_02    parking_ticket   unknown          0.000       tesseract
+  signals: none
+school_01     school_letter    unknown          0.000       tesseract
+  signals: none
+school_02     school_letter    unknown          0.000       tesseract
+  signals: none
+utility_01    utility_bill     unknown          0.000       tesseract
+  signals: none
+utility_02    utility_bill     unknown          0.000       tesseract
+  signals: none
+.
+1 passed in 2.73s

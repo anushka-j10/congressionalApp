@@ -1,0 +1,45 @@
+{
+  "id": "school_04",
+  "synthetic": true,
+  "doc_type": "school_letter",
+  "expected": {
+    "deadline": "2026-11-06",
+    "amount_due": "12.00",
+    "required_action": "Return the fictional trip form.",
+    "contact": "Fictional help desk; use this notice only for testing."
+  },
+  "text": "SYNTHETIC ONLY - NOT A REAL NOTICE\nFICTIONAL SCHOOL TRIP LETTER\nInvented Civic Demonstration Office\nResident: Invented Person Q\nAddress: 400 Example Way, Demo Town, ZZ 00000\nReference: DEMO-ONLY-123\nIssued: October 20, 2026\n\nReturn deadline: November 6, 2026\nAmount due: $12.00\nWhat to do: Return the fictional trip form.\n\nContact: Fictional help desk; use this notice only for testing.",
+  "edge_cases": [
+    "school_amount"
+  ],
+  "expected_state": {
+    "deadline": "present",
+    "amount_due": "present",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "variants": [
+    {
+      "name": "clean",
+      "image": "school_04__clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "school_04__degraded.jpg"
+    }
+  ],
+  "additional_page_images": [],
+  "degradation": [
+    "rotation_1.3deg",
+    "affine_skew",
+    "blur_0.45",
+    "shadow_gradient",
+    "seeded_speckles",
+    "jpeg_quality_48"
+  ],
+  "expected_aliases": {
+    "contact": [
+      "Fictional help desk"
+    ]
+  }
+}

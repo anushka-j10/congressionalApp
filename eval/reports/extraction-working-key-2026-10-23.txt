@@ -1,0 +1,36 @@
+M2 SYNTHETIC READ -> EXTRACT INTEGRATION
+Reader: preprocessed; model: gpt-5.4-mini
+Pinned today: 2026-10-22; temperature: provider default (not sent).
+Known fixture type is supplied as an explicit user selection; classifier remains unknown.
+No human text corrections in this run; printed reader gate is reported separately.
+Correct? checks these original fixture expectations only; not a general field scorer.
+
+| Sample | Field | Expected | Extracted | Status | Correct? |
+| --- | --- | --- | --- | --- | --- |
+| court_01 | deadline | 2026-11-03 | 2026-11-03 | verified | True |
+| court_01 | amount_due | None | None | missing | True |
+| court_01 | required_action | Attend the fictional hearing on the scheduled date. | Attend the fictional hearing on the scheduled date. | verified | True |
+| court_02 | deadline | 2026-11-05 | 2026-11-05 | verified | True |
+| court_02 | amount_due | None | None | missing | True |
+| court_02 | required_action | Return the fictional response form by the deadline. | Return the fictional response form by the deadline. | verified | True |
+| parking_01 | deadline | 2026-10-29 | 2026-10-29 | verified | True |
+| parking_01 | amount_due | 45.00 | 45.00 | verified | True |
+| parking_01 | required_action | Pay the fictional parking charge by the deadline. | Pay the fictional parking charge by the deadline. | verified | True |
+| parking_02 | deadline | 2026-11-02 | 2026-11-02 | verified | True |
+| parking_02 | amount_due | 65.00 | 65.00 | verified | True |
+| parking_02 | required_action | Request a review of the fictional citation by the deadline. | Request a review of the fictional citation by the deadline. | verified | True |
+| school_01 | deadline | 2026-10-30 | 2026-10-30 | verified | True |
+| school_01 | amount_due | None | None | unverified | True |
+| school_01 | required_action | Return the fictional school permission form by the deadline. | Return the fictional school permission form by
+the deadline. | verified | True |
+| school_02 | deadline | 2026-11-07 | 2026-11-07 | verified | True |
+| school_02 | amount_due | None | None | unverified | True |
+| school_02 | required_action | Confirm a fictional parent conference appointment by the deadline. | Confirm a fictional parent conference appointment by the deadline. | verified | True |
+| utility_01 | deadline | 2026-11-04 | 2026-11-04 | verified | True |
+| utility_01 | amount_due | 82.35 | 82.35 | verified | True |
+| utility_01 | required_action | Pay the fictional electric bill by the due date. | Pay the fictional electric bill by the due date. | verified | True |
+| utility_02 | deadline | 2026-11-06 | 2026-11-06 | verified | True |
+| utility_02 | amount_due | 37.20 | 37.20 | verified | True |
+| utility_02 | required_action | Pay the fictional water bill by the due date. | Pay the fictional water bill by the due date. | verified | True |
+
+Reported successful-response token totals only (failed-request usage/cost unknown): {"input_tokens": 5829, "output_tokens": 1455, "cached_input_tokens": 0}

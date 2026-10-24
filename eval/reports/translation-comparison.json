@@ -1,0 +1,3288 @@
+{
+  "run_date": "2026-10-23",
+  "model": "gpt-5.4-mini",
+  "reader": "preprocessed",
+  "today": "2026-10-22",
+  "temperature": "provider_default",
+  "status": "completed",
+  "runs": [
+    {
+      "sample": "court_01",
+      "language": "es",
+      "source_text": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nMUNICIPAL COURT NOTICE\n\nFictional Notice Decoder Demonstration Office\nRecipient: Invented Resident C\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-003\n\nIssued: 2026-10-21\n\nDeadline: 2026-11-03\nAmount due: Not specified\n\nWhat to do: Attend the fictional hearing on the scheduled\n\ndate.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is\ninvolved.\n\nContact: placeholder only; do not send money or personal\ndata.",
+      "extraction": {
+        "doc_type": "court_notice",
+        "today": "2026-10-22",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Notice Decoder Demonstration Office",
+            "source_snippet": "Fictional Notice Decoder Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 62,
+            "source_end": 107,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "2026-11-03",
+            "source_snippet": "Deadline: 2026-11-03",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 229,
+            "source_end": 249,
+            "normalized_value": "2026-11-03",
+            "days_remaining": 12,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": null,
+            "source_snippet": "Amount due: Not specified",
+            "status": "missing",
+            "reason": "The extractor did not find this field. Check the photo.",
+            "source_start": null,
+            "source_end": null,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Attend the fictional hearing on the scheduled date.",
+            "source_snippet": "What to do: Attend the fictional hearing on the scheduled\ndate.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 277,
+            "source_end": 341,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "placeholder only; do not send money or personal data.",
+            "source_snippet": "Contact: placeholder only; do not send money or personal\ndata.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 461,
+            "source_end": 523,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field.",
+          "Amount due: not verified. Check the original notice or ask someone for help."
+        ],
+        "usage": {
+          "input_tokens": 726,
+          "output_tokens": 177,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      },
+      "pipeline": {
+        "english": {
+          "summary": "You selected: Court notice.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Attend the fictional hearing on the scheduled date."
+          ],
+          "deadline_note": "Due date: November 3, 2026.",
+          "amount_note": "Amount due: Not found. Check the original notice.",
+          "confidence_notes": [
+            "Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected.",
+            "Amount due: Not found. Check the original notice."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "November 3, 2026",
+            "amount_due": "Amount due: Not found. Check the original notice.",
+            "required_action": "Attend the fictional hearing on the scheduled date.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "This is an explanatory tool, not legal advice."
+        },
+        "localized": {
+          "summary": "Seleccionaste: Aviso judicial.",
+          "what_happened": "Los hechos verificados se muestran a continuación.",
+          "what_to_do": [
+            "Asista a la audiencia ficticia en la fecha programada."
+          ],
+          "deadline_note": "Fecha de vencimiento: 3 de noviembre de 2026.",
+          "amount_note": "Monto a pagar: No encontrado. Revise el aviso original.",
+          "confidence_notes": [
+            "Verificado significa que coincide con el texto que confirmó. Revise el aviso original; esto no garantiza que se eligió el dato correcto.",
+            "Monto a pagar: No encontrado. Revise el aviso original."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "3 de noviembre de 2026",
+            "amount_due": "Monto a pagar: No encontrado. Revise el aviso original.",
+            "required_action": "Asista a la audiencia ficticia en la fecha programada.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "Esta herramienta ofrece explicaciones, no asesoramiento legal."
+        },
+        "requested_language": "es",
+        "display_language": "es",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "missing",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+          "deadline": "Deadline: 2026-11-03",
+          "amount_due": "Amount due: Not specified",
+          "required_action": "What to do: Attend the fictional hearing on the scheduled\ndate.",
+          "contact": "Contact: placeholder only; do not send money or personal\ndata."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": false,
+          "translation_confidence": "medium",
+          "failed_checks": [],
+          "attempts": 1,
+          "back_translation": {
+            "passed": true,
+            "checks": [],
+            "minimum_text_similarity": 1.0
+          },
+          "checks": {
+            "numbers": true,
+            "dates": true,
+            "glossary": true,
+            "disclaimer": true,
+            "warnings": true
+          }
+        },
+        "notice": "Las traducciones propuestas no han sido revisadas por hablantes nativos.",
+        "target_disclaimer": "Esta herramienta ofrece explicaciones, no asesoramiento legal.",
+        "usage": {
+          "calls": 3,
+          "input_tokens": 2093,
+          "output_tokens": 595,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 3
+        }
+      },
+      "used_glossary": [
+        "hearing",
+        "due date"
+      ],
+      "baseline": {
+        "translation": "MUESTRA SINTÉTICA - NO ES UN AVISO REAL\n\nAVISO DEL TRIBUNAL MUNICIPAL\n\nOficina de demostración del decodificador de avisos ficticios\nDestinatario: Residente Inventado C\n\n100 Example Lane, Demo Town, ZZ 00000\nReferencia: SYNTHETIC-ONLY-003\n\nEmitido: 2026-10-21\n\nFecha límite: 2026-11-03\nCantidad adeudada: No especificada\n\nQué hacer: Asistir a la audiencia ficticia en la fecha programada.\n\nEste documento inventado es solo para pruebas de software.\n\nNo participa ninguna agencia, persona, caso, cuenta ni pago reales.\n\nContacto: solo marcador de posición; no envíe dinero ni datos personales.",
+        "checks": {
+          "numbers": true,
+          "dates": true,
+          "amounts": true,
+          "glossary": true,
+          "disclaimer": false,
+          "no_numeric_dates": false
+        },
+        "back_translation": {
+          "passed": true,
+          "text_similarity": 0.9317
+        },
+        "english_back_translation": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nMUNICIPAL COURT NOTICE\n\nDemo office of the fictitious notice decoder\nAddressee: Invented Resident C\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-003\n\nIssued: 2026-10-21\n\nDeadline: 2026-11-03\nAmount due: Not specified\n\nWhat to do: Attend the fictitious hearing on the scheduled date.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is involved.\n\nContact: placeholder only; do not send money or personal data.",
+        "usage": {
+          "calls": 2,
+          "input_tokens": 490,
+          "output_tokens": 348,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 2
+        }
+      }
+    },
+    {
+      "sample": "court_01",
+      "language": "tl",
+      "source_text": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nMUNICIPAL COURT NOTICE\n\nFictional Notice Decoder Demonstration Office\nRecipient: Invented Resident C\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-003\n\nIssued: 2026-10-21\n\nDeadline: 2026-11-03\nAmount due: Not specified\n\nWhat to do: Attend the fictional hearing on the scheduled\n\ndate.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is\ninvolved.\n\nContact: placeholder only; do not send money or personal\ndata.",
+      "extraction": {
+        "doc_type": "court_notice",
+        "today": "2026-10-22",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Notice Decoder Demonstration Office",
+            "source_snippet": "Fictional Notice Decoder Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 62,
+            "source_end": 107,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "2026-11-03",
+            "source_snippet": "Deadline: 2026-11-03",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 229,
+            "source_end": 249,
+            "normalized_value": "2026-11-03",
+            "days_remaining": 12,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": null,
+            "source_snippet": "Amount due: Not specified",
+            "status": "missing",
+            "reason": "The extractor did not find this field. Check the photo.",
+            "source_start": null,
+            "source_end": null,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Attend the fictional hearing on the scheduled date.",
+            "source_snippet": "What to do: Attend the fictional hearing on the scheduled\ndate.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 277,
+            "source_end": 341,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "placeholder only; do not send money or personal data.",
+            "source_snippet": "Contact: placeholder only; do not send money or personal\ndata.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 461,
+            "source_end": 523,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field.",
+          "Amount due: not verified. Check the original notice or ask someone for help."
+        ],
+        "usage": {
+          "input_tokens": 726,
+          "output_tokens": 177,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      },
+      "pipeline": {
+        "english": {
+          "summary": "You selected: Court notice.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Attend the fictional hearing on the scheduled date."
+          ],
+          "deadline_note": "Due date: November 3, 2026.",
+          "amount_note": "Amount due: Not found. Check the original notice.",
+          "confidence_notes": [
+            "Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected.",
+            "Amount due: Not found. Check the original notice."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "November 3, 2026",
+            "amount_due": "Amount due: Not found. Check the original notice.",
+            "required_action": "Attend the fictional hearing on the scheduled date.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "This is an explanatory tool, not legal advice."
+        },
+        "localized": {
+          "summary": "You selected: Court notice.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Attend the fictional hearing on the scheduled date."
+          ],
+          "deadline_note": "Due date: November 3, 2026.",
+          "amount_note": "Amount due: Not found. Check the original notice.",
+          "confidence_notes": [
+            "Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected.",
+            "Amount due: Not found. Check the original notice."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "November 3, 2026",
+            "amount_due": "Amount due: Not found. Check the original notice.",
+            "required_action": "Attend the fictional hearing on the scheduled date.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "This is an explanatory tool, not legal advice."
+        },
+        "requested_language": "tl",
+        "display_language": "en",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "missing",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+          "deadline": "Deadline: 2026-11-03",
+          "amount_due": "Amount due: Not specified",
+          "required_action": "What to do: Attend the fictional hearing on the scheduled\ndate.",
+          "contact": "Contact: placeholder only; do not send money or personal\ndata."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": true,
+          "translation_confidence": "low",
+          "failed_checks": [
+            "warning_preservation"
+          ],
+          "attempts": 2,
+          "back_translation": {
+            "passed": false,
+            "checks": [
+              "warning_preservation"
+            ],
+            "minimum_text_similarity": 1.0
+          },
+          "checks": {
+            "numbers": false,
+            "dates": false,
+            "glossary": false,
+            "disclaimer": false,
+            "warnings": false
+          }
+        },
+        "notice": "Hindi namin ito maisalin nang maaasahan. Narito ang bersiyong Ingles.",
+        "target_disclaimer": "Ang kasangkapang ito ay nagbibigay ng paliwanag, hindi legal na payo.",
+        "usage": {
+          "calls": 5,
+          "input_tokens": 3656,
+          "output_tokens": 1138,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 5
+        }
+      },
+      "used_glossary": [
+        "hearing",
+        "due date"
+      ],
+      "baseline": {
+        "translation": "HUWARANG HALIMBAWA - HINDI TUNAY NA PAUNAWA\n\nPAUNAWA NG HUKUMANG PAMBAYAN\n\nOpisina ng Demonstrasyon ng Fictional Notice Decoder\nTinatanggap: Inimbentong Residente C\n\n100 Example Lane, Demo Town, ZZ 00000\nSanggunian: SYNTHETIC-ONLY-003\n\nInisyu noong: 2026-10-21\n\nTakdang panahon: 2026-11-03\nHalagang dapat bayaran: Hindi tinukoy\n\nAno ang gagawin: Dumalo sa huwad na pagdinig sa nakatakdang\npetsa.\n\nAng kathang-isip na dokumentong ito ay para lamang sa pagsubok ng software.\n\nWalang tunay na ahensya, tao, kaso, account, o bayad na\nkasangkot.\n\nKontak: pansamantalang ilagay lamang; huwag magpadala ng pera o personal na datos.",
+        "checks": {
+          "numbers": true,
+          "dates": true,
+          "amounts": true,
+          "glossary": false,
+          "disclaimer": false,
+          "no_numeric_dates": false
+        },
+        "back_translation": {
+          "passed": true,
+          "text_similarity": 0.9012
+        },
+        "english_back_translation": "MODEL EXAMPLE - NOT A REAL NOTICE\n\nCOURT NOTICE\n\nOffice of the Fictional Notice Decoder Demo\nRecipient: Invented Resident C\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-003\n\nIssued on: 2026-10-21\n\nDue date: 2026-11-03\nAmount due: Not specified\n\nWhat to do: Attend the fake hearing on the scheduled date.\n\nThis fictional document is for software testing only.\n\nNo real agency, person, case, account, or payment is involved.\n\nContact: temporary placeholder only; do not send money or personal data.",
+        "usage": {
+          "calls": 2,
+          "input_tokens": 529,
+          "output_tokens": 387,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 2
+        }
+      }
+    },
+    {
+      "sample": "court_02",
+      "language": "es",
+      "source_text": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nSUMMONS TO DEMONSTRATION COURT\n\nFictional Notice Decoder Demonstration Office\nRecipient: Invented Resident D\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-004\n\nIssued: 2026-10-21\n\nDeadline: 2026-11-05\nAmount due: Not specified\n\nWhat to do: Return the fictional response form by the\ndeadline.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is\ninvolved.\n\nContact: placeholder only; do not send money or personal\ndata.",
+      "extraction": {
+        "doc_type": "court_notice",
+        "today": "2026-10-22",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Notice Decoder Demonstration Office",
+            "source_snippet": "Fictional Notice Decoder Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 70,
+            "source_end": 115,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "2026-11-05",
+            "source_snippet": "Deadline: 2026-11-05",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 237,
+            "source_end": 257,
+            "normalized_value": "2026-11-05",
+            "days_remaining": 14,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": null,
+            "source_snippet": "Amount due: Not specified",
+            "status": "missing",
+            "reason": "The extractor did not find this field. Check the photo.",
+            "source_start": null,
+            "source_end": null,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Return the fictional response form by the deadline.",
+            "source_snippet": "What to do: Return the fictional response form by the\ndeadline.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 285,
+            "source_end": 348,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "placeholder only; do not send money or personal\ndata.",
+            "source_snippet": "Contact: placeholder only; do not send money or personal\ndata.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 468,
+            "source_end": 530,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field.",
+          "Amount due: not verified. Check the original notice or ask someone for help."
+        ],
+        "usage": {
+          "input_tokens": 730,
+          "output_tokens": 179,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      },
+      "pipeline": {
+        "english": {
+          "summary": "You selected: Court notice.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Return the fictional response form by the deadline."
+          ],
+          "deadline_note": "Due date: November 5, 2026.",
+          "amount_note": "Amount due: Not found. Check the original notice.",
+          "confidence_notes": [
+            "Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected.",
+            "Amount due: Not found. Check the original notice."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "November 5, 2026",
+            "amount_due": "Amount due: Not found. Check the original notice.",
+            "required_action": "Return the fictional response form by the deadline.",
+            "contact": "placeholder only; do not send money or personal\ndata."
+          },
+          "disclaimer": "This is an explanatory tool, not legal advice."
+        },
+        "localized": {
+          "summary": "Usted seleccionó: Aviso judicial.",
+          "what_happened": "Los hechos verificados se muestran a continuación.",
+          "what_to_do": [
+            "Devuelva el formulario de respuesta ficticio antes de la fecha de vencimiento."
+          ],
+          "deadline_note": "Fecha de vencimiento: 5 de noviembre de 2026.",
+          "amount_note": "Monto a pagar: No encontrado. Revise el aviso original.",
+          "confidence_notes": [
+            "Verificado significa que coincide con el texto que confirmó. Revise el aviso original; esto no garantiza que se eligió el dato correcto.",
+            "Monto a pagar: No encontrado. Revise el aviso original."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "5 de noviembre de 2026",
+            "amount_due": "Monto a pagar: No encontrado. Revise el aviso original.",
+            "required_action": "Devuelva el formulario de respuesta ficticio antes de la fecha de vencimiento.",
+            "contact": "placeholder only; do not send money or personal\ndata."
+          },
+          "disclaimer": "Esta herramienta ofrece explicaciones, no asesoramiento legal."
+        },
+        "requested_language": "es",
+        "display_language": "es",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "missing",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+          "deadline": "Deadline: 2026-11-05",
+          "amount_due": "Amount due: Not specified",
+          "required_action": "What to do: Return the fictional response form by the\ndeadline.",
+          "contact": "Contact: placeholder only; do not send money or personal\ndata."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": false,
+          "translation_confidence": "medium",
+          "failed_checks": [],
+          "attempts": 1,
+          "back_translation": {
+            "passed": true,
+            "checks": [],
+            "minimum_text_similarity": 0.8679
+          },
+          "checks": {
+            "numbers": true,
+            "dates": true,
+            "glossary": true,
+            "disclaimer": true,
+            "warnings": true
+          }
+        },
+        "notice": "Las traducciones propuestas no han sido revisadas por hablantes nativos.",
+        "target_disclaimer": "Esta herramienta ofrece explicaciones, no asesoramiento legal.",
+        "usage": {
+          "calls": 3,
+          "input_tokens": 2063,
+          "output_tokens": 608,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 3
+        }
+      },
+      "used_glossary": [
+        "due date"
+      ],
+      "baseline": {
+        "translation": "MUESTRA SINTÉTICA - NO ES UN AVISO REAL\n\nCITACIÓN AL TRIBUNAL DE DEMOSTRACIÓN\n\nOficina de demostración del decodificador de avisos ficticios\nDestinatario: Residente inventado D\n\n100 Example Lane, Demo Town, ZZ 00000\nReferencia: SYNTHETIC-ONLY-004\n\nEmitido: 2026-10-21\n\nFecha límite: 2026-11-05\nImporte adeudado: No especificado\n\nQué hacer: Devuelva el formulario de respuesta ficticio antes de la fecha límite.\n\nEste documento inventado es solo para pruebas de software.\n\nNo interviene ninguna agencia, persona, caso, cuenta ni pago real.\n\nContacto: solo marcador de posición; no envíe dinero ni datos personales.",
+        "checks": {
+          "numbers": true,
+          "dates": true,
+          "amounts": true,
+          "glossary": false,
+          "disclaimer": false,
+          "no_numeric_dates": false
+        },
+        "back_translation": {
+          "passed": true,
+          "text_similarity": 0.9155
+        },
+        "english_back_translation": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nSUMMONS TO THE DEMONSTRATION COURT\n\nDemonstration office of the fictitious notice decoder\nAddressee: Invented Resident D\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-004\n\nIssued: 2026-10-21\n\nDeadline: 2026-11-05\nAmount due: Not specified\n\nWhat to do: Return the fictitious response form before the deadline.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is involved.\n\nContact: placeholder only; do not send money or personal data.",
+        "usage": {
+          "calls": 2,
+          "input_tokens": 500,
+          "output_tokens": 361,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 2
+        }
+      }
+    },
+    {
+      "sample": "court_02",
+      "language": "tl",
+      "source_text": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nSUMMONS TO DEMONSTRATION COURT\n\nFictional Notice Decoder Demonstration Office\nRecipient: Invented Resident D\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-004\n\nIssued: 2026-10-21\n\nDeadline: 2026-11-05\nAmount due: Not specified\n\nWhat to do: Return the fictional response form by the\ndeadline.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is\ninvolved.\n\nContact: placeholder only; do not send money or personal\ndata.",
+      "extraction": {
+        "doc_type": "court_notice",
+        "today": "2026-10-22",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Notice Decoder Demonstration Office",
+            "source_snippet": "Fictional Notice Decoder Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 70,
+            "source_end": 115,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "2026-11-05",
+            "source_snippet": "Deadline: 2026-11-05",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 237,
+            "source_end": 257,
+            "normalized_value": "2026-11-05",
+            "days_remaining": 14,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": null,
+            "source_snippet": "Amount due: Not specified",
+            "status": "missing",
+            "reason": "The extractor did not find this field. Check the photo.",
+            "source_start": null,
+            "source_end": null,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Return the fictional response form by the deadline.",
+            "source_snippet": "What to do: Return the fictional response form by the\ndeadline.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 285,
+            "source_end": 348,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "placeholder only; do not send money or personal\ndata.",
+            "source_snippet": "Contact: placeholder only; do not send money or personal\ndata.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 468,
+            "source_end": 530,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field.",
+          "Amount due: not verified. Check the original notice or ask someone for help."
+        ],
+        "usage": {
+          "input_tokens": 730,
+          "output_tokens": 179,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      },
+      "pipeline": {
+        "english": {
+          "summary": "You selected: Court notice.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Return the fictional response form by the deadline."
+          ],
+          "deadline_note": "Due date: November 5, 2026.",
+          "amount_note": "Amount due: Not found. Check the original notice.",
+          "confidence_notes": [
+            "Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected.",
+            "Amount due: Not found. Check the original notice."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "November 5, 2026",
+            "amount_due": "Amount due: Not found. Check the original notice.",
+            "required_action": "Return the fictional response form by the deadline.",
+            "contact": "placeholder only; do not send money or personal\ndata."
+          },
+          "disclaimer": "This is an explanatory tool, not legal advice."
+        },
+        "localized": {
+          "summary": "You selected: Court notice.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Return the fictional response form by the deadline."
+          ],
+          "deadline_note": "Due date: November 5, 2026.",
+          "amount_note": "Amount due: Not found. Check the original notice.",
+          "confidence_notes": [
+            "Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected.",
+            "Amount due: Not found. Check the original notice."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "November 5, 2026",
+            "amount_due": "Amount due: Not found. Check the original notice.",
+            "required_action": "Return the fictional response form by the deadline.",
+            "contact": "placeholder only; do not send money or personal\ndata."
+          },
+          "disclaimer": "This is an explanatory tool, not legal advice."
+        },
+        "requested_language": "tl",
+        "display_language": "en",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "missing",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+          "deadline": "Deadline: 2026-11-05",
+          "amount_due": "Amount due: Not specified",
+          "required_action": "What to do: Return the fictional response form by the\ndeadline.",
+          "contact": "Contact: placeholder only; do not send money or personal\ndata."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": true,
+          "translation_confidence": "low",
+          "failed_checks": [
+            "warning_preservation"
+          ],
+          "attempts": 2,
+          "back_translation": {
+            "passed": false,
+            "checks": [
+              "warning_preservation"
+            ],
+            "minimum_text_similarity": 0.7723
+          },
+          "checks": {
+            "numbers": false,
+            "dates": false,
+            "glossary": false,
+            "disclaimer": false,
+            "warnings": false
+          }
+        },
+        "notice": "Hindi namin ito maisalin nang maaasahan. Narito ang bersiyong Ingles.",
+        "target_disclaimer": "Ang kasangkapang ito ay nagbibigay ng paliwanag, hindi legal na payo.",
+        "usage": {
+          "calls": 5,
+          "input_tokens": 3564,
+          "output_tokens": 1131,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 5
+        }
+      },
+      "used_glossary": [
+        "due date"
+      ],
+      "baseline": {
+        "translation": "SINTETIKONG HALIMBAWA - HINDI TUNAY NA PAUNAWA\n\nPAANYAYA SA HUKUMANG PANG-DEMONSTRASYON\n\nOpisina ng Tagapagpaliwanag ng Kathang-Isip na Paunawa\nTatanggap: Inimbentong Residente D\n\n100 Example Lane, Demo Town, ZZ 00000\nSanggunian: SYNTHETIC-ONLY-004\n\nInisyu: 2026-10-21\n\nTakdang araw: 2026-11-05\nHalagang dapat bayaran: Hindi tinukoy\n\nGagawin: Ibalik ang kathang-isip na form ng tugon bago ang\ntakdang araw.\n\nAng kathang-isip na dokumentong ito ay para lamang sa pagsubok ng software.\n\nWalang tunay na ahensya, tao, kaso, account, o bayad na\nkasangkot.\n\nContact: para sa lugar lamang; huwag magpadala ng pera o personal na datos.",
+        "checks": {
+          "numbers": true,
+          "dates": true,
+          "amounts": true,
+          "glossary": false,
+          "disclaimer": false,
+          "no_numeric_dates": false
+        },
+        "back_translation": {
+          "passed": true,
+          "text_similarity": 0.8652
+        },
+        "english_back_translation": "SYNTHETIC EXAMPLE - NOT A REAL NOTICE\n\nINVITATION TO A DEMONSTRATION COURT\n\nOffice of the Fictional Notice Explainer\nRecipient: Invented Resident D\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-004\n\nIssued: 2026-10-21\n\nDue date: 2026-11-05\nAmount due: Not specified\n\nAction required: Return the fictional response form before the due date.\n\nThis fictional document is for software testing only.\n\nNo real agency, person, case, account, or payment is involved.\n\nContact: for location purposes only; do not send money or personal data.",
+        "usage": {
+          "calls": 2,
+          "input_tokens": 542,
+          "output_tokens": 401,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 2
+        }
+      }
+    },
+    {
+      "sample": "parking_01",
+      "language": "es",
+      "source_text": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nPARKING TICKET\n\nFictional Notice Decoder Demonstration Office\nRecipient: Invented Resident A\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-001\n\nIssued: 2026-10-21\n\nDeadline: 2026-10-29\nAmount due: $45.00\n\nWhat to do: Pay the fictional parking charge by the\n\ndeadline.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is\ninvolved.\n\nContact: placeholder only; do not send money or personal\ndata.",
+      "extraction": {
+        "doc_type": "parking_ticket",
+        "today": "2026-10-22",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Notice Decoder Demonstration Office",
+            "source_snippet": "Fictional Notice Decoder Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 54,
+            "source_end": 99,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "2026-10-29",
+            "source_snippet": "Deadline: 2026-10-29",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 221,
+            "source_end": 241,
+            "normalized_value": "2026-10-29",
+            "days_remaining": 7,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": "$45.00",
+            "source_snippet": "Amount due: $45.00",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 242,
+            "source_end": 260,
+            "normalized_value": "45.00",
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Pay the fictional parking charge by the deadline.",
+            "source_snippet": "What to do: Pay the fictional parking charge by the\ndeadline.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 262,
+            "source_end": 324,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "placeholder only; do not send money or personal data.",
+            "source_snippet": "Contact: placeholder only; do not send money or personal\ndata.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 444,
+            "source_end": 506,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field."
+        ],
+        "usage": {
+          "input_tokens": 727,
+          "output_tokens": 183,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      },
+      "pipeline": {
+        "english": {
+          "summary": "You selected: Parking ticket.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Pay the fictional parking charge by the deadline."
+          ],
+          "deadline_note": "Due date: October 29, 2026.",
+          "amount_note": "Amount due: $45.00.",
+          "confidence_notes": [
+            "Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "October 29, 2026",
+            "amount_due": "$45.00",
+            "required_action": "Pay the fictional parking charge by the deadline.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "This is an explanatory tool, not legal advice."
+        },
+        "localized": {
+          "summary": "Seleccionaste: multa de estacionamiento.",
+          "what_happened": "Los hechos verificados se muestran a continuación.",
+          "what_to_do": [
+            "Paga el cargo ficticio de estacionamiento antes de la fecha de vencimiento."
+          ],
+          "deadline_note": "Fecha de vencimiento: 29 de octubre de 2026.",
+          "amount_note": "Importe adeudado: $45.00.",
+          "confidence_notes": [
+            "Verificado significa que coincide con el texto que confirmó. Revise el aviso original; esto no garantiza que se eligió el dato correcto."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "29 de octubre de 2026",
+            "amount_due": "$45.00",
+            "required_action": "Paga el cargo ficticio de estacionamiento antes de la fecha de vencimiento.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "Esta herramienta ofrece explicaciones, no asesoramiento legal."
+        },
+        "requested_language": "es",
+        "display_language": "es",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "verified",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+          "deadline": "Deadline: 2026-10-29",
+          "amount_due": "Amount due: $45.00",
+          "required_action": "What to do: Pay the fictional parking charge by the\ndeadline.",
+          "contact": "Contact: placeholder only; do not send money or personal\ndata."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": false,
+          "translation_confidence": "medium",
+          "failed_checks": [],
+          "attempts": 1,
+          "back_translation": {
+            "passed": true,
+            "checks": [],
+            "minimum_text_similarity": 0.8627
+          },
+          "checks": {
+            "numbers": true,
+            "dates": true,
+            "glossary": true,
+            "disclaimer": true,
+            "warnings": true
+          }
+        },
+        "notice": "Las traducciones propuestas no han sido revisadas por hablantes nativos.",
+        "target_disclaimer": "Esta herramienta ofrece explicaciones, no asesoramiento legal.",
+        "usage": {
+          "calls": 3,
+          "input_tokens": 1966,
+          "output_tokens": 554,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 3
+        }
+      },
+      "used_glossary": [
+        "due date"
+      ],
+      "baseline": {
+        "translation": "MUESTRA SINTÉTICA - NO ES UN AVISO REAL\n\nBOLETO DE ESTACIONAMIENTO\n\nOficina de demostración del decodificador de avisos ficticios\nDestinatario: Residente inventado A\n\n100 Example Lane, Demo Town, ZZ 00000\nReferencia: SYNTHETIC-ONLY-001\n\nEmitido: 2026-10-21\n\nFecha límite: 2026-10-29\nMonto adeudado: $45.00\n\nQué hacer: Pague el cargo ficticio de estacionamiento antes de la fecha límite.\n\nEste documento inventado es solo para pruebas de software.\n\nNo interviene ninguna agencia, persona, caso, cuenta ni pago reales.\n\nContacto: solo un texto de marcador de posición; no envíe dinero ni datos personales.",
+        "checks": {
+          "numbers": true,
+          "dates": true,
+          "amounts": true,
+          "glossary": true,
+          "disclaimer": false,
+          "no_numeric_dates": false
+        },
+        "back_translation": {
+          "passed": true,
+          "text_similarity": 0.945
+        },
+        "english_back_translation": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nPARKING TICKET\n\nFictitious notice decoder demo office\nRecipient: Invented Resident A\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-001\n\nIssued: 2026-10-21\n\nDue date: 2026-10-29\nAmount due: $45.00\n\nWhat to do: Pay the fictitious parking charge before the due date.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is involved.\n\nContact: placeholder text only; do not send money or personal data.",
+        "usage": {
+          "calls": 2,
+          "input_tokens": 496,
+          "output_tokens": 353,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 2
+        }
+      }
+    },
+    {
+      "sample": "parking_01",
+      "language": "tl",
+      "source_text": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nPARKING TICKET\n\nFictional Notice Decoder Demonstration Office\nRecipient: Invented Resident A\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-001\n\nIssued: 2026-10-21\n\nDeadline: 2026-10-29\nAmount due: $45.00\n\nWhat to do: Pay the fictional parking charge by the\n\ndeadline.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is\ninvolved.\n\nContact: placeholder only; do not send money or personal\ndata.",
+      "extraction": {
+        "doc_type": "parking_ticket",
+        "today": "2026-10-22",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Notice Decoder Demonstration Office",
+            "source_snippet": "Fictional Notice Decoder Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 54,
+            "source_end": 99,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "2026-10-29",
+            "source_snippet": "Deadline: 2026-10-29",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 221,
+            "source_end": 241,
+            "normalized_value": "2026-10-29",
+            "days_remaining": 7,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": "$45.00",
+            "source_snippet": "Amount due: $45.00",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 242,
+            "source_end": 260,
+            "normalized_value": "45.00",
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Pay the fictional parking charge by the deadline.",
+            "source_snippet": "What to do: Pay the fictional parking charge by the\ndeadline.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 262,
+            "source_end": 324,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "placeholder only; do not send money or personal data.",
+            "source_snippet": "Contact: placeholder only; do not send money or personal\ndata.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 444,
+            "source_end": 506,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field."
+        ],
+        "usage": {
+          "input_tokens": 727,
+          "output_tokens": 183,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      },
+      "pipeline": {
+        "english": {
+          "summary": "You selected: Parking ticket.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Pay the fictional parking charge by the deadline."
+          ],
+          "deadline_note": "Due date: October 29, 2026.",
+          "amount_note": "Amount due: $45.00.",
+          "confidence_notes": [
+            "Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "October 29, 2026",
+            "amount_due": "$45.00",
+            "required_action": "Pay the fictional parking charge by the deadline.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "This is an explanatory tool, not legal advice."
+        },
+        "localized": {
+          "summary": "Ikaw ang pumili: Tiket sa paradahan.",
+          "what_happened": "Ang mga nasuring katotohanan ay ipinapakita sa ibaba.",
+          "what_to_do": [
+            "Bayaran ang huwad na singil sa paradahan bago ang takdang petsa."
+          ],
+          "deadline_note": "Takdang petsa: Oktubre 29, 2026.",
+          "amount_note": "Halaga na dapat bayaran: $45.00.",
+          "confidence_notes": [
+            "Ang nasuri ay tumutugma sa tekstong kinumpirma mo. Suriin ang orihinal na abiso; hindi nito ginagarantiya na tamang impormasyon ang napili."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "Oktubre 29, 2026",
+            "amount_due": "$45.00",
+            "required_action": "Bayaran ang huwad na singil sa paradahan bago ang takdang petsa.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "Ang kasangkapang ito ay nagbibigay ng paliwanag, hindi legal na payo."
+        },
+        "requested_language": "tl",
+        "display_language": "tl",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "verified",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+          "deadline": "Deadline: 2026-10-29",
+          "amount_due": "Amount due: $45.00",
+          "required_action": "What to do: Pay the fictional parking charge by the\ndeadline.",
+          "contact": "Contact: placeholder only; do not send money or personal\ndata."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": false,
+          "translation_confidence": "medium",
+          "failed_checks": [],
+          "attempts": 1,
+          "back_translation": {
+            "passed": true,
+            "checks": [],
+            "minimum_text_similarity": 0.7629
+          },
+          "checks": {
+            "numbers": true,
+            "dates": true,
+            "glossary": true,
+            "disclaimer": true,
+            "warnings": true
+          }
+        },
+        "notice": "Hindi pa nasusuri ng mga katutubong tagapagsalita ang mga mungkahing salin.",
+        "target_disclaimer": "Ang kasangkapang ito ay nagbibigay ng paliwanag, hindi legal na payo.",
+        "usage": {
+          "calls": 3,
+          "input_tokens": 2022,
+          "output_tokens": 587,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 3
+        }
+      },
+      "used_glossary": [
+        "due date"
+      ],
+      "baseline": {
+        "translation": "SINTETIKONG HALIMBAWA - HINDI TUNAY NA PAUNAWA\n\nTIKET SA PAGPAPARK\n\nOpisina ng Demonstrasyon ng Fictional Notice Decoder\nTumanggap: Inimbentong Residente A\n\n100 Halimbawang Daan, Demo Town, ZZ 00000\nSanggunian: SYNTHETIC-ONLY-001\n\nInisyu: 2026-10-21\n\nHuling araw: 2026-10-29\nHalagang dapat bayaran: $45.00\n\nAno ang gagawin: Bayaran ang kathang-isip na singil sa pagpa-park bago ang\n\nhuling araw.\n\nAng imbentong dokumentong ito ay para lamang sa pagsubok ng software.\n\nWalang tunay na ahensya, tao, kaso, account, o bayad na sangkot.\n\nMakipag-ugnayan: placeholder lamang; huwag magpadala ng pera o personal na datos.",
+        "checks": {
+          "numbers": true,
+          "dates": true,
+          "amounts": true,
+          "glossary": true,
+          "disclaimer": false,
+          "no_numeric_dates": false
+        },
+        "back_translation": {
+          "passed": true,
+          "text_similarity": 0.9187
+        },
+        "english_back_translation": "SYNTHETIC EXAMPLE - NOT A REAL NOTICE\n\nPARKING TICKET\n\nDemonstration Office of Fictional Notice Decoder\nRecipient: Invented Resident A\n\n100 Sample Street, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-001\n\nIssued: 2026-10-21\n\nDue date: 2026-10-29\nAmount due: $45.00\n\nWhat to do: Pay the fictional parking charge before the\n\ndue date.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is involved.\n\nContact: placeholder only; do not send money or personal data.",
+        "usage": {
+          "calls": 2,
+          "input_tokens": 532,
+          "output_tokens": 393,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 2
+        }
+      }
+    },
+    {
+      "sample": "parking_02",
+      "language": "es",
+      "source_text": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nPARKING VIOLATION NOTICE\n\nFictional Notice Decoder Demonstration Office\nRecipient: Invented Resident B\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-002\n\nIssued: 2026-10-21\n\nDeadline: 2026-11-02\nAmount due: $65.00\n\nWhat to do: Request a review of the fictional citation by\nthe deadline.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is\ninvolved.\n\nContact: placeholder only; do not send money or personal\ndata.",
+      "extraction": {
+        "doc_type": "parking_ticket",
+        "today": "2026-10-22",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Notice Decoder Demonstration Office",
+            "source_snippet": "Fictional Notice Decoder Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 64,
+            "source_end": 109,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "2026-11-02",
+            "source_snippet": "Deadline: 2026-11-02",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 231,
+            "source_end": 251,
+            "normalized_value": "2026-11-02",
+            "days_remaining": 11,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": "$65.00",
+            "source_snippet": "Amount due: $65.00",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 252,
+            "source_end": 270,
+            "normalized_value": "65.00",
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Request a review of the fictional citation by the deadline.",
+            "source_snippet": "What to do: Request a review of the fictional citation by\nthe deadline.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 272,
+            "source_end": 343,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "placeholder only; do not send money or personal data.",
+            "source_snippet": "Contact: placeholder only; do not send money or personal data.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 463,
+            "source_end": 525,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field."
+        ],
+        "usage": {
+          "input_tokens": 731,
+          "output_tokens": 185,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      },
+      "pipeline": {
+        "english": {
+          "summary": "You selected: Parking ticket.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Request a review of the fictional citation by the deadline."
+          ],
+          "deadline_note": "Due date: November 2, 2026.",
+          "amount_note": "Amount due: $65.00.",
+          "confidence_notes": [
+            "Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "November 2, 2026",
+            "amount_due": "$65.00",
+            "required_action": "Request a review of the fictional citation by the deadline.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "This is an explanatory tool, not legal advice."
+        },
+        "localized": {
+          "summary": "Seleccionaste: Multa de estacionamiento.",
+          "what_happened": "Los hechos verificados se muestran a continuación.",
+          "what_to_do": [
+            "Solicite una revisión de la citación ficticia antes de la fecha límite."
+          ],
+          "deadline_note": "Fecha de vencimiento: 2 de noviembre de 2026.",
+          "amount_note": "Cantidad adeudada: $65.00.",
+          "confidence_notes": [
+            "Verificado significa que coincide con el texto que confirmó. Revise el aviso original; esto no garantiza que se eligió el dato correcto."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "2 de noviembre de 2026",
+            "amount_due": "$65.00",
+            "required_action": "Solicite una revisión de la citación ficticia antes de la fecha límite.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "Esta herramienta ofrece explicaciones, no asesoramiento legal."
+        },
+        "requested_language": "es",
+        "display_language": "es",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "verified",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+          "deadline": "Deadline: 2026-11-02",
+          "amount_due": "Amount due: $65.00",
+          "required_action": "What to do: Request a review of the fictional citation by\nthe deadline.",
+          "contact": "Contact: placeholder only; do not send money or personal data."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": false,
+          "translation_confidence": "medium",
+          "failed_checks": [],
+          "attempts": 1,
+          "back_translation": {
+            "passed": true,
+            "checks": [],
+            "minimum_text_similarity": 0.9508
+          },
+          "checks": {
+            "numbers": true,
+            "dates": true,
+            "glossary": true,
+            "disclaimer": true,
+            "warnings": true
+          }
+        },
+        "notice": "Las traducciones propuestas no han sido revisadas por hablantes nativos.",
+        "target_disclaimer": "Esta herramienta ofrece explicaciones, no asesoramiento legal.",
+        "usage": {
+          "calls": 3,
+          "input_tokens": 2016,
+          "output_tokens": 559,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 3
+        }
+      },
+      "used_glossary": [
+        "citation",
+        "due date"
+      ],
+      "baseline": {
+        "translation": "MUESTRA SINTÉTICA - NO ES UN AVISO REAL\n\nAVISO DE INFRACCIÓN DE ESTACIONAMIENTO\n\nOficina de demostración del decodificador de avisos ficticios\nDestinatario: Residente inventado B\n\n100 Example Lane, Demo Town, ZZ 00000\nReferencia: SÓLO-SINTÉTICO-002\n\nEmitido: 2026-10-21\n\nFecha límite: 2026-11-02\nImporte adeudado: $65.00\n\nQué hacer: Solicite una revisión de la citación ficticia antes\nde la fecha límite.\n\nEste documento inventado es solo para pruebas de software.\n\nNo interviene ninguna agencia, persona, caso, cuenta ni pago\nreal.\n\nContacto: solo marcador de posición; no envíe dinero ni datos\npersonales.",
+        "checks": {
+          "numbers": true,
+          "dates": true,
+          "amounts": true,
+          "glossary": true,
+          "disclaimer": false,
+          "no_numeric_dates": false
+        },
+        "back_translation": {
+          "passed": true,
+          "text_similarity": 0.9052
+        },
+        "english_back_translation": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nPARKING VIOLATION NOTICE\n\nDemonstration office of the fictitious notice decoder\nAddressee: Invented Resident B\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-002\n\nIssued: 2026-10-21\n\nDue date: 2026-11-02\nAmount due: $65.00\n\nWhat to do: Request a review of the fictitious citation before\nthe due date.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is involved.\n\nContact: placeholder only; do not send money or personal data.",
+        "usage": {
+          "calls": 2,
+          "input_tokens": 507,
+          "output_tokens": 372,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 2
+        }
+      }
+    },
+    {
+      "sample": "parking_02",
+      "language": "tl",
+      "source_text": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nPARKING VIOLATION NOTICE\n\nFictional Notice Decoder Demonstration Office\nRecipient: Invented Resident B\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-002\n\nIssued: 2026-10-21\n\nDeadline: 2026-11-02\nAmount due: $65.00\n\nWhat to do: Request a review of the fictional citation by\nthe deadline.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is\ninvolved.\n\nContact: placeholder only; do not send money or personal\ndata.",
+      "extraction": {
+        "doc_type": "parking_ticket",
+        "today": "2026-10-22",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Notice Decoder Demonstration Office",
+            "source_snippet": "Fictional Notice Decoder Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 64,
+            "source_end": 109,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "2026-11-02",
+            "source_snippet": "Deadline: 2026-11-02",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 231,
+            "source_end": 251,
+            "normalized_value": "2026-11-02",
+            "days_remaining": 11,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": "$65.00",
+            "source_snippet": "Amount due: $65.00",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 252,
+            "source_end": 270,
+            "normalized_value": "65.00",
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Request a review of the fictional citation by the deadline.",
+            "source_snippet": "What to do: Request a review of the fictional citation by\nthe deadline.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 272,
+            "source_end": 343,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "placeholder only; do not send money or personal data.",
+            "source_snippet": "Contact: placeholder only; do not send money or personal data.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 463,
+            "source_end": 525,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field."
+        ],
+        "usage": {
+          "input_tokens": 731,
+          "output_tokens": 185,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      },
+      "pipeline": {
+        "english": {
+          "summary": "You selected: Parking ticket.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Request a review of the fictional citation by the deadline."
+          ],
+          "deadline_note": "Due date: November 2, 2026.",
+          "amount_note": "Amount due: $65.00.",
+          "confidence_notes": [
+            "Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "November 2, 2026",
+            "amount_due": "$65.00",
+            "required_action": "Request a review of the fictional citation by the deadline.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "This is an explanatory tool, not legal advice."
+        },
+        "localized": {
+          "summary": "Ang pinili mo ay: tiket sa paradahan.",
+          "what_happened": "Ang mga nasuri at nakumpirmang detalye ay ipinapakita sa ibaba.",
+          "what_to_do": [
+            "Humiling ng pagsusuri ng kathang-isip na sipi ng paglabag bago ang takdang petsa."
+          ],
+          "deadline_note": "Takdang petsa: Nobyembre 2, 2026.",
+          "amount_note": "Halagang dapat bayaran: $65.00.",
+          "confidence_notes": [
+            "Ang nasuri ay tumutugma sa tekstong kinumpirma mo. Suriin ang orihinal na abiso; hindi nito ginagarantiya na tamang impormasyon ang napili."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "Nobyembre 2, 2026",
+            "amount_due": "$65.00",
+            "required_action": "Humiling ng pagsusuri ng kathang-isip na sipi ng paglabag bago ang takdang petsa.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "Ang kasangkapang ito ay nagbibigay ng paliwanag, hindi legal na payo."
+        },
+        "requested_language": "tl",
+        "display_language": "tl",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "verified",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+          "deadline": "Deadline: 2026-11-02",
+          "amount_due": "Amount due: $65.00",
+          "required_action": "What to do: Request a review of the fictional citation by\nthe deadline.",
+          "contact": "Contact: placeholder only; do not send money or personal data."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": false,
+          "translation_confidence": "medium",
+          "failed_checks": [
+            "warning_preservation"
+          ],
+          "attempts": 2,
+          "back_translation": {
+            "passed": true,
+            "checks": [],
+            "minimum_text_similarity": 0.8788
+          },
+          "checks": {
+            "numbers": true,
+            "dates": true,
+            "glossary": true,
+            "disclaimer": true,
+            "warnings": true
+          }
+        },
+        "notice": "Hindi pa nasusuri ng mga katutubong tagapagsalita ang mga mungkahing salin.",
+        "target_disclaimer": "Ang kasangkapang ito ay nagbibigay ng paliwanag, hindi legal na payo.",
+        "usage": {
+          "calls": 5,
+          "input_tokens": 3432,
+          "output_tokens": 1040,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 5
+        }
+      },
+      "used_glossary": [
+        "citation",
+        "due date"
+      ],
+      "baseline": {
+        "translation": "HUWARANG SAMPOL - HINDI TOTOONG ABISO\n\nABISO SA PAGLABAG SA PAGPAPARADA\n\nTanggapan ng Demo ng Huwarang Notice Decoder\nTinatanggap: Inimbentong Residente B\n\n100 Halimbawang Daan, Demo Town, ZZ 00000\nSanggunian: SYNTHETIC-ONLY-002\n\nInisyu: 2026-10-21\n\nTakdang petsa: 2026-11-02\nHalagang dapat bayaran: $65.00\n\nAno ang gagawin: Humiling ng pagsusuri sa huwad na citation bago\nang takdang petsa.\n\nAng inimbentong dokumentong ito ay para lamang sa pagsubok ng software.\n\nWalang totoong ahensya, tao, kaso, account, o bayad na\nkasangkot.\n\nMakipag-ugnayan: pansamantalang nakalaan lamang; huwag magpadala ng pera o personal na\nimpormasyon.",
+        "checks": {
+          "numbers": true,
+          "dates": true,
+          "amounts": true,
+          "glossary": false,
+          "disclaimer": false,
+          "no_numeric_dates": false
+        },
+        "back_translation": {
+          "passed": true,
+          "text_similarity": 0.8821
+        },
+        "english_back_translation": "MODEL SAMPLE - NOT A REAL NOTICE\n\nPARKING VIOLATION NOTICE\n\nOffice of the Demo Notice Decoder\nAddressee: Invented Resident B\n\n100 Sample Street, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-002\n\nIssued: 2026-10-21\n\nDue date: 2026-11-02\nAmount due: $65.00\n\nWhat to do: Request a review of the false citation before\n the due date.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is involved.\n\nContact: temporary placeholder only; do not send money or personal\ninformation.",
+        "usage": {
+          "calls": 2,
+          "input_tokens": 541,
+          "output_tokens": 398,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 2
+        }
+      }
+    },
+    {
+      "sample": "school_01",
+      "language": "es",
+      "source_text": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nSCHOOL LETTER TO FAMILIES\n\nFictional Notice Decoder Demonstration Office\nRecipient: Invented Resident G\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-007\n\nIssued: 2026-10-21\n\nDeadline: 2026-10-30\n\nAmount due: Not specified\n\nWhat to do: Return the fictional school permission form by\nthe deadline.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is\ninvolved.\n\nContact: placeholder only; do not send money or personal\ndata.",
+      "extraction": {
+        "doc_type": "school_letter",
+        "today": "2026-10-22",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Notice Decoder Demonstration Office",
+            "source_snippet": "Fictional Notice Decoder Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 65,
+            "source_end": 110,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "2026-10-30",
+            "source_snippet": "Deadline: 2026-10-30",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 232,
+            "source_end": 252,
+            "normalized_value": "2026-10-30",
+            "days_remaining": 8,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": null,
+            "source_snippet": "Amount due: Not specified",
+            "status": "missing",
+            "reason": "The confirmed source explicitly says this field is not stated.",
+            "source_start": 254,
+            "source_end": 279,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Return the fictional school permission form by the deadline.",
+            "source_snippet": "What to do: Return the fictional school permission form by\nthe deadline.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 281,
+            "source_end": 353,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "placeholder only; do not send money or personal\ndata.",
+            "source_snippet": "Contact: placeholder only; do not send money or personal\ndata.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 473,
+            "source_end": 535,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field.",
+          "Amount due: not verified. Check the original notice or ask someone for help."
+        ],
+        "usage": {
+          "input_tokens": 728,
+          "output_tokens": 181,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      },
+      "pipeline": {
+        "english": {
+          "summary": "You selected: School letter.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Return the fictional school permission form by the deadline."
+          ],
+          "deadline_note": "Due date: October 30, 2026.",
+          "amount_note": "Amount due: Not found. Check the original notice.",
+          "confidence_notes": [
+            "Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected.",
+            "Amount due: Not found. Check the original notice."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "October 30, 2026",
+            "amount_due": "Amount due: Not found. Check the original notice.",
+            "required_action": "Return the fictional school permission form by the deadline.",
+            "contact": "placeholder only; do not send money or personal\ndata."
+          },
+          "disclaimer": "This is an explanatory tool, not legal advice."
+        },
+        "localized": {
+          "summary": "Seleccionó: Carta escolar.",
+          "what_happened": "Los hechos verificados se muestran a continuación.",
+          "what_to_do": [
+            "Devuelva el formulario ficticio de permiso escolar antes de la fecha de vencimiento."
+          ],
+          "deadline_note": "Fecha de vencimiento: 30 de octubre de 2026.",
+          "amount_note": "Monto a pagar: No encontrado. Revise el aviso original.",
+          "confidence_notes": [
+            "Verificado significa que coincide con el texto que confirmó. Revise el aviso original; esto no garantiza que se eligió el dato correcto.",
+            "Monto a pagar: No encontrado. Revise el aviso original."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "30 de octubre de 2026",
+            "amount_due": "Monto a pagar: No encontrado. Revise el aviso original.",
+            "required_action": "Devuelva el formulario ficticio de permiso escolar antes de la fecha de vencimiento.",
+            "contact": "placeholder only; do not send money or personal\ndata."
+          },
+          "disclaimer": "Esta herramienta ofrece explicaciones, no asesoramiento legal."
+        },
+        "requested_language": "es",
+        "display_language": "es",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "missing",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+          "deadline": "Deadline: 2026-10-30",
+          "amount_due": "Amount due: Not specified",
+          "required_action": "What to do: Return the fictional school permission form by\nthe deadline.",
+          "contact": "Contact: placeholder only; do not send money or personal\ndata."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": false,
+          "translation_confidence": "medium",
+          "failed_checks": [],
+          "attempts": 1,
+          "back_translation": {
+            "passed": true,
+            "checks": [],
+            "minimum_text_similarity": 0.9516
+          },
+          "checks": {
+            "numbers": true,
+            "dates": true,
+            "glossary": true,
+            "disclaimer": true,
+            "warnings": true
+          }
+        },
+        "notice": "Las traducciones propuestas no han sido revisadas por hablantes nativos.",
+        "target_disclaimer": "Esta herramienta ofrece explicaciones, no asesoramiento legal.",
+        "usage": {
+          "calls": 3,
+          "input_tokens": 2067,
+          "output_tokens": 607,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 3
+        }
+      },
+      "used_glossary": [
+        "due date"
+      ],
+      "baseline": {
+        "translation": "MUESTRA SINTÉTICA - NO ES UN AVISO REAL\n\nCARTA ESCOLAR PARA LAS FAMILIAS\n\nOficina de Demostración del Decodificador de Avisos Ficticios\nDestinatario: Residente Inventado G\n\n100 Example Lane, Demo Town, ZZ 00000\nReferencia: SYNTHETIC-ONLY-007\n\nEmitido: 2026-10-21\n\nFecha límite: 2026-10-30\n\nImporte debido: No especificado\n\nQué hacer: Devuelva el formulario ficticio de autorización escolar antes de\nla fecha límite.\n\nEste documento inventado es solo para pruebas de software.\n\nNo interviene ninguna agencia, persona, caso, cuenta ni pago real.\n\nContacto: solo un marcador de posición; no envíe dinero ni datos personales.",
+        "checks": {
+          "numbers": true,
+          "dates": true,
+          "amounts": true,
+          "glossary": true,
+          "disclaimer": false,
+          "no_numeric_dates": false
+        },
+        "back_translation": {
+          "passed": true,
+          "text_similarity": 0.9197
+        },
+        "english_back_translation": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nSCHOOL LETTER FOR FAMILIES\n\nDemonstration Office of the Fictional Notice Decoder\nAddressee: Invented Resident G\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-007\n\nIssued: 2026-10-21\n\nDeadline: 2026-10-30\n\nAmount due: Not specified\n\nWhat to do: Return the fictional school authorization form before the deadline.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is involved.\n\nContact: placeholder only; do not send money or personal data.",
+        "usage": {
+          "calls": 2,
+          "input_tokens": 498,
+          "output_tokens": 358,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 2
+        }
+      }
+    },
+    {
+      "sample": "school_01",
+      "language": "tl",
+      "source_text": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nSCHOOL LETTER TO FAMILIES\n\nFictional Notice Decoder Demonstration Office\nRecipient: Invented Resident G\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-007\n\nIssued: 2026-10-21\n\nDeadline: 2026-10-30\n\nAmount due: Not specified\n\nWhat to do: Return the fictional school permission form by\nthe deadline.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is\ninvolved.\n\nContact: placeholder only; do not send money or personal\ndata.",
+      "extraction": {
+        "doc_type": "school_letter",
+        "today": "2026-10-22",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Notice Decoder Demonstration Office",
+            "source_snippet": "Fictional Notice Decoder Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 65,
+            "source_end": 110,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "2026-10-30",
+            "source_snippet": "Deadline: 2026-10-30",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 232,
+            "source_end": 252,
+            "normalized_value": "2026-10-30",
+            "days_remaining": 8,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": null,
+            "source_snippet": "Amount due: Not specified",
+            "status": "missing",
+            "reason": "The confirmed source explicitly says this field is not stated.",
+            "source_start": 254,
+            "source_end": 279,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Return the fictional school permission form by the deadline.",
+            "source_snippet": "What to do: Return the fictional school permission form by\nthe deadline.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 281,
+            "source_end": 353,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "placeholder only; do not send money or personal\ndata.",
+            "source_snippet": "Contact: placeholder only; do not send money or personal\ndata.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 473,
+            "source_end": 535,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field.",
+          "Amount due: not verified. Check the original notice or ask someone for help."
+        ],
+        "usage": {
+          "input_tokens": 728,
+          "output_tokens": 181,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      },
+      "pipeline": {
+        "english": {
+          "summary": "You selected: School letter.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Return the fictional school permission form by the deadline."
+          ],
+          "deadline_note": "Due date: October 30, 2026.",
+          "amount_note": "Amount due: Not found. Check the original notice.",
+          "confidence_notes": [
+            "Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected.",
+            "Amount due: Not found. Check the original notice."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "October 30, 2026",
+            "amount_due": "Amount due: Not found. Check the original notice.",
+            "required_action": "Return the fictional school permission form by the deadline.",
+            "contact": "placeholder only; do not send money or personal\ndata."
+          },
+          "disclaimer": "This is an explanatory tool, not legal advice."
+        },
+        "localized": {
+          "summary": "Ang napili mo ay: Liham ng paaralan.",
+          "what_happened": "Ipinapakita sa ibaba ang mga nasuring katotohanan.",
+          "what_to_do": [
+            "Ibalik ang huwad na form ng pahintulot ng paaralan bago ang takdang petsa."
+          ],
+          "deadline_note": "Takdang petsa: Oktubre 30, 2026.",
+          "amount_note": "Halagang babayaran: Hindi nakita. Suriin ang orihinal na abiso.",
+          "confidence_notes": [
+            "Ang nasuri ay tumutugma sa tekstong kinumpirma mo. Suriin ang orihinal na abiso; hindi nito ginagarantiya na tamang impormasyon ang napili.",
+            "Halagang babayaran: Hindi nakita. Suriin ang orihinal na abiso."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "Oktubre 30, 2026",
+            "amount_due": "Halagang babayaran: Hindi nakita. Suriin ang orihinal na abiso.",
+            "required_action": "Ibalik ang huwad na form ng pahintulot ng paaralan bago ang takdang petsa.",
+            "contact": "placeholder only; do not send money or personal\ndata."
+          },
+          "disclaimer": "Ang kasangkapang ito ay nagbibigay ng paliwanag, hindi legal na payo."
+        },
+        "requested_language": "tl",
+        "display_language": "tl",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "missing",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+          "deadline": "Deadline: 2026-10-30",
+          "amount_due": "Amount due: Not specified",
+          "required_action": "What to do: Return the fictional school permission form by\nthe deadline.",
+          "contact": "Contact: placeholder only; do not send money or personal\ndata."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": false,
+          "translation_confidence": "medium",
+          "failed_checks": [],
+          "attempts": 1,
+          "back_translation": {
+            "passed": true,
+            "checks": [],
+            "minimum_text_similarity": 0.9091
+          },
+          "checks": {
+            "numbers": true,
+            "dates": true,
+            "glossary": true,
+            "disclaimer": true,
+            "warnings": true
+          }
+        },
+        "notice": "Hindi pa nasusuri ng mga katutubong tagapagsalita ang mga mungkahing salin.",
+        "target_disclaimer": "Ang kasangkapang ito ay nagbibigay ng paliwanag, hindi legal na payo.",
+        "usage": {
+          "calls": 3,
+          "input_tokens": 2163,
+          "output_tokens": 668,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 3
+        }
+      },
+      "used_glossary": [
+        "due date"
+      ],
+      "baseline": {
+        "translation": "SINTETIKONG HALIMBAWA - HINDI TOTOONG PAUNAWA\n\nLIHAM NG PAARALAN PARA SA MGA PAMILYA\n\nOpisina ng Demonstrasyon ng Fictional Notice Decoder\nTinatanggap: Inimbentong Residente G\n\n100 Example Lane, Demo Town, ZZ 00000\nSanggunian: SYNTHETIC-ONLY-007\n\nInisyu: 2026-10-21\n\nTakdang petsa: 2026-10-30\n\nHalagang dapat bayaran: Hindi tinukoy\n\nAno ang gagawin: Ibalik ang huwad na porma ng pahintulot ng paaralan bago ang takdang petsa.\n\nAng imbentong dokumentong ito ay para lamang sa pagsubok ng software.\n\nWalang tunay na ahensiya, tao, kaso, account, o bayad na sangkot.\n\nMakipag-ugnayan: pansamantala lamang; huwag magpadala ng pera o personal na datos.",
+        "checks": {
+          "numbers": true,
+          "dates": true,
+          "amounts": true,
+          "glossary": true,
+          "disclaimer": false,
+          "no_numeric_dates": false
+        },
+        "back_translation": {
+          "passed": true,
+          "text_similarity": 0.9211
+        },
+        "english_back_translation": "SYNTHETIC EXAMPLE - NOT A REAL NOTICE\n\nSCHOOL LETTER FOR FAMILIES\n\nOffice of the Fictional Notice Decoder Demonstration\nReceived by: Invented Resident G\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-007\n\nIssued: 2026-10-21\n\nDue date: 2026-10-30\n\nAmount due: Not specified\n\nWhat to do: Return the false school permission form before the due date.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is involved.\n\nContact: temporary only; do not send money or personal data.",
+        "usage": {
+          "calls": 2,
+          "input_tokens": 538,
+          "output_tokens": 399,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 2
+        }
+      }
+    },
+    {
+      "sample": "school_02",
+      "language": "es",
+      "source_text": "——_———————\n\nSYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nSCHOOL CONFERENCE LETTER\n\nFictional Notice Decoder Demonstration Office\nRecipient: Invented Resident H\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-008\n\nIssued: 2026-10-21\n\nDeadline: 2026-11-07\nAmount due: Not specified\n\nWhat to do: Confirm a fictional parent conference\nappointment by the deadline.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is\ninvolved.\n\nContact: placeholder only; do not send money or personal\ndata.",
+      "extraction": {
+        "doc_type": "school_letter",
+        "today": "2026-10-22",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Notice Decoder Demonstration Office",
+            "source_snippet": "Fictional Notice Decoder Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 76,
+            "source_end": 121,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "2026-11-07",
+            "source_snippet": "Deadline: 2026-11-07",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 243,
+            "source_end": 263,
+            "normalized_value": "2026-11-07",
+            "days_remaining": 16,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": null,
+            "source_snippet": "Amount due: Not specified",
+            "status": "missing",
+            "reason": "The confirmed source explicitly says this field is not stated.",
+            "source_start": 264,
+            "source_end": 289,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Confirm a fictional parent conference appointment by the deadline.",
+            "source_snippet": "What to do: Confirm a fictional parent conference appointment by the deadline.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 291,
+            "source_end": 369,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "placeholder only; do not send money or personal data.",
+            "source_snippet": "Contact: placeholder only; do not send money or personal data.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 489,
+            "source_end": 551,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field.",
+          "Amount due: not verified. Check the original notice or ask someone for help."
+        ],
+        "usage": {
+          "input_tokens": 731,
+          "output_tokens": 177,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      },
+      "pipeline": {
+        "english": {
+          "summary": "You selected: School letter.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Confirm a fictional parent conference appointment by the deadline."
+          ],
+          "deadline_note": "Due date: November 7, 2026.",
+          "amount_note": "Amount due: Not found. Check the original notice.",
+          "confidence_notes": [
+            "Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected.",
+            "Amount due: Not found. Check the original notice."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "November 7, 2026",
+            "amount_due": "Amount due: Not found. Check the original notice.",
+            "required_action": "Confirm a fictional parent conference appointment by the deadline.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "This is an explanatory tool, not legal advice."
+        },
+        "localized": {
+          "summary": "You selected: School letter.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Confirm a fictional parent conference appointment by the deadline."
+          ],
+          "deadline_note": "Due date: November 7, 2026.",
+          "amount_note": "Amount due: Not found. Check the original notice.",
+          "confidence_notes": [
+            "Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected.",
+            "Amount due: Not found. Check the original notice."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "November 7, 2026",
+            "amount_due": "Amount due: Not found. Check the original notice.",
+            "required_action": "Confirm a fictional parent conference appointment by the deadline.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "This is an explanatory tool, not legal advice."
+        },
+        "requested_language": "es",
+        "display_language": "en",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "missing",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+          "deadline": "Deadline: 2026-11-07",
+          "amount_due": "Amount due: Not specified",
+          "required_action": "What to do: Confirm a fictional parent conference appointment by the deadline.",
+          "contact": "Contact: placeholder only; do not send money or personal data."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": true,
+          "translation_confidence": "low",
+          "failed_checks": [
+            "key_fact_back_translation",
+            "warning_preservation"
+          ],
+          "attempts": 2,
+          "back_translation": {
+            "passed": false,
+            "checks": [
+              "key_fact_back_translation"
+            ],
+            "minimum_text_similarity": 0.5714
+          },
+          "checks": {
+            "numbers": false,
+            "dates": false,
+            "glossary": false,
+            "disclaimer": false,
+            "warnings": false
+          }
+        },
+        "notice": "No pudimos traducir esto de forma fiable. Aquí está la versión en inglés.",
+        "target_disclaimer": "Esta herramienta ofrece explicaciones, no asesoramiento legal.",
+        "usage": {
+          "calls": 5,
+          "input_tokens": 3396,
+          "output_tokens": 1052,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 5
+        }
+      },
+      "used_glossary": [
+        "due date"
+      ],
+      "baseline": {
+        "translation": "——_———————\n\nMUESTRA SINTÉTICA - NO ES UN AVISO REAL\n\nCARTA DE CONFERENCIA ESCOLAR\n\nOficina de demostración del decodificador de avisos ficticios\nDestinatario: Residente inventado H\n\n100 Example Lane, Demo Town, ZZ 00000\nReferencia: SYNTHETIC-ONLY-008\n\nEmitido: 2026-10-21\n\nFecha límite: 2026-11-07\nImporte debido: No especificado\n\nQué hacer: Confirmar una cita ficticia para una conferencia con\nlos padres antes de la fecha límite.\n\nEste documento inventado es solo para pruebas de software.\n\nNo interviene ninguna agencia, persona, caso, cuenta ni pago reales.\n\nContacto: solo de marcador de posición; no envíe dinero ni datos\npersonales.",
+        "checks": {
+          "numbers": true,
+          "dates": true,
+          "amounts": true,
+          "glossary": true,
+          "disclaimer": false,
+          "no_numeric_dates": false
+        },
+        "back_translation": {
+          "passed": true,
+          "text_similarity": 0.9091
+        },
+        "english_back_translation": "——_———————\n\nSYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nSCHOOL CONFERENCE LETTER\n\nDemonstration office of the fictional notice decoder\nAddressee: Invented Resident H\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-008\n\nIssued: 2026-10-21\n\nDeadline: 2026-11-07\nAmount due: Not specified\n\nWhat to do: Confirm a fictitious appointment for a parent conference before the deadline.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is involved.\n\nContact: placeholder only; do not send money or personal data.",
+        "usage": {
+          "calls": 2,
+          "input_tokens": 511,
+          "output_tokens": 374,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 2
+        }
+      }
+    },
+    {
+      "sample": "school_02",
+      "language": "tl",
+      "source_text": "——_———————\n\nSYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nSCHOOL CONFERENCE LETTER\n\nFictional Notice Decoder Demonstration Office\nRecipient: Invented Resident H\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-008\n\nIssued: 2026-10-21\n\nDeadline: 2026-11-07\nAmount due: Not specified\n\nWhat to do: Confirm a fictional parent conference\nappointment by the deadline.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is\ninvolved.\n\nContact: placeholder only; do not send money or personal\ndata.",
+      "extraction": {
+        "doc_type": "school_letter",
+        "today": "2026-10-22",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Notice Decoder Demonstration Office",
+            "source_snippet": "Fictional Notice Decoder Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 76,
+            "source_end": 121,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "2026-11-07",
+            "source_snippet": "Deadline: 2026-11-07",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 243,
+            "source_end": 263,
+            "normalized_value": "2026-11-07",
+            "days_remaining": 16,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": null,
+            "source_snippet": "Amount due: Not specified",
+            "status": "missing",
+            "reason": "The confirmed source explicitly says this field is not stated.",
+            "source_start": 264,
+            "source_end": 289,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Confirm a fictional parent conference appointment by the deadline.",
+            "source_snippet": "What to do: Confirm a fictional parent conference appointment by the deadline.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 291,
+            "source_end": 369,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "placeholder only; do not send money or personal data.",
+            "source_snippet": "Contact: placeholder only; do not send money or personal data.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 489,
+            "source_end": 551,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field.",
+          "Amount due: not verified. Check the original notice or ask someone for help."
+        ],
+        "usage": {
+          "input_tokens": 731,
+          "output_tokens": 177,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      },
+      "pipeline": {
+        "english": {
+          "summary": "You selected: School letter.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Confirm a fictional parent conference appointment by the deadline."
+          ],
+          "deadline_note": "Due date: November 7, 2026.",
+          "amount_note": "Amount due: Not found. Check the original notice.",
+          "confidence_notes": [
+            "Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected.",
+            "Amount due: Not found. Check the original notice."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "November 7, 2026",
+            "amount_due": "Amount due: Not found. Check the original notice.",
+            "required_action": "Confirm a fictional parent conference appointment by the deadline.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "This is an explanatory tool, not legal advice."
+        },
+        "localized": {
+          "summary": "Iyong pinili: Liham ng paaralan.",
+          "what_happened": "Ipinapakita sa ibaba ang mga nasuring katotohanan.",
+          "what_to_do": [
+            "Kumpirmahin ang isang kathang-isip na appointment sa kumperensiya ng magulang bago ang takdang petsa."
+          ],
+          "deadline_note": "Takdang petsa: Nobyembre 7, 2026.",
+          "amount_note": "Halagang babayaran: Hindi nakita. Suriin ang orihinal na abiso.",
+          "confidence_notes": [
+            "Ang nasuri ay tumutugma sa tekstong kinumpirma mo. Suriin ang orihinal na abiso; hindi nito ginagarantiya na tamang impormasyon ang napili.",
+            "Halagang babayaran: Hindi nakita. Suriin ang orihinal na abiso."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "Nobyembre 7, 2026",
+            "amount_due": "Halagang babayaran: Hindi nakita. Suriin ang orihinal na abiso.",
+            "required_action": "Kumpirmahin ang isang kathang-isip na appointment sa kumperensiya ng magulang bago ang takdang petsa.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "Ang kasangkapang ito ay nagbibigay ng paliwanag, hindi legal na payo."
+        },
+        "requested_language": "tl",
+        "display_language": "tl",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "missing",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+          "deadline": "Deadline: 2026-11-07",
+          "amount_due": "Amount due: Not specified",
+          "required_action": "What to do: Confirm a fictional parent conference appointment by the deadline.",
+          "contact": "Contact: placeholder only; do not send money or personal data."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": false,
+          "translation_confidence": "medium",
+          "failed_checks": [
+            "warning_preservation"
+          ],
+          "attempts": 2,
+          "back_translation": {
+            "passed": true,
+            "checks": [],
+            "minimum_text_similarity": 0.9559
+          },
+          "checks": {
+            "numbers": true,
+            "dates": true,
+            "glossary": true,
+            "disclaimer": true,
+            "warnings": true
+          }
+        },
+        "notice": "Hindi pa nasusuri ng mga katutubong tagapagsalita ang mga mungkahing salin.",
+        "target_disclaimer": "Ang kasangkapang ito ay nagbibigay ng paliwanag, hindi legal na payo.",
+        "usage": {
+          "calls": 5,
+          "input_tokens": 3595,
+          "output_tokens": 1169,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 5
+        }
+      },
+      "used_glossary": [
+        "due date"
+      ],
+      "baseline": {
+        "translation": "——_———————\n\nHINDI TOTONG HALIMBAWA - HINDI ISANG TUNAY NA ABISO\n\nLIHAM PARA SA KUMPERENSYA SA PAARALAN\n\nOpisina ng Pagsasagawa ng Tagapagpaliwanag ng Kathang-Isip na Abiso\nTinatanggap: Inimbentong Residente H\n\n100 Example Lane, Demo Town, ZZ 00000\nSanggunian: SYNTHETIC-ONLY-008\n\nInisyu: 2026-10-21\n\nTakdang araw: 2026-11-07\nHalagang dapat bayaran: Hindi tinukoy\n\nAno ang gagawin: Kumpirmahin ang isang kathang-isip na pagpupulong\npara sa magulang bago ang takdang araw.\n\nAng imbentong dokumentong ito ay para lamang sa pagsubok ng software.\n\nWalang totoong ahensya, tao, kaso, account, o bayad na\nkasangkot.\n\nMakipag-ugnayan: pansamantalang tagapuno lamang; huwag magpadala ng pera o personal na datos.",
+        "checks": {
+          "numbers": true,
+          "dates": true,
+          "amounts": true,
+          "glossary": true,
+          "disclaimer": false,
+          "no_numeric_dates": false
+        },
+        "back_translation": {
+          "passed": true,
+          "text_similarity": 0.8424
+        },
+        "english_back_translation": "——_———————\n\nHINDI TUNAY NA HALIMBAWA - NOT A REAL NOTICE\n\nLETTER FOR THE SCHOOL CONFERENCE\n\nOffice of the Execution of the Fictional Notice Explainer\nRecipient: Invented Resident H\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-008\n\nIssued: 2026-10-21\n\nDue date: 2026-11-07\nAmount due: Not specified\n\nWhat to do: Confirm a fictional meeting\nfor the parent before the due date.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is\ninvolved.\n\nContact: temporary placeholder only; do not send money or personal data.",
+        "usage": {
+          "calls": 2,
+          "input_tokens": 569,
+          "output_tokens": 442,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 2
+        }
+      }
+    },
+    {
+      "sample": "utility_01",
+      "language": "es",
+      "source_text": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nELECTRIC UTILITY BILL\n\nFictional Notice Decoder Demonstration Office\nRecipient: Invented Resident E\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-005\n\nIssued: 2026-10-21\n\nDeadline: 2026-11-04\nAmount due: $82.35\n\nWhat to do: Pay the fictional electric bill by the due\ndate.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is\ninvolved.\n\nContact: placeholder only; do not send money or personal\n\ndata.",
+      "extraction": {
+        "doc_type": "utility_bill",
+        "today": "2026-10-22",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Notice Decoder Demonstration Office",
+            "source_snippet": "Fictional Notice Decoder Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 61,
+            "source_end": 106,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "2026-11-04",
+            "source_snippet": "Deadline: 2026-11-04",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 228,
+            "source_end": 248,
+            "normalized_value": "2026-11-04",
+            "days_remaining": 13,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": "$82.35",
+            "source_snippet": "Amount due: $82.35",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 249,
+            "source_end": 267,
+            "normalized_value": "82.35",
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Pay the fictional electric bill by the due date.",
+            "source_snippet": "What to do: Pay the fictional electric bill by the due\ndate.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 269,
+            "source_end": 329,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "placeholder only; do not send money or personal\ndata.",
+            "source_snippet": "Contact: placeholder only; do not send money or personal\n\ndata.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 449,
+            "source_end": 512,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field."
+        ],
+        "usage": {
+          "input_tokens": 729,
+          "output_tokens": 186,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      },
+      "pipeline": {
+        "english": {
+          "summary": "You selected: Utility bill.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Pay the fictional electric bill by the due date."
+          ],
+          "deadline_note": "Due date: November 4, 2026.",
+          "amount_note": "Amount due: $82.35.",
+          "confidence_notes": [
+            "Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "November 4, 2026",
+            "amount_due": "$82.35",
+            "required_action": "Pay the fictional electric bill by the due date.",
+            "contact": "placeholder only; do not send money or personal\ndata."
+          },
+          "disclaimer": "This is an explanatory tool, not legal advice."
+        },
+        "localized": {
+          "summary": "Ha seleccionado: factura de servicios públicos.",
+          "what_happened": "Los hechos comprobados se muestran a continuación.",
+          "what_to_do": [
+            "Pague la factura ficticia de electricidad antes de la fecha de vencimiento."
+          ],
+          "deadline_note": "Fecha de vencimiento: 4 de noviembre de 2026.",
+          "amount_note": "Monto adeudado: $82.35.",
+          "confidence_notes": [
+            "Verificado significa que coincide con el texto que confirmó. Revise el aviso original; esto no garantiza que se eligió el dato correcto."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "4 de noviembre de 2026",
+            "amount_due": "$82.35",
+            "required_action": "Pague la factura ficticia de electricidad antes de la fecha de vencimiento.",
+            "contact": "placeholder only; do not send money or personal\ndata."
+          },
+          "disclaimer": "Esta herramienta ofrece explicaciones, no asesoramiento legal."
+        },
+        "requested_language": "es",
+        "display_language": "es",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "verified",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+          "deadline": "Deadline: 2026-11-04",
+          "amount_due": "Amount due: $82.35",
+          "required_action": "What to do: Pay the fictional electric bill by the due\ndate.",
+          "contact": "Contact: placeholder only; do not send money or personal\n\ndata."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": false,
+          "translation_confidence": "medium",
+          "failed_checks": [],
+          "attempts": 1,
+          "back_translation": {
+            "passed": true,
+            "checks": [],
+            "minimum_text_similarity": 0.9126
+          },
+          "checks": {
+            "numbers": true,
+            "dates": true,
+            "glossary": true,
+            "disclaimer": true,
+            "warnings": true
+          }
+        },
+        "notice": "Las traducciones propuestas no han sido revisadas por hablantes nativos.",
+        "target_disclaimer": "Esta herramienta ofrece explicaciones, no asesoramiento legal.",
+        "usage": {
+          "calls": 3,
+          "input_tokens": 1973,
+          "output_tokens": 555,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 3
+        }
+      },
+      "used_glossary": [
+        "due date"
+      ],
+      "baseline": {
+        "translation": "MUESTRA SINTÉTICA - NO ES UN AVISO REAL\n\nFACTURA DE SERVICIO ELÉCTRICO\n\nOficina de Demostración del Decodificador de Avisos Ficticios\nDestinatario: Residente Inventado E\n\n100 Example Lane, Demo Town, ZZ 00000\nReferencia: SYNTHETIC-ONLY-005\n\nEmitido: 2026-10-21\n\nFecha límite: 2026-11-04\nImporte adeudado: $82.35\n\nQué hacer: Pague la factura eléctrica ficticia antes de la\nfecha de vencimiento.\n\nEste documento inventado es solo para pruebas de software.\n\nNo interviene ninguna agencia, persona, caso, cuenta ni pago\nreal.\n\nContacto: solo de relleno; no envíe dinero ni datos\npersonales.",
+        "checks": {
+          "numbers": true,
+          "dates": true,
+          "amounts": true,
+          "glossary": true,
+          "disclaimer": false,
+          "no_numeric_dates": false
+        },
+        "back_translation": {
+          "passed": true,
+          "text_similarity": 0.8642
+        },
+        "english_back_translation": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nELECTRIC SERVICE INVOICE\n\nOffice of the Decoding Demo for Fictional Notices\nAddressee: Invented Resident E\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-005\n\nIssued: 2026-10-21\n\nDue date: 2026-11-04\nAmount due: $82.35\n\nWhat to do: Pay the fictional electric bill before the due date.\n\nThis invented document is only for software testing.\n\nNo agency, person, case, account, or real payment is involved.\n\nContact: filler only; do not send money or personal data.",
+        "usage": {
+          "calls": 2,
+          "input_tokens": 503,
+          "output_tokens": 363,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 2
+        }
+      }
+    },
+    {
+      "sample": "utility_01",
+      "language": "tl",
+      "source_text": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nELECTRIC UTILITY BILL\n\nFictional Notice Decoder Demonstration Office\nRecipient: Invented Resident E\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-005\n\nIssued: 2026-10-21\n\nDeadline: 2026-11-04\nAmount due: $82.35\n\nWhat to do: Pay the fictional electric bill by the due\ndate.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is\ninvolved.\n\nContact: placeholder only; do not send money or personal\n\ndata.",
+      "extraction": {
+        "doc_type": "utility_bill",
+        "today": "2026-10-22",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Notice Decoder Demonstration Office",
+            "source_snippet": "Fictional Notice Decoder Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 61,
+            "source_end": 106,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "2026-11-04",
+            "source_snippet": "Deadline: 2026-11-04",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 228,
+            "source_end": 248,
+            "normalized_value": "2026-11-04",
+            "days_remaining": 13,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": "$82.35",
+            "source_snippet": "Amount due: $82.35",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 249,
+            "source_end": 267,
+            "normalized_value": "82.35",
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Pay the fictional electric bill by the due date.",
+            "source_snippet": "What to do: Pay the fictional electric bill by the due\ndate.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 269,
+            "source_end": 329,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "placeholder only; do not send money or personal\ndata.",
+            "source_snippet": "Contact: placeholder only; do not send money or personal\n\ndata.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 449,
+            "source_end": 512,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field."
+        ],
+        "usage": {
+          "input_tokens": 729,
+          "output_tokens": 186,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      },
+      "pipeline": {
+        "english": {
+          "summary": "You selected: Utility bill.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Pay the fictional electric bill by the due date."
+          ],
+          "deadline_note": "Due date: November 4, 2026.",
+          "amount_note": "Amount due: $82.35.",
+          "confidence_notes": [
+            "Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "November 4, 2026",
+            "amount_due": "$82.35",
+            "required_action": "Pay the fictional electric bill by the due date.",
+            "contact": "placeholder only; do not send money or personal\ndata."
+          },
+          "disclaimer": "This is an explanatory tool, not legal advice."
+        },
+        "localized": {
+          "summary": "Ang napili mo ay: Bayarin sa utility.",
+          "what_happened": "Ang mga nasuring katotohanan ay ipinapakita sa ibaba.",
+          "what_to_do": [
+            "Bayaran ang kathang-isip na bayarin sa kuryente bago ang takdang petsa."
+          ],
+          "deadline_note": "Takdang petsa: Nobyembre 4, 2026.",
+          "amount_note": "Halagang dapat bayaran: $82.35.",
+          "confidence_notes": [
+            "Ang nasuri ay tumutugma sa tekstong kinumpirma mo. Suriin ang orihinal na abiso; hindi nito ginagarantiya na tamang impormasyon ang napili."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "Nobyembre 4, 2026",
+            "amount_due": "$82.35",
+            "required_action": "Bayaran ang kathang-isip na bayarin sa kuryente bago ang takdang petsa.",
+            "contact": "placeholder only; do not send money or personal\ndata."
+          },
+          "disclaimer": "Ang kasangkapang ito ay nagbibigay ng paliwanag, hindi legal na payo."
+        },
+        "requested_language": "tl",
+        "display_language": "tl",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "verified",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+          "deadline": "Deadline: 2026-11-04",
+          "amount_due": "Amount due: $82.35",
+          "required_action": "What to do: Pay the fictional electric bill by the due\ndate.",
+          "contact": "Contact: placeholder only; do not send money or personal\n\ndata."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": false,
+          "translation_confidence": "medium",
+          "failed_checks": [],
+          "attempts": 1,
+          "back_translation": {
+            "passed": true,
+            "checks": [],
+            "minimum_text_similarity": 0.835
+          },
+          "checks": {
+            "numbers": true,
+            "dates": true,
+            "glossary": true,
+            "disclaimer": true,
+            "warnings": true
+          }
+        },
+        "notice": "Hindi pa nasusuri ng mga katutubong tagapagsalita ang mga mungkahing salin.",
+        "target_disclaimer": "Ang kasangkapang ito ay nagbibigay ng paliwanag, hindi legal na payo.",
+        "usage": {
+          "calls": 3,
+          "input_tokens": 2037,
+          "output_tokens": 594,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 3
+        }
+      },
+      "used_glossary": [
+        "due date"
+      ],
+      "baseline": {
+        "translation": "HALIMBAWANG GAWA-GAWANG HALIMBAWA - HINDI ITO TUNAY NA PAUNAWA\n\nSINGILIN SA KURYENTE\n\nTanggapan ng Ipinagawang Demonstrasyon ng Decoder ng Paunawa\nTumatanggap: Inimbentong Residente E\n\n100 Example Lane, Demo Town, ZZ 00000\nSanggunian: SYNTHETIC-ONLY-005\n\nInisyu: 2026-10-21\n\nTakdang araw: 2026-11-04\nHalagang dapat bayaran: $82.35\n\nAno ang gagawin: Bayaran ang gawa-gawang singil sa kuryente bago ang takdang\naraw.\n\nAng inimbentong dokumentong ito ay para lamang sa pagsubok ng software.\n\nWalang tunay na ahensya, tao, kaso, account, o bayad na\nnasasangkot.\n\nMakipag-ugnayan: panandaliang tala lamang; huwag magpadala ng pera o personal na\n\nimpormasyon.",
+        "checks": {
+          "numbers": true,
+          "dates": true,
+          "amounts": true,
+          "glossary": true,
+          "disclaimer": false,
+          "no_numeric_dates": false
+        },
+        "back_translation": {
+          "passed": true,
+          "text_similarity": 0.8978
+        },
+        "english_back_translation": "HYPOTHETICAL MADE-UP EXAMPLE - THIS IS NOT A REAL NOTICE\n\nELECTRICITY BILL\n\nNotice Decoder Demonstration Office\nRecipient: Invented Resident E\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-005\n\nIssued: 2026-10-21\n\nDue date: 2026-11-04\nAmount due: $82.35\n\nWhat to do: Pay the made-up electricity bill before the due date.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is involved.\n\nContact: temporary note only; do not send money or personal information.",
+        "usage": {
+          "calls": 2,
+          "input_tokens": 552,
+          "output_tokens": 411,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 2
+        }
+      }
+    },
+    {
+      "sample": "utility_02",
+      "language": "es",
+      "source_text": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nWATER UTILITY BILL\n\nFictional Notice Decoder Demonstration Office\nRecipient: Invented Resident F\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-006\n\nIssued: 2026-10-21\n\nDeadline: 2026-11-06\nAmount due: $37.20\n\nWhat to do: Pay the fictional water bill by the due date.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is\ninvolved.\n\nContact: placeholder only; do not send money or personal\ndata.",
+      "extraction": {
+        "doc_type": "utility_bill",
+        "today": "2026-10-22",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Notice Decoder Demonstration Office",
+            "source_snippet": "Fictional Notice Decoder Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 58,
+            "source_end": 103,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "2026-11-06",
+            "source_snippet": "Deadline: 2026-11-06",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 225,
+            "source_end": 245,
+            "normalized_value": "2026-11-06",
+            "days_remaining": 15,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": "$37.20",
+            "source_snippet": "Amount due: $37.20",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 246,
+            "source_end": 264,
+            "normalized_value": "37.20",
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Pay the fictional water bill by the due date.",
+            "source_snippet": "What to do: Pay the fictional water bill by the due date.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 266,
+            "source_end": 323,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "placeholder only; do not send money or personal data.",
+            "source_snippet": "Contact: placeholder only; do not send money or personal data.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 443,
+            "source_end": 505,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field."
+        ],
+        "usage": {
+          "input_tokens": 727,
+          "output_tokens": 181,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      },
+      "pipeline": {
+        "english": {
+          "summary": "You selected: Utility bill.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Pay the fictional water bill by the due date."
+          ],
+          "deadline_note": "Due date: November 6, 2026.",
+          "amount_note": "Amount due: $37.20.",
+          "confidence_notes": [
+            "Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "November 6, 2026",
+            "amount_due": "$37.20",
+            "required_action": "Pay the fictional water bill by the due date.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "This is an explanatory tool, not legal advice."
+        },
+        "localized": {
+          "summary": "Seleccionaste: Factura de servicios públicos.",
+          "what_happened": "Los hechos verificados se muestran a continuación.",
+          "what_to_do": [
+            "Paga la factura ficticia de agua antes de la fecha de vencimiento."
+          ],
+          "deadline_note": "Fecha de vencimiento: 6 de noviembre de 2026.",
+          "amount_note": "Monto adeudado: $37.20.",
+          "confidence_notes": [
+            "Verificado significa que coincide con el texto que confirmó. Revise el aviso original; esto no garantiza que se eligió el dato correcto."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "6 de noviembre de 2026",
+            "amount_due": "$37.20",
+            "required_action": "Paga la factura ficticia de agua antes de la fecha de vencimiento.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "Esta herramienta ofrece explicaciones, no asesoramiento legal."
+        },
+        "requested_language": "es",
+        "display_language": "es",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "verified",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+          "deadline": "Deadline: 2026-11-06",
+          "amount_due": "Amount due: $37.20",
+          "required_action": "What to do: Pay the fictional water bill by the due date.",
+          "contact": "Contact: placeholder only; do not send money or personal data."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": false,
+          "translation_confidence": "medium",
+          "failed_checks": [],
+          "attempts": 1,
+          "back_translation": {
+            "passed": true,
+            "checks": [],
+            "minimum_text_similarity": 0.9362
+          },
+          "checks": {
+            "numbers": true,
+            "dates": true,
+            "glossary": true,
+            "disclaimer": true,
+            "warnings": true
+          }
+        },
+        "notice": "Las traducciones propuestas no han sido revisadas por hablantes nativos.",
+        "target_disclaimer": "Esta herramienta ofrece explicaciones, no asesoramiento legal.",
+        "usage": {
+          "calls": 3,
+          "input_tokens": 1966,
+          "output_tokens": 554,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 3
+        }
+      },
+      "used_glossary": [
+        "due date"
+      ],
+      "baseline": {
+        "translation": "MUESTRA SINTÉTICA - NO ES UN AVISO REAL\n\nFACTURA DEL SERVICIO DE AGUA\n\nOficina de demostración del decodificador de avisos ficticios\nDestinatario: Residente inventado F\n\n100 Example Lane, Demo Town, ZZ 00000\nReferencia: SYNTHETIC-ONLY-006\n\nEmitido: 2026-10-21\n\nFecha límite: 2026-11-06\nImporte adeudado: $37.20\n\nQué hacer: Pague la factura ficticia de agua antes de la fecha límite.\n\nEste documento inventado es solo para pruebas de software.\n\nNo interviene ninguna agencia, persona, caso, cuenta ni pago reales.\n\nContacto: solo como marcador de posición; no envíe dinero ni datos personales.",
+        "checks": {
+          "numbers": true,
+          "dates": true,
+          "amounts": true,
+          "glossary": false,
+          "disclaimer": false,
+          "no_numeric_dates": false
+        },
+        "back_translation": {
+          "passed": true,
+          "text_similarity": 0.8786
+        },
+        "english_back_translation": "SYNTHETIC SAMPLE - THIS IS NOT A REAL NOTICE\n\nWATER SERVICE INVOICE\n\nDemonstration office for the decoder of fictitious notices\nAddressee: Invented Resident F\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-006\n\nIssued: 2026-10-21\n\nDue date: 2026-11-06\nAmount due: $37.20\n\nWhat to do: Pay the fictitious water bill before the due date.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is involved.\n\nContact: placeholder only; do not send money or personal data.",
+        "usage": {
+          "calls": 2,
+          "input_tokens": 492,
+          "output_tokens": 359,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 2
+        }
+      }
+    },
+    {
+      "sample": "utility_02",
+      "language": "tl",
+      "source_text": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nWATER UTILITY BILL\n\nFictional Notice Decoder Demonstration Office\nRecipient: Invented Resident F\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-006\n\nIssued: 2026-10-21\n\nDeadline: 2026-11-06\nAmount due: $37.20\n\nWhat to do: Pay the fictional water bill by the due date.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is\ninvolved.\n\nContact: placeholder only; do not send money or personal\ndata.",
+      "extraction": {
+        "doc_type": "utility_bill",
+        "today": "2026-10-22",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Notice Decoder Demonstration Office",
+            "source_snippet": "Fictional Notice Decoder Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 58,
+            "source_end": 103,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "2026-11-06",
+            "source_snippet": "Deadline: 2026-11-06",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 225,
+            "source_end": 245,
+            "normalized_value": "2026-11-06",
+            "days_remaining": 15,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": "$37.20",
+            "source_snippet": "Amount due: $37.20",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 246,
+            "source_end": 264,
+            "normalized_value": "37.20",
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Pay the fictional water bill by the due date.",
+            "source_snippet": "What to do: Pay the fictional water bill by the due date.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 266,
+            "source_end": 323,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "placeholder only; do not send money or personal data.",
+            "source_snippet": "Contact: placeholder only; do not send money or personal data.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 443,
+            "source_end": 505,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field."
+        ],
+        "usage": {
+          "input_tokens": 727,
+          "output_tokens": 181,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      },
+      "pipeline": {
+        "english": {
+          "summary": "You selected: Utility bill.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Pay the fictional water bill by the due date."
+          ],
+          "deadline_note": "Due date: November 6, 2026.",
+          "amount_note": "Amount due: $37.20.",
+          "confidence_notes": [
+            "Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "November 6, 2026",
+            "amount_due": "$37.20",
+            "required_action": "Pay the fictional water bill by the due date.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "This is an explanatory tool, not legal advice."
+        },
+        "localized": {
+          "summary": "Napili mo: Utility bill.",
+          "what_happened": "Ang mga nasuring katotohanan ay ipinapakita sa ibaba.",
+          "what_to_do": [
+            "Bayaran ang kathang-isip na bayarin sa tubig bago ang takdang petsa."
+          ],
+          "deadline_note": "Takdang petsa: Nobyembre 6, 2026.",
+          "amount_note": "Halagang dapat bayaran: $37.20.",
+          "confidence_notes": [
+            "Ang nasuri ay tumutugma sa tekstong kinumpirma mo. Suriin ang orihinal na abiso; hindi nito ginagarantiya na tamang impormasyon ang napili."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+            "deadline": "Nobyembre 6, 2026",
+            "amount_due": "$37.20",
+            "required_action": "Bayaran ang kathang-isip na bayarin sa tubig bago ang takdang petsa.",
+            "contact": "placeholder only; do not send money or personal data."
+          },
+          "disclaimer": "Ang kasangkapang ito ay nagbibigay ng paliwanag, hindi legal na payo."
+        },
+        "requested_language": "tl",
+        "display_language": "tl",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "verified",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Notice Decoder Demonstration Office",
+          "deadline": "Deadline: 2026-11-06",
+          "amount_due": "Amount due: $37.20",
+          "required_action": "What to do: Pay the fictional water bill by the due date.",
+          "contact": "Contact: placeholder only; do not send money or personal data."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": false,
+          "translation_confidence": "medium",
+          "failed_checks": [],
+          "attempts": 1,
+          "back_translation": {
+            "passed": true,
+            "checks": [],
+            "minimum_text_similarity": 0.8511
+          },
+          "checks": {
+            "numbers": true,
+            "dates": true,
+            "glossary": true,
+            "disclaimer": true,
+            "warnings": true
+          }
+        },
+        "notice": "Hindi pa nasusuri ng mga katutubong tagapagsalita ang mga mungkahing salin.",
+        "target_disclaimer": "Ang kasangkapang ito ay nagbibigay ng paliwanag, hindi legal na payo.",
+        "usage": {
+          "calls": 3,
+          "input_tokens": 2021,
+          "output_tokens": 583,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 3
+        }
+      },
+      "used_glossary": [
+        "due date"
+      ],
+      "baseline": {
+        "translation": "HALIMBAWA LANG - HINDI TUNAY NA PAUNAWA\n\nBILL NG TUBIG NA SERBISYO\n\nTanggapan para sa Pagsasalin ng Guni-guning Paunawa\nTinatanggap: Inimbentong Residente F\n\n100 Example Lane, Demo Town, ZZ 00000\nSanggunian: SYNTHETIC-ONLY-006\n\nInisyu: 2026-10-21\n\nTakdang araw: 2026-11-06\nHalagang dapat bayaran: $37.20\n\nAno ang gagawin: Bayaran ang kathang-isip na bayarin sa tubig bago ang takdang petsa.\n\nAng imbentong dokumentong ito ay para lamang sa pagsubok ng software.\n\nWalang tunay na ahensiya, tao, kaso, account, o bayad na\nkasangkot.\n\nMakipag-ugnayan: pananda lamang; huwag magpadala ng pera o personal na\nimpormasyon.",
+        "checks": {
+          "numbers": true,
+          "dates": true,
+          "amounts": true,
+          "glossary": true,
+          "disclaimer": false,
+          "no_numeric_dates": false
+        },
+        "back_translation": {
+          "passed": true,
+          "text_similarity": 0.8738
+        },
+        "english_back_translation": "SAMPLE ONLY - NOT A REAL NOTICE\n\nWATER SERVICE BILL\n\nOffice for Translation of a Fictional Notice\nRecipient: Invented Resident F\n\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-006\n\nIssued: 2026-10-21\n\nDue date: 2026-11-06\nAmount due: $37.20\n\nWhat to do: Pay the fictional water bill before the due date.\n\nThis invented document is for software testing only.\n\nNo real agency, person, case, account, or payment is involved.\n\nContact: for label purposes only; do not send money or personal information.",
+        "usage": {
+          "calls": 2,
+          "input_tokens": 535,
+          "output_tokens": 392,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 2
+        }
+      }
+    }
+  ],
+  "metric_version": "m3-numeric-date-separation-v2"
+}

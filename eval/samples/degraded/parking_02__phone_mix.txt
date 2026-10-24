@@ -1,0 +1,21 @@
+SYNTHETIC SAMPLE - NOT A REAL NOTICE
+
+PARKING VIOLATION NOTICE
+
+Fictional Notice Decoder Demonstration Office
+Recipient: Invented Resident B
+100 Example Lane, Demo Town, ZZ 00000
+Reference: SYNTHETIC-ONLY-002
+Issued: 2026-10-21
+
+Deadline: 2026-11-02
+Amount due: $65.00
+
+What to do: Request a review of the fictional citation by
+the deadline.
+
+This invented document is for software testing only.
+No real agency, person, case, account, or payment is
+involved.
+Contact: placeholder only; do not send money or personal
+data.

@@ -1,0 +1,79 @@
+[
+  {
+    "english": "summons",
+    "translation": "citación judicial",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "citation",
+    "translation": "citación",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "violation",
+    "translation": "infracción",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "hearing",
+    "translation": "audiencia",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "late fee",
+    "translation": "cargo por demora",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "balance due",
+    "translation": "saldo pendiente",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "municipal court",
+    "translation": "tribunal municipal",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "appeal",
+    "translation": "apelación",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "plea",
+    "translation": "declaración ante el tribunal",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "penalty",
+    "translation": "sanción",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  },
+  {
+    "english": "due date",
+    "translation": "fecha de vencimiento",
+    "notes": "PROPOSED: requires native-speaker and context review.",
+    "reviewed": false,
+    "reviewed_by": null
+  }
+]

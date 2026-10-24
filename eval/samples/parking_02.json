@@ -1,0 +1,12 @@
+{
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "deadline": "2026-11-02",
+  "amount": "65.00",
+  "action": "Request a review of the fictional citation by the deadline.",
+  "image_effects": [
+    "rotation",
+    "uneven_lighting",
+    "mild_blur"
+  ]
+}

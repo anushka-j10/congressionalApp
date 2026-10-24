@@ -1,0 +1,51 @@
+{
+  "version": "m4-pre-fix-v1",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "temperature": 0,
+  "reasoning_effort": "none",
+  "today": "2026-10-24",
+  "reader": "preprocessed",
+  "repeats": 3,
+  "languages": [
+    "es",
+    "tl"
+  ],
+  "variants": [
+    "clean",
+    "degraded"
+  ],
+  "workers": 2,
+  "modes": {
+    "B1": {
+      "validators": false,
+      "abstain": false
+    },
+    "B2": {
+      "validators": false,
+      "abstain": false
+    },
+    "full": {
+      "validators": true,
+      "abstain": true
+    }
+  },
+  "cost": {
+    "status": "standard_rate_estimate",
+    "usd_per_million_input": 0.75,
+    "usd_per_million_cached_input": 0.075,
+    "usd_per_million_output": 4.5,
+    "model_family": "gpt-5.4-mini",
+    "source": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+    "checked_date": "2026-10-24",
+    "limitations": "Reported token usage only; CPU/network/hosting and unreported failed calls excluded; not a billing invoice."
+  },
+  "protocol": {
+    "text_confirmation": "harness confirms OCR unchanged; no human correction simulated",
+    "document_type": "explicit fixture type selection, automatic classifier recorded separately",
+    "multi_page": "first page only; additional pages not merged by existing app",
+    "B1": "plain explain/translate on the same OCR text; all field outputs treated as facts",
+    "B2": "same raw extraction proposal as full, validation and abstention bypassed in eval only",
+    "heldout_repeats": 1,
+    "heldout_required_count": 10
+  }
+}

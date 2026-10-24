@@ -1,0 +1,88 @@
+{
+  "parameters": {
+    "rotation_degrees": 3.5,
+    "perspective_inverse_coefficients": [
+      1.0,
+      0.03,
+      -30,
+      -0.025,
+      1.01,
+      25,
+      6e-05,
+      -3.5e-05
+    ],
+    "blur_radius": 1.3,
+    "shadow_min": 105,
+    "shadow_max": 245,
+    "noise_max_delta": 16,
+    "jpeg_quality": 25,
+    "default_jpeg_quality": 90,
+    "phone_mix": {
+      "rotation_degrees": 2.2,
+      "blur_radius": 0.85,
+      "jpeg_quality": 30,
+      "all_six_effects": true
+    },
+    "seed": 212026
+  },
+  "variants": [
+    "rotation",
+    "perspective",
+    "blur",
+    "shadow",
+    "noise",
+    "compression",
+    "phone_mix"
+  ],
+  "sources": [
+    {
+      "sample": "parking_01",
+      "doc_type": "parking_ticket",
+      "ground_truth_sha256": "fc97536c460abc3e37b75f7af0ad774366571aefe61a7108e6614d779cf06a6b",
+      "clean_image_sha256": "4f6166d126feb0a500968954d51e1ec4a9583cae72e3ed427aeb6310455de77a"
+    },
+    {
+      "sample": "parking_02",
+      "doc_type": "parking_ticket",
+      "ground_truth_sha256": "ad50c35840093ecf319821003bfb09a2cd779a39728e49fa6b4a360b0765d534",
+      "clean_image_sha256": "6d55ca07856347182ecbc6cde223907ce9a2502d2ba417febfbef749f50b9aa7"
+    },
+    {
+      "sample": "court_01",
+      "doc_type": "court_notice",
+      "ground_truth_sha256": "a7c6c85b189ea150bf1d2bf8eee9ff4153d88c9d80837003fdc36d34fdb1838e",
+      "clean_image_sha256": "863bc140d4d61eeeb477033c066123ebe354d870b90c9abad8c515d67f6b1fae"
+    },
+    {
+      "sample": "court_02",
+      "doc_type": "court_notice",
+      "ground_truth_sha256": "597e21e3ff5eae5b6ea7d29c2d4d0c245bf0cbe870fc85ce7c3b214454e241a7",
+      "clean_image_sha256": "d4b762552f55bdc3b68938adcb0b9f21355b0a49498995d28634df62473c9eda"
+    },
+    {
+      "sample": "utility_01",
+      "doc_type": "utility_bill",
+      "ground_truth_sha256": "f6b4470d517efeabffe77fb4515c54ddebe150d84c2cf8f69ae6b4d74298217c",
+      "clean_image_sha256": "3b9099ddfd931a631f3b6064f8e3a3004d6965cbd9256ccfce71a20d1b654742"
+    },
+    {
+      "sample": "utility_02",
+      "doc_type": "utility_bill",
+      "ground_truth_sha256": "3dafa6249f943760bc80347b6b4f84f42036bf31803184a013bae1c0b3ce17d7",
+      "clean_image_sha256": "25a347e41b968b22ef8ff3224fb7c29e05b88fdcda7dfad474644f4e94673625"
+    },
+    {
+      "sample": "school_01",
+      "doc_type": "school_letter",
+      "ground_truth_sha256": "cb8b292252323709a463dc752e4418717fba0cc2a08bda7e2b6eab8ac81dedd3",
+      "clean_image_sha256": "d0631acf616e3946f3be72fd651bd49239c78a0ee76a94cc9f1adb33471d9b86"
+    },
+    {
+      "sample": "school_02",
+      "doc_type": "school_letter",
+      "ground_truth_sha256": "628b2760a8fe260ec3460e479f246ac804e67298f413b376e1971157efde74ae",
+      "clean_image_sha256": "c76da6b2919a6304dab03fe79f970b8d29ecf0edfeb9e3913409e82adc15acbd"
+    }
+  ],
+  "font_sha256": "525979822591a3447cfc49d943d6f7683508e25543407871c0ed8fed05fd2bd9"
+}

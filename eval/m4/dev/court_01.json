@@ -1,0 +1,40 @@
+{
+  "id": "court_01",
+  "synthetic": true,
+  "doc_type": "court_notice",
+  "expected": {
+    "deadline": "2026-11-03",
+    "amount_due": null,
+    "required_action": "Attend the fictional hearing on the scheduled date.",
+    "contact": "placeholder only; do not send money or personal data."
+  },
+  "text": "SYNTHETIC SAMPLE - NOT A REAL NOTICE\n\nMUNICIPAL COURT NOTICE\n\nFictional Notice Decoder Demonstration Office\nRecipient: Invented Resident C\n100 Example Lane, Demo Town, ZZ 00000\nReference: SYNTHETIC-ONLY-003\nIssued: 2026-10-21\n\nDeadline: 2026-11-03\nAmount due: Not specified\n\nWhat to do: Attend the fictional hearing on the scheduled\ndate.\n\nThis invented document is for software testing only.\nNo real agency, person, case, account, or payment is\ninvolved.\nContact: placeholder only; do not send money or personal\ndata.",
+  "edge_cases": [
+    "original_m1_fixture"
+  ],
+  "expected_state": {
+    "deadline": "present",
+    "amount_due": "missing",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "variants": [
+    {
+      "name": "clean",
+      "image": "court_01__clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "court_01__degraded.jpg"
+    }
+  ],
+  "additional_page_images": [],
+  "degradation": [
+    "rotation_1.3deg",
+    "affine_skew",
+    "blur_0.45",
+    "shadow_gradient",
+    "seeded_speckles",
+    "jpeg_quality_48"
+  ]
+}

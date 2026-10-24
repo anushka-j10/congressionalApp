@@ -1,0 +1,441 @@
+A1 file-by-file explanations
+
+146 A1-created files are listed; original code changes are described in AI_USAGE.md.
+
+DESIGN_NOTES.md
+These editable notes explain the measurement definitions and the test corpus choices. They document the failed baseline threshold and keep extraction design behind the review gate.
+
+eval/generate_reader_samples.py
+This script creates clean copies and seven fixed degraded versions of every invented source page. It writes exact text pairs and a parameter manifest without changing the original M1 images or JSON.
+
+eval/reader-corpus.json
+This manifest records fixed image-effect parameters, seeds, font checksum, and clean source hashes. It identifies the exact reproducible corpus for later reader comparisons.
+
+eval/reader_bakeoff.py
+This script scores actual reader output using exact character edit distance and digit-sensitive key-token recall. It automatically discovers handwriting pairs and records unavailable readers as unmeasured.
+
+eval/reports-a1-table.txt
+This file contains the real console table from the baseline run. It is suitable for a screenshot and distinguishes tested rows from N/A rows.
+
+eval/reports/A1_FILE_GUIDE.txt
+This file inventories each A1-created source, data, and report file with two-sentence explanations. It complements the shorter source-file guide in the README.
+
+eval/reports/reader-baseline-analysis.md
+This report explains which degradation conditions failed and lists exact missed tokens. It separates next comparison options from evidence-backed reader selection.
+
+eval/reports/reader-baseline.json
+This report holds measured per-page metrics, target inventories, missed values, and production fingerprints. It records vision as not run and handwriting as absent instead of inventing scores.
+
+eval/samples/clean/court_01.png
+This invented court_01 notice image uses the original clean layout. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/clean/court_01.txt
+This file transcribes the exact visible text of the court_01 sample under the original clean layout. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/clean/court_02.png
+This invented court_02 notice image uses the original clean layout. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/clean/court_02.txt
+This file transcribes the exact visible text of the court_02 sample under the original clean layout. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/clean/parking_01.png
+This invented parking_01 notice image uses the original clean layout. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/clean/parking_01.txt
+This file transcribes the exact visible text of the parking_01 sample under the original clean layout. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/clean/parking_02.png
+This invented parking_02 notice image uses the original clean layout. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/clean/parking_02.txt
+This file transcribes the exact visible text of the parking_02 sample under the original clean layout. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/clean/school_01.png
+This invented school_01 notice image uses the original clean layout. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/clean/school_01.txt
+This file transcribes the exact visible text of the school_01 sample under the original clean layout. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/clean/school_02.png
+This invented school_02 notice image uses the original clean layout. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/clean/school_02.txt
+This file transcribes the exact visible text of the school_02 sample under the original clean layout. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/clean/utility_01.png
+This invented utility_01 notice image uses the original clean layout. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/clean/utility_01.txt
+This file transcribes the exact visible text of the utility_01 sample under the original clean layout. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/clean/utility_02.png
+This invented utility_02 notice image uses the original clean layout. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/clean/utility_02.txt
+This file transcribes the exact visible text of the utility_02 sample under the original clean layout. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/court_01.txt
+This is the exact visible-text ground truth for the preserved M1 court_01 image. The baseline uses it to score that legacy image separately from the clean corpus.
+
+eval/samples/court_02.txt
+This is the exact visible-text ground truth for the preserved M1 court_02 image. The baseline uses it to score that legacy image separately from the clean corpus.
+
+eval/samples/degraded/court_01__blur.jpg
+This invented court_01 notice image uses the fixed blur condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/court_01__blur.txt
+This file transcribes the exact visible text of the court_01 sample under the fixed blur condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/court_01__compression.jpg
+This invented court_01 notice image uses the fixed compression condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/court_01__compression.txt
+This file transcribes the exact visible text of the court_01 sample under the fixed compression condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/court_01__noise.jpg
+This invented court_01 notice image uses the fixed noise condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/court_01__noise.txt
+This file transcribes the exact visible text of the court_01 sample under the fixed noise condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/court_01__perspective.jpg
+This invented court_01 notice image uses the fixed perspective condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/court_01__perspective.txt
+This file transcribes the exact visible text of the court_01 sample under the fixed perspective condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/court_01__phone_mix.jpg
+This invented court_01 notice image uses the fixed phone mix condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/court_01__phone_mix.txt
+This file transcribes the exact visible text of the court_01 sample under the fixed phone mix condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/court_01__rotation.jpg
+This invented court_01 notice image uses the fixed rotation condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/court_01__rotation.txt
+This file transcribes the exact visible text of the court_01 sample under the fixed rotation condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/court_01__shadow.jpg
+This invented court_01 notice image uses the fixed shadow condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/court_01__shadow.txt
+This file transcribes the exact visible text of the court_01 sample under the fixed shadow condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/court_02__blur.jpg
+This invented court_02 notice image uses the fixed blur condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/court_02__blur.txt
+This file transcribes the exact visible text of the court_02 sample under the fixed blur condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/court_02__compression.jpg
+This invented court_02 notice image uses the fixed compression condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/court_02__compression.txt
+This file transcribes the exact visible text of the court_02 sample under the fixed compression condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/court_02__noise.jpg
+This invented court_02 notice image uses the fixed noise condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/court_02__noise.txt
+This file transcribes the exact visible text of the court_02 sample under the fixed noise condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/court_02__perspective.jpg
+This invented court_02 notice image uses the fixed perspective condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/court_02__perspective.txt
+This file transcribes the exact visible text of the court_02 sample under the fixed perspective condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/court_02__phone_mix.jpg
+This invented court_02 notice image uses the fixed phone mix condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/court_02__phone_mix.txt
+This file transcribes the exact visible text of the court_02 sample under the fixed phone mix condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/court_02__rotation.jpg
+This invented court_02 notice image uses the fixed rotation condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/court_02__rotation.txt
+This file transcribes the exact visible text of the court_02 sample under the fixed rotation condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/court_02__shadow.jpg
+This invented court_02 notice image uses the fixed shadow condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/court_02__shadow.txt
+This file transcribes the exact visible text of the court_02 sample under the fixed shadow condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/parking_01__blur.jpg
+This invented parking_01 notice image uses the fixed blur condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/parking_01__blur.txt
+This file transcribes the exact visible text of the parking_01 sample under the fixed blur condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/parking_01__compression.jpg
+This invented parking_01 notice image uses the fixed compression condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/parking_01__compression.txt
+This file transcribes the exact visible text of the parking_01 sample under the fixed compression condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/parking_01__noise.jpg
+This invented parking_01 notice image uses the fixed noise condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/parking_01__noise.txt
+This file transcribes the exact visible text of the parking_01 sample under the fixed noise condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/parking_01__perspective.jpg
+This invented parking_01 notice image uses the fixed perspective condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/parking_01__perspective.txt
+This file transcribes the exact visible text of the parking_01 sample under the fixed perspective condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/parking_01__phone_mix.jpg
+This invented parking_01 notice image uses the fixed phone mix condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/parking_01__phone_mix.txt
+This file transcribes the exact visible text of the parking_01 sample under the fixed phone mix condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/parking_01__rotation.jpg
+This invented parking_01 notice image uses the fixed rotation condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/parking_01__rotation.txt
+This file transcribes the exact visible text of the parking_01 sample under the fixed rotation condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/parking_01__shadow.jpg
+This invented parking_01 notice image uses the fixed shadow condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/parking_01__shadow.txt
+This file transcribes the exact visible text of the parking_01 sample under the fixed shadow condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/parking_02__blur.jpg
+This invented parking_02 notice image uses the fixed blur condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/parking_02__blur.txt
+This file transcribes the exact visible text of the parking_02 sample under the fixed blur condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/parking_02__compression.jpg
+This invented parking_02 notice image uses the fixed compression condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/parking_02__compression.txt
+This file transcribes the exact visible text of the parking_02 sample under the fixed compression condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/parking_02__noise.jpg
+This invented parking_02 notice image uses the fixed noise condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/parking_02__noise.txt
+This file transcribes the exact visible text of the parking_02 sample under the fixed noise condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/parking_02__perspective.jpg
+This invented parking_02 notice image uses the fixed perspective condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/parking_02__perspective.txt
+This file transcribes the exact visible text of the parking_02 sample under the fixed perspective condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/parking_02__phone_mix.jpg
+This invented parking_02 notice image uses the fixed phone mix condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/parking_02__phone_mix.txt
+This file transcribes the exact visible text of the parking_02 sample under the fixed phone mix condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/parking_02__rotation.jpg
+This invented parking_02 notice image uses the fixed rotation condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/parking_02__rotation.txt
+This file transcribes the exact visible text of the parking_02 sample under the fixed rotation condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/parking_02__shadow.jpg
+This invented parking_02 notice image uses the fixed shadow condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/parking_02__shadow.txt
+This file transcribes the exact visible text of the parking_02 sample under the fixed shadow condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/school_01__blur.jpg
+This invented school_01 notice image uses the fixed blur condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/school_01__blur.txt
+This file transcribes the exact visible text of the school_01 sample under the fixed blur condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/school_01__compression.jpg
+This invented school_01 notice image uses the fixed compression condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/school_01__compression.txt
+This file transcribes the exact visible text of the school_01 sample under the fixed compression condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/school_01__noise.jpg
+This invented school_01 notice image uses the fixed noise condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/school_01__noise.txt
+This file transcribes the exact visible text of the school_01 sample under the fixed noise condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/school_01__perspective.jpg
+This invented school_01 notice image uses the fixed perspective condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/school_01__perspective.txt
+This file transcribes the exact visible text of the school_01 sample under the fixed perspective condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/school_01__phone_mix.jpg
+This invented school_01 notice image uses the fixed phone mix condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/school_01__phone_mix.txt
+This file transcribes the exact visible text of the school_01 sample under the fixed phone mix condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/school_01__rotation.jpg
+This invented school_01 notice image uses the fixed rotation condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/school_01__rotation.txt
+This file transcribes the exact visible text of the school_01 sample under the fixed rotation condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/school_01__shadow.jpg
+This invented school_01 notice image uses the fixed shadow condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/school_01__shadow.txt
+This file transcribes the exact visible text of the school_01 sample under the fixed shadow condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/school_02__blur.jpg
+This invented school_02 notice image uses the fixed blur condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/school_02__blur.txt
+This file transcribes the exact visible text of the school_02 sample under the fixed blur condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/school_02__compression.jpg
+This invented school_02 notice image uses the fixed compression condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/school_02__compression.txt
+This file transcribes the exact visible text of the school_02 sample under the fixed compression condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/school_02__noise.jpg
+This invented school_02 notice image uses the fixed noise condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/school_02__noise.txt
+This file transcribes the exact visible text of the school_02 sample under the fixed noise condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/school_02__perspective.jpg
+This invented school_02 notice image uses the fixed perspective condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/school_02__perspective.txt
+This file transcribes the exact visible text of the school_02 sample under the fixed perspective condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/school_02__phone_mix.jpg
+This invented school_02 notice image uses the fixed phone mix condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/school_02__phone_mix.txt
+This file transcribes the exact visible text of the school_02 sample under the fixed phone mix condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/school_02__rotation.jpg
+This invented school_02 notice image uses the fixed rotation condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/school_02__rotation.txt
+This file transcribes the exact visible text of the school_02 sample under the fixed rotation condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/school_02__shadow.jpg
+This invented school_02 notice image uses the fixed shadow condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/school_02__shadow.txt
+This file transcribes the exact visible text of the school_02 sample under the fixed shadow condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/utility_01__blur.jpg
+This invented utility_01 notice image uses the fixed blur condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/utility_01__blur.txt
+This file transcribes the exact visible text of the utility_01 sample under the fixed blur condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/utility_01__compression.jpg
+This invented utility_01 notice image uses the fixed compression condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/utility_01__compression.txt
+This file transcribes the exact visible text of the utility_01 sample under the fixed compression condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/utility_01__noise.jpg
+This invented utility_01 notice image uses the fixed noise condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/utility_01__noise.txt
+This file transcribes the exact visible text of the utility_01 sample under the fixed noise condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/utility_01__perspective.jpg
+This invented utility_01 notice image uses the fixed perspective condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/utility_01__perspective.txt
+This file transcribes the exact visible text of the utility_01 sample under the fixed perspective condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/utility_01__phone_mix.jpg
+This invented utility_01 notice image uses the fixed phone mix condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/utility_01__phone_mix.txt
+This file transcribes the exact visible text of the utility_01 sample under the fixed phone mix condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/utility_01__rotation.jpg
+This invented utility_01 notice image uses the fixed rotation condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/utility_01__rotation.txt
+This file transcribes the exact visible text of the utility_01 sample under the fixed rotation condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/utility_01__shadow.jpg
+This invented utility_01 notice image uses the fixed shadow condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/utility_01__shadow.txt
+This file transcribes the exact visible text of the utility_01 sample under the fixed shadow condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/utility_02__blur.jpg
+This invented utility_02 notice image uses the fixed blur condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/utility_02__blur.txt
+This file transcribes the exact visible text of the utility_02 sample under the fixed blur condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/utility_02__compression.jpg
+This invented utility_02 notice image uses the fixed compression condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/utility_02__compression.txt
+This file transcribes the exact visible text of the utility_02 sample under the fixed compression condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/utility_02__noise.jpg
+This invented utility_02 notice image uses the fixed noise condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/utility_02__noise.txt
+This file transcribes the exact visible text of the utility_02 sample under the fixed noise condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/utility_02__perspective.jpg
+This invented utility_02 notice image uses the fixed perspective condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/utility_02__perspective.txt
+This file transcribes the exact visible text of the utility_02 sample under the fixed perspective condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/utility_02__phone_mix.jpg
+This invented utility_02 notice image uses the fixed phone mix condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/utility_02__phone_mix.txt
+This file transcribes the exact visible text of the utility_02 sample under the fixed phone mix condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/utility_02__rotation.jpg
+This invented utility_02 notice image uses the fixed rotation condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/utility_02__rotation.txt
+This file transcribes the exact visible text of the utility_02 sample under the fixed rotation condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/degraded/utility_02__shadow.jpg
+This invented utility_02 notice image uses the fixed shadow condition. It is scored against the paired text file and contains no real resident or agency information.
+
+eval/samples/degraded/utility_02__shadow.txt
+This file transcribes the exact visible text of the utility_02 sample under the fixed shadow condition. The truth remains unchanged by image degradation so lost or altered digits lower recall.
+
+eval/samples/handwriting/README.md
+This file explains how to pair the six invented handwriting photos with exact text files. It documents automatic discovery and explicitly states that missing handwriting evidence is unmeasured.
+
+eval/samples/parking_01.txt
+This is the exact visible-text ground truth for the preserved M1 parking_01 image. The baseline uses it to score that legacy image separately from the clean corpus.
+
+eval/samples/parking_02.txt
+This is the exact visible-text ground truth for the preserved M1 parking_02 image. The baseline uses it to score that legacy image separately from the clean corpus.
+
+eval/samples/school_01.txt
+This is the exact visible-text ground truth for the preserved M1 school_01 image. The baseline uses it to score that legacy image separately from the clean corpus.
+
+eval/samples/school_02.txt
+This is the exact visible-text ground truth for the preserved M1 school_02 image. The baseline uses it to score that legacy image separately from the clean corpus.
+
+eval/samples/utility_01.txt
+This is the exact visible-text ground truth for the preserved M1 utility_01 image. The baseline uses it to score that legacy image separately from the clean corpus.
+
+eval/samples/utility_02.txt
+This is the exact visible-text ground truth for the preserved M1 utility_02 image. The baseline uses it to score that legacy image separately from the clean corpus.
+
+tests/test_reader_bakeoff.py
+This file tests metric accounting, wrong-digit rejection, fixture pairing, and repeatable degradations. It also checks that the shared clean renderer preserves the original clean images.

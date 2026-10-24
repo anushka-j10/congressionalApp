@@ -1,0 +1,12 @@
+{
+  "synthetic": true,
+  "doc_type": "utility_bill",
+  "deadline": "2026-11-06",
+  "amount": "37.20",
+  "action": "Pay the fictional water bill by the due date.",
+  "image_effects": [
+    "rotation",
+    "uneven_lighting",
+    "mild_blur"
+  ]
+}

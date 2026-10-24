@@ -1,0 +1,13 @@
+{
+  "synthetic": true,
+  "samples": [
+    "attack_01.json",
+    "attack_02.json",
+    "attack_03.json",
+    "attack_04.json",
+    "attack_05.json",
+    "attack_06.json",
+    "attack_07.json",
+    "attack_08.json"
+  ]
+}

@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.env
+.env.*
+!.env.example
+.DS_Store
+*.pem
+*.key
+# Student-supplied heldout inputs stay private and untouched until the freeze gate.
+/eval/heldout/*
+!/eval/heldout/README.md
+!/eval/heldout/expected-fields.template.json

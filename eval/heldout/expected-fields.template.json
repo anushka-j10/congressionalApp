@@ -1,0 +1,14 @@
+{
+  "id": "REPLACE_WITH_SYNTHETIC_TEST_ID",
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "expected": {
+    "deadline": null,
+    "amount_due": null,
+    "required_action": null,
+    "contact": null
+  },
+  "variants": [{"name": "phone", "image": "REPLACE_WITH_IMAGE_FILENAME.jpg"}],
+  "additional_page_images": [],
+  "edge_cases": []
+}

@@ -1,0 +1,13 @@
+M2 SYNTHETIC READ -> EXTRACT INTEGRATION
+Reader: preprocessed; model: gpt-5.4-mini
+Pinned today: 2026-10-22; temperature: provider default (not sent).
+Known fixture type is supplied as an explicit user selection; classifier remains unknown.
+No human text corrections in this run; printed reader gate is reported separately.
+Correct? checks these original fixture expectations only; not a general field scorer.
+
+| Sample | Field | Expected | Extracted | Status | Correct? |
+| --- | --- | --- | --- | --- | --- |
+STOPPED: extraction HTTP 503: Extraction is unavailable because of an API rate or quota limit. Try again later.
+No field accuracy measured; remaining samples NOT RUN. Mock tests are not live extraction evidence.
+
+Provider-reported token totals (no price guessed): {"input_tokens": 0, "output_tokens": 0, "cached_input_tokens": 0}

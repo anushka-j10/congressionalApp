@@ -1,0 +1,47 @@
+{
+  "id": "utility_04",
+  "synthetic": true,
+  "doc_type": "utility_bill",
+  "expected": {
+    "deadline": "2026-11-11",
+    "amount_due": "24.60",
+    "required_action": "Return the fictional meter form.",
+    "contact": "Fictional help desk; use this notice only for testing."
+  },
+  "text": "SYNTHETIC ONLY - NOT A REAL NOTICE\nFICTIONAL WATER NOTICE - PAGE 1 OF 2\nInvented Civic Demonstration Office\nResident: Invented Person Q\nAddress: 400 Example Way, Demo Town, ZZ 00000\nReference: DEMO-ONLY-123\nIssued: October 20, 2026\n\nAmount due: $24.60\nDeadline: November 11, 2026\nWhat to do: Return the fictional meter form.\nContact information is on page 2.\n",
+  "edge_cases": [
+    "multi_page"
+  ],
+  "expected_state": {
+    "deadline": "present",
+    "amount_due": "present",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "variants": [
+    {
+      "name": "clean",
+      "image": "utility_04__clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "utility_04__degraded.jpg"
+    }
+  ],
+  "additional_page_images": [
+    "utility_04__page2.png"
+  ],
+  "degradation": [
+    "rotation_1.3deg",
+    "affine_skew",
+    "blur_0.45",
+    "shadow_gradient",
+    "seeded_speckles",
+    "jpeg_quality_48"
+  ],
+  "expected_aliases": {
+    "contact": [
+      "Fictional help desk"
+    ]
+  }
+}

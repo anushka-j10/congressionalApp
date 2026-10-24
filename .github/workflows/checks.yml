@@ -1,0 +1,21 @@
+name: Notice Decoder checks
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: sudo apt-get update && sudo apt-get install -y tesseract-ocr tesseract-ocr-eng fonts-dejavu-core
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pytest -q -rx
+      - run: node --test tests/*.mjs
+      - run: python -m eval.run --set dev --dry-run
+      - run: python -m eval.run --set adversarial --dry-run
+# No API key, paid call, or heldout sample is used in CI.
+# The known source-context regression is visibly xfailed until the student's fix choice.

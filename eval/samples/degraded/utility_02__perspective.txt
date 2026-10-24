@@ -1,0 +1,20 @@
+SYNTHETIC SAMPLE - NOT A REAL NOTICE
+
+WATER UTILITY BILL
+
+Fictional Notice Decoder Demonstration Office
+Recipient: Invented Resident F
+100 Example Lane, Demo Town, ZZ 00000
+Reference: SYNTHETIC-ONLY-006
+Issued: 2026-10-21
+
+Deadline: 2026-11-06
+Amount due: $37.20
+
+What to do: Pay the fictional water bill by the due date.
+
+This invented document is for software testing only.
+No real agency, person, case, account, or payment is
+involved.
+Contact: placeholder only; do not send money or personal
+data.

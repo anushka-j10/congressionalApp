@@ -1,0 +1,2893 @@
+{
+  "stage": "A1 baseline; no reader fixes; selection and Part B gate pending",
+  "python_version": "3.9.7",
+  "tesseract_version": "tesseract 5.5.3",
+  "production_fingerprints": {
+    "backend/readers.py": "c6a57101226476aec8d78e21552ce6e3dd6319ec3962eaca880594dc619e08b7",
+    "backend/images.py": "5757ca03294fcf84b1bc5cf960efcbd4714ba0bc56e6996fc883066f47ec626a",
+    "backend/main.py": "a2e211e3c96d8f59695513488cf5a60aaba77dec22ca1dd776fae2e85506e28b",
+    "frontend/image-prep.js": "fcc7e1218e7106238eb11867e327c02b3741ea5a4bb53c379b252590cd88fd22"
+  },
+  "corpus_manifest_sha256": "026caf55dbdf65ab94d5ccd8baf1212689c5bcbf9f17379dfd8e371383ee5d5d",
+  "settings": {
+    "normalization": "unchanged M1 EXIF transpose; <=1600px; JPEG quality 90",
+    "tesseract_language": "eng",
+    "tesseract_psm": 3,
+    "vision_model": null
+  },
+  "reports": [
+    {
+      "reader": "tesseract",
+      "conditions": [
+        {
+          "condition": "clean",
+          "samples": 8,
+          "cer": 0.0,
+          "key_token_recall": 1.0,
+          "matched": 28,
+          "key_tokens": 28,
+          "errors": 0
+        },
+        {
+          "condition": "degraded",
+          "samples": 56,
+          "cer": 0.2909071899069459,
+          "key_token_recall": 0.6428571428571429,
+          "matched": 126,
+          "key_tokens": 196,
+          "errors": 0
+        },
+        {
+          "condition": "handwriting",
+          "samples": 0,
+          "cer": null,
+          "key_token_recall": null,
+          "matched": 0,
+          "key_tokens": 0,
+          "errors": 0
+        },
+        {
+          "condition": "legacy_m1",
+          "samples": 8,
+          "cer": 0.00048792388387411563,
+          "key_token_recall": 1.0,
+          "matched": 28,
+          "key_tokens": 28,
+          "errors": 0
+        }
+      ],
+      "samples": [
+        {
+          "sample": "court_01",
+          "condition": "clean",
+          "variant": "clean",
+          "reader": "tesseract",
+          "seconds": 0.369,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 513,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-03"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-003"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "court_02",
+          "condition": "clean",
+          "variant": "clean",
+          "reader": "tesseract",
+          "seconds": 0.374,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 521,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-05"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-004"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "parking_01",
+          "condition": "clean",
+          "variant": "clean",
+          "reader": "tesseract",
+          "seconds": 0.359,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 496,
+          "cer": 0.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-29"
+            },
+            {
+              "kind": "amount",
+              "value": "$45.00"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-001"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "parking_02",
+          "condition": "clean",
+          "variant": "clean",
+          "reader": "tesseract",
+          "seconds": 0.363,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 516,
+          "cer": 0.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-02"
+            },
+            {
+              "kind": "amount",
+              "value": "$65.00"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-002"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "school_01",
+          "condition": "clean",
+          "variant": "clean",
+          "reader": "tesseract",
+          "seconds": 0.375,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 525,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-30"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-007"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "school_02",
+          "condition": "clean",
+          "variant": "clean",
+          "reader": "tesseract",
+          "seconds": 0.376,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 530,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-07"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-008"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "utility_01",
+          "condition": "clean",
+          "variant": "clean",
+          "reader": "tesseract",
+          "seconds": 0.359,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 502,
+          "cer": 0.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-04"
+            },
+            {
+              "kind": "amount",
+              "value": "$82.35"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-005"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "utility_02",
+          "condition": "clean",
+          "variant": "clean",
+          "reader": "tesseract",
+          "seconds": 0.355,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 496,
+          "cer": 0.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-06"
+            },
+            {
+              "kind": "amount",
+              "value": "$37.20"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-006"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "court_01__blur",
+          "condition": "degraded",
+          "variant": "blur",
+          "reader": "tesseract",
+          "seconds": 0.354,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 513,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-03"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-003"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "court_01__compression",
+          "condition": "degraded",
+          "variant": "compression",
+          "reader": "tesseract",
+          "seconds": 0.352,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 513,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-03"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-003"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "court_01__noise",
+          "condition": "degraded",
+          "variant": "noise",
+          "reader": "tesseract",
+          "seconds": 0.414,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 513,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-03"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-003"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "court_01__perspective",
+          "condition": "degraded",
+          "variant": "perspective",
+          "reader": "tesseract",
+          "seconds": 0.301,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 161,
+          "ground_truth_characters": 513,
+          "cer": 0.3138401559454191,
+          "key_tokens": 3,
+          "key_tokens_matched": 2,
+          "key_token_recall": 0.6666666666666666,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-03"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-003"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": [
+                "2026-11-03"
+              ]
+            }
+          ]
+        },
+        {
+          "sample": "court_01__phone_mix",
+          "condition": "degraded",
+          "variant": "phone_mix",
+          "reader": "tesseract",
+          "seconds": 0.169,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 451,
+          "ground_truth_characters": 513,
+          "cer": 0.8791423001949318,
+          "key_tokens": 3,
+          "key_tokens_matched": 0,
+          "key_token_recall": 0.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-03"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-003"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-03",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-003",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            }
+          ]
+        },
+        {
+          "sample": "court_01__rotation",
+          "condition": "degraded",
+          "variant": "rotation",
+          "reader": "tesseract",
+          "seconds": 0.351,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 4,
+          "ground_truth_characters": 513,
+          "cer": 0.007797270955165692,
+          "key_tokens": 3,
+          "key_tokens_matched": 2,
+          "key_token_recall": 0.6666666666666666,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-03"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-003"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-11-03",
+              "missing_occurrences": 1,
+              "observed_candidates": [
+                "2026-10-21"
+              ]
+            }
+          ]
+        },
+        {
+          "sample": "court_01__shadow",
+          "condition": "degraded",
+          "variant": "shadow",
+          "reader": "tesseract",
+          "seconds": 0.16,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 437,
+          "ground_truth_characters": 513,
+          "cer": 0.8518518518518519,
+          "key_tokens": 3,
+          "key_tokens_matched": 0,
+          "key_token_recall": 0.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-03"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-003"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-03",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-003",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            }
+          ]
+        },
+        {
+          "sample": "court_02__blur",
+          "condition": "degraded",
+          "variant": "blur",
+          "reader": "tesseract",
+          "seconds": 0.366,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 521,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-05"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-004"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "court_02__compression",
+          "condition": "degraded",
+          "variant": "compression",
+          "reader": "tesseract",
+          "seconds": 0.362,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 521,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-05"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-004"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "court_02__noise",
+          "condition": "degraded",
+          "variant": "noise",
+          "reader": "tesseract",
+          "seconds": 0.424,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 521,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-05"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-004"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "court_02__perspective",
+          "condition": "degraded",
+          "variant": "perspective",
+          "reader": "tesseract",
+          "seconds": 0.342,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 96,
+          "ground_truth_characters": 521,
+          "cer": 0.18426103646833014,
+          "key_tokens": 3,
+          "key_tokens_matched": 2,
+          "key_token_recall": 0.6666666666666666,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-05"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-004"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": [
+                "2026-11-05"
+              ]
+            }
+          ]
+        },
+        {
+          "sample": "court_02__phone_mix",
+          "condition": "degraded",
+          "variant": "phone_mix",
+          "reader": "tesseract",
+          "seconds": 0.148,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 504,
+          "ground_truth_characters": 521,
+          "cer": 0.9673704414587332,
+          "key_tokens": 3,
+          "key_tokens_matched": 0,
+          "key_token_recall": 0.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-05"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-004"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-05",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-004",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            }
+          ]
+        },
+        {
+          "sample": "court_02__rotation",
+          "condition": "degraded",
+          "variant": "rotation",
+          "reader": "tesseract",
+          "seconds": 0.36,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 4,
+          "ground_truth_characters": 521,
+          "cer": 0.007677543186180422,
+          "key_tokens": 3,
+          "key_tokens_matched": 2,
+          "key_token_recall": 0.6666666666666666,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-05"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-004"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-11-05",
+              "missing_occurrences": 1,
+              "observed_candidates": [
+                "2026-10-21"
+              ]
+            }
+          ]
+        },
+        {
+          "sample": "court_02__shadow",
+          "condition": "degraded",
+          "variant": "shadow",
+          "reader": "tesseract",
+          "seconds": 0.174,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 422,
+          "ground_truth_characters": 521,
+          "cer": 0.8099808061420346,
+          "key_tokens": 3,
+          "key_tokens_matched": 0,
+          "key_token_recall": 0.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-05"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-004"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-05",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-004",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            }
+          ]
+        },
+        {
+          "sample": "parking_01__blur",
+          "condition": "degraded",
+          "variant": "blur",
+          "reader": "tesseract",
+          "seconds": 0.35,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 496,
+          "cer": 0.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-29"
+            },
+            {
+              "kind": "amount",
+              "value": "$45.00"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-001"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "parking_01__compression",
+          "condition": "degraded",
+          "variant": "compression",
+          "reader": "tesseract",
+          "seconds": 0.345,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 496,
+          "cer": 0.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-29"
+            },
+            {
+              "kind": "amount",
+              "value": "$45.00"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-001"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "parking_01__noise",
+          "condition": "degraded",
+          "variant": "noise",
+          "reader": "tesseract",
+          "seconds": 0.404,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 496,
+          "cer": 0.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-29"
+            },
+            {
+              "kind": "amount",
+              "value": "$45.00"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-001"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "parking_01__perspective",
+          "condition": "degraded",
+          "variant": "perspective",
+          "reader": "tesseract",
+          "seconds": 0.322,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 97,
+          "ground_truth_characters": 496,
+          "cer": 0.19556451612903225,
+          "key_tokens": 4,
+          "key_tokens_matched": 3,
+          "key_token_recall": 0.75,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-29"
+            },
+            {
+              "kind": "amount",
+              "value": "$45.00"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-001"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": [
+                "2026-10-29"
+              ]
+            }
+          ]
+        },
+        {
+          "sample": "parking_01__phone_mix",
+          "condition": "degraded",
+          "variant": "phone_mix",
+          "reader": "tesseract",
+          "seconds": 0.15,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 496,
+          "ground_truth_characters": 496,
+          "cer": 1.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 0,
+          "key_token_recall": 0.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-29"
+            },
+            {
+              "kind": "amount",
+              "value": "$45.00"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-001"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-29",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "amount",
+              "value": "$45.00",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-001",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            }
+          ]
+        },
+        {
+          "sample": "parking_01__rotation",
+          "condition": "degraded",
+          "variant": "rotation",
+          "reader": "tesseract",
+          "seconds": 0.341,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 3,
+          "ground_truth_characters": 496,
+          "cer": 0.006048387096774193,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-29"
+            },
+            {
+              "kind": "amount",
+              "value": "$45.00"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-001"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "parking_01__shadow",
+          "condition": "degraded",
+          "variant": "shadow",
+          "reader": "tesseract",
+          "seconds": 0.175,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 389,
+          "ground_truth_characters": 496,
+          "cer": 0.7842741935483871,
+          "key_tokens": 4,
+          "key_tokens_matched": 0,
+          "key_token_recall": 0.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-29"
+            },
+            {
+              "kind": "amount",
+              "value": "$45.00"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-001"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-29",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "amount",
+              "value": "$45.00",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-001",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            }
+          ]
+        },
+        {
+          "sample": "parking_02__blur",
+          "condition": "degraded",
+          "variant": "blur",
+          "reader": "tesseract",
+          "seconds": 0.363,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 516,
+          "cer": 0.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-02"
+            },
+            {
+              "kind": "amount",
+              "value": "$65.00"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-002"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "parking_02__compression",
+          "condition": "degraded",
+          "variant": "compression",
+          "reader": "tesseract",
+          "seconds": 0.361,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 516,
+          "cer": 0.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-02"
+            },
+            {
+              "kind": "amount",
+              "value": "$65.00"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-002"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "parking_02__noise",
+          "condition": "degraded",
+          "variant": "noise",
+          "reader": "tesseract",
+          "seconds": 0.421,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 516,
+          "cer": 0.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-02"
+            },
+            {
+              "kind": "amount",
+              "value": "$65.00"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-002"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "parking_02__perspective",
+          "condition": "degraded",
+          "variant": "perspective",
+          "reader": "tesseract",
+          "seconds": 0.332,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 96,
+          "ground_truth_characters": 516,
+          "cer": 0.18604651162790697,
+          "key_tokens": 4,
+          "key_tokens_matched": 3,
+          "key_token_recall": 0.75,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-02"
+            },
+            {
+              "kind": "amount",
+              "value": "$65.00"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-002"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": [
+                "2026-11-02"
+              ]
+            }
+          ]
+        },
+        {
+          "sample": "parking_02__phone_mix",
+          "condition": "degraded",
+          "variant": "phone_mix",
+          "reader": "tesseract",
+          "seconds": 0.147,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 516,
+          "ground_truth_characters": 516,
+          "cer": 1.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 0,
+          "key_token_recall": 0.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-02"
+            },
+            {
+              "kind": "amount",
+              "value": "$65.00"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-002"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-02",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "amount",
+              "value": "$65.00",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-002",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            }
+          ]
+        },
+        {
+          "sample": "parking_02__rotation",
+          "condition": "degraded",
+          "variant": "rotation",
+          "reader": "tesseract",
+          "seconds": 0.354,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 5,
+          "ground_truth_characters": 516,
+          "cer": 0.009689922480620155,
+          "key_tokens": 4,
+          "key_tokens_matched": 3,
+          "key_token_recall": 0.75,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-02"
+            },
+            {
+              "kind": "amount",
+              "value": "$65.00"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-002"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-11-02",
+              "missing_occurrences": 1,
+              "observed_candidates": [
+                "2026-10-21"
+              ]
+            }
+          ]
+        },
+        {
+          "sample": "parking_02__shadow",
+          "condition": "degraded",
+          "variant": "shadow",
+          "reader": "tesseract",
+          "seconds": 0.178,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 403,
+          "ground_truth_characters": 516,
+          "cer": 0.7810077519379846,
+          "key_tokens": 4,
+          "key_tokens_matched": 0,
+          "key_token_recall": 0.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-02"
+            },
+            {
+              "kind": "amount",
+              "value": "$65.00"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-002"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-02",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "amount",
+              "value": "$65.00",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-002",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            }
+          ]
+        },
+        {
+          "sample": "school_01__blur",
+          "condition": "degraded",
+          "variant": "blur",
+          "reader": "tesseract",
+          "seconds": 0.369,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 525,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-30"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-007"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "school_01__compression",
+          "condition": "degraded",
+          "variant": "compression",
+          "reader": "tesseract",
+          "seconds": 0.364,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 525,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-30"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-007"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "school_01__noise",
+          "condition": "degraded",
+          "variant": "noise",
+          "reader": "tesseract",
+          "seconds": 0.428,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 525,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-30"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-007"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "school_01__perspective",
+          "condition": "degraded",
+          "variant": "perspective",
+          "reader": "tesseract",
+          "seconds": 0.342,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 98,
+          "ground_truth_characters": 525,
+          "cer": 0.18666666666666668,
+          "key_tokens": 3,
+          "key_tokens_matched": 2,
+          "key_token_recall": 0.6666666666666666,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-30"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-007"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": [
+                "2026-10-30"
+              ]
+            }
+          ]
+        },
+        {
+          "sample": "school_01__phone_mix",
+          "condition": "degraded",
+          "variant": "phone_mix",
+          "reader": "tesseract",
+          "seconds": 0.148,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 525,
+          "ground_truth_characters": 525,
+          "cer": 1.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 0,
+          "key_token_recall": 0.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-30"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-007"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-30",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-007",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            }
+          ]
+        },
+        {
+          "sample": "school_01__rotation",
+          "condition": "degraded",
+          "variant": "rotation",
+          "reader": "tesseract",
+          "seconds": 0.362,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 3,
+          "ground_truth_characters": 525,
+          "cer": 0.005714285714285714,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-30"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-007"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "school_01__shadow",
+          "condition": "degraded",
+          "variant": "shadow",
+          "reader": "tesseract",
+          "seconds": 0.166,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 446,
+          "ground_truth_characters": 525,
+          "cer": 0.8495238095238096,
+          "key_tokens": 3,
+          "key_tokens_matched": 0,
+          "key_token_recall": 0.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-30"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-007"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-30",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-007",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            }
+          ]
+        },
+        {
+          "sample": "school_02__blur",
+          "condition": "degraded",
+          "variant": "blur",
+          "reader": "tesseract",
+          "seconds": 0.374,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 530,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-07"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-008"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "school_02__compression",
+          "condition": "degraded",
+          "variant": "compression",
+          "reader": "tesseract",
+          "seconds": 0.375,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 530,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-07"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-008"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "school_02__noise",
+          "condition": "degraded",
+          "variant": "noise",
+          "reader": "tesseract",
+          "seconds": 0.433,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 530,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-07"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-008"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "school_02__perspective",
+          "condition": "degraded",
+          "variant": "perspective",
+          "reader": "tesseract",
+          "seconds": 0.345,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 132,
+          "ground_truth_characters": 530,
+          "cer": 0.2490566037735849,
+          "key_tokens": 3,
+          "key_tokens_matched": 2,
+          "key_token_recall": 0.6666666666666666,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-07"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-008"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": [
+                "2026-11-07"
+              ]
+            }
+          ]
+        },
+        {
+          "sample": "school_02__phone_mix",
+          "condition": "degraded",
+          "variant": "phone_mix",
+          "reader": "tesseract",
+          "seconds": 0.153,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 530,
+          "ground_truth_characters": 530,
+          "cer": 1.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 0,
+          "key_token_recall": 0.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-07"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-008"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-07",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-008",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            }
+          ]
+        },
+        {
+          "sample": "school_02__rotation",
+          "condition": "degraded",
+          "variant": "rotation",
+          "reader": "tesseract",
+          "seconds": 0.366,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 4,
+          "ground_truth_characters": 530,
+          "cer": 0.007547169811320755,
+          "key_tokens": 3,
+          "key_tokens_matched": 2,
+          "key_token_recall": 0.6666666666666666,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-07"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-008"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-11-07",
+              "missing_occurrences": 1,
+              "observed_candidates": [
+                "2026-10-21"
+              ]
+            }
+          ]
+        },
+        {
+          "sample": "school_02__shadow",
+          "condition": "degraded",
+          "variant": "shadow",
+          "reader": "tesseract",
+          "seconds": 0.159,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 462,
+          "ground_truth_characters": 530,
+          "cer": 0.8716981132075472,
+          "key_tokens": 3,
+          "key_tokens_matched": 0,
+          "key_token_recall": 0.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-07"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-008"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-07",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-008",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            }
+          ]
+        },
+        {
+          "sample": "utility_01__blur",
+          "condition": "degraded",
+          "variant": "blur",
+          "reader": "tesseract",
+          "seconds": 0.349,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 502,
+          "cer": 0.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-04"
+            },
+            {
+              "kind": "amount",
+              "value": "$82.35"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-005"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "utility_01__compression",
+          "condition": "degraded",
+          "variant": "compression",
+          "reader": "tesseract",
+          "seconds": 0.35,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 502,
+          "cer": 0.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-04"
+            },
+            {
+              "kind": "amount",
+              "value": "$82.35"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-005"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "utility_01__noise",
+          "condition": "degraded",
+          "variant": "noise",
+          "reader": "tesseract",
+          "seconds": 0.419,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 502,
+          "cer": 0.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-04"
+            },
+            {
+              "kind": "amount",
+              "value": "$82.35"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-005"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "utility_01__perspective",
+          "condition": "degraded",
+          "variant": "perspective",
+          "reader": "tesseract",
+          "seconds": 0.325,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 96,
+          "ground_truth_characters": 502,
+          "cer": 0.19123505976095617,
+          "key_tokens": 4,
+          "key_tokens_matched": 3,
+          "key_token_recall": 0.75,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-04"
+            },
+            {
+              "kind": "amount",
+              "value": "$82.35"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-005"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": [
+                "2026-11-04"
+              ]
+            }
+          ]
+        },
+        {
+          "sample": "utility_01__phone_mix",
+          "condition": "degraded",
+          "variant": "phone_mix",
+          "reader": "tesseract",
+          "seconds": 0.151,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 502,
+          "ground_truth_characters": 502,
+          "cer": 1.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 0,
+          "key_token_recall": 0.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-04"
+            },
+            {
+              "kind": "amount",
+              "value": "$82.35"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-005"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-04",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "amount",
+              "value": "$82.35",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-005",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            }
+          ]
+        },
+        {
+          "sample": "utility_01__rotation",
+          "condition": "degraded",
+          "variant": "rotation",
+          "reader": "tesseract",
+          "seconds": 0.347,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 4,
+          "ground_truth_characters": 502,
+          "cer": 0.00796812749003984,
+          "key_tokens": 4,
+          "key_tokens_matched": 3,
+          "key_token_recall": 0.75,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-04"
+            },
+            {
+              "kind": "amount",
+              "value": "$82.35"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-005"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-11-04",
+              "missing_occurrences": 1,
+              "observed_candidates": [
+                "2026-10-21"
+              ]
+            }
+          ]
+        },
+        {
+          "sample": "utility_01__shadow",
+          "condition": "degraded",
+          "variant": "shadow",
+          "reader": "tesseract",
+          "seconds": 0.174,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 397,
+          "ground_truth_characters": 502,
+          "cer": 0.7908366533864541,
+          "key_tokens": 4,
+          "key_tokens_matched": 0,
+          "key_token_recall": 0.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-04"
+            },
+            {
+              "kind": "amount",
+              "value": "$82.35"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-005"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-04",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "amount",
+              "value": "$82.35",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-005",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            }
+          ]
+        },
+        {
+          "sample": "utility_02__blur",
+          "condition": "degraded",
+          "variant": "blur",
+          "reader": "tesseract",
+          "seconds": 0.349,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 496,
+          "cer": 0.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-06"
+            },
+            {
+              "kind": "amount",
+              "value": "$37.20"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-006"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "utility_02__compression",
+          "condition": "degraded",
+          "variant": "compression",
+          "reader": "tesseract",
+          "seconds": 0.354,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 496,
+          "cer": 0.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-06"
+            },
+            {
+              "kind": "amount",
+              "value": "$37.20"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-006"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "utility_02__noise",
+          "condition": "degraded",
+          "variant": "noise",
+          "reader": "tesseract",
+          "seconds": 0.409,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 496,
+          "cer": 0.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-06"
+            },
+            {
+              "kind": "amount",
+              "value": "$37.20"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-006"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "utility_02__perspective",
+          "condition": "degraded",
+          "variant": "perspective",
+          "reader": "tesseract",
+          "seconds": 0.272,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 181,
+          "ground_truth_characters": 496,
+          "cer": 0.3649193548387097,
+          "key_tokens": 4,
+          "key_tokens_matched": 3,
+          "key_token_recall": 0.75,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-06"
+            },
+            {
+              "kind": "amount",
+              "value": "$37.20"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-006"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": [
+                "2026-11-06"
+              ]
+            }
+          ]
+        },
+        {
+          "sample": "utility_02__phone_mix",
+          "condition": "degraded",
+          "variant": "phone_mix",
+          "reader": "tesseract",
+          "seconds": 0.155,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 496,
+          "ground_truth_characters": 496,
+          "cer": 1.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 0,
+          "key_token_recall": 0.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-06"
+            },
+            {
+              "kind": "amount",
+              "value": "$37.20"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-006"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-06",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "amount",
+              "value": "$37.20",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-006",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            }
+          ]
+        },
+        {
+          "sample": "utility_02__rotation",
+          "condition": "degraded",
+          "variant": "rotation",
+          "reader": "tesseract",
+          "seconds": 0.344,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 4,
+          "ground_truth_characters": 496,
+          "cer": 0.008064516129032258,
+          "key_tokens": 4,
+          "key_tokens_matched": 3,
+          "key_token_recall": 0.75,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-06"
+            },
+            {
+              "kind": "amount",
+              "value": "$37.20"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-006"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-11-06",
+              "missing_occurrences": 1,
+              "observed_candidates": [
+                "2026-10-21"
+              ]
+            }
+          ]
+        },
+        {
+          "sample": "utility_02__shadow",
+          "condition": "degraded",
+          "variant": "shadow",
+          "reader": "tesseract",
+          "seconds": 0.177,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 383,
+          "ground_truth_characters": 496,
+          "cer": 0.7721774193548387,
+          "key_tokens": 4,
+          "key_tokens_matched": 0,
+          "key_token_recall": 0.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-06"
+            },
+            {
+              "kind": "amount",
+              "value": "$37.20"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-006"
+            }
+          ],
+          "missed_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-06",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "amount",
+              "value": "$37.20",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-006",
+              "missing_occurrences": 1,
+              "observed_candidates": []
+            }
+          ]
+        },
+        {
+          "sample": "court_01",
+          "condition": "legacy_m1",
+          "variant": "legacy_m1",
+          "reader": "tesseract",
+          "seconds": 0.379,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 513,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-03"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-003"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "court_02",
+          "condition": "legacy_m1",
+          "variant": "legacy_m1",
+          "reader": "tesseract",
+          "seconds": 0.382,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 521,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-05"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-004"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "parking_01",
+          "condition": "legacy_m1",
+          "variant": "legacy_m1",
+          "reader": "tesseract",
+          "seconds": 0.37,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 496,
+          "cer": 0.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-29"
+            },
+            {
+              "kind": "amount",
+              "value": "$45.00"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-001"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "parking_02",
+          "condition": "legacy_m1",
+          "variant": "legacy_m1",
+          "reader": "tesseract",
+          "seconds": 0.374,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 1,
+          "ground_truth_characters": 516,
+          "cer": 0.001937984496124031,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-02"
+            },
+            {
+              "kind": "amount",
+              "value": "$65.00"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-002"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "school_01",
+          "condition": "legacy_m1",
+          "variant": "legacy_m1",
+          "reader": "tesseract",
+          "seconds": 0.387,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 525,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-10-30"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-007"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "school_02",
+          "condition": "legacy_m1",
+          "variant": "legacy_m1",
+          "reader": "tesseract",
+          "seconds": 0.384,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 530,
+          "cer": 0.0,
+          "key_tokens": 3,
+          "key_tokens_matched": 3,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-07"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-008"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "utility_01",
+          "condition": "legacy_m1",
+          "variant": "legacy_m1",
+          "reader": "tesseract",
+          "seconds": 0.37,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 0,
+          "ground_truth_characters": 502,
+          "cer": 0.0,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-04"
+            },
+            {
+              "kind": "amount",
+              "value": "$82.35"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-005"
+            }
+          ],
+          "missed_tokens": []
+        },
+        {
+          "sample": "utility_02",
+          "condition": "legacy_m1",
+          "variant": "legacy_m1",
+          "reader": "tesseract",
+          "seconds": 0.362,
+          "error": null,
+          "warnings_count": 0,
+          "character_edits": 1,
+          "ground_truth_characters": 496,
+          "cer": 0.0020161290322580645,
+          "key_tokens": 4,
+          "key_tokens_matched": 4,
+          "key_token_recall": 1.0,
+          "target_tokens": [
+            {
+              "kind": "date",
+              "value": "2026-10-21"
+            },
+            {
+              "kind": "date",
+              "value": "2026-11-06"
+            },
+            {
+              "kind": "amount",
+              "value": "$37.20"
+            },
+            {
+              "kind": "id",
+              "value": "SYNTHETIC-ONLY-006"
+            }
+          ],
+          "missed_tokens": []
+        }
+      ],
+      "printed_key_recall": 0.6875,
+      "printed_threshold_met": false,
+      "not_run_reason": null
+    },
+    {
+      "reader": "vision",
+      "conditions": [
+        {
+          "condition": "clean",
+          "samples": 0,
+          "cer": null,
+          "key_token_recall": null,
+          "matched": 0,
+          "key_tokens": 0,
+          "errors": 0
+        },
+        {
+          "condition": "degraded",
+          "samples": 0,
+          "cer": null,
+          "key_token_recall": null,
+          "matched": 0,
+          "key_tokens": 0,
+          "errors": 0
+        },
+        {
+          "condition": "handwriting",
+          "samples": 0,
+          "cer": null,
+          "key_token_recall": null,
+          "matched": 0,
+          "key_tokens": 0,
+          "errors": 0
+        },
+        {
+          "condition": "legacy_m1",
+          "samples": 0,
+          "cer": null,
+          "key_token_recall": null,
+          "matched": 0,
+          "key_tokens": 0,
+          "errors": 0
+        }
+      ],
+      "samples": [],
+      "printed_key_recall": null,
+      "printed_threshold_met": null,
+      "not_run_reason": "OPENAI_API_KEY and OPENAI_MODEL are not both configured"
+    }
+  ]
+}
