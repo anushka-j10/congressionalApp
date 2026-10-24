@@ -203,7 +203,8 @@ META_INSTRUCTION = re.compile(
     r'\b(?:reveal|print|show|expose)\b.{0,70}\b(?:system prompt|hidden prompt|api key)\b|'
     r'\bdisable\b.{0,50}\bvalidators?\b|'
     r'\bmark\b.{0,100}\bas verified\b|'
-    r'\b(?:required_action|amount_due|deadline)\s+must\s+be\b', re.I)
+    r'\b(?:required_action|amount_due|deadline)\s+must\s+be\b|'
+    r'\b(?:say|output|replace|set)\b.{0,65}\b(?:amount(?: due)?|deadline|contact|required_action)\b', re.I)
 FIELD_LINE = re.compile(r'^\s*(?:issued|issue date|deadline|due date|amount(?: due)?|'
                         r'current amount due|balance(?: due)?|contact|what to do)\s*:', re.I)
 
