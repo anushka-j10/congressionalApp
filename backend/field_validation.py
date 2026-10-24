@@ -195,6 +195,46 @@ def conflicting_obligation_dates(text):
     return len(values)>1
 
 
+
+META_INSTRUCTION = re.compile(
+    r'\b(?:ignore|disregard|override)\s+(?:(?:all|the|any|previous|prior)\s+)*'
+    r'(?:instructions?|prompts?|validators?|system)\b|'
+    r'\b(?:system override|developer instruction|assistant output|official (?:ai|decoder) instructions?)\b|'
+    r'\b(?:reveal|print|show|expose)\b.{0,70}\b(?:system prompt|hidden prompt|api key)\b|'
+    r'\bdisable\b.{0,50}\bvalidators?\b|'
+    r'\bmark\b.{0,100}\bas verified\b|'
+    r'\b(?:required_action|amount_due|deadline)\s+must\s+be\b', re.I)
+FIELD_LINE = re.compile(r'^\s*(?:issued|issue date|deadline|due date|amount(?: due)?|'
+                        r'current amount due|balance(?: due)?|contact|what to do)\s*:', re.I)
+
+
+def evidence_context(text,start,end):
+    """Include the real source line and nearby preceding cues, never following commands."""
+    left=text.rfind('\n',0,start)+1
+    right=text.find('\n',end)
+    if right<0:right=len(text)
+    line=text[left:right]
+    preceding=[]
+    for previous in reversed(text[:left].splitlines()[-3:]):
+        if not previous.strip() or FIELD_LINE.match(previous):break
+        preceding.insert(0,previous)
+    return '\n'.join(preceding+[line])
+
+
+def unsafe_evidence(name,text,start,end,snippet):
+    context=evidence_context(text,start,end)
+    if META_INSTRUCTION.search(normalize(context)) or META_INSTRUCTION.search(normalize(snippet)):
+        return True
+    # Role checks use the evidence's own line, not an unrelated preceding field.
+    line_end=text.find('\n',end)
+    own_line=text[text.rfind('\n',0,start)+1:line_end if line_end>=0 else len(text)]
+    if name=='amount_due' and re.search(r'\b(?:late fee|future (?:fee|balance)|penalty|example amount)\b',own_line,re.I):
+        return True
+    if name=='deadline' and re.match(r'\s*(?:issued|issue date|received|printed|date of (?:this )?notice)\s*:',own_line,re.I):
+        return True
+    return False
+
+
 def checked_field(name, proposed, text, today):
     value, snippet = proposed.value, proposed.source_snippet
     if value is None:
@@ -209,6 +249,9 @@ def checked_field(name, proposed, text, today):
     start, end = span
     result.source_start, result.source_end = span
     actual = text[start:end]
+    if unsafe_evidence(name,text,start,end,snippet):
+        result.reason = 'The source has conflicting field-role or instruction-like context. Check the original notice.'
+        return result
     # Explicit labeled absence is different from an unparsable numeric proposal.
     # Require the phrase in BOTH the proposed snippet and the matched source.
     absence = r'(?:not specified|not stated|not provided|none|n/a)'
@@ -246,6 +289,8 @@ def checked_field(name, proposed, text, today):
                 anchor_text = text[anchor[0]:anchor[1]]
                 if not re.search(r'\b(?:issued|issue date|date of (?:this )?notice)\s*:', anchor_text, re.I):
                     raise ValueError('Anchor is not explicitly an issue date')
+                if unsafe_evidence('anchor',text,anchor[0],anchor[1],proposed.anchor_source_snippet):
+                    raise ValueError('Instruction-like anchor evidence')
                 origin = parse_date(proposed.anchor_date)
                 if origin != one_date(proposed.anchor_source_snippet) or origin != one_date(anchor_text):
                     raise ValueError('Anchor date differs')

@@ -55,7 +55,6 @@ def test_fabricated_unsupported_amount_is_never_verified(item):
     assert checked['amount_due'].normalized_value is None
 
 
-@pytest.mark.xfail(strict=True,reason='M4 reproduced source-context gap; no fix before Part C user choice')
 def test_hostile_source_supported_amount_must_not_be_verified():
     item=ATTACKS[4];raw=proposal(item)
     raw['amount_due']={'value':'$999.99','source_snippet':item['hostile_text']}

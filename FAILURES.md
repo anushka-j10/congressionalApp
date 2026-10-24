@@ -416,3 +416,13 @@ One record may contribute multiple field/stage failures. Classifier mismatches a
 
 Part D not started. Student-selected fix: pending. Before/after values: pending, not zero.
 Heldout: NOT RUN; ten student-supplied cases and `eval-freeze` are required after the fix loop.
+
+## Part D round 1 — selected fix, 2026-10-24
+
+General explicit-obligation conflict detection was added (commit 676eab8). Full
+pipeline critical false-verification changed from 6/360 to 0/360 on dev and stayed
+0/144 on adversarial, each rerun over all variants and three repetitions. Conflicting
+required dates now produce an unverified warning instead of a selected date.
+Ordinary issue dates and equivalent repeated dates have passing controls. The
+single-card rule may also flag legitimate multiple obligations. No heldout was read.
+Round 2 now addresses the separately reproduced hostile source-supported evidence.

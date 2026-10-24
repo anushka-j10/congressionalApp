@@ -547,3 +547,15 @@ verified. Two distinct calendar dates require unverified; issue/received dates d
 not participate and equivalent repeated dates are harmless. The single-card design
 also conservatively flags legitimate multiple obligations; this is an intentional
 coverage tradeoff. Labels and date parsing are general, with no fixture identifiers.
+
+### Selected fix round 2: instruction-aware, field-role evidence
+
+A matched value cannot be Verified when its actual source line/snippet contains
+AI-directed overrides, prompt/key disclosure requests, validator-disable/status
+commands or model-output directives. Bounded preceding lines catch clipped snippets
+below an override heading; blank lines and intervening labeled facts stop that
+lookback. Following hostile text does not taint an earlier valid fact. Explicit
+late-fee/future/penalty evidence is not the current amount, and issue/received stamps
+are not a deadline. Relative anchors receive the instruction check while retaining
+their legitimate issue-date role. This English heuristic is conservative, can miss
+paraphrased attacks, and is not a general semantic authenticity guarantee.
