@@ -118,7 +118,6 @@ def test_entire_api_flow_leaves_no_notice_translation_or_explanation_on_disk_or_
     finally:app.dependency_overrides.clear()
 
 
-@pytest.mark.xfail(strict=True,reason='M4 live conflicting-date failure; no fix before Part C user choice')
 def test_conflicting_required_dates_must_not_produce_a_verified_choice():
     item=next(value for value in load_set('dev') if 'conflicting_dates' in value['edge_cases'])
     raw=proposal(item)

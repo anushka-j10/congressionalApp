@@ -170,6 +170,31 @@ def one_amount(snippet):
     return parse_amount(tokens[0])
 
 
+
+# Only explicit obligation labels participate; issue dates and ordinary dates do not.
+OBLIGATION_DATE_LABEL = re.compile(
+    r'(?:^|\n)[^\n:]{0,30}\b(?:deadline|due date|return date|return deadline|'
+    r'(?:mandatory|required|scheduled) hearing date|hearing date|'
+    r'date of required appearance|respond by|return by|pay by|payment due)'
+    r'\s*(?::|is|on|by)?\s*$', re.I)
+CONTEXT_DATE_PATTERN = re.compile(DATE_PATTERN.pattern.replace(
+    r'(?![\w/.-])', r'(?![\w/-]|\.[0-9])'), re.I)
+
+
+def conflicting_obligation_dates(text):
+    """A single deadline card must abstain if explicit obligation dates disagree."""
+    values=set()
+    for match in CONTEXT_DATE_PATTERN.finditer(text):
+        prefix=text[max(0,match.start()-160):match.start()]
+        if not OBLIGATION_DATE_LABEL.search(prefix):
+            continue
+        try:
+            values.add(parse_date(match.group()))
+        except (ValueError,StopIteration):
+            continue
+    return len(values)>1
+
+
 def checked_field(name, proposed, text, today):
     value, snippet = proposed.value, proposed.source_snippet
     if value is None:
@@ -200,6 +225,8 @@ def checked_field(name, proposed, text, today):
         return result
     try:
         if name == 'deadline':
+            if conflicting_obligation_dates(text):
+                raise ValueError('Conflicting explicit obligation dates')
             if proposed.kind == 'absolute':
                 if any(item is not None for item in [proposed.relative_days, proposed.anchor_date, proposed.anchor_source_snippet]):
                     raise ValueError('Conflicting deadline representation')

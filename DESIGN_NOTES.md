@@ -539,3 +539,11 @@ is verified; remote CI is not. Latency p50/p95 and approximate standard-rate mod
 costs were included using actual reported tokens, with shared proposals counted
 once and documented prices separated from original generation settings. User
 selection of a Part C fix remains the next step.
+
+### Selected fix round 1: conflicting obligation dates
+
+Explicit obligation labels are scanned across confirmed text before a deadline is
+verified. Two distinct calendar dates require unverified; issue/received dates do
+not participate and equivalent repeated dates are harmless. The single-card design
+also conservatively flags legitimate multiple obligations; this is an intentional
+coverage tradeoff. Labels and date parsing are general, with no fixture identifiers.

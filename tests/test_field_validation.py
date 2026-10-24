@@ -185,3 +185,17 @@ def test_non_ascii_source_digits_are_not_fuzzy_letter_noise():
     text='Contact support: ٢٠١-٥٥٥-٠١٠٠'
     field=checked_field('contact',ProposedField(value='٢٠١-٥٥٥-٠١٠١',source_snippet='Contact support: ٢٠١-٥٥٥-٠١٠١'),text,TODAY)
     assert field.status=='unverified'
+
+
+@pytest.mark.parametrize('text,expected',[
+ ('Issued: October 20, 2026\nDeadline: November 4, 2026',False),
+ ('Deadline: November 4, 2026\nDeadline: November 14, 2026',True),
+ ('Mandatory hearing date: November 4, 2026\nMandatory hearing date: November 14, 2026',True),
+ ('Deadline:\nNovember 4, 2026.\nDue date: November 14, 2026.',True),
+ ('Deadline: 2026-11-04\nDue date: November 4, 2026',False),
+ ('Issued: 2026-10-20\nReceived: 2026-10-24\nDeadline: 2026-11-04',False),
+ ('Pay by November 4, 2026\nReturn by November 14, 2026',True),
+])
+def test_conflicting_explicit_obligation_dates(text,expected):
+ from backend.field_validation import conflicting_obligation_dates
+ assert conflicting_obligation_dates(text) is expected
