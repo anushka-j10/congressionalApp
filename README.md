@@ -1,8 +1,8 @@
 # Notice Decoder
 
 A mobile-first PWA project for a Congressional App Challenge entry in NJ-08,
-starting with Jersey City / Hudson County. **Current checkpoint: Milestone 4 Part C is
-ready for student review and fix selection.** Photograph a page, check and confirm
+starting with Jersey City / Hudson County. **Current checkpoint: Milestone 4 selected fixes 1–2 are
+complete and frozen; heldout acceptance remains pending.** Photograph a page, check and confirm
 the text, explicitly select the document type, and inspect source-backed facts.
 The app explains verified facts in English and offers guarded Spanish/Tagalog
 translations, original-English toggles, and matching-voice read-aloud.
@@ -893,3 +893,20 @@ frontend syntax checks pass, with the existing Python 3.9 asyncio warning. CI is
 defined but has not run on GitHub. Saved dev/adversarial tables reproduce exactly
 without API calls. API keys remain owner-only, ignored and absent from audited
 reports/assets; heldout is excluded from even credential scans.
+
+
+
+
+Selected fixes 1–2 pass local regressions; valid live post-fix evaluation is in progress. Initial post-fix provider-unavailable runs do not establish improvement. No heldout/freeze has happened.
+
+
+## Part D selected fixes validated — 2026-10-24
+
+Both selected fixes are complete, with successful full reruns in order and local
+commits. Use the current FAILURES.md/docs/EVIDENCE.md sections and
+[latest dev table](results/m4-round2-live-dev.md) /
+[latest adversarial table](results/m4-round2-live-adversarial.md).
+345 Python and 14 Node tests pass; no expected failures remain. Failed-access
+attempts are retained but excluded from quality claims. Heldout remains untouched,
+awaiting ten supplied cases after the code freeze. Residual contact/source and
+language limitations are disclosed; no deployment or push was performed.

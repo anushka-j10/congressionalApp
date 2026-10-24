@@ -18,4 +18,4 @@ jobs:
       - run: python -m eval.run --set dev --dry-run
       - run: python -m eval.run --set adversarial --dry-run
 # No API key, paid call, or heldout sample is used in CI.
-# The known source-context regression is visibly xfailed until the student's fix choice.
+# Selected source-context regressions are required passing tests after fixes 1 and 2.

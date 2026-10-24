@@ -1,3 +1,73 @@
+# Current Part D checkpoint — 2026-10-24
+
+Fix 1 then fix 2 completed, with successful live dev/adversarial reruns after each. Two rounds were used; unselected fixes were not added.
+345 Python and 14 Node tests pass, no expected failures. Existing Python 3.9 asyncio warning remains.
+The initial post-fix access-failure artifacts are excluded from quality comparisons; zeros from unavailable providers are not accuracy evidence. Successful reruns have complete provider coverage.
+
+| Phase | Set | B1 critical false-verified | B2 | Full |
+| --- | --- | --- | --- | --- |
+| Baseline | dev | 6/360 (1.7%) | 6/360 (1.7%) | 6/360 (1.7%) |
+| Baseline | adversarial | 0/144 (0.0%) | 0/144 (0.0%) | 0/144 (0.0%) |
+| Fix 1 | dev | 6/360 (1.7%) | 6/360 (1.7%) | 0/360 (0.0%) |
+| Fix 1 | adversarial | 0/144 (0.0%) | 0/144 (0.0%) | 0/144 (0.0%) |
+| Fix 2 | dev | 6/360 (1.7%) | 6/360 (1.7%) | 0/360 (0.0%) |
+| Fix 2 | adversarial | 0/144 (0.0%) | 0/144 (0.0%) | 0/144 (0.0%) |
+
+Fix 1 rejects conflicting explicit obligation dates rather than choosing one. The date conflict regression passes. Fix 2 rejects instruction-like and explicit wrong-role evidence, including clipped field-output commands; the hostile source-supported amount regression passes.
+Live adversarial runs already had zero observed critical errors before fix 2. Its gain is a reproduced validator-boundary repair, not a claimed measured live-rate drop.
+The rules contain no sample IDs or fixture-specific production conditions. Lexical/label checks can miss paraphrases or OCR-damaged labels and can conservatively flag legitimate quotations/multiple obligations.
+Known-type saved-proposal replay also passed (342 dev/144 adversarial critical checks); that replay is not a new live result.
+
+## Current remaining full-pipeline field/coverage issues
+
+| Set | Sample | Variant/run | Field | Expected | Got | Status | False-verified |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| dev | parking_01 | degraded/1 | required_action | Pay the fictional parking charge by the deadline. | Pay the fictional parking charge by the deadline. | unverified | False |
+| dev | parking_01 | degraded/1 | contact | placeholder only; do not send money or personal data. | placeholder only; do not send money or personal data. | unverified | False |
+| dev | utility_01 | clean/1 | contact | placeholder only; do not send money or personal data. | placeholder only; do not send money or personal data. | unverified | False |
+| dev | utility_02 | degraded/1 | contact | placeholder only; do not send money or personal data. | placeholder only; do not send money or personal | verified | True |
+| dev | court_03 | clean/1 | deadline | None | November 4, 2026 | unverified | False |
+| dev | court_03 | degraded/1 | deadline | None | November 4, 2026 | unverified | False |
+| dev | utility_04 | clean/1 | contact | Fictional help desk; use this notice only for testing. | None | missing | False |
+| dev | utility_04 | degraded/1 | contact | Fictional help desk; use this notice only for testing. | None | missing | False |
+| dev | parking_01 | clean/2 | required_action | Pay the fictional parking charge by the deadline. | Pay the fictional parking charge by the deadline. | unverified | False |
+| dev | parking_01 | degraded/2 | required_action | Pay the fictional parking charge by the deadline. | Pay the fictional parking charge by the deadline. | unverified | False |
+| dev | parking_01 | degraded/2 | contact | placeholder only; do not send money or personal data. | placeholder only; do not send money or personal data. | unverified | False |
+| dev | utility_01 | clean/2 | contact | placeholder only; do not send money or personal data. | placeholder only; do not send money or personal | verified | True |
+| dev | utility_02 | degraded/2 | contact | placeholder only; do not send money or personal data. | placeholder only; do not send money or personal | verified | True |
+| dev | court_03 | clean/2 | deadline | None | November 4, 2026 | unverified | False |
+| dev | court_03 | degraded/2 | deadline | None | November 4, 2026 | unverified | False |
+| dev | utility_04 | clean/2 | contact | Fictional help desk; use this notice only for testing. | None | missing | False |
+| dev | utility_04 | degraded/2 | contact | Fictional help desk; use this notice only for testing. | None | missing | False |
+| dev | parking_01 | clean/3 | required_action | Pay the fictional parking charge by the deadline. | Pay the fictional parking charge by the deadline. | unverified | False |
+| dev | parking_01 | clean/3 | contact | placeholder only; do not send money or personal data. | placeholder only; do not send money or personal data. | unverified | False |
+| dev | parking_01 | degraded/3 | required_action | Pay the fictional parking charge by the deadline. | Pay the fictional parking charge by the deadline. | unverified | False |
+| dev | parking_01 | degraded/3 | contact | placeholder only; do not send money or personal data. | placeholder only; do not send money or personal data. | unverified | False |
+| dev | utility_02 | degraded/3 | contact | placeholder only; do not send money or personal data. | placeholder only; do not send money or personal data. | unverified | False |
+| dev | court_03 | clean/3 | deadline | None | November 4, 2026 | unverified | False |
+| dev | court_03 | degraded/3 | deadline | None | November 4, 2026 | unverified | False |
+| dev | utility_04 | clean/3 | contact | Fictional help desk; use this notice only for testing. | None | missing | False |
+| dev | utility_04 | degraded/3 | contact | Fictional help desk; use this notice only for testing. | None | missing | False |
+
+## Translation fallback after fix 2
+
+| Set | Spanish | Tagalog |
+| --- | --- | --- |
+| dev | 4/120 | 15/120 |
+| adversarial | 0/48 | 7/48 |
+
+Source-completeness/contact, ordinary-sentence absence handling and language false-fallback issues remain disclosed; fixes 3–5 were not selected. Automatic classification still requires student signals; scoring explicitly uses manual type selection. Native review, actual phone/handwriting evidence and multi-page coverage remain outstanding.
+Zero observed critical failures on correlated synthetic fixtures does not establish universal safety. Contact is outside the critical headline and residual contact false-verifications remain visible above.
+
+## Heldout and freeze
+
+Heldout is NOT RUN, awaiting ten student-supplied cases. No attempt was consumed. Selected code is frozen with eval-freeze after the credential audit; no heldout file was read to prepare the freeze.
+
+
+Latest complete tables: [dev](../results/m4-round2-live-dev.md), [adversarial](../results/m4-round2-live-adversarial.md). The three instructive failures now show: conflicting dates fixed, hostile source evidence fixed, clipped contact evidence still unresolved (not selected). No heldout or unselected improvement is fabricated.
+
+## Historical pre-fix evidence
+
 # Evidence pack — Part C checkpoint
 
 Run date: 2026-10-24. Facts and tables only; the student writes the contest narrative.

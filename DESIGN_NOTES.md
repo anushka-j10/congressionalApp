@@ -559,3 +559,17 @@ late-fee/future/penalty evidence is not the current amount, and issue/received s
 are not a deadline. Relative anchors receive the instruction check while retaining
 their legitimate issue-date role. This English heuristic is conservative, can miss
 paraphrased attacks, and is not a general semantic authenticity guarantee.
+
+
+Both selected rounds have complete dev/adversarial reruns; see the current tables
+in FAILURES.md. 343 Python tests and 14 Node tests pass with no expected failures.
+Unselected source-completeness and language issues remain disclosed. This ends the
+selected fix loop at two rounds; code is frozen before a future single heldout
+attempt once the student supplies ten cases. No heldout input has been read.
+
+The date conflict rule covers supported English obligation labels/calendar formats;
+OCR-damaged or differently phrased labels may escape it. The instruction filter
+also covers field-output directives, with passing controls for ordinary contact
+instructions. These are bounded safeguards, not authentication or complete semantic
+understanding. Live-access failures were excluded from quality conclusions and
+retained as unavailable artifacts; fresh successful runs are required for results.

@@ -220,3 +220,37 @@
 - **`results/m4-adversarial-review.json`**: Contains the corrected proposed scoring of unchanged synthetic model outputs. It records reproducible current counts with explicit measurement limitations and inference/scoring provenance.
 
 - **`results/m4-adversarial-review.md`**: Contains the corrected proposed scoring of unchanged synthetic model outputs. It records reproducible current counts with explicit measurement limitations and inference/scoring provenance.
+
+- **`results/m4-round1-dev.json`**: Records the complete repeated evaluation after selected fix 1. It retains actual outputs/counts and pinned settings rather than replacing earlier evidence.
+
+- **`results/m4-round1-dev.md`**: Records the complete repeated evaluation after selected fix 1. It retains actual outputs/counts and pinned settings rather than replacing earlier evidence.
+
+- **`results/m4-round1-adversarial.json`**: Records the complete repeated evaluation after selected fix 1. It retains actual outputs/counts and pinned settings rather than replacing earlier evidence.
+
+- **`results/m4-round1-adversarial.md`**: Records the complete repeated evaluation after selected fix 1. It retains actual outputs/counts and pinned settings rather than replacing earlier evidence.
+
+- **`results/m4-round2-dev.json`**: Records the complete repeated evaluation after selected fix 2. It retains actual outputs/counts and pinned settings rather than replacing earlier evidence.
+
+- **`results/m4-round2-dev.md`**: Records the complete repeated evaluation after selected fix 2. It retains actual outputs/counts and pinned settings rather than replacing earlier evidence.
+
+- **`results/m4-round2-adversarial.json`**: Records the complete repeated evaluation after selected fix 2. It retains actual outputs/counts and pinned settings rather than replacing earlier evidence.
+
+- **`results/m4-round2-adversarial.md`**: Records the complete repeated evaluation after selected fix 2. It retains actual outputs/counts and pinned settings rather than replacing earlier evidence.
+
+- **`eval/freeze.json`**: Records the selected source fingerprint and freeze date without secrets or heldout content. The one-use heldout gate checks this fingerprint and the eval-freeze tag before reading any test sample.
+
+- **`results/m4-round1-live-dev.json`**: Contains the successful full live evaluation after this selected fix. Provider coverage is checked before using these counts; earlier unavailable attempts remain separate.
+
+- **`results/m4-round1-live-dev.md`**: Contains the successful full live evaluation after this selected fix. Provider coverage is checked before using these counts; earlier unavailable attempts remain separate.
+
+- **`results/m4-round1-live-adversarial.json`**: Contains the successful full live evaluation after this selected fix. Provider coverage is checked before using these counts; earlier unavailable attempts remain separate.
+
+- **`results/m4-round1-live-adversarial.md`**: Contains the successful full live evaluation after this selected fix. Provider coverage is checked before using these counts; earlier unavailable attempts remain separate.
+
+- **`results/m4-round2-live-dev.json`**: Contains the successful full live evaluation after this selected fix. Provider coverage is checked before using these counts; earlier unavailable attempts remain separate.
+
+- **`results/m4-round2-live-dev.md`**: Contains the successful full live evaluation after this selected fix. Provider coverage is checked before using these counts; earlier unavailable attempts remain separate.
+
+- **`results/m4-round2-live-adversarial.json`**: Contains the successful full live evaluation after this selected fix. Provider coverage is checked before using these counts; earlier unavailable attempts remain separate.
+
+- **`results/m4-round2-live-adversarial.md`**: Contains the successful full live evaluation after this selected fix. Provider coverage is checked before using these counts; earlier unavailable attempts remain separate.
