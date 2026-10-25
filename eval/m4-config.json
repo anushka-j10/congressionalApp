@@ -1,5 +1,5 @@
 {
-  "version": "m4-pre-fix-v1",
+  "version": "reliability-repair-v1",
   "model": "gpt-5.4-mini-2026-03-17",
   "temperature": 0,
   "reasoning_effort": "none",
@@ -46,6 +46,7 @@
     "B1": "plain explain/translate on the same OCR text; all field outputs treated as facts",
     "B2": "same raw extraction proposal as full, validation and abstention bypassed in eval only",
     "heldout_repeats": 1,
-    "heldout_required_count": 10
+    "heldout_required_count": 10,
+    "amount_review": "Not simulated: amounts and money-bearing actions require separate human photo review and remain unverified by default."
   }
 }

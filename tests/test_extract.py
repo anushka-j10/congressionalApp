@@ -62,7 +62,7 @@ def api():
 
 
 def request(client, **changes):
-    data = dict(text=TEXT, doc_type='parking_ticket', text_confirmed=True)
+    data = dict(text=TEXT, doc_type='parking_ticket', text_confirmed=True, amounts_confirmed=True)
     data.update(changes)
     return client.post('/api/extract', json=data)
 

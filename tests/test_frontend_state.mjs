@@ -59,6 +59,7 @@ async function setup() {
   }
   function extract() {
     el('text-checked').checked = true;
+    el('amounts-checked').checked = true;
     el('text-checked').emit('change');
     return el('confirm-text').emit('click');
   }
@@ -141,4 +142,38 @@ test('language change refreshes dynamic statuses without restoring cleared messa
   assert.equal(app.el('field-status').textContent,'extract_done');
   app.el('clear-photo').emit('click');app.window.emit('notice-language');
   assert.equal(app.el('confirmation-status').textContent,'');assert.equal(app.el('field-status').textContent,'');
+});
+
+test('amount review is separate, required, and is never inferred from OCR agreement', async () => {
+  const app=await setup();await app.read();
+  app.el('text-checked').checked=true;app.el('text-checked').emit('change');
+  assert.equal(app.el('amounts-checked').checked,false);
+  assert.equal(app.el('confirm-text').disabled,true);
+  await app.el('confirm-text').emit('click');
+  assert.equal(app.pending.length,0);
+  app.el('amounts-checked').checked=true;app.el('amounts-checked').emit('change');
+  assert.equal(app.el('confirm-text').disabled,false);
+  const task=app.el('confirm-text').emit('click');
+  const pending=app.pending.shift();
+  assert.equal(JSON.parse(pending.options.body).amounts_confirmed,true);
+  pending.resolve(response({fields:{},warnings:[]}));await task;
+});
+
+test('editing or changing document type resets the amount attestation', async () => {
+  const app=await setup();await app.read();
+  app.el('amounts-checked').checked=true;
+  app.el('confirmed-text').value+=' correction';app.el('confirmed-text').emit('input');
+  assert.equal(app.el('amounts-checked').checked,false);
+  app.el('amounts-checked').checked=true;app.el('doc-type-choice').emit('change');
+  assert.equal(app.el('amounts-checked').checked,false);
+});
+
+test('unchecking amount review removes previous verified cards and explanation', async () => {
+  const app=await setup();await app.read();const task=app.extract();
+  app.pending.shift().resolve(response({fields:{},warnings:[]}));await task;
+  assert.equal(app.el('field-results').hidden,false);
+  app.el('amounts-checked').checked=false;app.el('amounts-checked').emit('change');
+  assert.equal(app.el('field-results').hidden,true);
+  assert.equal(app.el('field-cards').textContent,'');
+  assert.equal(app.el('confirm-text').disabled,true);
 });

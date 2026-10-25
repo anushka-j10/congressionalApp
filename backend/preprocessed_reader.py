@@ -6,6 +6,7 @@ import cv2
 import numpy as np
 
 from backend.readers import ReaderError, Reading, TesseractReader
+from backend.reader_tokens import compare_candidates
 
 PREPROCESSING = {
     "version": "opencv-v1", "median_kernel": 3, "adaptive_block": 51,
@@ -69,6 +70,17 @@ class PreprocessedReader:
     def read(self, jpeg):
         png, _ = preprocess(jpeg)
         reading = self.engine.read(png)
-        return Reading(reading.text, reading.warnings + [
+        warnings = reading.warnings + [
             "Image was preprocessed. Check dates, amounts, and IDs against the photo."
-        ])
+        ]
+        # Same local engine, different image treatment: correlated evidence, not
+        # independent verification. Never silently replace the primary reading.
+        try:
+            comparison = self.engine.read(jpeg)
+            other_text = comparison.text
+        except ReaderError:
+            other_text = ""
+            warnings.append("The original-image comparison failed. Check amounts against the photo.")
+        reviews = compare_candidates(reading.text, other_text, "preprocessed", "original-image")
+        warnings.append("Reader agreement is not verification. Check every disputed value against the photo.")
+        return Reading(reading.text, warnings, reviews, "preprocessed")

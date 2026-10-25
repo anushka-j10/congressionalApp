@@ -151,7 +151,8 @@
     "reader_date": "date",
     "reader_amount": "amount",
     "reader_id": "ID",
-    "photo_alt": "Your prepared notice photo"
+    "photo_alt": "Your prepared notice photo",
+    "amount_confirmation": "I compared every printed amount with the original photo and corrected any wrong digits, or no amount is shown. Matching reader results can still be wrong."
   },
   "reader_warning_patterns": [
     {

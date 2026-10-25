@@ -8,7 +8,7 @@ from statistics import mean,pstdev,median
 import math
 from eval.protocol import FIELDS
 
-VERSION='proposed-m4-strict-v2'
+VERSION='proposed-reliability-v3'
 CRITICAL=('deadline','amount_due','required_action')
 
 
@@ -21,15 +21,35 @@ def canonical(name,value):
     value=unicodedata.normalize('NFKC',str(value)).strip()
     if name in {'amount_due','deadline'} and text(value) in {'not specified','not stated','not provided','none','n/a','no payment is requested','no payment requested','no deadline is stated','no return deadline is stated'}:
         return None
+    if name=='amount_due' and re.fullmatch(r'not (?:stated|specified|provided)[;,.]\s*(?:fines?|fees?|costs?)\b[a-z\s,()\-]*\b(?:determined|decided|set)\b[a-z\s,()\-]*[.]?',value,re.I):
+        return None  # Explicit absence plus a non-numeric future-determination explanation.
     if name=='amount_due':
         if not re.fullmatch(r'\$?\s*[0-9]+(?:,[0-9]{3})*(?:\.[0-9]{1,2})?',value):return text(value)
         try:return format(Decimal(value.replace('$','').replace(',','').strip()),'.2f')
         except InvalidOperation:return text(value)
     if name=='deadline':
+        weekday=re.match(r'^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),?\s+',value,re.I)
+        candidate=value[weekday.end():] if weekday else value
+        candidate=re.sub(r'\s+(?:at\s+)?(?:1[0-2]|0?[1-9])(?::[0-5][0-9])?\s*(?:AM|PM)$','',candidate,flags=re.I)
         for pattern in ['%Y-%m-%d','%m/%d/%Y','%B %d, %Y','%B %d %Y','%b %d, %Y']:
-            try:return datetime.strptime(value.rstrip(' .'),pattern).date().isoformat()
+            try:
+                parsed=datetime.strptime(candidate.rstrip(' .'),pattern).date()
+                if weekday and parsed.strftime('%A').casefold()!=weekday[1].casefold():return text(value)
+                return parsed.isoformat()
             except ValueError:pass
     return text(value)
+
+
+def equivalent(name,left,right):
+    """Bounded equivalence, not an LLM judge or unrestricted paraphrase credit.
+
+    Dropping a courtesy/modality prefix cannot drop the rest of an instruction.
+    Timings, alternatives, amounts and destinations must remain identical.
+    """
+    if name=='required_action' and left is not None and right is not None:
+        core=lambda value:re.sub(r'^(?:please\s+|you must\s+)','',text(value))
+        return core(left)==core(right)
+    return canonical(name,left)==canonical(name,right)
 
 
 def score_field(name,truth,expected_state,field,aliases=(),unavailable=False):
@@ -39,6 +59,9 @@ def score_field(name,truth,expected_state,field,aliases=(),unavailable=False):
              candidate is not None and any(canonical(name,candidate)==canonical(name,alias) for alias in aliases))
     if expected_state=='ambiguous':correct=candidate is None
     if unavailable:correct=False
+    equivalent_correct=(equivalent(name,candidate,truth) or candidate is not None and any(equivalent(name,candidate,alias) for alias in aliases))
+    if expected_state=='ambiguous':equivalent_correct=candidate is None
+    if unavailable:equivalent_correct=False
     wrong=not correct
     return {'expected':truth,'expected_state':expected_state,'got':candidate,'canonical_got':canonical(name,candidate),'status':status,
         'correct_value_present':correct and expected_state=='present',
@@ -47,7 +70,10 @@ def score_field(name,truth,expected_state,field,aliases=(),unavailable=False):
         'flagged_wrong':wrong and status in {'missing','unverified'} and not unavailable,
         'abstain_when_truth_exists':expected_state=='present' and status in {'missing','unverified'} and not unavailable,
         'correct_to_say_missing':expected_state=='missing' and canonical(name,candidate) is None and (status=='missing' or candidate is not None) and not unavailable,
-        'unavailable':unavailable}
+        'unavailable':unavailable,
+        'exact_wording_match':text(candidate)==text(truth) if candidate is not None and truth is not None else candidate is truth,
+        'equivalent_value_present':equivalent_correct and expected_state=='present',
+        'equivalence_false_verified':not equivalent_correct and status=='verified' and not unavailable}
 
 
 def score_row(row):
@@ -69,7 +95,8 @@ def aggregate(records,mode,names=FIELDS):
     counts=Counter()
     for value in fields:
         for key in ['correct_value_present','usable_verified_correct','wrong','false_verified','flagged_wrong',
-                    'abstain_when_truth_exists','correct_to_say_missing','unavailable']:
+                    'abstain_when_truth_exists','correct_to_say_missing','unavailable',
+                    'equivalent_value_present','equivalence_false_verified']:
             counts[key]+=bool(value[key])
         counts['truth_present']+=value['expected_state']=='present'
         counts['truth_missing']+=value['expected_state']=='missing'
@@ -82,7 +109,9 @@ def aggregate(records,mode,names=FIELDS):
         'flagged_correctly_rate':fraction(counts['flagged_wrong'],counts['wrong']-counts['unavailable']),
         'abstain_when_truth_exists':fraction(counts['abstain_when_truth_exists'],counts['truth_present']),
         'correct_to_say_missing':fraction(counts['correct_to_say_missing'],counts['truth_missing']),
-        'unavailable_rate':fraction(counts['unavailable'],len(fields))}
+        'unavailable_rate':fraction(counts['unavailable'],len(fields)),
+        'limited_equivalence_accuracy':fraction(counts['equivalent_value_present'],counts['truth_present']),
+        'limited_equivalence_false_verified_rate':fraction(counts['equivalence_false_verified'],len(fields))}
 
 
 def summarize(records):
@@ -136,9 +165,18 @@ def markdown(report):
       'Truth-present accuracy excludes ambiguous/absent fields; false-verification opportunities include them. Thus 100% accuracy does not imply zero unsafe claims.','',
       '| Method | False-verified (critical) | Wrong among Verified | Field accuracy (truth present) | Usable verified accuracy | Flagged wrong | Unavailable |',
       '| --- | --- | --- | --- | --- | --- | --- |']
+    if report['config'].get('protocol',{}).get('amount_review'):
+        lines[9:9]=['Human amount review is NOT simulated. Amounts and money-bearing actions remain unverified by default; evaluate coverage as well as false-verification. Agreement between OCR passes is not proof of correctness.','']
     for mode,section in report['summary'].items():
         d=section['headline_critical']
         lines.append('| '+mode+' | '+' | '.join(display(d[key]) for key in ['false_verified_rate','wrong_among_verified','field_accuracy','usable_verified_accuracy','flagged_correctly_rate','unavailable_rate'])+' |')
+    lines+=['','## Limited equivalence alongside strict scoring','',
+      'Dates normalize supported weekday/time notation independently of production validators. Actions only tolerate a leading Please or You must; omitted timing, conditions, numbers or alternatives still fail. No free-form paraphrase or contact truncation is credited. Historical v2 results are not rewritten.',
+      '', '| Method | Critical strict false-verified | Critical limited-equivalence false-verified | Limited-equivalence present accuracy |',
+      '| --- | --- | --- | --- |']
+    for mode,section in report['summary'].items():
+        d=section['headline_critical']
+        lines.append('| '+mode+' | '+' | '.join(display(d[key]) for key in ['false_verified_rate','limited_equivalence_false_verified_rate','limited_equivalence_accuracy'])+' |')
     lines+=['','## Per-field counts','', '| Method | Field | Accuracy | False-verified | Abstain when truth exists | Correct missing |', '| --- | --- | --- | --- | --- | --- |']
     for mode,section in report['summary'].items():
         for name,d in section['per_field'].items():

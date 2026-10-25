@@ -155,7 +155,8 @@
     "reader_date": "petsa",
     "reader_amount": "halaga",
     "reader_id": "ID",
-    "photo_alt": "Inihandang larawan ng iyong abiso"
+    "photo_alt": "Inihandang larawan ng iyong abiso",
+    "amount_confirmation": "Inihambing ko ang bawat nakalimbag na halaga sa orihinal na larawan at itinama ang mga maling numero, o walang halagang nakalagay. Maaaring mali pa rin ang magkatugmang pagbasa."
   },
   "reader_warning_patterns": [
     {

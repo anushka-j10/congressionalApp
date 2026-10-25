@@ -151,7 +151,8 @@
     "reader_date": "fecha",
     "reader_amount": "monto",
     "reader_id": "identificador",
-    "photo_alt": "Su foto del aviso preparada"
+    "photo_alt": "Su foto del aviso preparada",
+    "amount_confirmation": "Comparé cada importe impreso con la foto original y corregí los dígitos incorrectos, o no aparece ningún importe. Las lecturas coincidentes aún pueden ser incorrectas."
   },
   "reader_warning_patterns": [
     {

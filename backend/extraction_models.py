@@ -14,6 +14,8 @@ class ExtractRequest(StrictModel):
     text: str = Field(min_length=1, max_length=30000)
     doc_type: DocType
     text_confirmed: Literal[True]
+    # Separate human attestation; reader agreement must never set this flag.
+    amounts_confirmed: bool = False
 
     @field_validator('text_confirmed', mode='before')
     @classmethod

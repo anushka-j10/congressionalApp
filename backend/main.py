@@ -162,7 +162,7 @@ async def extract_notice(request: Request, extractor=Depends(get_extractor), tod
         if not parsed.text.strip():
             raise HTTPException(422, "There is no text to extract. Check the reading first.")
         doc_type = parsed.doc_type
-        result = await run_in_threadpool(extract_and_verify, parsed.text, doc_type, extractor, today)
+        result = await run_in_threadpool(extract_and_verify, parsed.text, doc_type, extractor, today, parsed.amounts_confirmed)
         result['receipt'] = issue_receipt(app.state.receipt_secret, doc_type, result['fields'], result['today'])
         return result
     except HTTPException as exc:

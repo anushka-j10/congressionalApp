@@ -58,6 +58,7 @@ def run_notice(item,variant,repetition,config,key,tesseract):
          'expected':item['expected'],'expected_state':item['expected_state'],
          'expected_aliases':item.get('expected_aliases',{}),'selected_type':item['doc_type'],
          'edge_cases':item.get('edge_cases',[]),'stages':{},'methods':{},
+         'human_amount_review':False,
          'input_image':variant['image'],'additional_pages_not_processed':len(item.get('additional_page_images',[]))}
     options={'temperature':config['temperature'],'reasoning_effort':config['reasoning_effort']}
     language_model=StructuredModel(key,config['model'],**options)

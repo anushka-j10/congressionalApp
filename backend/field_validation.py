@@ -20,7 +20,11 @@ DATE_PATTERN = re.compile(
     r'[0-9]{1,2}[/.-][0-9]{1,2}[/.-][0-9]{4}|'
     r'(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|'
     r'Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)'
-    r'\.?\s+[0-9]{1,2}(?:st|nd|rd|th)?(?:,\s*|\s+)[0-9]{4})(?![\w/.-])', re.I)
+    r'\.?\s+[0-9]{1,2}(?:st|nd|rd|th)?(?:,\s*|\s+)[0-9]{4})(?![\w/-]|\.[0-9])', re.I)
+WEEKDAY = re.compile(r'^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),?\s+', re.I)
+TIME_PATTERN = re.compile(r'(?<![\w:])(?:1[0-2]|0?[1-9])(?::[0-5][0-9])?\s*(?:AM|PM)\b', re.I)
+ROOM_PATTERN = re.compile(r'\b(?:courtroom|room|suite)\s+[A-Za-z]?[0-9]+\b', re.I)
+MONEY_PATTERN = re.compile(r'(?<!\w)\$\s*(?:[0-9]{1,3}(?:,[0-9]{3})+|[0-9]+)(?:\.[0-9]{2})?(?![\w,]|\.[0-9]|\s*[-+−])')
 RELATIVE = re.compile(r'within\s+([0-9]{1,3})\s+(?:calendar\s+)?days?\s+(?:of|after)\s+'
                       r'(?:the\s+)?(?:issue date|date (?:above|of this notice))', re.I)
 
@@ -108,6 +112,9 @@ def find_source(text, snippet):
 def parse_date(value):
     """US month/day/year or ISO/year-first, with four-digit years only."""
     value = unicodedata.normalize('NFKC', value).strip()
+    weekday = WEEKDAY.match(value)
+    if weekday:
+        value = value[weekday.end():]
     if not DATE_PATTERN.fullmatch(value):
         raise ValueError('Unsupported date')
     if re.fullmatch(r'[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}', value):
@@ -119,16 +126,25 @@ def parse_date(value):
         label, day, year = match.groups()
         month = next(number for name, number in MONTHS.items() if name.startswith(label.lower().rstrip('.')))
         day, year = int(day), int(year)
-    return date(year, month, day)  # Rejects impossible/leap dates.
+    result = date(year, month, day)  # Rejects impossible/leap dates.
+    if weekday and result.strftime('%A').casefold() != weekday[1].casefold():
+        raise ValueError('Weekday differs from calendar date')
+    return result
 
 
 def one_date(snippet):
     matches = list(DATE_PATTERN.finditer(snippet))
     if len(matches) != 1:
         raise ValueError('Need one unambiguous date in its snippet')
-    if digits(snippet[:matches[0].start()] + snippet[matches[0].end():]):
+    remainder = snippet[:matches[0].start()] + snippet[matches[0].end():]
+    # A date may be printed in the same instruction as one positive amount and
+    # a clock time. Ignore only complete typed tokens, never arbitrary digits.
+    remainder = ROOM_PATTERN.sub('', TIME_PATTERN.sub('', MONEY_PATTERN.sub('', remainder)))
+    if digits(remainder):
         raise ValueError('Other numbers make the date snippet ambiguous')
-    return parse_date(matches[0].group())
+    prefix = snippet[:matches[0].start()]
+    weekday = re.search(r'\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),?\s*$', prefix, re.I)
+    return parse_date((weekday[1] + ', ' if weekday else '') + matches[0].group())
 
 
 def parse_amount(value):
@@ -160,7 +176,9 @@ def one_amount(snippet):
         if prefix.endswith(tuple(AMOUNT_SIGNS)) or suffix.startswith(tuple(AMOUNT_SIGNS)):
             raise ValueError('Amount sign context is unsupported')
     tokens = [match.group() for match in matches]
-    if tokens and digits(re.sub(pattern, '', snippet)):
+    remainder = re.sub(pattern, '', snippet)
+    remainder = TIME_PATTERN.sub('', DATE_PATTERN.sub('', remainder))
+    if tokens and digits(remainder):
         raise ValueError('Other numbers make the amount snippet ambiguous')
     if not tokens:
         labeled = re.fullmatch(r'\s*(?:(?:amount(?: due)?|balance(?: due)?)\s*:\s*)?(.+?)\s*', snippet, re.I)
@@ -168,6 +186,45 @@ def one_amount(snippet):
     if len(tokens) != 1:
         raise ValueError('Need one amount in its snippet')
     return parse_amount(tokens[0])
+
+
+def action_core(value):
+    """Only optional introductory courtesy/modality may differ, never clauses."""
+    return re.sub(r'^(?:please\s+|you must\s+)', '', normalize(value)).rstrip(' .!?')
+
+
+def action_sentence(text, start, end):
+    """Recover a copied action's sentence, including wrapped trailing clauses.
+
+    English heuristic, bounded to avoid unbounded scans. A clipped model snippet
+    is not trusted to define the sentence boundary. No content is auto-expanded.
+    """
+    left = text.rfind('\n', 0, start) + 1
+    # Preserve a condition wrapped immediately before the copied action.
+    for _ in range(3):
+        previous_start = text.rfind('\n', 0, max(0, left - 1)) + 1
+        previous = text[previous_start:max(0, left - 1)].strip()
+        if left and previous and (previous.endswith(',') or
+                (re.match(r'^(?:if|unless|otherwise|except|when)\b', previous, re.I) and not previous.endswith(('.', '!', '?'))) or
+                re.search(r'\b(?:if|unless|otherwise|or|and|by|before|within)\s*$', previous, re.I)):
+            left = previous_start
+        else:
+            break
+    right = min(len(text), end + 2000)
+    tail = text[end:right]
+    boundary = re.search(r'\n\s*\n|\n\s*(?:Contact|Questions|Amount due|Deadline|Due date|Issued)\s*:', tail, re.I)
+    if boundary:
+        right = end + boundary.start()
+    segment = text[left:right]
+    masked = re.sub(r'\b(?:Mr|Mrs|Ms|Dr|St|ext)\.', lambda m: m[0][:-1] + '\u2024', segment, flags=re.I)
+    stops = list(re.finditer(r'[.!?](?=\s|$)', masked))
+    before = [m.end() for m in stops if left + m.end() <= start]
+    after = [m.end() for m in stops if left + m.end() >= end]
+    lo = before[-1] if before else 0
+    hi = after[0] if after else len(segment)
+    sentence = segment[lo:hi].strip()
+    sentence = re.sub(r'^(?:required action|what (?:you must|to) do|to pay)\s*:\s*', '', sentence, flags=re.I)
+    return sentence
 
 
 
@@ -229,8 +286,17 @@ def unsafe_evidence(name,text,start,end,snippet):
     # Role checks use the evidence's own line, not an unrelated preceding field.
     line_end=text.find('\n',end)
     own_line=text[text.rfind('\n',0,start)+1:line_end if line_end>=0 else len(text)]
-    if name=='amount_due' and re.search(r'\b(?:late fee|future (?:fee|balance)|penalty|example amount)\b',own_line,re.I):
-        return True
+    if name=='amount_due':
+        role = re.search(r'\b(?:late (?:fee|penalty)|future (?:fee|balance)|penalty|example amount)\b', own_line, re.I)
+        if role:
+            money = MONEY_PATTERN.search(own_line)
+            # "Pay $X ... to avoid a late fee" describes the current amount;
+            # "$X" after the fee label remains wrong-role evidence, even when
+            # the model clips that label out of its source snippet.
+            current = money and money.start() < role.start() and re.search(
+                r'\b(?:pay|current|amount due|balance due)\b', own_line[:money.start()], re.I)
+            if not current:
+                return True
     if name=='deadline' and re.match(r'\s*(?:issued|issue date|received|printed|date of (?:this )?notice)\s*:',own_line,re.I):
         return True
     return False
@@ -316,6 +382,14 @@ def checked_field(name, proposed, text, today):
             # When fuzzy letters match, all numeric sequences still must agree.
             if digits(snippet) != digits(actual):
                 raise ValueError('Source digits differ')
+            if name == 'required_action':
+                value_span = find_source(actual, value)
+                if not value_span:
+                    raise ValueError('Action not found in actual source')
+                sentence = action_sentence(text, start + value_span[0], start + value_span[1])
+                if action_core(value) != action_core(sentence):
+                    result.reason = 'The action may omit a condition, alternative, or timing clause. Check the complete instruction.'
+                    return result
         result.status = 'verified'
         result.reason = 'Matches the confirmed text. Check that this is the right fact on your original notice.'
     except (ValueError, StopIteration, OverflowError):

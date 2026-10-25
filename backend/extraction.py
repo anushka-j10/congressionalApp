@@ -1,6 +1,7 @@
 """Strict model extraction, followed by independent deterministic validation."""
 
 import json
+import re
 import time
 from dataclasses import dataclass
 
@@ -24,7 +25,11 @@ relative_days as the stated number, anchor_date as the explicitly printed issue
 date, and anchor_source_snippet as its verbatim labeled source. Never calculate a
 date yourself. Unsupported rules or unclear anchors must be null. A hearing or
 return date may be the deadline when explicitly required. Never return status
-flags: only the server's plain-code checks decide them.'''
+flags: only the server's plain-code checks decide them.
+For required_action copy the COMPLETE instruction sentence(s), preserving all
+timing clauses, conditions, alternatives, amounts, destinations and exceptions.
+Do not shorten an instruction because its date or amount also has a separate
+field. Keep wrapped lines together. If completeness is unclear, use null.'''
 
 
 class ExtractionError(Exception):
@@ -109,7 +114,7 @@ class ModelExtractor:
             raise ExtractionError(message) from None
 
 
-def extract_and_verify(text, doc_type, extractor, today):
+def extract_and_verify(text, doc_type, extractor, today, amounts_confirmed=False):
     if doc_type == 'unknown':
         fields = {name: CheckedField(value=None, source_snippet=None, status='missing',
                     reason='Document type is unknown; extraction was skipped.').model_dump()
@@ -119,6 +124,17 @@ def extract_and_verify(text, doc_type, extractor, today):
                 'usage': None, 'attempts': 0}
     extracted = extractor.extract(text, doc_type)
     fields, warnings = verify_notice(extracted.proposed, text, today)
+    # A perfect source match can repeat an OCR error. Default closed for API and
+    # unattended evaluation; only explicit human photo review permits the amount.
+    if not amounts_confirmed:
+        for name in ('amount_due', 'required_action'):
+            field = fields[name]
+            if field.status == 'verified' and (name == 'amount_due' or
+                    re.search(r'\$|\b\d+\.\d{2}\b|\bUSD\b|\b\d+\s*dollars?\b', field.value or '', re.I)):
+                field.status = 'unverified'
+                field.normalized_value = None
+                field.reason = 'Check every printed amount against the original photo before confirming amounts.'
+        warnings.append('Printed amounts have not been separately checked against the original photo. Reader agreement is not verification.')
     return {'doc_type': doc_type, 'today': today.isoformat(),
             'fields': {name: value.model_dump() for name, value in fields.items()},
             'warnings': warnings, 'usage': extracted.usage, 'attempts': extracted.attempts}

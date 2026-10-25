@@ -68,6 +68,7 @@ const textEditor = document.querySelector("#confirmed-text");
 const typeChoice = document.querySelector("#doc-type-choice");
 const fieldResults = document.querySelector("#field-results");
 const textChecked = document.querySelector("#text-checked");
+const amountsChecked = document.querySelector("#amounts-checked");
 const confirmButton = document.querySelector("#confirm-text");
 let lastReading = null;
 let confirmedText = null;
@@ -80,8 +81,8 @@ let requestGeneration = 0;
 
 function updateButtons() {
   takeButton.disabled = chooseButton.disabled = busy;
-  textEditor.disabled = textChecked.disabled = typeChoice.disabled = busy;
-  confirmButton.disabled = busy || !textChecked.checked || !textEditor.value.trim();
+  textEditor.disabled = textChecked.disabled = amountsChecked.disabled = typeChoice.disabled = busy;
+  confirmButton.disabled = busy || !textChecked.checked || !amountsChecked.checked || !textEditor.value.trim();
   readButton.disabled = busy || !preparedPhoto || !config;
   clearButton.disabled = !preparedPhoto && results.hidden;
 }
@@ -112,6 +113,7 @@ function clearResults() {
   confirmedText = null;
   textEditor.value = "";
   textChecked.checked = false;
+  amountsChecked.checked = false;
   document.querySelector("#confirmation-status").textContent = "";
   for (const id of ["notice-text", "doc-type", "confidence", "reader-used", "warnings", "signals", "token-reviews"]) {
     document.getElementById(id).textContent = "";
@@ -246,15 +248,18 @@ function invalidateConfirmation() {
 }
 textEditor.addEventListener("input", () => {
   textChecked.checked = false;
+  amountsChecked.checked = false;
   invalidateConfirmation();
 });
 textChecked.addEventListener("change", invalidateConfirmation);
+amountsChecked.addEventListener("change", invalidateConfirmation);
 typeChoice.addEventListener("change", () => {
   textChecked.checked = false;
+  amountsChecked.checked = false;
   invalidateConfirmation();
 });
 confirmButton.addEventListener("click", async () => {
-  if (busy || !textChecked.checked || !textEditor.value.trim()) return;
+  if (busy || !textChecked.checked || !amountsChecked.checked || !textEditor.value.trim()) return;
   const generation = requestGeneration;
   confirmedText = textEditor.value;
   const selectedType = typeChoice.value;
@@ -270,7 +275,7 @@ confirmButton.addEventListener("click", async () => {
   try {
     const response = await fetch("/api/extract", {
       method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text: confirmedText, doc_type: selectedType, text_confirmed: true }),
+      body: JSON.stringify({ text: confirmedText, doc_type: selectedType, text_confirmed: true, amounts_confirmed: amountsChecked.checked }),
       signal: controller.signal, cache: "no-store",
     });
     const data = await response.json();

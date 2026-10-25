@@ -48,6 +48,7 @@
     <p id="edit-help" class="hint" data-i18n="edit_help">Correct dates, amounts, IDs, and missing words. The original OCR above stays unchanged for comparison.</p>
     <textarea id="confirmed-text" rows="12" maxlength="30000" aria-describedby="edit-help" spellcheck="false" autocomplete="off" autocapitalize="off" lang="en" dir="ltr"></textarea>
     <label class="confirm-label"><input id="text-checked" type="checkbox"><span data-i18n="confirmation">I checked this text against the photo, including dates, amounts, and IDs.</span></label>
+    <label class="confirm-label"><input id="amounts-checked" type="checkbox"><span data-i18n="amount_confirmation">I compared every printed amount with the original photo and corrected any wrong digits, or no amount is shown. Matching reader results can still be wrong.</span></label>
     <p class="hint" data-i18n="extraction_privacy">Extraction sends edited text to OpenAI. Our server does not save it; provider retention rules apply. No photo is sent for this step.</p>
     <button id="confirm-text" type="button" disabled data-i18n="confirm_extract">Confirm text and extract facts</button>
     <p id="confirmation-status" role="status" aria-live="polite"></p>
