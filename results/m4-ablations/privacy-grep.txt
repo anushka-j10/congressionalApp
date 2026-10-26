@@ -1,0 +1,2 @@
+Server log grep: exit 1, zero notice sentinel or uploaded filename matches.
+Credential-like artifact scan: zero matches. The private .env contents were not read.

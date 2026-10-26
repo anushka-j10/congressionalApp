@@ -1,6 +1,6 @@
 # Current Milestone 4 failures — verification audit
 
-Audit date: 2026-10-25. Overall acceptance FAIL: per-validator leave-one-out ablation (item 5) is not implemented. It is a capability gap, not a demonstrated production bug; no feature was added. Freeze is therefore blocked.
+Follow-up 2026-10-25: the missing validator-group ablation capability is now implemented. Full-reference replay remains 0/120 dev and 0/48 adversarial critical false-verified; disabling date validation produces 2/120 dev false-verified deadlines. Detailed ablation failures and coverage are in results/m4-ablations/{dev,adversarial}.{json,md}. The original freeze tag remains unchanged.
 
 The table below is generated directly from the latest 40 dev / 16 adversarial live records, one repetition. Every scored wrong field for B1/B2/full is included; correct-but-unverified full fields are included to expose coverage costs. No unavailable call is counted as quality success. Strict copied-text scoring can penalize equivalent wording; the raw reports retain limited-equivalence flags separately.
 
@@ -59,3 +59,20 @@ The table below is generated directly from the latest 40 dev / 16 adversarial li
 Total listed rows: 49. Explicit null expected values represent missing/ambiguous ground truth, not placeholders. Zero-denominator rates are N/A, not fabricated zero percentages.
 
 Current result summaries and all per-field denominators: docs/EVIDENCE.md. Exact commands, PASS/FAIL checklist and grep findings: results/m4-verification/REPORT.md. Original historical failures are preserved in docs/history/FAILURES-before-verification.md; no held-out inference or rescoring was performed.
+
+
+## Authorized ablation follow-up
+
+| Mode | Dev critical false verified | Adversarial critical false verified |
+|---|---|---|
+| full | 0/120 | 0/48 |
+| without_action_completeness | 0/120 | 0/48 |
+| without_amount_validation | 0/120 | 0/48 |
+| without_date_validation | 2/120 | 0/48 |
+| without_evidence_context | 0/120 | 0/48 |
+| without_readability | 0/120 | 0/48 |
+| without_source_match | 0/120 | 0/48 |
+| without_text_copy | 0/120 | 0/48 |
+| without_human_amount_review | 0/120 | 0/48 |
+
+Full tables, per-field accuracy, abstain/MISSING denominators, raw scored records, commands and current 407 Python / 17 JavaScript test outputs: results/m4-ablations/. These are deterministic replays of the latest saved live proposals, not new model runs. All seven field-validator groups plus the separate human-review gate are measured. The held-out set and historical freeze remain untouched.

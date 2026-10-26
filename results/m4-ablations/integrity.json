@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-25",
+  "implementation_commit": "81661e4690dc73f4aefea12e5f5df9767ca31e39",
+  "python_tests": 407,
+  "javascript_tests": 17,
+  "model_calls": 0,
+  "credential_read": false,
+  "heldout_run": false,
+  "original_tag": "24d729a540ed3913ced09ee42af89765fd921c4b",
+  "env_mode": "0o600",
+  "source_sha256": "2c0cebe2e97d7e26de0ddc4a1d1080e3a751f6b21ef8e82d0a3c8af1b2a0d665",
+  "files_sha256": {
+    "results/m4-ablations/REPORT.md": "864a55d19f0d0d26145bbee6f6085b576a8a913cf10691c258b4527d12343e0c",
+    "results/m4-ablations/adversarial-stdout.txt": "5d3ed5d078af0847e9606aa18654f2784054b54f262349cdf49e1da2e9414846",
+    "results/m4-ablations/adversarial.json": "87dbe1193e32d7dd124e205e40b91303e06ca02a4b76d54af59658b5f1cee793",
+    "results/m4-ablations/adversarial.md": "bffe24dbd52ecc5c024dc0937d4ae5c517a6de6743c8d9c6f9e82fc0e64b20b9",
+    "results/m4-ablations/app-smoke.txt": "f5d931bc47c595e48a186dda76a87c5d12f90d1e7c5215689e350d20b689c216",
+    "results/m4-ablations/clean-node.txt": "880f21f5f1da954b8e255fd9b38ee485d10a9e64e9cf06748320c77e6a6b83f6",
+    "results/m4-ablations/clean-pytest.txt": "c5be950bad5324fe29515a4577cf74b8b8bc0089331035bd6e27448ad0ecf886",
+    "results/m4-ablations/commands.md": "bed7174daa4823746015e8533cb73e42e2ca1bdd3390bef8cf726d49007e288e",
+    "results/m4-ablations/dev-stdout.txt": "487c85bf6ddf3e420a7048ccd1e74244be4f280ffe2f312a1c7c568e65da5996",
+    "results/m4-ablations/dev.json": "95d33e16e816cdd5e6c6010cb23a142e4843b1d68ad30deeb72ab04d5f2737e7",
+    "results/m4-ablations/dev.md": "d217a026bd5558814e97d691e208e75926bd2e970aa05e86abbffa4efd506198",
+    "results/m4-ablations/install-check.txt": "7677bbe4d7721c3d6dd56b26cd536822c329a9b6f7c1f714887b6558b46910bd",
+    "results/m4-ablations/node.txt": "415870f6c10a61dddc7b5dd802346c7c1841a74b49fd570b5cabbdeecf4fbc49",
+    "results/m4-ablations/privacy-grep.txt": "e16d983e238ed209085a3473964ed37c0bdf3f67e0ab44a258f866023c5464e5",
+    "results/m4-ablations/privacy-probe.py": "980ca2fe49b9c6e2ece4a62b074ccbf394f38f3d0638dfe99ddb962cee7ba644",
+    "results/m4-ablations/pytest.txt": "dcd045470167d6cc8b3504abf94f59f02940bbd2ad8893c79dc09d0723c92522",
+    "results/m4-ablations/server.txt": "4346734502cbb84da4fa790621cbd731bf63a5d230322a324c14611a5385a82d"
+  }
+}

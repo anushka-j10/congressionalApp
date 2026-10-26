@@ -1,0 +1,58 @@
+# Validator ablation: dev
+
+40 saved records; zero new model/OCR calls. Same proposals, text, truth, scorer and human-review state in every row.
+
+Each mode disables one named group; all other groups stay active. Schema and unknown-type abstention stay active. Date validation includes calendar parsing, source equality, conflicting dates and relative-anchor checks. Explanation guards are outside this field-only experiment.
+
+| Mode | Critical false verified | Present-field accuracy | Verified correct | Abstain when present | Correct MISSING |
+|---|---|---|---|---|---|
+| full | 0/120 (0.0%) | 92/92 (100.0%) | 72/92 (78.3%) | 20/92 (21.7%) | 26/26 (100.0%) |
+| without_action_completeness | 0/120 (0.0%) | 92/92 (100.0%) | 72/92 (78.3%) | 20/92 (21.7%) | 26/26 (100.0%) |
+| without_amount_validation | 0/120 (0.0%) | 92/92 (100.0%) | 72/92 (78.3%) | 20/92 (21.7%) | 26/26 (100.0%) |
+| without_date_validation | 2/120 (1.7%) | 92/92 (100.0%) | 72/92 (78.3%) | 20/92 (21.7%) | 26/26 (100.0%) |
+| without_evidence_context | 0/120 (0.0%) | 92/92 (100.0%) | 72/92 (78.3%) | 20/92 (21.7%) | 26/26 (100.0%) |
+| without_readability | 0/120 (0.0%) | 92/92 (100.0%) | 72/92 (78.3%) | 20/92 (21.7%) | 26/26 (100.0%) |
+| without_source_match | 0/120 (0.0%) | 92/92 (100.0%) | 72/92 (78.3%) | 20/92 (21.7%) | 26/26 (100.0%) |
+| without_text_copy | 0/120 (0.0%) | 92/92 (100.0%) | 72/92 (78.3%) | 20/92 (21.7%) | 26/26 (100.0%) |
+| without_human_amount_review | 0/120 (0.0%) | 92/92 (100.0%) | 92/92 (100.0%) | 0/92 (0.0%) | 26/26 (100.0%) |
+
+| Mode | Field | Accuracy | False verified | Abstain when present |
+|---|---|---|---|---|
+| full | deadline | 34/34 (100.0%) | 0/40 (0.0%) | 0/34 (0.0%) |
+| full | amount_due | 20/20 (100.0%) | 0/40 (0.0%) | 20/20 (100.0%) |
+| full | required_action | 38/38 (100.0%) | 0/40 (0.0%) | 0/38 (0.0%) |
+| full | contact | 36/38 (94.7%) | 0/40 (0.0%) | 3/38 (7.9%) |
+| without_action_completeness | deadline | 34/34 (100.0%) | 0/40 (0.0%) | 0/34 (0.0%) |
+| without_action_completeness | amount_due | 20/20 (100.0%) | 0/40 (0.0%) | 20/20 (100.0%) |
+| without_action_completeness | required_action | 38/38 (100.0%) | 0/40 (0.0%) | 0/38 (0.0%) |
+| without_action_completeness | contact | 36/38 (94.7%) | 0/40 (0.0%) | 3/38 (7.9%) |
+| without_amount_validation | deadline | 34/34 (100.0%) | 0/40 (0.0%) | 0/34 (0.0%) |
+| without_amount_validation | amount_due | 20/20 (100.0%) | 0/40 (0.0%) | 20/20 (100.0%) |
+| without_amount_validation | required_action | 38/38 (100.0%) | 0/40 (0.0%) | 0/38 (0.0%) |
+| without_amount_validation | contact | 36/38 (94.7%) | 0/40 (0.0%) | 3/38 (7.9%) |
+| without_date_validation | deadline | 34/34 (100.0%) | 2/40 (5.0%) | 0/34 (0.0%) |
+| without_date_validation | amount_due | 20/20 (100.0%) | 0/40 (0.0%) | 20/20 (100.0%) |
+| without_date_validation | required_action | 38/38 (100.0%) | 0/40 (0.0%) | 0/38 (0.0%) |
+| without_date_validation | contact | 36/38 (94.7%) | 0/40 (0.0%) | 3/38 (7.9%) |
+| without_evidence_context | deadline | 34/34 (100.0%) | 0/40 (0.0%) | 0/34 (0.0%) |
+| without_evidence_context | amount_due | 20/20 (100.0%) | 0/40 (0.0%) | 20/20 (100.0%) |
+| without_evidence_context | required_action | 38/38 (100.0%) | 0/40 (0.0%) | 0/38 (0.0%) |
+| without_evidence_context | contact | 36/38 (94.7%) | 0/40 (0.0%) | 3/38 (7.9%) |
+| without_readability | deadline | 34/34 (100.0%) | 0/40 (0.0%) | 0/34 (0.0%) |
+| without_readability | amount_due | 20/20 (100.0%) | 0/40 (0.0%) | 20/20 (100.0%) |
+| without_readability | required_action | 38/38 (100.0%) | 0/40 (0.0%) | 0/38 (0.0%) |
+| without_readability | contact | 36/38 (94.7%) | 0/40 (0.0%) | 3/38 (7.9%) |
+| without_source_match | deadline | 34/34 (100.0%) | 0/40 (0.0%) | 0/34 (0.0%) |
+| without_source_match | amount_due | 20/20 (100.0%) | 0/40 (0.0%) | 20/20 (100.0%) |
+| without_source_match | required_action | 38/38 (100.0%) | 0/40 (0.0%) | 0/38 (0.0%) |
+| without_source_match | contact | 36/38 (94.7%) | 0/40 (0.0%) | 3/38 (7.9%) |
+| without_text_copy | deadline | 34/34 (100.0%) | 0/40 (0.0%) | 0/34 (0.0%) |
+| without_text_copy | amount_due | 20/20 (100.0%) | 0/40 (0.0%) | 20/20 (100.0%) |
+| without_text_copy | required_action | 38/38 (100.0%) | 0/40 (0.0%) | 0/38 (0.0%) |
+| without_text_copy | contact | 36/38 (94.7%) | 0/40 (0.0%) | 2/38 (5.3%) |
+| without_human_amount_review | deadline | 34/34 (100.0%) | 0/40 (0.0%) | 0/34 (0.0%) |
+| without_human_amount_review | amount_due | 20/20 (100.0%) | 0/40 (0.0%) | 0/20 (0.0%) |
+| without_human_amount_review | required_action | 38/38 (100.0%) | 0/40 (0.0%) | 0/38 (0.0%) |
+| without_human_amount_review | contact | 36/38 (94.7%) | 0/40 (0.0%) | 3/38 (7.9%) |
+
+An unchanged row means other checks still blocked the saved proposals, or that this set did not exercise the disabled group. It does not prove that validator is unnecessary. Amount-review removal measures reduced abstention; it does not establish pixel-level OCR correctness.

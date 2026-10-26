@@ -1,0 +1,25 @@
+✔ clear aborts reading and a late response cannot repopulate text (28.978458ms)
+✔ late extraction cannot restore cleared cards or unlock a newer read (1.004167ms)
+✔ pagehide clears edited text and ignores in-flight extraction (0.624ms)
+✔ editing confirmed text removes cards and requires a new confirmation (0.534458ms)
+✔ language change refreshes dynamic statuses without restoring cleared messages (0.574333ms)
+✔ amount review is separate, required, and is never inferred from OCR agreement (0.500042ms)
+✔ editing or changing document type resets the amount attestation (0.426125ms)
+✔ unchecking amount review removes previous verified cards and explanation (0.449125ms)
+✔ clear aborts and ignores a late explanation reply (3.533708ms)
+✔ language change cannot display the preceding language response (0.763042ms)
+✔ page leave erases the explanation and prevents late speech (0.489584ms)
+✔ a network failure never displays partial translated output (0.421458ms)
+✔ voice selection refuses another language and supports configured aliases (0.111208ms)
+✔ OCR highlights use code-point offsets after a non-BMP character and keep markup inert (1.473667ms)
+✔ timeout leaves a fixed localized error and no partial explanation (0.609708ms)
+✔ rate-limit leaves a fixed localized error and no partial explanation (0.408209ms)
+✔ malformed-json leaves a fixed localized error and no partial explanation (0.850708ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 94.908959

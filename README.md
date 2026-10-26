@@ -929,3 +929,10 @@ The repaired version requires a separate amount-photo review, shows disagreement
 ## Milestone 4 verification audit — 2026-10-25
 
 Overall FAIL against the requested checklist: individual-validator leave-one-out ablation is missing; B2 only turns all validators off. The clean-install audit passed 391 Python and 17 JavaScript tests and completed fresh dev/adversarial runs. See [the per-item report and command evidence](results/m4-verification/REPORT.md). No production features were added, no held-out run occurred in this audit, and the existing eval-freeze tag was not moved.
+
+
+## Authorized M4 ablation follow-up — 2026-10-25
+
+The previously missing field-validator group ablations are implemented. [Current report](results/m4-ablations/REPORT.md) supersedes the audit's item 5 gap: 407 Python and 17 JavaScript tests pass in a clean checkout. The dev replay shows 2/120 critical false-verified deadlines when date validation is removed, versus 0/120 with the full pipeline. The adversarial replay is also recorded. These use saved proposals without new model/key access. The old freeze tag remains unchanged; no held-out run occurred.
+
+Run `python -m eval.ablations --input results/m4-verification/dev.json --out results/my-new-ablation.json` for an offline replay. The output path must be new. Only completed development/adversarial reports are accepted. See the report for exact validator-group boundaries and limits.
