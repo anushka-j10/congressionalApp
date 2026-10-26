@@ -1,7 +1,7 @@
 {
-  "audited_head": "eccb39bcd3d683eb4bc357dc8dd52895790ac4f0",
-  "working_files_scanned": 632,
-  "history_blobs_scanned": 737,
+  "audited_head": "e6f9933818d055e436b157aff081aa08be0f962e",
+  "working_files_scanned": 647,
+  "history_blobs_scanned": 772,
   "configured_key_working_matches": 0,
   "credential_like_working_files": 0,
   "configured_key_history_matches": 0,

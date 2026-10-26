@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "blank_photo_no_guess_and_retake_warning": true,
+    "clean_deadline_amount_action_verified": true,
+    "simple_explanation_en": true,
+    "simple_explanation_es": true,
+    "simple_explanation_tl": false,
+    "truncated_year_critical_facts_withheld": true,
+    "damaged_duration_critical_facts_withheld": true,
+    "absent_deadline_not_invented": true,
+    "deployed_english_fallback": true,
+    "malformed_request_safe_error": true
+  },
+  "passed": 9,
+  "total": 10
+}
+Traceback (most recent call last):
+  File "/Users/anushkajain/Documents/Codex/2026-10-21/files-pasted-by-the-user-project/outputs/congressionalApp/results/phone-reading-fix/live_api_checks.py", line 79, in <module>
+    assert all(report['checks'].values())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

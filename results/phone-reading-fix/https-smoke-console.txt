@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-10-26T14:06:43.146276+00:00",
+  "url": "https://notice-decoder-ns5o.onrender.com",
+  "commit": "e6f9933818d055e436b157aff081aa08be0f962e",
+  "checks": {
+    "health_200": true,
+    "https_page_200": true,
+    "mobile_viewport": true,
+    "disclaimer": true,
+    "standalone_manifest": true,
+    "icons_200": true,
+    "shell_v21": true,
+    "api_no_store": true,
+    "private_paths_404": true,
+    "foreign_origin_rejected": true,
+    "exact_origin_allowed": true,
+    "eleven_deployed_assets_match_release": true
+  },
+  "passed": 12,
+  "total": 12,
+  "public_config": {
+    "reader": "preprocessed",
+    "external_processing": false,
+    "classifier_ready": false,
+    "extraction_external_processing": true
+  },
+  "model_calls": 0,
+  "notice_uploads": 0,
+  "credential_access": false
+}

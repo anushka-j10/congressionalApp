@@ -1,0 +1,833 @@
+{
+  "url": "https://notice-decoder-ns5o.onrender.com",
+  "checked_at": "2026-10-26T14:22:24.289009+00:00",
+  "deployed_commit": "e6f9933818d055e436b157aff081aa08be0f962e",
+  "synthetic_only": true,
+  "local_credentials_read": false,
+  "checks": {
+    "blank_photo_no_guess_and_retake_warning": true,
+    "clean_deadline_amount_action_verified": true,
+    "simple_explanation_en": true,
+    "simple_explanation_es": true,
+    "simple_explanation_tl": false,
+    "truncated_year_critical_facts_withheld": true,
+    "damaged_duration_critical_facts_withheld": true,
+    "absent_deadline_not_invented": true,
+    "deployed_english_fallback": true,
+    "malformed_request_safe_error": true
+  },
+  "responses": {
+    "blank_photo": {
+      "http_status": 200,
+      "output": {
+        "text": "",
+        "doc_type": "unknown",
+        "doc_type_confidence": 0.0,
+        "signals": [],
+        "reader": "preprocessed",
+        "warnings": [
+          "Image was preprocessed. Check dates, amounts, and IDs against the photo.",
+          "Reader agreement is not verification. Check every disputed value against the photo.",
+          "Little readable text was found. Retake the photo in good light with the whole page in focus.",
+          "Document signals have not been configured yet. Type will be unknown."
+        ]
+      }
+    },
+    "clean": {
+      "http_status": 200,
+      "input": "SYNTHETIC TEST ONLY\nFictional Demonstration Office\nDeadline: 11/29/2027\nAmount due: $146.00\nPay the charge.\nContact: Example Office.",
+      "output": {
+        "doc_type": "parking_ticket",
+        "today": "2026-10-26",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Demonstration Office",
+            "source_snippet": "Fictional Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 20,
+            "source_end": 50,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "11/29/2027",
+            "source_snippet": "Deadline: 11/29/2027",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 51,
+            "source_end": 71,
+            "normalized_value": "2027-11-29",
+            "days_remaining": 399,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": "$146.00",
+            "source_snippet": "Amount due: $146.00",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 72,
+            "source_end": 91,
+            "normalized_value": "146.00",
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Pay the charge.",
+            "source_snippet": "Pay the charge.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 92,
+            "source_end": 107,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "Example Office",
+            "source_snippet": "Contact: Example Office.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 108,
+            "source_end": 132,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field."
+        ],
+        "usage": {
+          "input_tokens": 687,
+          "output_tokens": 145,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      }
+    },
+    "simple_explanation_en": {
+      "http_status": 200,
+      "output": {
+        "english": {
+          "summary": "You selected: Parking ticket.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Pay the charge."
+          ],
+          "deadline_note": "Due date: November 29, 2027.",
+          "amount_note": "Amount due: $146.00.",
+          "confidence_notes": [
+            "“Text match” means the result passed checks against your reviewed text. Reading errors, wrong dates or incomplete instructions can still pass. Confirm important details with the issuing office."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Demonstration Office",
+            "deadline": "November 29, 2027",
+            "amount_due": "$146.00",
+            "required_action": "Pay the charge.",
+            "contact": "Example Office"
+          },
+          "disclaimer": "This is not legal advice. Verify important details with the issuing office."
+        },
+        "localized": {
+          "summary": "You selected: Parking ticket.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Pay the charge."
+          ],
+          "deadline_note": "Due date: November 29, 2027.",
+          "amount_note": "Amount due: $146.00.",
+          "confidence_notes": [
+            "“Text match” means the result passed checks against your reviewed text. Reading errors, wrong dates or incomplete instructions can still pass. Confirm important details with the issuing office."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Demonstration Office",
+            "deadline": "November 29, 2027",
+            "amount_due": "$146.00",
+            "required_action": "Pay the charge.",
+            "contact": "Example Office"
+          },
+          "disclaimer": "This is not legal advice. Verify important details with the issuing office."
+        },
+        "requested_language": "en",
+        "display_language": "en",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "verified",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Demonstration Office",
+          "deadline": "Deadline: 11/29/2027",
+          "amount_due": "Amount due: $146.00",
+          "required_action": "Pay the charge.",
+          "contact": "Contact: Example Office."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": false,
+          "translation_confidence": "high",
+          "attempts": 0,
+          "failed_checks": [],
+          "back_translation": null
+        },
+        "notice": "",
+        "target_disclaimer": "This is not legal advice. Verify important details with the issuing office.",
+        "usage": {
+          "calls": 1,
+          "input_tokens": 694,
+          "output_tokens": 164,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        }
+      }
+    },
+    "simple_explanation_es": {
+      "http_status": 200,
+      "output": {
+        "english": {
+          "summary": "You selected: Parking ticket.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Pay the charge."
+          ],
+          "deadline_note": "Due date: November 29, 2027.",
+          "amount_note": "Amount due: $146.00.",
+          "confidence_notes": [
+            "“Text match” means the result passed checks against your reviewed text. Reading errors, wrong dates or incomplete instructions can still pass. Confirm important details with the issuing office."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Demonstration Office",
+            "deadline": "November 29, 2027",
+            "amount_due": "$146.00",
+            "required_action": "Pay the charge.",
+            "contact": "Example Office"
+          },
+          "disclaimer": "This is not legal advice. Verify important details with the issuing office."
+        },
+        "localized": {
+          "summary": "Has seleccionado: multa de estacionamiento.",
+          "what_happened": "Los datos verificados se muestran a continuación.",
+          "what_to_do": [
+            "Paga el cargo."
+          ],
+          "deadline_note": "Fecha de vencimiento: 29 de noviembre de 2027.",
+          "amount_note": "Monto adeudado: $146.00.",
+          "confidence_notes": [
+            "“Coincide con el texto” significa que el resultado pasó las comprobaciones del texto que revisaste. Pueden pasar errores de lectura, fechas incorrectas o instrucciones incompletas. Confirma lo importante con la oficina emisora."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Demonstration Office",
+            "deadline": "29 de noviembre de 2027",
+            "amount_due": "$146.00",
+            "required_action": "Paga el cargo.",
+            "contact": "Example Office"
+          },
+          "disclaimer": "No es asesoramiento legal. Confirma los datos importantes con la oficina emisora."
+        },
+        "requested_language": "es",
+        "display_language": "es",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "verified",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Demonstration Office",
+          "deadline": "Deadline: 11/29/2027",
+          "amount_due": "Amount due: $146.00",
+          "required_action": "Pay the charge.",
+          "contact": "Contact: Example Office."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": false,
+          "translation_confidence": "medium",
+          "failed_checks": [],
+          "attempts": 1,
+          "back_translation": {
+            "passed": true,
+            "checks": [],
+            "minimum_text_similarity": 1.0
+          },
+          "checks": {
+            "numbers": true,
+            "dates": true,
+            "glossary": true,
+            "disclaimer": true,
+            "warnings": true
+          }
+        },
+        "notice": "Las traducciones al español y al tagalo aún necesitan revisión humana.",
+        "target_disclaimer": "No es asesoramiento legal. Confirma los datos importantes con la oficina emisora.",
+        "usage": {
+          "calls": 3,
+          "input_tokens": 1947,
+          "output_tokens": 532,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 3
+        }
+      }
+    },
+    "simple_explanation_tl": {
+      "http_status": 200,
+      "output": {
+        "english": {
+          "summary": "You selected: Parking ticket.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Pay the charge."
+          ],
+          "deadline_note": "Due date: November 29, 2027.",
+          "amount_note": "Amount due: $146.00.",
+          "confidence_notes": [
+            "“Text match” means the result passed checks against your reviewed text. Reading errors, wrong dates or incomplete instructions can still pass. Confirm important details with the issuing office."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Demonstration Office",
+            "deadline": "November 29, 2027",
+            "amount_due": "$146.00",
+            "required_action": "Pay the charge.",
+            "contact": "Example Office"
+          },
+          "disclaimer": "This is not legal advice. Verify important details with the issuing office."
+        },
+        "localized": {
+          "summary": "You selected: Parking ticket.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Pay the charge."
+          ],
+          "deadline_note": "Due date: November 29, 2027.",
+          "amount_note": "Amount due: $146.00.",
+          "confidence_notes": [
+            "“Text match” means the result passed checks against your reviewed text. Reading errors, wrong dates or incomplete instructions can still pass. Confirm important details with the issuing office."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Demonstration Office",
+            "deadline": "November 29, 2027",
+            "amount_due": "$146.00",
+            "required_action": "Pay the charge.",
+            "contact": "Example Office"
+          },
+          "disclaimer": "This is not legal advice. Verify important details with the issuing office."
+        },
+        "requested_language": "tl",
+        "display_language": "en",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "verified",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Demonstration Office",
+          "deadline": "Deadline: 11/29/2027",
+          "amount_due": "Amount due: $146.00",
+          "required_action": "Pay the charge.",
+          "contact": "Contact: Example Office."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": true,
+          "translation_confidence": "low",
+          "failed_checks": [
+            "warning_preservation"
+          ],
+          "attempts": 2,
+          "back_translation": {
+            "passed": false,
+            "checks": [
+              "warning_preservation"
+            ],
+            "minimum_text_similarity": 1.0
+          },
+          "checks": {
+            "numbers": false,
+            "dates": false,
+            "glossary": false,
+            "disclaimer": false,
+            "warnings": false
+          }
+        },
+        "notice": "Hindi namin ito maisalin nang maaasahan. Narito ang bersiyong Ingles.",
+        "target_disclaimer": "Hindi ito legal na payo. Kumpirmahin ang mahahalagang detalye sa tanggapang nagbigay ng abiso.",
+        "usage": {
+          "calls": 5,
+          "input_tokens": 3355,
+          "output_tokens": 988,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 5
+        }
+      }
+    },
+    "truncated_year": {
+      "http_status": 200,
+      "input": "SYNTHETIC TEST ONLY\nFictional Demonstration Office\nDeadline: 11/29/2\nAmount due: $146.00\nPay the charge.\nContact: Example Office.",
+      "output": {
+        "doc_type": "parking_ticket",
+        "today": "2026-10-26",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Demonstration Office",
+            "source_snippet": "Fictional Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 20,
+            "source_end": 50,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "11/29/2",
+            "source_snippet": "Deadline: 11/29/2",
+            "status": "unverified",
+            "reason": "A date or time limit in the reading is incomplete or ambiguous. Retake the whole notice or correct the text from the photo before using these details.",
+            "source_start": 51,
+            "source_end": 68,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": "$146.00",
+            "source_snippet": "Amount due: $146.00",
+            "status": "unverified",
+            "reason": "A date or time limit in the reading is incomplete or ambiguous. Retake the whole notice or correct the text from the photo before using these details.",
+            "source_start": 69,
+            "source_end": 88,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Pay the charge.",
+            "source_snippet": "Pay the charge.",
+            "status": "unverified",
+            "reason": "A date or time limit in the reading is incomplete or ambiguous. Retake the whole notice or correct the text from the photo before using these details.",
+            "source_start": 89,
+            "source_end": 104,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "Example Office",
+            "source_snippet": "Contact: Example Office.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 105,
+            "source_end": 129,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field.",
+          "Deadline: not verified. Check the original notice or ask someone for help.",
+          "Amount due: not verified. Check the original notice or ask someone for help.",
+          "Required action: not verified. Check the original notice or ask someone for help."
+        ],
+        "usage": {
+          "input_tokens": 686,
+          "output_tokens": 143,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      }
+    },
+    "damaged_duration": {
+      "http_status": 200,
+      "input": "SYNTHETIC TEST ONLY\nFictional Demonstration Office\nDeadline: 11/29/2027\nAmount due: $146.00\nPay the charge.\nContact: Example Office.\nIf you dispute this charge, notify the office at least S days before payment.",
+      "output": {
+        "doc_type": "parking_ticket",
+        "today": "2026-10-26",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Demonstration Office",
+            "source_snippet": "Fictional Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 20,
+            "source_end": 50,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "11/29/2027",
+            "source_snippet": "Deadline: 11/29/2027",
+            "status": "unverified",
+            "reason": "A date or time limit in the reading is incomplete or ambiguous. Retake the whole notice or correct the text from the photo before using these details.",
+            "source_start": 51,
+            "source_end": 71,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": "$146.00",
+            "source_snippet": "Amount due: $146.00",
+            "status": "unverified",
+            "reason": "A date or time limit in the reading is incomplete or ambiguous. Retake the whole notice or correct the text from the photo before using these details.",
+            "source_start": 72,
+            "source_end": 91,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Pay the charge.",
+            "source_snippet": "Pay the charge.",
+            "status": "unverified",
+            "reason": "A date or time limit in the reading is incomplete or ambiguous. Retake the whole notice or correct the text from the photo before using these details.",
+            "source_start": 92,
+            "source_end": 107,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "Example Office.",
+            "source_snippet": "Contact: Example Office.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 108,
+            "source_end": 132,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field.",
+          "Deadline: not verified. Check the original notice or ask someone for help.",
+          "Amount due: not verified. Check the original notice or ask someone for help.",
+          "Required action: not verified. Check the original notice or ask someone for help."
+        ],
+        "usage": {
+          "input_tokens": 703,
+          "output_tokens": 145,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      }
+    },
+    "no_deadline": {
+      "http_status": 200,
+      "input": "SYNTHETIC TEST ONLY\nFictional Demonstration Office\nAmount due: $146.00\nPay the charge.\nContact: Example Office.",
+      "output": {
+        "doc_type": "parking_ticket",
+        "today": "2026-10-26",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Demonstration Office",
+            "source_snippet": "Fictional Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 20,
+            "source_end": 50,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": null,
+            "source_snippet": null,
+            "status": "missing",
+            "reason": "The extractor did not find this field. Check the photo.",
+            "source_start": null,
+            "source_end": null,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": "$146.00",
+            "source_snippet": "Amount due: $146.00",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 51,
+            "source_end": 70,
+            "normalized_value": "146.00",
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Pay the charge.",
+            "source_snippet": "Pay the charge.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 71,
+            "source_end": 86,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "Example Office",
+            "source_snippet": "Contact: Example Office.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 87,
+            "source_end": 111,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field.",
+          "Deadline: not verified. Check the original notice or ask someone for help."
+        ],
+        "usage": {
+          "input_tokens": 677,
+          "output_tokens": 138,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      }
+    },
+    "reserved_token": {
+      "http_status": 200,
+      "input": "SYNTHETIC TEST ONLY\nFictional Demonstration Office\nDeadline: 11/29/2027\nAmount due: $146.00\nPay the charge.\nContact: Example Office, reference ⟦ND_0⟧.",
+      "output": {
+        "doc_type": "parking_ticket",
+        "today": "2026-10-26",
+        "fields": {
+          "issuing_agency": {
+            "value": "Fictional Demonstration Office",
+            "source_snippet": "Fictional Demonstration Office",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 20,
+            "source_end": 50,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "deadline": {
+            "value": "11/29/2027",
+            "source_snippet": "Deadline: 11/29/2027",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 51,
+            "source_end": 71,
+            "normalized_value": "2027-11-29",
+            "days_remaining": 399,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "amount_due": {
+            "value": "$146.00",
+            "source_snippet": "Amount due: $146.00",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 72,
+            "source_end": 91,
+            "normalized_value": "146.00",
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "required_action": {
+            "value": "Pay the charge.",
+            "source_snippet": "Pay the charge.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 92,
+            "source_end": 107,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          },
+          "contact": {
+            "value": "Example Office, reference ⟦ND_0⟧.",
+            "source_snippet": "Contact: Example Office, reference ⟦ND_0⟧.",
+            "status": "verified",
+            "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+            "source_start": 108,
+            "source_end": 150,
+            "normalized_value": null,
+            "days_remaining": null,
+            "anchor_source_snippet": null,
+            "anchor_start": null,
+            "anchor_end": null
+          }
+        },
+        "warnings": [
+          "Verified means source-matched to your confirmed text, not independently authenticated or guaranteed to be the correct field."
+        ],
+        "usage": {
+          "input_tokens": 698,
+          "output_tokens": 167,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        },
+        "attempts": 1
+      }
+    },
+    "fallback_explanation": {
+      "http_status": 200,
+      "output": {
+        "english": {
+          "summary": "You selected: Parking ticket.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Pay the charge."
+          ],
+          "deadline_note": "Due date: November 29, 2027.",
+          "amount_note": "Amount due: $146.00.",
+          "confidence_notes": [
+            "“Text match” means the result passed checks against your reviewed text. Reading errors, wrong dates or incomplete instructions can still pass. Confirm important details with the issuing office."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Demonstration Office",
+            "deadline": "November 29, 2027",
+            "amount_due": "$146.00",
+            "required_action": "Pay the charge.",
+            "contact": "Example Office, reference ⟦ND_0⟧."
+          },
+          "disclaimer": "This is not legal advice. Verify important details with the issuing office."
+        },
+        "localized": {
+          "summary": "You selected: Parking ticket.",
+          "what_happened": "The checked facts are shown below.",
+          "what_to_do": [
+            "Pay the charge."
+          ],
+          "deadline_note": "Due date: November 29, 2027.",
+          "amount_note": "Amount due: $146.00.",
+          "confidence_notes": [
+            "“Text match” means the result passed checks against your reviewed text. Reading errors, wrong dates or incomplete instructions can still pass. Confirm important details with the issuing office."
+          ],
+          "cards": {
+            "issuing_agency": "Fictional Demonstration Office",
+            "deadline": "November 29, 2027",
+            "amount_due": "$146.00",
+            "required_action": "Pay the charge.",
+            "contact": "Example Office, reference ⟦ND_0⟧."
+          },
+          "disclaimer": "This is not legal advice. Verify important details with the issuing office."
+        },
+        "requested_language": "es",
+        "display_language": "en",
+        "field_statuses": {
+          "issuing_agency": "verified",
+          "deadline": "verified",
+          "amount_due": "verified",
+          "required_action": "verified",
+          "contact": "verified"
+        },
+        "original_snippets": {
+          "issuing_agency": "Fictional Demonstration Office",
+          "deadline": "Deadline: 11/29/2027",
+          "amount_due": "Amount due: $146.00",
+          "required_action": "Pay the charge.",
+          "contact": "Contact: Example Office, reference ⟦ND_0⟧."
+        },
+        "english_generation": {
+          "method": "model",
+          "attempts": 1,
+          "failed_checks": []
+        },
+        "translation": {
+          "fallback_to_english": true,
+          "translation_confidence": "low",
+          "failed_checks": [
+            "unsupported_protected_input"
+          ],
+          "attempts": 0,
+          "back_translation": null
+        },
+        "notice": "No pudimos traducir esto de forma fiable. Aquí está la versión en inglés.",
+        "target_disclaimer": "No es asesoramiento legal. Confirma los datos importantes con la oficina emisora.",
+        "usage": {
+          "calls": 1,
+          "input_tokens": 728,
+          "output_tokens": 175,
+          "cached_input_tokens": 0,
+          "responses_with_usage": 1
+        }
+      }
+    },
+    "malformed": {
+      "http_status": 422,
+      "output": {
+        "detail": "Check the text, document type, and text confirmation before extracting."
+      }
+    }
+  },
+  "passed": 9,
+  "total": 10
+}

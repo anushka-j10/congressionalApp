@@ -1,0 +1,93 @@
+- banner:
+  - link "Notice Decoder home":
+    - /url: "#welcome"
+    - text: Notice Decoder
+  - generic: Language
+  - combobox "Language":
+    - option "English" [selected]
+    - option "Español"
+    - option "Tagalog"
+- main:
+  - heading "Read a notice" [level=1]
+  - region "Add a photo":
+    - heading "Add a photo" [level=2]
+    - paragraph: Photograph one printed English page. Include every edge and keep the words in focus.
+    - button "Take photo":
+      - generic: Take photo
+    - button "Choose a photo":
+      - generic: Choose a photo
+    - generic "+ Photo tips and supported files"
+    - img "Your prepared notice photo"
+    - paragraph: Prepared JPEG · 127 KB · Long edge up to 1600px
+    - paragraph: "Local reader: the photo goes to our server, is not sent to an AI provider, and is not saved."
+    - button "Read notice"
+    - button "Clear photo and results"
+    - paragraph: Spanish and Tagalog translations still need human review.
+    - status: Reading complete. Check the text against the photo.
+  - generic "− Review the reading":
+    - text: −
+    - heading "Review the reading" [active] [level=2]
+  - region "Review the reading":
+    - paragraph: Check these reader warnings against the photo.
+    - list:
+      - listitem: The image was enhanced for reading. Check dates, amounts and IDs against the photo.
+      - listitem: Agreed means both readers returned the same value. It does not mean verified. Check every candidate against the photo.
+      - listitem: Automatic type detection is not available. Choose the type shown on your notice.
+    - generic "+ Reading details"
+    - generic "+ Original OCR reading"
+    - region "Reading differences to check against the photo":
+      - heading "Dates, amounts, and IDs to check" [level=3]
+      - paragraph: Agreed means both readers returned the same value. It does not mean verified. Check every candidate against the photo.
+      - strong: ID · Agreed
+      - paragraph: "preprocessed: SYNTHETIC-PHONE-701"
+      - paragraph: "original-image: SYNTHETIC-PHONE-701"
+      - strong: date · Agreed
+      - paragraph: "preprocessed: 11/04/2027"
+      - paragraph: "original-image: 11/04/2027"
+      - strong: amount · Agreed
+      - paragraph: "preprocessed: $146.00"
+      - paragraph: "original-image: $146.00"
+      - strong: date · Agreed
+      - paragraph: "preprocessed: 11/29/2027"
+      - paragraph: "original-image: 11/29/2027"
+      - strong: Time limit · Agreed
+      - paragraph: "preprocessed: 7 days"
+      - paragraph: "original-image: 7 days"
+    - paragraph: Highlights are hints, not a detector of every error. Handwriting accuracy has not been measured; compare every word with the photo.
+    - strong: Choose your notice type
+    - combobox "Choose your notice type":
+      - option "Choose a notice type" [selected]
+      - option "Parking ticket"
+      - option "Court notice"
+      - option "Utility bill"
+      - option "School letter"
+    - paragraph: Select the type printed on the notice. This step is separate from reading the photo. If you are unsure, leave it unselected and ask the issuing office.
+    - strong: Edit the reading
+    - paragraph: Correct dates, amounts, contact details, IDs and missing words. The original reading above stays unchanged for comparison.
+    - textbox "Edit the reading": "SYNTHETIC TEST ONLY - NOT A REAL TICKET INVENTED RIVER DEMONSTRATION COURT COMPLAINT AND SUMMONS Reference: SYNTHETIC-PHONE-701 100 Example Lane, Demo Town, ZZ 00000 Contact: Fictional Review Office Vehicle: TEST-ONLY Color: GRAY Offense: Fictional restricted parking Issued: 11/04/2027 Time: 10:25 AM Amount due: $146.00 Due date: 11/29/2027 1, PLEA OF NOT GUILTY If you dispute this synthetic charge, notify the office at least 7 days prior to the pay by date listed on this ticket. 2, APPEARANCE The office will provide a hearing date. Never send payment for this test notice."
+    - checkbox "I compared this text with the photo and corrected dates, amounts, contact details, IDs and missing words."
+    - generic: I compared this text with the photo and corrected dates, amounts, contact details, IDs and missing words.
+    - checkbox "I compared every printed amount with the original photo and corrected any wrong digits, or no amount is shown. Matching reader results can still be wrong."
+    - generic: I compared every printed amount with the original photo and corrected any wrong digits, or no amount is shown. Matching reader results can still be wrong.
+    - paragraph: Extraction sends edited text to OpenAI. Our server does not save it; provider retention rules apply. No photo is sent for this step.
+    - button "Check the key details" [disabled]
+  - text: + +
+  - generic "+ Parking ticket websites"
+  - option "Choose a state" [selected]
+  - option "Connecticut"
+  - option "Maine"
+  - option "Massachusetts"
+  - option "New Hampshire"
+  - option "New Jersey"
+  - option "New York"
+  - option "Pennsylvania"
+  - option "Rhode Island"
+  - option "Vermont"
+  - option "Another state"
+  - option "I’m not sure yet"
+  - button "How it works"
+  - generic "+ App connection and installation"
+  - generic "+ How your notice is processed"
+  - paragraph: This is not legal advice. Verify important details with the issuing office.
+- contentinfo:
+  - button "Our story"

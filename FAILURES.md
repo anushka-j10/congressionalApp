@@ -2,11 +2,11 @@
 
 Updated 2026-10-25. The original held-out failures remain part of the submission evidence. Current dev/adversarial safety numbers do not replace or erase them. The original set has not been rerun with the final code; no post-repair independent held-out accuracy is available.
 
-## Public-release follow-up — October 26
+## Earlier public-release follow-up — October 26 (e25b3c1)
 
 Hosting passes 12/12 public checks, and one synthetic development notice completed live upload, extraction and EN/ES/TL display. **Full phone acceptance remains incomplete.** AJ's iPhone report led to a local reproduction on a publicly linked, angled ticket photo: preprocessing truncated a deadline year and corrupted a contesting-clause number. The original-image reader recovered the full date but still corrupted the clause; the generic quality heuristic added no poor-reading warning. These are not repaired by the new “Choose a notice type” selector wording. No extraction/model call was made on that real photo by the assistant, and its image/identifiers/full transcript are excluded from this public repository. The exact phone output/browser version remains unconfirmed.
 
-Deployed English fallback, unreadable-image abstention and offline checks are incomplete; the browser permission gate declined the separate blank-image upload. Physical-device installation/audio and native-language review remain unverified. [Full release record](results/release-2026-10-26/REPORT.md) and [2.0 priorities](NOTICE_DECODER_2_0_PROMPT.md) retain the distinctions between observed failures, unperformed checks and future work. No held-out rerun occurred.
+At that earlier release, deployed English fallback, unreadable-image abstention and offline checks were incomplete; the browser permission gate declined the separate blank-image upload. Physical-device installation/audio and native-language review remain unverified. [Full release record](results/release-2026-10-26/REPORT.md) and [2.0 priorities](NOTICE_DECODER_2_0_PROMPT.md) retain the distinctions between observed failures, unperformed checks and future work. No held-out rerun occurred.
 
 ## Additional Northeast stress run — October 26, 2026
 
@@ -122,3 +122,8 @@ No prompt, validator, answer key or app behavior was changed in this documentati
 ## 2026-10-26 phone OCR safety repair
 
 New timing-corruption checks withhold deadline, amount and action when a numeric date is incomplete/invalid or a time limit contains confused letters. No automatic digit correction or OCR-engine switch. Targeted controls: 6 unsafe actions previously verified, now 0; 2 legible controls preserved. Fresh dev run: 0/120 critical false verifications; all-field present accuracy 128/130, verified-correct coverage 107/130, abstention 23/130. Adversarial: 0/48 critical false verifications. Python 452 passed; JavaScript 62 passed. These are development results; the original held-out evidence is unchanged. Full limits, failure outputs, baseline/ablation tables and commands: [phone OCR repair report](results/phone-reading-fix/REPORT.md).
+
+
+### Current live checks — e6f9933
+
+The new guard rejects six controlled damaged timing examples that passed previously; it does not improve the underlying photo transcription. The deployed browser showed all three critical fields withheld for deliberately corrupted synthetic text. The deployed API blank-image check returned no text and a retake warning. English fallback was observed in the live browser and API. Live API acceptance is **9/10**, not a full pass: the simple Tagalog control failed `warning_preservation` after two attempts. The separate browser receipt's Spanish translation also fell back, while its Tagalog output passed. These failures remain in `results/phone-reading-fix/live-api.json` and `live-spanish-dom.txt`. No weakening of translation checks was attempted. Full original-photo/iPhone/offline acceptance and native review remain unverified.

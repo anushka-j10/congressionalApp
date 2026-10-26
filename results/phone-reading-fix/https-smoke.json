@@ -1,0 +1,87 @@
+{
+  "checked_at": "2026-10-26T14:06:43.146276+00:00",
+  "url": "https://notice-decoder-ns5o.onrender.com",
+  "commit": "e6f9933818d055e436b157aff081aa08be0f962e",
+  "checks": {
+    "health_200": true,
+    "https_page_200": true,
+    "mobile_viewport": true,
+    "disclaimer": true,
+    "standalone_manifest": true,
+    "icons_200": true,
+    "shell_v21": true,
+    "api_no_store": true,
+    "private_paths_404": true,
+    "foreign_origin_rejected": true,
+    "exact_origin_allowed": true,
+    "eleven_deployed_assets_match_release": true
+  },
+  "passed": 12,
+  "total": 12,
+  "asset_hashes": {
+    "index.html": {
+      "local": "4c672934f3920be89228ed2b6e13ac7cce9e11f29a0802a1958856990ad9bd78",
+      "deployed": "4c672934f3920be89228ed2b6e13ac7cce9e11f29a0802a1958856990ad9bd78",
+      "match": true
+    },
+    "app.js": {
+      "local": "333447334015e68e7df62f748bbc4f61b5b59fc281ca4187d9028ed3320093f1",
+      "deployed": "333447334015e68e7df62f748bbc4f61b5b59fc281ca4187d9028ed3320093f1",
+      "match": true
+    },
+    "styles.css": {
+      "local": "7f360c009fb1c512203ec9ebb040c6d6c91896506fcd4f7c8da37953e1555df2",
+      "deployed": "7f360c009fb1c512203ec9ebb040c6d6c91896506fcd4f7c8da37953e1555df2",
+      "match": true
+    },
+    "onboarding.js": {
+      "local": "29c54f0948fa28aa962f63c29db5c5b395882e1b8655128a5f50bb7611f412dd",
+      "deployed": "29c54f0948fa28aa962f63c29db5c5b395882e1b8655128a5f50bb7611f412dd",
+      "match": true
+    },
+    "field-cards.js": {
+      "local": "4f367d9381544b3c80dcd998b984ef79937803270856122f48a3bdea131cdbfe",
+      "deployed": "4f367d9381544b3c80dcd998b984ef79937803270856122f48a3bdea131cdbfe",
+      "match": true
+    },
+    "explanation.js": {
+      "local": "77b5136c5ff2bcc6b00c3309a168fabb89961c6a9c0c8302180edae7eb7c9f92",
+      "deployed": "77b5136c5ff2bcc6b00c3309a168fabb89961c6a9c0c8302180edae7eb7c9f92",
+      "match": true
+    },
+    "parking.js": {
+      "local": "d0fe3e15f024d8d3bf2410485f89d3d9d9f8e413ac946cca581ac63d1945acc2",
+      "deployed": "d0fe3e15f024d8d3bf2410485f89d3d9d9f8e413ac946cca581ac63d1945acc2",
+      "match": true
+    },
+    "parking-data.js": {
+      "local": "ac181aef057f5ec0e55f96b9026bafd46205334d91be65c9d45c3635ea6516f9",
+      "deployed": "ac181aef057f5ec0e55f96b9026bafd46205334d91be65c9d45c3635ea6516f9",
+      "match": true
+    },
+    "en.json": {
+      "local": "82d80e16375c96e5575e655c1ad2e4a6d07ec29d94b27df695afd35ceb7a3daa",
+      "deployed": "82d80e16375c96e5575e655c1ad2e4a6d07ec29d94b27df695afd35ceb7a3daa",
+      "match": true
+    },
+    "sw.js": {
+      "local": "5d20541eafe6c41b4007a45081edf4793a005444405c0d8064aacb415f4cac7b",
+      "deployed": "5d20541eafe6c41b4007a45081edf4793a005444405c0d8064aacb415f4cac7b",
+      "match": true
+    },
+    "token-review.js": {
+      "local": "c451204d61c4adaf53843bf65fb99210143c3cb0b8449791713c6bdf1387ae44",
+      "deployed": "c451204d61c4adaf53843bf65fb99210143c3cb0b8449791713c6bdf1387ae44",
+      "match": true
+    }
+  },
+  "public_config": {
+    "reader": "preprocessed",
+    "external_processing": false,
+    "classifier_ready": false,
+    "extraction_external_processing": true
+  },
+  "model_calls": 0,
+  "notice_uploads": 0,
+  "credential_access": false
+}

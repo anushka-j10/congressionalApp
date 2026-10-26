@@ -136,3 +136,12 @@ Preserve the chosen visual direction: system sans-serif, cool palette, centered 
 - No claims that all states, handwriting, multilingual source documents, legal correctness or real-phone operation work without supporting measurements.
 
 Start with the Priority 0 reproduction and repair plan. Do not start visual redesigns, account systems, payment handling, analytics or other unrelated features.
+
+
+## 2026-10-26 repair handoff — do not treat this as solved OCR
+
+Read `results/phone-reading-fix/REPORT.md` first. Release e6f9933 adds a document-wide critical-field rejection when numeric dates are incomplete/impossible or duration counts contain OCR-confused letters. Original/preprocessed text and candidate values are never silently repaired. Six simulated damaged action cases changed from verified to withheld; two valid controls remain verified. Two generated receipt photos read their three measured tokens correctly, so they did not reproduce the real photograph's pixel failure. The exact iPhone input has not passed a repeat test.
+
+Keep the policy explicit: a genuinely printed short year also causes abstention; a plausible wrong four-digit year/number or missing paragraph can still pass. Next OCR improvements need independent, varied real-camera development samples with careful consent and redaction, measured verified coverage, and no reuse of the consumed held-out set. Do not remove this safety guard just to increase coverage.
+
+Live translation still fails selectively: Spanish fell back on the synthetic receipt; Tagalog succeeded on that receipt but the simple control failed `warning_preservation` during back-translation. Preserve those outcomes. Native glossary review and translation robustness need work; do not loosen numeric, warning, or source checks to make a demonstration pass. Live API acceptance was 9/10, while all 452 Python and 62 JavaScript regressions passed. Physical iPhone install/camera/audio/screen-reader/offline checks and cloud CI completion remain separate acceptance tasks.
