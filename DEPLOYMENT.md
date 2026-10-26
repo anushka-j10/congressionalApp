@@ -1,6 +1,6 @@
 # Render deployment
 
-Deployment preparation, 2026-10-25. One Docker web service serves both the phone-oriented PWA and FastAPI under the same HTTPS origin. This file is configuration guidance; a deployment is complete only after Render reports Live and the resulting URL is checked. No held-out inference or validator/prompt change is part of this deployment.
+Deployed and HTTPS-smoke-checked, 2026-10-25. Live URL: https://notice-decoder-ns5o.onrender.com. One Docker web service serves both the phone-oriented PWA and FastAPI under the same HTTPS origin. Render reports Live for commit 96911c9, and 11 public HTTPS smoke checks pass; details are in DEPLOYMENT_RESULTS.md. Full model-backed and physical-phone acceptance remains Step 5. No held-out inference or validator/prompt change is part of this deployment.
 
 ## Configuration
 
@@ -25,7 +25,7 @@ Deployment preparation, 2026-10-25. One Docker web service serves both the phone
 
 Render's free service sleeps after 15 idle minutes; the documented wake-up takes about a minute. Free hosting quotas and API usage are separate. The local/container filesystem is ephemeral, and the application does not use it to retain notices. Do not use an artificial keep-alive monitor to imply production availability.
 
-Preparation evidence: results/deployment/pytest.txt (422 Python passes), node.txt (21 JavaScript passes), secret-audit.json (aggregate counts only). One pre-existing dependency deprecation warning remains. A Docker daemon is not installed locally, so the Docker build must be verified on Render; localhost tests are not reported as a completed container/deployed test.
+Preparation evidence: results/deployment/pytest.txt (422 Python passes), node.txt (21 JavaScript passes), secret-audit.json (aggregate counts only). One pre-existing dependency deprecation warning remains. A Docker daemon is not installed locally; the Docker build and startup were instead verified by the successful Live Render deployment. Build output installed Debian Tesseract 5.3.0, whereas the local evaluation used 5.5.3. Existing evaluation scores are not claimed as measurements of the deployed reader version.
 
 The code changes are limited to the deployment boundary and friendly 429/503 UI messages. New Spanish/Tagalog error-message strings are generated and remain unreviewed, like the existing glossaries. Extraction prompts, deterministic fact validators, answer keys and original freeze tag are unchanged.
 

@@ -2,7 +2,7 @@
 
 Notice Decoder is a mobile-first PWA for understanding a photographed notice: read the text, check it against the photo, choose the document type, inspect extracted facts and their sources, then read a plain-English explanation or a guarded Spanish/Tagalog translation. It is intended for a Congressional App Challenge NJ-08 entry, including Jersey City. It is an explanatory tool, not legal advice; verify obligations with the issuing office.
 
-**Status, 2026-10-25:** local implementation and evaluation evidence exist; deployment and phone acceptance are pending. The latest clean-checkout check passed **407 Python tests and 17 JavaScript tests** ([logs](results/m4-ablations/clean-pytest.txt), [JavaScript](results/m4-ablations/clean-node.txt)). The original held-out run had **4/30 critical false-verified fields**. That result is retained for the earlier frozen version; the final version has no independent held-out measurement. No live judge URL is available yet.
+**Status, 2026-10-25:** [The app is live over HTTPS](https://notice-decoder-ns5o.onrender.com). Physical-phone and full deployed notice-flow acceptance remain pending. The deployment-boundary regression run passed **422 Python tests and 21 JavaScript tests** ([Python logs](results/deployment/pytest.txt), [JavaScript](results/deployment/node.txt)); the earlier clean-install evidence is retained separately. The original held-out run had **4/30 critical false-verified fields**. That result is retained for the earlier frozen version; the final version has no independent held-out measurement. Judge URL: https://notice-decoder-ns5o.onrender.com.
 
 ## Run locally
 
@@ -116,7 +116,7 @@ Ablations replay identical saved proposals/text/answers through seven field-vali
 - **Translation:** Spanish and Tagalog glossary files are unreviewed. Number/glossary/back-translation checks are mechanical safeguards, not native-speaker or legal-language approval. A correct translation can repeat a wrong extracted fact.
 - **Read-aloud:** browser/device voices determine language availability. Desktop checks do not establish working Spanish/Tagalog voices on a judge's phone. Physical-phone testing remains outstanding.
 - **Scope:** one page per request. Extra pages are not merged. English field-role, instruction and action-completeness rules are bounded heuristics; unsupported date formats and multiple obligations can cause abstention or missed distinctions.
-- **Help and deployment:** configured external help resources remain TODO in `backend/languages/help.json`; no live HTTPS deployment is verified. Host secrets, request rate limiting, origin policy, deployed quota behavior and real-device acceptance remain later milestone checks.
+- **Help and deployment:** configured external help resources remain TODO in `backend/languages/help.json`; HTTPS deployment is verified at https://notice-decoder-ns5o.onrender.com; full notice-flow and real-phone acceptance remain pending. Server-only host configuration, request-limit regression tests and a live origin-policy check are recorded in DEPLOYMENT_RESULTS.md. Real model/quota behavior and device acceptance remain Step 5 checks.
 - **Privacy:** tested normal app paths use in-memory notice processing and no-store API responses; these tests do not prove secure RAM erasure, OS/library behavior, host-log policy or provider retention. Explicit synthetic evaluation reports intentionally persist test data outside the served frontend. Vendored HEIC diagnostics are disclosed in the privacy audit.
 
 ## Evidence and project files
@@ -132,4 +132,4 @@ Application source is under backend/ and frontend/; tests are under tests/. The 
 
 ## Deployment preparation
 
-[DEPLOYMENT.md](DEPLOYMENT.md) gives the free Render setup, exact server-only environment variables, security controls and numbered dashboard steps. Deployment-boundary tests now pass: 422 Python and 21 JavaScript checks (results/deployment/). A live HTTPS URL and real-phone acceptance are still pending; these local checks do not claim either.
+[DEPLOYMENT.md](DEPLOYMENT.md) gives the free Render setup, exact server-only environment variables, security controls and numbered dashboard steps. Deployment-boundary tests now pass: 422 Python and 21 JavaScript checks (results/deployment/). The live URL is https://notice-decoder-ns5o.onrender.com. Its page/health/manifest/private-file/origin smoke checks pass (results/deployment/https-smoke.json); actual phone installation/read-aloud and model-backed notice-flow acceptance remain pending.

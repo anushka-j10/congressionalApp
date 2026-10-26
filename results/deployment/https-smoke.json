@@ -1,0 +1,21 @@
+{
+  "url": "https://notice-decoder-ns5o.onrender.com",
+  "checks": {
+    "health_200": true,
+    "page_https_200": true,
+    "mobile_viewport_present": true,
+    "legal_disclaimer_present": true,
+    "manifest_standalone": true,
+    "manifest_icons_200": true,
+    "service_worker_shell_v10": true,
+    "health_no_store": true,
+    "private_paths_404": true,
+    "foreign_browser_origin_403": true,
+    "exact_origin_preflight": true
+  },
+  "all_passed": true,
+  "model_calls": 0,
+  "notice_uploads": 0,
+  "credential_access": false,
+  "limits": "Does not establish analysis/translation, phone installation/read-aloud, offline handling, spend cap or container health beyond these requests."
+}

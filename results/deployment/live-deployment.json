@@ -1,0 +1,18 @@
+{
+  "checked_date": "2026-10-25",
+  "status": "live",
+  "url": "https://notice-decoder-ns5o.onrender.com",
+  "service_id": "srv-dbfbm7dg1s2s73f6fk70",
+  "deploy_id": "dep-dbfbm7lg1s2s73f6fksg",
+  "deployed_commit": "96911c952a3fb5ccc776ca038041c90d5588c29d",
+  "workspace": "My Workspace",
+  "compute": "Free",
+  "git_branch": "fix/notice-reliability",
+  "dashboard_url": "https://dashboard.render.com/web/srv-dbfbm7dg1s2s73f6fk70",
+  "secret_entered_directly_by_user": true,
+  "secret_value_retrieved_from_host": false,
+  "smoke_model_calls": 0,
+  "smoke_notice_uploads": 0,
+  "github_ci_status_at_check": "in_progress",
+  "github_ci_url": "https://github.com/anushka-j10/congressionalApp/actions/runs/40258877041"
+}
