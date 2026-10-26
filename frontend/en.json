@@ -159,7 +159,25 @@
     "photo_tips": "Photo tips and supported files",
     "story_title": "Our story",
     "story_origin": "After a health emergency, Anushka Jain’s parents asked her to help read a parking ticket. Even as a native English speaker, she struggled to understand it and figure out what to do next.",
-    "story_purpose": "Growing up in Jersey City’s vibrant, diverse community, Anushka saw how confusing notices could create barriers for many families. That experience inspired her to create Notice Decoder, using machine learning to make notices easier to understand."
+    "story_purpose": "Growing up in Jersey City’s vibrant, diverse community, Anushka saw how confusing notices could create barriers for many families. That experience inspired her to create Notice Decoder, using machine learning to make notices easier to understand.",
+    "welcome_title": "Understand your notice",
+    "welcome_body": "Start with a photo. Check the text. Find the details you need.",
+    "get_started": "Get started",
+    "how_it_works": "How it works",
+    "skip_tutorial": "Skip tutorial",
+    "tutorial_back": "Back",
+    "tutorial_next": "Next",
+    "tutorial_finish": "Read my notice",
+    "tutorial_progress": "Step {step} of {total}",
+    "close_story": "Close story",
+    "tutorial_1_title": "Take a clear photo",
+    "tutorial_1_body": "Include the whole page, with the words in focus. You can also choose a photo from your phone.",
+    "tutorial_2_title": "Check what we read",
+    "tutorial_2_body": "Compare the text with your photo. Correct any mistakes, choose the notice type, and check every date and amount before continuing.",
+    "tutorial_3_title": "Find the key details",
+    "tutorial_3_body": "See the deadline, amount and next steps. Open a source to compare it with the notice. If something cannot be verified, we will flag it for you.",
+    "tutorial_4_title": "Read or listen",
+    "tutorial_4_body": "Choose English, Spanish or Tagalog, or listen with Read aloud when a matching voice is available. Translations are unreviewed; verify important details with the issuing office."
   },
   "reader_warning_patterns": [
     {

@@ -163,7 +163,25 @@
     "photo_tips": "Mga tip sa larawan at mga suportadong file",
     "story_title": "Ang aming kuwento",
     "story_origin": "Matapos ang isang emerhensiya sa kalusugan, hiniling ng mga magulang ni Anushka Jain na tulungan silang basahin ang isang tiket sa paradahan. Kahit katutubong nagsasalita ng Ingles, nahirapan siyang unawain ito at malaman ang susunod na gagawin.",
-    "story_purpose": "Lumaki si Anushka sa masigla at magkakaibang komunidad ng Jersey City. Nakita niya kung paano nagiging hadlang para sa maraming pamilya ang mga abisong mahirap unawain. Ang karanasang iyon ang nagbigay-inspirasyon sa kanya na likhain ang Notice Decoder, gamit ang machine learning upang mas madaling maunawaan ang mga abiso."
+    "story_purpose": "Lumaki si Anushka sa masigla at magkakaibang komunidad ng Jersey City. Nakita niya kung paano nagiging hadlang para sa maraming pamilya ang mga abisong mahirap unawain. Ang karanasang iyon ang nagbigay-inspirasyon sa kanya na likhain ang Notice Decoder, gamit ang machine learning upang mas madaling maunawaan ang mga abiso.",
+    "welcome_title": "Unawain ang iyong abiso",
+    "welcome_body": "Magsimula sa larawan. Suriin ang teksto. Hanapin ang mga detalyeng kailangan mo.",
+    "get_started": "Magsimula",
+    "how_it_works": "Paano ito gumagana",
+    "skip_tutorial": "Laktawan ang gabay",
+    "tutorial_back": "Bumalik",
+    "tutorial_next": "Susunod",
+    "tutorial_finish": "Basahin ang abiso ko",
+    "tutorial_progress": "Hakbang {step} sa {total}",
+    "close_story": "Isara ang kuwento",
+    "tutorial_1_title": "Kumuha ng malinaw na larawan",
+    "tutorial_1_body": "Isama ang buong pahina at tiyaking malinaw ang mga salita. Maaari ka ring pumili ng larawan mula sa iyong telepono.",
+    "tutorial_2_title": "Suriin ang nabasang teksto",
+    "tutorial_2_body": "Ihambing ang teksto sa iyong larawan. Itama ang mga mali, piliin ang uri ng abiso, at suriin ang bawat petsa at halaga bago magpatuloy.",
+    "tutorial_3_title": "Hanapin ang mahahalagang detalye",
+    "tutorial_3_body": "Tingnan ang takdang petsa, halaga, at mga susunod na hakbang. Buksan ang pinagmulan upang ihambing sa abiso. Ipapakita namin kung may hindi mabeberipika.",
+    "tutorial_4_title": "Basahin o pakinggan",
+    "tutorial_4_body": "Pumili ng Ingles, Espanyol o Tagalog, o gamitin ang Basahin nang malakas kung may angkop na boses. Hindi pa nasusuri ang mga salin; kumpirmahin ang mahahalagang detalye sa tanggapang nagpadala."
   },
   "reader_warning_patterns": [
     {

@@ -1,0 +1,722 @@
+[
+  {
+    "phoneWidth": "320",
+    "lang": "en",
+    "state": "welcome",
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "visibleScreens": [
+      "welcome-screen"
+    ],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "en",
+    "state": "tutorial1",
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "en",
+    "state": "tutorial2",
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "en",
+    "state": "tutorial3",
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "en",
+    "state": "tutorial4",
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "en",
+    "state": "notice",
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "visibleScreens": [
+      "notice-screen"
+    ],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "en",
+    "state": "story",
+    "open": true,
+    "scrollWidth": 286,
+    "width": 286
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "es",
+    "state": "welcome",
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "visibleScreens": [
+      "welcome-screen"
+    ],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "es",
+    "state": "tutorial1",
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "es",
+    "state": "tutorial2",
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "es",
+    "state": "tutorial3",
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "es",
+    "state": "tutorial4",
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "es",
+    "state": "notice",
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "visibleScreens": [
+      "notice-screen"
+    ],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "es",
+    "state": "story",
+    "open": true,
+    "scrollWidth": 286,
+    "width": 286
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "tl",
+    "state": "welcome",
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "visibleScreens": [
+      "welcome-screen"
+    ],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "tl",
+    "state": "tutorial1",
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "tl",
+    "state": "tutorial2",
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "tl",
+    "state": "tutorial3",
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "tl",
+    "state": "tutorial4",
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "tl",
+    "state": "notice",
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "visibleScreens": [
+      "notice-screen"
+    ],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "tl",
+    "state": "story",
+    "open": true,
+    "scrollWidth": 286,
+    "width": 286
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "en",
+    "state": "welcome",
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "visibleScreens": [
+      "welcome-screen"
+    ],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "en",
+    "state": "tutorial1",
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "en",
+    "state": "tutorial2",
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "en",
+    "state": "tutorial3",
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "en",
+    "state": "tutorial4",
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "en",
+    "state": "notice",
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "visibleScreens": [
+      "notice-screen"
+    ],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "en",
+    "state": "story",
+    "open": true,
+    "scrollWidth": 356,
+    "width": 356
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "es",
+    "state": "welcome",
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "visibleScreens": [
+      "welcome-screen"
+    ],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "es",
+    "state": "tutorial1",
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "es",
+    "state": "tutorial2",
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "es",
+    "state": "tutorial3",
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "es",
+    "state": "tutorial4",
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "es",
+    "state": "notice",
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "visibleScreens": [
+      "notice-screen"
+    ],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "es",
+    "state": "story",
+    "open": true,
+    "scrollWidth": 356,
+    "width": 356
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "tl",
+    "state": "welcome",
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "visibleScreens": [
+      "welcome-screen"
+    ],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "tl",
+    "state": "tutorial1",
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "tl",
+    "state": "tutorial2",
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "tl",
+    "state": "tutorial3",
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "tl",
+    "state": "tutorial4",
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "tl",
+    "state": "notice",
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "visibleScreens": [
+      "notice-screen"
+    ],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "tl",
+    "state": "story",
+    "open": true,
+    "scrollWidth": 356,
+    "width": 356
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "en",
+    "state": "welcome",
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "visibleScreens": [
+      "welcome-screen"
+    ],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "en",
+    "state": "tutorial1",
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "en",
+    "state": "tutorial2",
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "en",
+    "state": "tutorial3",
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "en",
+    "state": "tutorial4",
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "en",
+    "state": "notice",
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "visibleScreens": [
+      "notice-screen"
+    ],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "en",
+    "state": "story",
+    "open": true,
+    "scrollWidth": 396,
+    "width": 396
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "es",
+    "state": "welcome",
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "visibleScreens": [
+      "welcome-screen"
+    ],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "es",
+    "state": "tutorial1",
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "es",
+    "state": "tutorial2",
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "es",
+    "state": "tutorial3",
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "es",
+    "state": "tutorial4",
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "es",
+    "state": "notice",
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "visibleScreens": [
+      "notice-screen"
+    ],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "es",
+    "state": "story",
+    "open": true,
+    "scrollWidth": 396,
+    "width": 396
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "tl",
+    "state": "welcome",
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "visibleScreens": [
+      "welcome-screen"
+    ],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "tl",
+    "state": "tutorial1",
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "tl",
+    "state": "tutorial2",
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "tl",
+    "state": "tutorial3",
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "tl",
+    "state": "tutorial4",
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "visibleScreens": [
+      "tutorial-screen"
+    ],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "tl",
+    "state": "notice",
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "visibleScreens": [
+      "notice-screen"
+    ],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "tl",
+    "state": "story",
+    "open": true,
+    "scrollWidth": 396,
+    "width": 396
+  }
+]

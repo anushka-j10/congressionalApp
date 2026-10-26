@@ -139,3 +139,49 @@ footer > details > summary { font-size: 14px; }
 .our-story { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 16px; line-height: 1.65; color: #4f463e; }
 .our-story h2 { font-size: 24px; color: #302923; margin-bottom: 12px; }
 .our-story p { max-width: 60ch; }
+
+/* App entry and guided setup use separate screens, with a persistent story link. */
+body { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; }
+.topbar { width: 100%; flex-shrink: 0; }
+#main { width: 100%; flex: 1; display: flex; flex-direction: column; }
+.welcome-screen, .tutorial-screen { width: 100%; max-width: 420px; margin: auto; }
+.welcome-screen { text-align: center; padding-block: 12px; }
+.welcome-art { max-width: 210px; margin: 0 auto 18px; }
+.welcome-art svg, .tutorial-art svg { display: block; width: 100%; height: auto; }
+.welcome-screen h1, .tutorial-screen h1 { font-size: clamp(28px, 6vw, 34px); line-height: 1.15; }
+.welcome-screen p { max-width: 30ch; margin: 16px auto 28px; color: var(--muted); }
+.flow-primary { width: 100%; }
+.text-button { color: var(--accent); background: transparent; border: 0; font-size: 14px; font-weight: 500; min-height: 44px; padding: 10px 12px; text-decoration: underline; text-underline-offset: 4px; }
+.text-button:hover { background: var(--surface); filter: none; }
+.tutorial-screen { padding-block: 0 12px; }
+.tutorial-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.tutorial-top p { margin: 0; }
+.tutorial-art { width: min(100%, 240px); margin: 4px auto 18px; }
+.tutorial-screen > p { color: var(--muted); line-height: 1.55; min-height: 6.2em; }
+.tutorial-nav { display: grid; grid-template-columns: auto minmax(0,1fr); gap: 12px; margin-top: 24px; }
+.tutorial-dots { display: flex; justify-content: center; gap: 8px; margin: 22px 0; }
+.tutorial-dots span { width: 6px; height: 6px; background: #cfc7bb; border-radius: 50%; }
+[data-step="1"] .tutorial-dots span:nth-child(1), [data-step="2"] .tutorial-dots span:nth-child(2), [data-step="3"] .tutorial-dots span:nth-child(3), [data-step="4"] .tutorial-dots span:nth-child(4) { background: var(--accent); }
+.reader-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.reader-heading h1 { margin-bottom: 4px; }
+.reader-privacy { margin-top: 24px; font-size: 14px; color: var(--muted); }
+.app-footer { width: 100%; text-align: center; padding: 4px 20px max(12px, env(safe-area-inset-bottom)); }
+.story-link { display: inline-block; padding-inline: 24px; }
+#story-dialog { color: #302923; background: #faf7f0; width: calc(100% - 32px); max-width: 480px; max-height: calc(100svh - 48px); overflow: auto; border: 1px solid var(--line); border-radius: 8px; padding: 20px; }
+#story-dialog::backdrop { background: rgb(32 28 24 / .45); }
+.story-close { display: block; margin-inline-start: auto; }
+#story-dialog .our-story { border: 0; margin: 4px 0 0; padding: 0; }
+.scan-line { animation: scan-page 1.8s ease-in-out both; }
+.review-highlight { animation: reveal-highlight .8s ease-out both; }
+.review-tick { stroke-dasharray: 55; animation: draw-check 1.4s ease-out both; }
+.result-row { animation: reveal-row .65s ease-out both; }
+.row-two { animation-delay: .25s; }.row-three { animation-delay: .5s; }
+.voice-line { transform-box: fill-box; transform-origin: center; animation: speak 1.6s ease-in-out both; }
+.voice-two { animation-delay: .1s; }.voice-three { animation-delay: .2s; }
+@keyframes scan-page { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: 1; } 80% { opacity: 1; } 100% { transform: translateY(84px); opacity: 0; } }
+@keyframes reveal-highlight { from { opacity: 0; } to { opacity: 1; } }
+@keyframes draw-check { from { stroke-dashoffset: 55; } to { stroke-dashoffset: 0; } }
+@keyframes reveal-row { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes speak { 0%,100% { transform: scaleY(1); } 25%,75% { transform: scaleY(.45); } 50% { transform: scaleY(1.15); } }
+@media (max-height: 650px) { .welcome-art { max-width: 140px; margin-bottom: 12px; } .tutorial-art { max-width: 150px; margin-bottom: 12px; } .tutorial-screen > p { min-height: 0; } .tutorial-dots { margin: 14px 0; } .tutorial-nav { margin-top: 14px; } }
+@media (prefers-reduced-motion: reduce) { .scan-line, .review-highlight, .review-tick, .result-row, .voice-line { animation: none; } .scan-line { opacity: 0; } }

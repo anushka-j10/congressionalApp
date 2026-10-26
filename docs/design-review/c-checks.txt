@@ -16,3 +16,13 @@ Same test commands rerun: 422 Python passed, 25 JavaScript passed.
 27 layout combinations rerun; no horizontal overflow or measured visible control/confirmation-label target under 44px.
 Story text measured 16px in all combinations. English story visually reviewed at 390px.
 Evidence: c-final-layout-checks.json, c-our-story.png.
+
+App flow update:
+node --test tests/*.mjs: 29 passed.
+../../work/m4-audit-venv/bin/python -m pytest -q: 422 passed, one dependency warning.
+Browser: 63 checks (7 screens/states x 3 widths x 3 UI languages), c-flow-checks.json.
+No horizontal overflow or measured visible button/select/summary under 44px.
+One active screen at a time; welcome/tutorial fit tested 820px viewport height.
+Native story modal opened; Close and Escape returned to the app.
+CSS animations are finite and disabled under prefers-reduced-motion; OS preference not toggled.
+Preview photo processing/audio remain inactive. No live deployment or model requests.

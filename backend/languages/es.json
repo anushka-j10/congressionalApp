@@ -159,7 +159,25 @@
     "photo_tips": "Consejos para la foto y archivos admitidos",
     "story_title": "Nuestra historia",
     "story_origin": "Después de una emergencia de salud, los padres de Anushka Jain le pidieron ayuda para leer una multa de estacionamiento. Aunque el inglés es su lengua materna, le costó entenderla y saber qué hacer después.",
-    "story_purpose": "Al crecer en la comunidad diversa y llena de vida de Jersey City, Anushka vio cómo los avisos confusos podían crear barreras para muchas familias. Esa experiencia la inspiró a crear Notice Decoder, usando aprendizaje automático para facilitar la comprensión de los avisos."
+    "story_purpose": "Al crecer en la comunidad diversa y llena de vida de Jersey City, Anushka vio cómo los avisos confusos podían crear barreras para muchas familias. Esa experiencia la inspiró a crear Notice Decoder, usando aprendizaje automático para facilitar la comprensión de los avisos.",
+    "welcome_title": "Entiende tu aviso",
+    "welcome_body": "Empieza con una foto. Revisa el texto. Encuentra los detalles que necesitas.",
+    "get_started": "Comenzar",
+    "how_it_works": "Cómo funciona",
+    "skip_tutorial": "Omitir tutorial",
+    "tutorial_back": "Atrás",
+    "tutorial_next": "Siguiente",
+    "tutorial_finish": "Leer mi aviso",
+    "tutorial_progress": "Paso {step} de {total}",
+    "close_story": "Cerrar historia",
+    "tutorial_1_title": "Toma una foto clara",
+    "tutorial_1_body": "Incluye toda la página y asegúrate de que las palabras estén enfocadas. También puedes elegir una foto de tu teléfono.",
+    "tutorial_2_title": "Revisa lo que leímos",
+    "tutorial_2_body": "Compara el texto con tu foto. Corrige los errores, elige el tipo de aviso y revisa cada fecha e importe antes de continuar.",
+    "tutorial_3_title": "Encuentra los datos clave",
+    "tutorial_3_body": "Consulta la fecha límite, el importe y los próximos pasos. Abre una fuente para compararla con el aviso. Si algo no se puede verificar, te lo indicaremos.",
+    "tutorial_4_title": "Lee o escucha",
+    "tutorial_4_body": "Elige inglés, español o tagalo, o usa Leer en voz alta si hay una voz compatible. Las traducciones no están revisadas; verifica los datos importantes con la oficina emisora."
   },
   "reader_warning_patterns": [
     {
