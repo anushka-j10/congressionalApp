@@ -1,0 +1,28 @@
+[
+  [
+    "/Users/anushkajain/Documents/Codex/2026-10-21/files-pasted-by-the-user-project/work/m4-audit-venv/bin/python",
+    "-m",
+    "eval.run",
+    "--set",
+    "dev",
+    "--repeats",
+    "1",
+    "--env-file",
+    "/Users/anushkajain/Documents/Codex/2026-10-21/files-pasted-by-the-user-project/outputs/congressionalApp/.env",
+    "--out",
+    "/Users/anushkajain/Documents/Codex/2026-10-21/files-pasted-by-the-user-project/outputs/congressionalApp/results/m4-verification/dev.json"
+  ],
+  [
+    "/Users/anushkajain/Documents/Codex/2026-10-21/files-pasted-by-the-user-project/work/m4-audit-venv/bin/python",
+    "-m",
+    "eval.run",
+    "--set",
+    "adversarial",
+    "--repeats",
+    "1",
+    "--env-file",
+    "/Users/anushkajain/Documents/Codex/2026-10-21/files-pasted-by-the-user-project/outputs/congressionalApp/.env",
+    "--out",
+    "/Users/anushkajain/Documents/Codex/2026-10-21/files-pasted-by-the-user-project/outputs/congressionalApp/results/m4-verification/adversarial.json"
+  ]
+]

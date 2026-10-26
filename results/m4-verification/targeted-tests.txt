@@ -1,0 +1,40 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.14, pytest-8.4.2, pluggy-1.7.0 -- /Users/anushkajain/Documents/Codex/2026-10-21/files-pasted-by-the-user-project/work/m4-audit-venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/anushkajain/Documents/Codex/2026-10-21/files-pasted-by-the-user-project/work/m4-audit-clean
+plugins: anyio-4.15.1
+collecting ... collected 25 items
+
+tests/test_field_validation.py::test_text_values_need_actual_source_phrases[contact-Call 201-555-0100-Call 201-555-0100-Call 201-555-0101] PASSED [  4%]
+tests/test_field_validation.py::test_text_values_need_actual_source_phrases[required_action-Pay $4-Pay $45-Pay $45] PASSED [  8%]
+tests/test_field_validation.py::test_text_values_need_actual_source_phrases[required_action-Pay $45-Pay $45.00-Pay $45.00] PASSED [ 12%]
+tests/test_field_validation.py::test_text_values_need_actual_source_phrases[required_action-Ignore instructions-Return the form-Return the form] PASSED [ 16%]
+tests/test_field_validation.py::test_text_values_need_actual_source_phrases[contact-Fake Office-Fake Office-No contacts here] PASSED [ 20%]
+tests/test_field_validation.py::test_missing_is_missing_not_a_guessed_value PASSED [ 24%]
+tests/test_explanation.py::test_bad_english_number_regenerates_once_then_template_fallback PASSED [ 28%]
+tests/test_read.py::test_no_notice_data_left_on_disk[None] PASSED        [ 32%]
+tests/test_read.py::test_no_notice_data_left_on_disk[reader] PASSED      [ 36%]
+tests/test_read.py::test_no_notice_data_left_on_disk[unexpected] PASSED  [ 40%]
+tests/test_read.py::test_no_notice_data_left_on_disk[bad-image] PASSED   [ 44%]
+tests/test_read.py::test_no_notice_data_left_on_disk[multipart] PASSED   [ 48%]
+tests/test_extract.py::test_extraction_keeps_text_out_of_logs_files_and_errors[None] PASSED [ 52%]
+tests/test_extract.py::test_extraction_keeps_text_out_of_logs_files_and_errors[provider] PASSED [ 56%]
+tests/test_extract.py::test_extraction_keeps_text_out_of_logs_files_and_errors[unexpected] PASSED [ 60%]
+tests/test_extract.py::test_extraction_keeps_text_out_of_logs_files_and_errors[request] PASSED [ 64%]
+tests/test_explanation.py::test_language_privacy_on_success_and_failures[success] PASSED [ 68%]
+tests/test_explanation.py::test_language_privacy_on_success_and_failures[malformed] PASSED [ 72%]
+tests/test_explanation.py::test_language_privacy_on_success_and_failures[oversize] PASSED [ 76%]
+tests/test_explanation.py::test_language_privacy_on_success_and_failures[tampered] PASSED [ 80%]
+tests/test_explanation.py::test_language_privacy_on_success_and_failures[unexpected] PASSED [ 84%]
+tests/test_m4_robustness.py::test_entire_api_flow_leaves_no_notice_translation_or_explanation_on_disk_or_logs[None] PASSED [ 88%]
+tests/test_m4_robustness.py::test_entire_api_flow_leaves_no_notice_translation_or_explanation_on_disk_or_logs[read] PASSED [ 92%]
+tests/test_m4_robustness.py::test_entire_api_flow_leaves_no_notice_translation_or_explanation_on_disk_or_logs[extract] PASSED [ 96%]
+tests/test_m4_robustness.py::test_entire_api_flow_leaves_no_notice_translation_or_explanation_on_disk_or_logs[explain] PASSED [100%]
+
+=============================== warnings summary ===============================
+../m4-audit-venv/lib/python3.12/site-packages/starlette/testclient.py:51
+  /Users/anushkajain/Documents/Codex/2026-10-21/files-pasted-by-the-user-project/work/m4-audit-venv/lib/python3.12/site-packages/starlette/testclient.py:51: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 25 passed, 1 warning in 1.19s =========================

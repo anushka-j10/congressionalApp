@@ -1,0 +1,46 @@
+INFO     notice_decoder:main.py:128 request_id=2ab41a8429b84a198f096e1b0ee0e5a9 timing_ms=724 doc_type=unknown error=none
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/read "HTTP/1.1 200 OK"
+INFO     notice_decoder:main.py:128 request_id=2391c9b8d2fb485088a4a8b7c11ed576 timing_ms=10 doc_type=unknown error=reader_unavailable
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/read "HTTP/1.1 503 Service Unavailable"
+INFO     notice_decoder:main.py:128 request_id=48a7c73ad16240309bd1668d78588d3d timing_ms=10 doc_type=unknown error=processing_failed
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/read "HTTP/1.1 500 Internal Server Error"
+INFO     notice_decoder:main.py:128 request_id=5149161ef26a429a8691f1f489e2497c timing_ms=12 doc_type=unknown error=http_415
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/read "HTTP/1.1 415 Unsupported Media Type"
+INFO     notice_decoder:main.py:128 request_id=ddb4056d25444fb09e51618edf6b59ee timing_ms=0 doc_type=unknown error=http_400
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/read "HTTP/1.1 400 Bad Request"
+INFO     notice_decoder:main.py:180 request_id=edc9904090da4e8aa694e54ccbcfc875 timing_ms=1 doc_type=parking_ticket error=none
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/extract "HTTP/1.1 200 OK"
+INFO     notice_decoder:main.py:180 request_id=f0d8ccdb462848298281831e017eb4dc timing_ms=0 doc_type=parking_ticket error=extraction_unavailable
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/extract "HTTP/1.1 503 Service Unavailable"
+INFO     notice_decoder:main.py:180 request_id=2b3bf5d509324a72ab40c2ac78a24176 timing_ms=0 doc_type=parking_ticket error=extraction_failed
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/extract "HTTP/1.1 500 Internal Server Error"
+INFO     notice_decoder:main.py:180 request_id=5b7679b8046f411890aed8a3b37b627f timing_ms=0 doc_type=unknown error=http_422
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/extract "HTTP/1.1 422 Unprocessable Entity"
+INFO     notice_decoder:main.py:230 request_id=088ca9050538424b8074e32471ac0d47 timing_ms=2 doc_type=parking_ticket error=none
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/explain "HTTP/1.1 200 OK"
+INFO     notice_decoder:main.py:230 request_id=e63ec334fc2848b4b783355a0831163b timing_ms=0 doc_type=unknown error=http_422
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/explain "HTTP/1.1 422 Unprocessable Entity"
+INFO     notice_decoder:main.py:230 request_id=ea7f20e819c84a0788c03eef8e4b61c4 timing_ms=0 doc_type=unknown error=http_413
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/explain "HTTP/1.1 413 Request Entity Too Large"
+INFO     notice_decoder:main.py:230 request_id=ad8cc2de3e8b4fc7aef75c7d0d595d20 timing_ms=0 doc_type=parking_ticket error=http_409
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/explain "HTTP/1.1 409 Conflict"
+INFO     notice_decoder:main.py:230 request_id=07269b123c564a73943927967e26b284 timing_ms=0 doc_type=parking_ticket error=explanation_failed
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/explain "HTTP/1.1 500 Internal Server Error"
+INFO     notice_decoder:main.py:128 request_id=63691c067bb14682b70024e149a57641 timing_ms=29 doc_type=unknown error=none
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/read "HTTP/1.1 200 OK"
+INFO     notice_decoder:main.py:180 request_id=1620d52ff7894b13be193d62b0fee820 timing_ms=0 doc_type=parking_ticket error=none
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/extract "HTTP/1.1 200 OK"
+INFO     notice_decoder:main.py:230 request_id=c6e53a4efb8d499f9cc8a112c107ed5a timing_ms=1 doc_type=parking_ticket error=none
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/explain "HTTP/1.1 200 OK"
+INFO     notice_decoder:main.py:128 request_id=03ecf92e96264bb89bc59863ad668028 timing_ms=28 doc_type=unknown error=processing_failed
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/read "HTTP/1.1 500 Internal Server Error"
+INFO     notice_decoder:main.py:128 request_id=78b27b2c6caf4135bfa14f1e7db5a99b timing_ms=29 doc_type=unknown error=none
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/read "HTTP/1.1 200 OK"
+INFO     notice_decoder:main.py:180 request_id=b2a48b013363403a8bb27a589dfff4f7 timing_ms=0 doc_type=parking_ticket error=extraction_failed
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/extract "HTTP/1.1 500 Internal Server Error"
+INFO     notice_decoder:main.py:128 request_id=acfd8707c8c1437cb9d066f92e2f3790 timing_ms=28 doc_type=unknown error=none
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/read "HTTP/1.1 200 OK"
+INFO     notice_decoder:main.py:180 request_id=03a7cee13bf64eaaaecdaaeb786983e0 timing_ms=0 doc_type=parking_ticket error=none
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/extract "HTTP/1.1 200 OK"
+INFO     notice_decoder:main.py:230 request_id=20666449c95b4b5aa48823f0376aec17 timing_ms=0 doc_type=parking_ticket error=explanation_failed
+INFO     httpx:_client.py:1025 HTTP Request: POST http://testserver/api/explain "HTTP/1.1 500 Internal Server Error"

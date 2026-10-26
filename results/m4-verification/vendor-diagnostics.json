@@ -1,0 +1,15 @@
+{
+  "file": "frontend/vendor/heic-to.js",
+  "console_call_sites": 8,
+  "contexts": [
+    ".heif_chroma.heif_chroma_420);if(!R||R.code){console.log(\"Decoding image failed\",this.handle,R);return}this.data=new Uint8Array(x9(R.data)),delete R.data,this.img=R,R.alpha!==void 0&&(this.alpha=new Uint8Array(x9(R.alpha)),de",
+    "if_chroma_interleaved_RGBA);if(!i0||i0.code){console.log(\"Decoding image failed\",this.handle,i0),D(null);return}for(let d of i0.channels)if(d.id==L.heif_channel.heif_channel_interleaved)if(d.stride==d.width*4)R.data.set(d.dat",
+    "=L.heif_context_alloc(),!this.decoder)return console.log(\"Could not create HEIF context\"),[];var D=L.heif_context_read_from_memory(this.decoder,R);if(D.code!==L.heif_error_code.heif_error_Ok)return console.log(\"Could not pars",
+    "ode!==L.heif_error_code.heif_error_Ok)return console.log(\"Could not parse HEIF file\",D.message),[];var K=L.heif_js_context_get_list_of_top_level_image_IDs(this.decoder);if(!K||K.code)return console.log(\"Error loading image id",
+    "image_IDs(this.decoder);if(!K||K.code)return console.log(\"Error loading image ids\",K),[];if(!K.length)return console.log(\"No images found\"),[];for(var $=[],i0=0;i0<K.length;i0++){var d=L.heif_js_context_get_image_handle(this.",
+    "loading image ids\",K),[];if(!K.length)return console.log(\"No images found\"),[];for(var $=[],i0=0;i0<K.length;i0++){var d=L.heif_js_context_get_image_handle(this.decoder,K[i0]);if(!d||d.code){console.log(\"Could not get image d",
+    "ge_handle(this.decoder,K[i0]);if(!d||d.code){console.log(\"Could not get image data for id\",K[i0],d);continue}$.push(new z8(d))}return $};var Zv=function(R){return R.charCodeAt(0)<<24|R.charCodeAt(1)<<16|R.charCodeAt(2)<<8|R.c",
+    " Worker(URL.createObjectURL(e)),i.onerror=r=>console.error(\"Worker error:\",r)}return i},f=t=>d(null,null,function*(){return new Promise((e,r)=>{g();let c=(Math.random()*new Date().getTime()).toString(),m={id:c,buffer:t};i.pos"
+  ],
+  "interpretation": "Vendored browser/WASM decoder has diagnostic console calls for decode errors/IDs. No OCR text logger or application persistence found here; static review is not proof about every vendor error payload."
+}

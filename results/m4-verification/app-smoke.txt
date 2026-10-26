@@ -1,0 +1,2 @@
+Clean-clone app: shell/health/read/extract/explain HTTP 200; all APIs no-store; five private paths HTTP 404; no new persisted notice/storage files.
+This success flow uses unknown-type/static explanations, no paid model request; live model behavior is tested separately by the eval runs.

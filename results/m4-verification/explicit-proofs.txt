@@ -1,0 +1,24 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.14, pytest-8.4.2, pluggy-1.7.0 -- /Users/anushkajain/Documents/Codex/2026-10-21/files-pasted-by-the-user-project/work/m4-audit-clean/../m4-audit-venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/anushkajain/Documents/Codex/2026-10-21/files-pasted-by-the-user-project/work/m4-audit-clean
+plugins: anyio-4.15.1
+collecting ... collected 9 items
+
+tests/test_m4_audit.py::test_absent_source_snippet_can_never_verify[issuing_agency] PASSED [ 11%]
+tests/test_m4_audit.py::test_absent_source_snippet_can_never_verify[deadline] PASSED [ 22%]
+tests/test_m4_audit.py::test_absent_source_snippet_can_never_verify[amount_due] PASSED [ 33%]
+tests/test_m4_audit.py::test_absent_source_snippet_can_never_verify[required_action] PASSED [ 44%]
+tests/test_m4_audit.py::test_absent_source_snippet_can_never_verify[contact] PASSED [ 55%]
+tests/test_m4_audit.py::test_notice_with_no_deadline_does_not_infer_one_from_issued_date PASSED [ 66%]
+tests/test_m4_audit.py::test_bad_model_cannot_promote_issue_date_to_a_missing_deadline PASSED [ 77%]
+tests/test_m4_audit.py::test_all_absent_fields_stay_missing_without_added_values PASSED [ 88%]
+tests/test_explanation.py::test_bad_english_number_regenerates_once_then_template_fallback PASSED [100%]
+
+=============================== warnings summary ===============================
+../m4-audit-venv/lib/python3.12/site-packages/starlette/testclient.py:51
+  /Users/anushkajain/Documents/Codex/2026-10-21/files-pasted-by-the-user-project/work/m4-audit-venv/lib/python3.12/site-packages/starlette/testclient.py:51: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+========================= 9 passed, 1 warning in 0.15s =========================

@@ -1,0 +1,6 @@
+6c13e08925fa88643957d9dc777d65b6136a70ae
+
+v26.0.0
+tesseract 5.5.3
+Python 3.12.14
+Clone has no .env: True

@@ -1,0 +1,8 @@
+backend/main.py:128:        logger.info("request_id=%s timing_ms=%d doc_type=%s error=%s",
+backend/main.py:180:        logger.info("request_id=%s timing_ms=%d doc_type=%s error=%s",
+backend/main.py:230:        logger.info("request_id=%s timing_ms=%d doc_type=%s error=%s",
+backend/images.py:66:            with Image.open(io.BytesIO(data)) as probe:
+backend/images.py:74:            with Image.open(io.BytesIO(data)) as source:
+backend/images.py:86:                clean.save(output, format="JPEG", quality=90)
+backend/readers.py:1:"""Interchangeable OCR readers; neither implementation writes notice files."""
+backend/classifier/signals.py:14:# Keep this empty until YOU write the real lists. See toy tests for syntax.

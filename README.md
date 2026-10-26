@@ -924,3 +924,8 @@ Review [the held-out analysis](results/heldout-review.md), [unchanged table](res
 The repaired version requires a separate amount-photo review, shows disagreements between two local OCR image treatments, and flags clipped action instructions. Supported date/amount context no longer fails merely because one sentence contains both types of number. See [current validation and limits](results/reliability-summary.md).
 
 383 Python and 17 JavaScript checks pass; fresh live development/adversarial results and their deliberately reduced unattended amount coverage are recorded there. Original eval-freeze and held-out artifacts are preserved; no new held-out claim is made.
+
+
+## Milestone 4 verification audit — 2026-10-25
+
+Overall FAIL against the requested checklist: individual-validator leave-one-out ablation is missing; B2 only turns all validators off. The clean-install audit passed 391 Python and 17 JavaScript tests and completed fresh dev/adversarial runs. See [the per-item report and command evidence](results/m4-verification/REPORT.md). No production features were added, no held-out run occurred in this audit, and the existing eval-freeze tag was not moved.

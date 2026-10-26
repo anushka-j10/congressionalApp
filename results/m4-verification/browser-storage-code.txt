@@ -1,0 +1,6 @@
+frontend/sw.js:7:  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(SHELL)).then(() => self.skipWaiting()));
+frontend/sw.js:11:  event.waitUntil(caches.keys().then((keys) => Promise.all(
+frontend/sw.js:13:      .map((key) => caches.delete(key))
+frontend/sw.js:22:  event.respondWith(fetch(event.request).catch(() => caches.match(url.pathname)));
+frontend/i18n.js:36:    try { localStorage.setItem(storageKey, current); } catch { /* private/offline browser */ }
+frontend/i18n.js:66:  try { remembered = localStorage.getItem(storageKey); } catch { /* no storage */ }
