@@ -1,0 +1,43 @@
+{
+  "original_freeze_commit": "24d729a540ed3913ced09ee42af89765fd921c4b",
+  "original_artifact_sha256": {
+    "results/heldout-final.json": "f2187dcaaec2feb85b9bb4e5563c740490986f378b9eeecc46b5bd81f026a7e2",
+    "results/heldout-final.md": "4fcd3aaf4df7a7e3a42a4eff4e7ef2adff7b96095439ed0443d495748fcfa4c8",
+    "results/heldout-protocol.json": "12428c0730746c1f6d874bb50ccb4c895eecc996f93efafd4e11c37e0e3b30e7",
+    "results/heldout-review.md": "8375889e1e77c7f2be99bfa9a98a8ff45669568ff6f3ac6a97ea21c2ce8a96db",
+    "eval/heldout-run-started.json": "903bd87eeb74a342d2a568ee3a74705db462ccf471ca80dfd40608fb365b0993",
+    "eval/freeze.json": "2aa8320de0ed99f1d4a6fe9ddccab206c18609c95465f27c28689d051fb0f568"
+  },
+  "original_artifacts_unchanged": true,
+  "source_sha256": "108928aee24bf81572532a89cbed4f21b6d99806367015e21a91357516ffb0a4",
+  "implementation_commit": "0eb731de25c5bba8ae96bb8327fce5a6b94de68e",
+  "tests": {
+    "python_passed": 383,
+    "javascript_passed": 17,
+    "new_python_cases": 38
+  },
+  "results_sha256": {
+    "results/reliability-dev.json": "ee66dd260fbda380514dfeda2b814e63dcf216e5a28b96c1fc9f716e51410731",
+    "results/reliability-dev.md": "f7cf45bbf23ef52194ad5f6ed5e40954ae48c016854b1a020fad44dcc1cf6444",
+    "results/reliability-adversarial.json": "6f6f2a9b09cfa4c809e662614c8fdd849672ccc500daf56ec21417b343bcbe7c",
+    "results/reliability-adversarial.md": "91c9bf612a161c5e9aa8abe74908862c73faf4e650033b077abbc6feaf589c1e",
+    "results/reliability-summary.md": "6a42c8a97e27e1d9cf2ccce3df702c088868149e94aa72b98753d58c0286a8fa",
+    "results/reliability-controls.json": "17d9dd7c023ce9b8a814ed1e35610573fc9bec229a503c2fea9a973b15dbb00e",
+    "results/reliability-preview.png": "487c6834392ab66b8c7d1da329ab100a8f4dc6c8c85ed37e0bf743a1a62accdb"
+  },
+  "heldout_rerun": false,
+  "heldout_rescored": false,
+  "run_dates": {
+    "dev": "2026-10-24",
+    "adversarial": "2026-10-24"
+  },
+  "final_credential_audit": {
+    "checked_project_files": 373,
+    "key_copies_found": 0,
+    "env_mode": "0600",
+    "env_ignored_untracked": true,
+    "heldout_inputs_excluded": true,
+    "live_private_paths_404": 6,
+    "live_public_apis_no_store_key_free": 3
+  }
+}

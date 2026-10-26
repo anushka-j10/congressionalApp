@@ -1,0 +1,77 @@
+{
+  "status": "single_completed_attempt_do_not_rerun",
+  "run_date": "2026-10-24",
+  "freeze_commit": "24d729a540ed3913ced09ee42af89765fd921c4b",
+  "source_sha256": "c71e6433a0059364578b149af45840ed2f6a6b349d001440b5315c0440b5c5d6",
+  "source_matches_frozen_run": true,
+  "scorer_version": "proposed-m4-strict-v2",
+  "corpus_sha256": "4af61b6bda2e9b11a4294a1f73df09a9030e60e1bbc2707fdb60ccef2a90a0db",
+  "records": 10,
+  "repetitions": 1,
+  "variant": "clean",
+  "variant_note": "Frozen harness label; original images, no generated degradation or physical-phone claim.",
+  "raw_result_sha256": "f2187dcaaec2feb85b9bb4e5563c740490986f378b9eeecc46b5bd81f026a7e2",
+  "raw_markdown_sha256": "4fcd3aaf4df7a7e3a42a4eff4e7ef2adff7b96095439ed0443d495748fcfa4c8",
+  "run_start_ledger": {
+    "status": "started_do_not_rerun",
+    "freeze_commit": "24d729a540ed3913ced09ee42af89765fd921c4b",
+    "source_sha256": "c71e6433a0059364578b149af45840ed2f6a6b349d001440b5315c0440b5c5d6"
+  },
+  "student_input_provenance": {
+    "purpose": "Student-supplied heldout inputs packaged after code freeze; no app or scorer changes. Exact answer-key strings retained, MISSING/AMBIGUOUS mapped to null with explicit state. No aliases added. Notes excluded from scored answers. Original images copied byte-for-byte; clean is the frozen harness variant label, not a phone-capture claim.",
+    "answer_key_sha256": "2ac5ac6602b4606262b0495cd71dfd221b372cec920f3a00e0d2c5effcc5768b",
+    "cases": [
+      {
+        "id": "case_01",
+        "doc_type": "parking_ticket",
+        "image_sha256": "80f8da83d6e456c71dc215f70f271ad69c92085e5da99725e45ac2b263ab6801"
+      },
+      {
+        "id": "case_02",
+        "doc_type": "parking_ticket",
+        "image_sha256": "1115c26e4da5fd30a125a63daba03e5ebd523a68c9b32f34849bff67a61f00fa"
+      },
+      {
+        "id": "case_03",
+        "doc_type": "parking_ticket",
+        "image_sha256": "3a5dd46313bd32e10baaa4dda46e80fde6b2ec8071ce7f499ddaaf7d7ec5f031"
+      },
+      {
+        "id": "case_04",
+        "doc_type": "court_notice",
+        "image_sha256": "2becb343f55a1e6a61aa5d89a926085fba3902b9e71d70ddc2138a734b0a9c4c"
+      },
+      {
+        "id": "case_05",
+        "doc_type": "court_notice",
+        "image_sha256": "ca405ada659554a4c55e4c49c3f00b4c6e8cc24f83dd34fc54fe65ae0da78fdb"
+      },
+      {
+        "id": "case_06",
+        "doc_type": "court_notice",
+        "image_sha256": "664f71ed66a01c1d0f9f8e4e4c11747f342ee81aab1e23a73002bdc5681f9211"
+      },
+      {
+        "id": "case_07",
+        "doc_type": "utility_bill",
+        "image_sha256": "bd0276d52058e08748caa51dd21c4914b4a44bf35b2812e245d0d86d2ba39ab3"
+      },
+      {
+        "id": "case_08",
+        "doc_type": "utility_bill",
+        "image_sha256": "0572bb673da1179d830312cc0d987c621b4d5de9bc64a2da5a1a313e66d4a77b"
+      },
+      {
+        "id": "case_09",
+        "doc_type": "school_letter",
+        "image_sha256": "85c214928c6a6d0bb9703a8b710d27a27436d02b2a67537b0c91ce9afb50679c"
+      },
+      {
+        "id": "case_10",
+        "doc_type": "school_letter",
+        "image_sha256": "2dbefef7babc9f240991dcacb09413d87478eef821cfed2448b9d379b6a4912f"
+      }
+    ]
+  },
+  "no_post_test_source_scorer_or_expected_changes": true
+}

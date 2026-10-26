@@ -254,3 +254,25 @@
 - **`results/m4-round2-live-adversarial.json`**: Contains the successful full live evaluation after this selected fix. Provider coverage is checked before using these counts; earlier unavailable attempts remain separate.
 
 - **`results/m4-round2-live-adversarial.md`**: Contains the successful full live evaluation after this selected fix. Provider coverage is checked before using these counts; earlier unavailable attempts remain separate.
+
+
+## Final held-out artifacts — 2026-10-24
+
+`results/heldout-final.json` stores the single frozen run's raw synthetic OCR, model outputs, scores and usage. `results/heldout-final.md` is its unchanged scorer-generated table, including the bad results.
+
+`results/heldout-review.md` explains the genuine numeric error, incomplete outputs and strict wording/normalization mismatches without changing scores. It lists every field mismatch and present-field abstention from the saved run; it is analysis of existing outputs, not another experiment.
+
+`results/heldout-protocol.json` records the original freeze commit, input hashes and final output hashes. It confirms a single completed attempt and unchanged frozen sources; the original run-start ledger is retained.
+
+Ignored `eval/heldout/manifest.json` lists the ten student-supplied cases, while case_01.json through case_10.json translate the supplied answer key into the evaluator's schema. The original images and answer document are retained alongside packaging-provenance.json with their hashes; none of these expected labels is sent to the model.
+
+
+## Post-evaluation repair files
+
+`tests/test_reliability_repairs.py` supplies 38 new development controls for mixed numeric context, full actions, explicit amount review, local OCR candidates and independent scoring. It includes a newly rendered real-OCR/API integration case and never opens student held-out inputs.
+
+`results/reliability-dev.{json,md}` and `results/reliability-adversarial.{json,md}` store new raw live records and full tables under scorer v3. Their unattended amount-review policy is explicit; they do not replace the original frozen results.
+
+`results/reliability-controls.json` records seven new deterministic before/after validator controls, not a model benchmark. `results/reliability-summary.md` explains implementation, tests, live results, coverage loss and remaining limits.
+
+`results/reliability-integrity.json` preserves original artifact hashes and records hashes of repair outputs/current source. `results/reliability-preview.png` shows the separate review controls in a browser using a synthetic development notice; the test notice was cleared afterward.

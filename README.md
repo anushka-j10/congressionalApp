@@ -2,8 +2,8 @@
 
 A mobile-first PWA project for a Congressional App Challenge entry in NJ-08,
 starting with Jersey City / Hudson County. **Current checkpoint: Milestone 4 selected fixes 1–2 are
-complete and frozen; heldout acceptance remains pending.** Photograph a page, check and confirm
-the text, explicitly select the document type, and inspect source-backed facts.
+complete. Post-evaluation reliability repairs are implemented; the original held-out run is preserved.** Photograph a page, check and confirm
+the text and every printed amount, explicitly select the document type, and inspect source-backed facts.
 The app explains verified facts in English and offers guarded Spanish/Tagalog
 translations, original-English toggles, and matching-voice read-aloud.
 
@@ -910,3 +910,17 @@ commits. Use the current FAILURES.md/docs/EVIDENCE.md sections and
 attempts are retained but excluded from quality claims. Heldout remains untouched,
 awaiting ten supplied cases after the code freeze. Residual contact/source and
 language limitations are disclosed; no deployment or push was performed.
+
+
+## Final held-out review checkpoint — 2026-10-24
+
+Ten student-supplied images and their independent answer key were evaluated once with the original eval-freeze sources. The frozen scorer flags critical false-verifications of B1 17/30, B2 8/30 and full 4/30; full is worse than dev 0/360 and all providers were available. These exact-match counts include a genuine $75.00 → $75.60 OCR error, two incomplete actions and one harmless wording difference; the raw scores were not revised.
+
+Review [the held-out analysis](results/heldout-review.md), [unchanged table](results/heldout-final.md) and [current evidence](docs/EVIDENCE.md). This closes the selected Part D run and stops for student review; no further tuning, new held-out attempt or Milestone 5 work was started. Earlier pending statements are historical.
+
+
+## Reliability repairs after held-out review
+
+The repaired version requires a separate amount-photo review, shows disagreements between two local OCR image treatments, and flags clipped action instructions. Supported date/amount context no longer fails merely because one sentence contains both types of number. See [current validation and limits](results/reliability-summary.md).
+
+383 Python and 17 JavaScript checks pass; fresh live development/adversarial results and their deliberately reduced unattended amount coverage are recorded there. Original eval-freeze and held-out artifacts are preserved; no new held-out claim is made.

@@ -1,3 +1,66 @@
+# Current reliability repair checkpoint
+
+User authorized implementation and automated checks after reviewing the original held-out failures. Repairs and their limits are detailed in results/reliability-summary.md; this is a new development cycle, not a revision of the frozen test.
+
+383 Python and 17 JavaScript checks pass. Both live sets completed with all methods/languages available. Human amount review is not simulated, so lower false-verification must be interpreted with reduced Verified coverage.
+
+| Set | B1 strict critical false-verified | B2 | Full | Full correct and Verified |
+| --- | --- | --- | --- | --- |
+| dev | 6/360 (1.7%) | 2/360 (0.6%) | 0/360 (0.0%) | 216/276 (78.3%) |
+| adversarial | 0/144 (0.0%) | 0/144 (0.0%) | 0/144 (0.0%) | 96/144 (66.7%) |
+
+Source changes: local original/preprocessed OCR comparisons; a human amount-review gate; complete-action checks; mixed date/amount context and weekday handling; separately reported limited wording equivalence in scorer v3. All original held-out outputs, expected labels, run ledger and eval-freeze remain unchanged; no held-out rerun/rescoring occurred. A fresh independent benchmark is still needed before claiming generalization.
+
+The following older checkpoint records are retained as history. The current working version is on fix/notice-reliability, not the original frozen HEAD.
+
+---
+
+# Final held-out checkpoint — 2026-10-24
+
+The ten student-supplied cases were evaluated once after the eval-freeze tag. All ten records completed, with no unavailable extraction, baseline or explanation methods. No production code, evaluator, scorer, model settings, expected answers or aliases were changed after observing outcomes. The source fingerprint and HEAD still match the original freeze. Packaging took place after freeze, before inference; original images and student answer strings were retained. Notes in the answer key were not scored or sent to the model.
+
+| Set / phase | B1 critical false-verified | B2 | Full |
+| --- | --- | --- | --- |
+| Final dev, 120 records | 6/360 (1.7%) | 6/360 (1.7%) | 0/360 (0.0%) |
+| Final adversarial, 48 records | 0/144 (0.0%) | 0/144 (0.0%) | 0/144 (0.0%) |
+| Held-out, 10 records once | 17/30 (56.7%) | 8/30 (26.7%) | 4/30 (13.3%) |
+
+These are the unchanged frozen scorer's exact-match results, not a claim that every text mismatch is a dangerous factual error. Full has 4/18 wrong among Verified critical outputs, 18/24 truth-present critical values correct, and 14/24 correct and Verified. All-field false-verification is 5/40: the four critical mismatches plus an abbreviated contact. Full marks absent deadlines correctly in 2/2 cases and absent amounts in 3/3. It leaves 4/7 present deadlines and 2/7 present amounts unverified, illustrating the coverage cost of conservative validation.
+
+Held-out is substantially worse than dev: 13.3% versus 0% on this headline. This suggests limited generalization from correlated development fixtures and possible overfitting to their formats. More varied layouts expose OCR errors and incomplete extraction; the strict scorer also penalizes semantically equivalent wording and unrecognized date formats. Ten cases and one run cannot separate or quantify those effects reliably. No revised metric, post-test scorer repair, tuning, or rerun is used to improve the headline.
+
+## Review the actual failures first
+
+| Case / field | Expected | Full output / status | Interpretation |
+| --- | --- | --- | --- |
+| case_03 amount | 75.00 | 75.60 / Verified | Genuine numeric error: OCR read CHARGE as $75.60. Source matching verified the incorrect OCR rather than the original pixels. The harness confirms OCR unchanged; it does not simulate a human correcting the text. |
+| case_04 action | You must appear in person in Courtroom 2 at 9:00 AM on Thursday, December 3, 2026. | appear in person in Courtroom 2 at 9:00 AM on Thursday, December 3, 2026 / Verified | Same obligation, location and time; frozen exact-copy scorer flags omission of 'You must'. This is a wording mismatch, not an invented obligation. |
+| case_06 action | File a written response with the Clerk's Office within 14 calendar days of the date of this notice. | File a written response with the Clerk's Office / Verified | Incomplete action: relative timing clause dropped. The separate deadline card correctly calculates 2026-11-05, which mitigates but does not change the scored action mismatch. |
+| case_09 action | Please return the signed permission slip and the $12.00 trip fee to Ms. Rivera by Friday, November 6, 2026. | Please return the signed permission slip and the $12.00 trip fee to Ms. Rivera / Verified | Incomplete action: return-by clause dropped, while the separate correct deadline is unverified. This leaves actionable timing uncertain in the full output. |
+| case_07 contact | Customer Service phone, hours and PO Box | (800) 555-0155 / Verified | Correct phone, incomplete contact compared with the student key. Hours and postal alternative are omitted; no fabricated phone. Outside the critical headline. |
+
+## Conservative flags and scorer limitations
+
+The full pipeline flags the ambiguous case_05 date rather than showing a selected date as Verified; B1/B2 both select November 20. That is a safety improvement, although the frozen scorer still calls the non-null unverified candidate wrong under an ambiguous truth state. Full abstains correctly on missing deadline cases_03/10 and missing amount cases_04/06/10.
+
+Correct values are conservatively flagged: deadlines in cases_01/04/08/09, amounts in cases_02/09. Their generic validator reason is retained in raw output; a precise internal cause is not asserted without a separate future investigation. Weekday-prefixed dates in cases_04/09 are not recognized by the frozen scorer's canonicalizer; relative phrases in B1/B2 case_06 also do not equal an ISO date. B1 case_04's explicit prose that fines are not stated is counted wrong because this particular absence phrase is outside the frozen absence vocabulary. Many B1 action/contact discrepancies are paraphrases, supported additions or punctuation differences. All original counts remain unchanged.
+
+These observations explain limits of interpretation, not retrospective ground-truth changes. Student answers were copied exactly, MISSING/AMBIGUOUS mapped to null plus explicit states, and no new acceptable aliases were added.
+
+## Language, capture and protocol limits
+
+Full Spanish and Tagalog each pass number/glossary checks in 7/10 cases and fall back to English in 3/10. Mechanical checks and back-translation are not native-speaker reviews; a correctly translated wrong field remains wrong. Full p50/p95 latency is 13.82/16.51 seconds and estimated mean model cost is $0.012555 per notice using recorded tokens and the frozen standard rates; CPU/hosting and unknown unreported failures are excluded. These rates were previously documented, not freshly priced for this held-out run.
+
+One original image per case was processed, under the frozen harness label 'clean'; no new degraded copies or physical-phone test is claimed. Types are 3 parking, 3 court, 2 utility and 2 school. Automatic classification still yields unknown for all ten; evaluation uses the student's explicit type selection. There was one repetition only: the generated table's zero standard deviation is arithmetic for one observation, not measured repeatability. The generic clean/degraded caption in the raw report does not mean both variants were run.
+
+Raw outputs and frozen tables: results/heldout-final.json and results/heldout-final.md. Detailed unchanged scorer discrepancies follow in results/heldout-review.md. Input hashes and post-run integrity checks are in results/heldout-protocol.json. Student input copies remain in the ignored eval/heldout folder. No key is copied there, no expected labels are provided to inference calls, and nothing was pushed or deployed.
+
+This concludes the selected Part D evaluation. Stop for student review; do not start another fix round or reuse these ten cases as a fresh held-out benchmark. Native language reviews, real-phone checks and independent student contributions remain outstanding.
+
+---
+
+The following selected-fix and historical records are retained for provenance. Any earlier NOT RUN or pending statements describe their historical checkpoint, not the current status.
+
 # Current Part D checkpoint — 2026-10-24
 
 Fix 1 then fix 2 completed, with successful live dev/adversarial reruns after each. Two rounds were used; unselected fixes were not added.
@@ -61,10 +124,10 @@ Zero observed critical failures on correlated synthetic fixtures does not establ
 
 ## Heldout and freeze
 
-Heldout is NOT RUN, awaiting ten student-supplied cases. No attempt was consumed. Selected code is frozen with eval-freeze after the credential audit; no heldout file was read to prepare the freeze.
+Heldout is now completed once: see the final checkpoint at the top and results/heldout-final.{json,md}. Selected code remains at the original eval-freeze; no post-test code or scorer changes were made.
 
 
-Latest complete tables: [dev](../results/m4-round2-live-dev.md), [adversarial](../results/m4-round2-live-adversarial.md). The three instructive failures now show: conflicting dates fixed, hostile source evidence fixed, clipped contact evidence still unresolved (not selected). No heldout or unselected improvement is fabricated.
+Latest complete tables: [dev](../results/m4-round2-live-dev.md), [adversarial](../results/m4-round2-live-adversarial.md). The three instructive failures now show: conflicting dates fixed, hostile source evidence fixed, clipped contact evidence still unresolved (not selected). Heldout is reported in the final checkpoint above; no unselected improvement is claimed.
 
 ## Historical pre-fix evidence
 

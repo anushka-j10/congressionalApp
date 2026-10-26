@@ -573,3 +573,15 @@ also covers field-output directives, with passing controls for ordinary contact
 instructions. These are bounded safeguards, not authentication or complete semantic
 understanding. Live-access failures were excluded from quality conclusions and
 retained as unavailable artifacts; fresh successful runs are required for results.
+
+
+## Frozen held-out outcome — 2026-10-24
+
+The ten student-supplied cases ran once with original frozen sources; full critical false-verification was 4/30 under the unchanged strict scorer, compared with dev 0/360. See results/heldout-review.md for the actual OCR error, incomplete actions, wording/normalization limits and conservative flags; no source/scorer changes or reruns followed. Native reviews, physical-phone checks and student classifier contributions remain pending.
+
+
+## Post-evaluation repair policy
+
+User authorized a new repair cycle after the held-out review. Two local image treatments are correlated OCR evidence; agreement never sets human amount confirmation, which is separately required and defaults false. A complete-action sentence check guards timing/condition/alternative omissions, while typed numeric context avoids discarding supported dates/amounts; both remain conservative English heuristics.
+
+Scorer v3 reports strict text matching separately from limited equivalence and normalizes supported weekday/time notation independently of production validation. Original v2 held-out outputs stay unchanged, and new live measurements deliberately do not simulate human amount review; see results/reliability-summary.md for the resulting coverage tradeoff.
