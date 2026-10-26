@@ -133,3 +133,10 @@ Application source is under backend/ and frontend/; tests are under tests/. The 
 ## Deployment preparation
 
 [DEPLOYMENT.md](DEPLOYMENT.md) gives the free Render setup, exact server-only environment variables, security controls and numbered dashboard steps. Deployment-boundary tests now pass: 422 Python and 21 JavaScript checks (results/deployment/). The live URL is https://notice-decoder-ns5o.onrender.com. Its page/health/manifest/private-file/origin smoke checks pass (results/deployment/https-smoke.json); actual phone installation/read-aloud and model-backed notice-flow acceptance remain pending.
+
+
+## Parking-ticket websites (review branch)
+
+The tutorial now begins with the **state that issued the notice**. The reader’s “Parking ticket help” section provides a researched directory of **12 issuer-specific routes across nine Northeast states**: CT, ME, MA, NH, NJ, NY, PA, RI and VT. Users must choose the matching issuer before any payment route is shown. This includes NJMCdirect, selected cities, and Maine’s participating-municipality portal; it is not complete municipal or 50-state coverage. Other/unknown issuers get contact guidance. The directory is separate from extracted facts and does not infer a payment obligation.
+
+Sources, coverage limits, maintenance instructions, and the October 26 checks are in [the parking-resource research record](docs/parking-resources/RESEARCH.md). New directions are available in English, Spanish and Tagalog; proposed translations remain unreviewed by native speakers. State and issuer choices stay in page memory. This update has not been deployed.

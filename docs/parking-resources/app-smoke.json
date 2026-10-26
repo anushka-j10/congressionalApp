@@ -1,0 +1,20 @@
+[
+  {
+    "language": "es",
+    "link": "Abrir NJMCdirect",
+    "state": "NJ"
+  },
+  {
+    "language": "tl",
+    "link": "Buksan ang NJMCdirect",
+    "state": "NJ"
+  },
+  {
+    "scenario": "NJ to NY clears links",
+    "linkCount": 0
+  },
+  {
+    "scenario": "unknown NY issuer has no guessed link",
+    "linkCount": 0
+  }
+]

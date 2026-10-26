@@ -9,14 +9,16 @@ function setup(hash='#welcome', reduced=false) {
   const timers=new Map(); let timerId=0;
   const win={location:{hash},addEventListener(k,v){events.set(k,v);},matchMedia:()=>({matches:reduced}),
     setTimeout(fn,delay){const id=++timerId;timers.set(id,{fn,delay});return id;},clearTimeout(id){timers.delete(id);}};
-  const ctx=vm.createContext({document:{getElementById:node},window:win,t:(key,values={})=>key+JSON.stringify(values)});
+  const ctx=vm.createContext({document:{getElementById:node},window:win,initializeParking(){},hasParkingState:()=>!!node('state-picker').value,t:(key,values={})=>key+JSON.stringify(values)});
   vm.runInContext(code,ctx);
+  const state=()=>{node('state-picker').value='NJ';click('state-continue');};
   const click=id=>{node(id).listeners.click();events.get('hashchange')();};
-  return {node,win,events,click,timers,runTimer(){const [id,timer]=timers.entries().next().value;timers.delete(id);timer.fn();}};
+  return {node,win,events,click,state,timers,runTimer(){const [id,timer]=timers.entries().next().value;timers.delete(id);timer.fn();}};
 }
-test('opening -> four tutorial steps -> reader exposes one screen at a time',()=>{
+test('opening -> state choice -> four tutorial steps -> reader exposes one screen at a time',()=>{
   const a=setup(); assert.equal(a.node('welcome-screen').hidden,false);assert.equal(a.node('notice-screen').hidden,true);
-  a.click('get-started');
+  a.click('get-started');assert.equal(a.win.location.hash,'#state');assert.equal(a.node('state-screen').hidden,false);
+  a.click('state-continue');assert.equal(a.win.location.hash,'#state');a.state();
   for(let step=1;step<=4;step++){
     assert.equal(a.win.location.hash,`#tutorial/${step}`);
     assert.equal(a.node('tutorial-screen').hidden,false);assert.equal(a.node('welcome-screen').hidden,true);assert.equal(a.node('notice-screen').hidden,true);
@@ -27,8 +29,8 @@ test('opening -> four tutorial steps -> reader exposes one screen at a time',()=
   assert.equal(a.win.location.hash,'#notice');assert.equal(a.node('notice-screen').hidden,false);assert.equal(a.node('tutorial-screen').hidden,true);assert.equal(a.node('reader-title').focused,true);
 });
 test('skip, back and browser navigation preserve the reader draft; replay begins at step one',()=>{
- const a=setup();a.node('confirmed-text').value='user correction';a.click('get-started');a.click('tutorial-next');a.click('tutorial-back');assert.equal(a.win.location.hash,'#tutorial/1');a.click('tutorial-back');assert.equal(a.node('welcome-screen').hidden,false);
- a.click('get-started');a.click('skip-tutorial');assert.equal(a.node('notice-screen').hidden,false);a.click('replay-tutorial');assert.equal(a.win.location.hash,'#tutorial/1');
+ const a=setup();a.node('confirmed-text').value='user correction';a.click('get-started');a.state();a.click('tutorial-next');a.click('tutorial-back');assert.equal(a.win.location.hash,'#tutorial/1');a.click('tutorial-back');assert.equal(a.node('state-screen').hidden,false);a.click('state-back');assert.equal(a.node('welcome-screen').hidden,false);
+ a.click('get-started');a.state();a.click('skip-tutorial');assert.equal(a.node('notice-screen').hidden,false);a.click('replay-tutorial');assert.equal(a.win.location.hash,'#tutorial/1');
  a.win.location.hash='#notice';a.events.get('hashchange')();assert.equal(a.node('notice-screen').hidden,false);assert.equal(a.node('confirmed-text').value,'user correction');
 });
 test('invalid routes return to welcome and language updates preserve tutorial position',()=>{
@@ -48,7 +50,7 @@ test('fresh launch holds the wordmark without scheduling any automatic advance',
 });
 test('Continue reveals welcome and returning through history does not replay the title',()=>{
  const a=setup('');a.node('skip-intro').listeners.click();assert.equal(a.node('brand-intro').hidden,true);assert.equal(a.node('app-shell').hidden,false);assert.equal(a.node('welcome-title').focused,true);
- a.click('get-started');a.click('tutorial-back');assert.equal(a.node('welcome-screen').hidden,false);assert.equal(a.node('brand-intro').hidden,true);assert.equal(a.timers.size,0);
+ a.click('get-started');assert.equal(a.node('state-screen').hidden,false);a.click('state-back');assert.equal(a.node('welcome-screen').hidden,false);assert.equal(a.node('brand-intro').hidden,true);assert.equal(a.timers.size,0);
 });
 test('leaving the page does not implicitly accept Continue',()=>{
  const a=setup('');a.events.get('pagehide')?.();assert.equal(a.node('brand-intro').hidden,false);assert.equal(a.node('app-shell').hidden,true);

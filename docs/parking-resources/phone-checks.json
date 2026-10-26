@@ -1,0 +1,128 @@
+[
+  {
+    "language": "en",
+    "overflow": false,
+    "screen": "state",
+    "small": [],
+    "width": "320"
+  },
+  {
+    "language": "es",
+    "overflow": false,
+    "screen": "state",
+    "small": [],
+    "width": "320"
+  },
+  {
+    "language": "tl",
+    "overflow": false,
+    "screen": "state",
+    "small": [],
+    "width": "320"
+  },
+  {
+    "language": "en",
+    "overflow": false,
+    "screen": "nj-directions",
+    "small": [],
+    "width": "320"
+  },
+  {
+    "language": "es",
+    "overflow": false,
+    "screen": "nj-directions",
+    "small": [],
+    "width": "320"
+  },
+  {
+    "language": "tl",
+    "overflow": false,
+    "screen": "nj-directions",
+    "small": [],
+    "width": "320"
+  },
+  {
+    "language": "en",
+    "overflow": false,
+    "screen": "state",
+    "small": [],
+    "width": "390"
+  },
+  {
+    "language": "es",
+    "overflow": false,
+    "screen": "state",
+    "small": [],
+    "width": "390"
+  },
+  {
+    "language": "tl",
+    "overflow": false,
+    "screen": "state",
+    "small": [],
+    "width": "390"
+  },
+  {
+    "language": "en",
+    "overflow": false,
+    "screen": "nj-directions",
+    "small": [],
+    "width": "390"
+  },
+  {
+    "language": "es",
+    "overflow": false,
+    "screen": "nj-directions",
+    "small": [],
+    "width": "390"
+  },
+  {
+    "language": "tl",
+    "overflow": false,
+    "screen": "nj-directions",
+    "small": [],
+    "width": "390"
+  },
+  {
+    "language": "en",
+    "overflow": false,
+    "screen": "state",
+    "small": [],
+    "width": "430"
+  },
+  {
+    "language": "es",
+    "overflow": false,
+    "screen": "state",
+    "small": [],
+    "width": "430"
+  },
+  {
+    "language": "tl",
+    "overflow": false,
+    "screen": "state",
+    "small": [],
+    "width": "430"
+  },
+  {
+    "language": "en",
+    "overflow": false,
+    "screen": "nj-directions",
+    "small": [],
+    "width": "430"
+  },
+  {
+    "language": "es",
+    "overflow": false,
+    "screen": "nj-directions",
+    "small": [],
+    "width": "430"
+  },
+  {
+    "language": "tl",
+    "overflow": false,
+    "screen": "nj-directions",
+    "small": [],
+    "width": "430"
+  }
+]

@@ -1,7 +1,9 @@
 import { t } from '/i18n.js';
+import { initializeParking, hasParkingState } from '/parking.js';
+initializeParking();
 // View state lives in the URL only; onboarding never stores or sends notice data.
 const flowNode = id => document.getElementById(id);
-const flowScreens = ['welcome-screen', 'tutorial-screen', 'notice-screen'];
+const flowScreens = ['welcome-screen', 'state-screen', 'tutorial-screen', 'notice-screen'];
 let tutorialStep = 1;
 let introShowing = !window.location.hash;
 function finishIntro(focus = true) {
@@ -13,7 +15,7 @@ function finishIntro(focus = true) {
 function renderFlow(focus = true) {
   const hash = window.location.hash;
   const match = /^#tutorial\/([1-4])$/.exec(hash);
-  const screen = hash === '#notice' ? 'notice-screen' : match ? 'tutorial-screen' : 'welcome-screen';
+  const screen = hash === '#notice' ? 'notice-screen' : hash === '#state' ? 'state-screen' : match ? 'tutorial-screen' : 'welcome-screen';
   tutorialStep = match ? Number(match[1]) : 1;
   for (const id of flowScreens) flowNode(id).hidden = id !== screen;
   if (screen === 'tutorial-screen') {
@@ -24,14 +26,16 @@ function renderFlow(focus = true) {
     flowNode('tutorial-screen').dataset.step = String(tutorialStep);
     for (let i = 1; i <= 4; i++) flowNode(`tutorial-art-${i}`).hidden = i !== tutorialStep;
   }
-  if (focus && !introShowing) flowNode(screen === 'notice-screen' ? 'reader-title' : screen === 'tutorial-screen' ? 'tutorial-title' : 'welcome-title').focus();
+  if (focus && !introShowing) flowNode(screen === 'notice-screen' ? 'reader-title' : screen === 'tutorial-screen' ? 'tutorial-title' : screen === 'state-screen' ? 'state-title' : 'welcome-title').focus();
 }
 const navigateFlow = hash => { window.location.hash = hash; };
-flowNode('get-started').addEventListener('click', () => navigateFlow('#tutorial/1'));
+flowNode('get-started').addEventListener('click', () => navigateFlow('#state'));
+flowNode('state-continue').addEventListener('click', () => { if (hasParkingState()) navigateFlow('#tutorial/1'); });
+flowNode('state-back').addEventListener('click', () => navigateFlow('#welcome'));
 flowNode('replay-tutorial').addEventListener('click', () => navigateFlow('#tutorial/1'));
 flowNode('skip-tutorial').addEventListener('click', () => navigateFlow('#notice'));
 flowNode('tutorial-next').addEventListener('click', () => navigateFlow(tutorialStep === 4 ? '#notice' : `#tutorial/${tutorialStep + 1}`));
-flowNode('tutorial-back').addEventListener('click', () => navigateFlow(tutorialStep === 1 ? '#welcome' : `#tutorial/${tutorialStep - 1}`));
+flowNode('tutorial-back').addEventListener('click', () => navigateFlow(tutorialStep === 1 ? '#state' : `#tutorial/${tutorialStep - 1}`));
 window.addEventListener('hashchange', () => { if (introShowing) finishIntro(); else renderFlow(); });
 window.addEventListener('notice-language', () => renderFlow(false));
 const storyDialog = flowNode('story-dialog');

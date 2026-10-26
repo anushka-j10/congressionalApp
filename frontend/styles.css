@@ -211,8 +211,7 @@ body { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: col
 
 /* Reader: a single page-shaped capture surface with one primary action. */
 .reader-heading { margin: 12px 0 24px; }
-.capture-workspace { position: relative; padding: 24px 20px 12px 24px; background: #fff; border: 1px solid #cad6e4; border-left: 6px solid #205bb4; border-radius: 8px 24px 24px 8px; }
-.capture-workspace::before { content: ''; position: absolute; right: 18px; top: 0; width: 24px; height: 4px; background: #91a6bd; border-radius: 0 0 3px 3px; }
+.capture-workspace { position: relative; padding: 24px 20px 12px; background: #fff; border: 1px solid #cad6e4; border-radius: 24px; }
 .capture-instruction { font-size: 15px; line-height: 1.5; color: #52647c; margin: 0 0 18px; max-width: 30ch; }
 .capture-actions { display: flex; flex-direction: column; gap: 6px; margin: 0; }
 .capture-actions button { min-height: 64px; width: 100%; border-radius: 14px; flex-direction: row; gap: 12px; padding: 14px 12px; }
@@ -226,3 +225,19 @@ body { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: col
 #notice-screen > .install { margin-top: 0; padding-top: 0; border-top: 0; }
 #notice-screen > .install > summary { font-size: 14px; }
 .reader-privacy { margin-top: 12px; }
+
+.state-screen { max-width: 440px; margin: 36px auto; }
+.state-screen h1, .state-screen > p { text-align: center; }
+.state-screen h1 { font-size: clamp(27px, 7vw, 34px); line-height: 1.15; }
+.state-screen > p { margin-bottom: 26px; }
+.state-screen select, .parking-resources select { width: 100%; max-width: 100%; min-height: 48px; }
+.state-screen .flow-primary { width: 100%; margin-top: 16px; }
+.parking-resources { margin-top: 20px; border-top: 1px solid var(--line); padding-block: 6px; }
+.parking-resources summary { min-height: 48px; padding-block: 12px; font-weight: 600; }
+.parking-content { padding: 8px 0 18px; overflow-wrap: anywhere; }
+.parking-content label { display: block; margin-top: 14px; font-weight: 600; }
+.parking-content ol { padding-inline-start: 24px; }
+.parking-content li { margin-block: 12px; }
+.parking-content a { color: var(--accent); display: inline-flex; align-items: center; min-height: 44px; padding-block: 8px; }
+.parking-content .parking-link { display: flex; justify-content: center; border: 1px solid var(--line); border-radius: 14px; padding: 12px 16px; text-align: center; font-weight: 600; }
+.parking-domain { display: block; font-size: 13px; color: var(--muted); margin-top: 6px; text-align: center; }

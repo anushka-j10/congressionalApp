@@ -1,7 +1,7 @@
 "use strict";
 
-const CACHE_NAME = "notice-decoder-shell-v17";
-const SHELL = ["/", "/index.html", "/styles.css", "/app.js", "/onboarding.js", "/image-prep.js", "/token-review.js", "/field-cards.js", "/i18n.js", "/explanation.js", "/speech.js", "/en.json", "/vendor/heic-to.js", "/manifest.webmanifest", "/icons/icon-192.png", "/icons/icon-512.png"];
+const CACHE_NAME = "notice-decoder-shell-v18";
+const SHELL = ["/", "/index.html", "/styles.css", "/app.js", "/onboarding.js", "/parking-data.js", "/parking.js", "/image-prep.js", "/token-review.js", "/field-cards.js", "/i18n.js", "/explanation.js", "/speech.js", "/en.json", "/vendor/heic-to.js", "/manifest.webmanifest", "/icons/icon-192.png", "/icons/icon-512.png"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(SHELL)).then(() => self.skipWaiting()));
