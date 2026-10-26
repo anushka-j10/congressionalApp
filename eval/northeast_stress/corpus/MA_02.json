@@ -1,0 +1,81 @@
+{
+  "id": "MA_02",
+  "state": "MA",
+  "issuer": "City of Cambridge Department of Transportation",
+  "layout": "schedule",
+  "sources": [
+    "https://www.cambridgema.gov/iwantto/payaparkingticket"
+  ],
+  "source_basis": "Instruction-based reconstruction: pay/dispute within 21 days, fine schedule and separate transaction fee. Layout is synthetic.",
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "rows": [
+    [
+      "Ticket",
+      "DEMO-MA-002"
+    ],
+    [
+      "Issue date",
+      "October 26, 2026"
+    ],
+    [
+      "Plate",
+      "DEMOMA / MA"
+    ],
+    [
+      "Violation",
+      "Expired meter"
+    ],
+    [
+      "Fine now",
+      "$40.00"
+    ],
+    [
+      "First late fee",
+      "$5.00"
+    ],
+    [
+      "Second late fee",
+      "$10.00"
+    ],
+    [
+      "Third late fee",
+      "$40.00"
+    ]
+  ],
+  "paragraphs": [
+    "Pay the fine or dispute this parking ticket within 21 days of the issue date.",
+    "Card payments have a separate 2.95% service fee, with a minimum of $2.25.",
+    "Questions: 617-349-4700."
+  ],
+  "expected": {
+    "deadline": "2026-11-16",
+    "amount_due": "40.00",
+    "required_action": "Pay the fine or dispute this parking ticket within 21 days of the issue date.",
+    "contact": "617-349-4700"
+  },
+  "expected_state": {
+    "deadline": "present",
+    "amount_due": "present",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "expected_aliases": {},
+  "route_id": null,
+  "challenges": [
+    "multiple_fees",
+    "percentage_fee",
+    "unlisted_issuer"
+  ],
+  "visible_text": "SYNTHETIC TEST - NOT VALID - DO NOT PAY\nCity of Cambridge Department of Transportation\nPARKING NOTICE\nTicket: DEMO-MA-002\nIssue date: October 26, 2026\nPlate: DEMOMA / MA\nViolation: Expired meter\nFine now: $40.00\nFirst late fee: $5.00\nSecond late fee: $10.00\nThird late fee: $40.00\nPay the fine or dispute this parking ticket within 21 days of the issue date.\nCard payments have a separate 2.95% service fee, with a minimum of $2.25.\nQuestions: 617-349-4700.",
+  "variants": [
+    {
+      "name": "clean",
+      "image": "MA_02-clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "MA_02-degraded.jpg"
+    }
+  ]
+}

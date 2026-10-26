@@ -2,6 +2,14 @@
 
 Updated 2026-10-25. The original held-out failures remain part of the submission evidence. Current dev/adversarial safety numbers do not replace or erase them. The original set has not been rerun with the final code; no post-repair independent held-out accuracy is available.
 
+## Additional Northeast stress run — October 26, 2026
+
+The new exploratory corpus has 18 assistant-authored notices, two per Northeast state, in clean/degraded versions. Its 36 runs have **21/144 strict all-field false-verifications**, including **15/108 critical false-verifications**; **10/36** cases pass strict value scoring. Six strict verification mismatches are harmless labels or supported extra text. The key, prompts and validators were not changed after observing the results.
+
+The most serious findings are an OCR-corrupted year **2926** accepted as a verified deadline (VT_01 clean), a deadline **one day late** when the issue date counts as day one (both VT_02 variants), `.ccm` accepted instead of the printed `.com` (ME_01 clean), and `3C days` accepted in a verified action instead of `30 days` (NY_01 clean). Conditional deadlines and omitted payment restrictions also need attention. These bugs remain unfixed in this testing-only update.
+
+[REPORT.md](results/northeast-stress/REPORT.md) distinguishes strict scoring from qualitative error severity and safe abstention. [FAILURE_DETAILS.md](results/northeast-stress/FAILURE_DETAILS.md) contains every failed case's full visible text, OCR, proposals, checked fields and English output. These results supplement, rather than replace, the original held-out evidence below.
+
 ## Original frozen held-out run
 
 Full pipeline: 4/30 critical false-verified, 5/40 all-field false-verified, 18/24 present critical values correct, 14/24 correct and verified, and 6/24 present critical facts withheld. B1 was 17/30 critical false-verified; B2 was 8/30. These are original v2 scores, unchanged.

@@ -1,0 +1,13 @@
+{
+  "application_hash_unchanged": true,
+  "corpus_hashes_unchanged": true,
+  "eval_freeze_unchanged": "24d729a540ed3913ced09ee42af89765fd921c4b",
+  "env_ignored": true,
+  "env_tracked": false,
+  "env_permissions": "0o600",
+  "files_scanned": 75,
+  "exact_key_matches": 0,
+  "key_pattern_matches": 0,
+  "records": 36,
+  "unique_records": 36
+}

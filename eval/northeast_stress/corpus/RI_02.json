@@ -1,0 +1,70 @@
+{
+  "id": "RI_02",
+  "state": "RI",
+  "issuer": "City of Newport Parking Division",
+  "layout": "review",
+  "sources": [
+    "https://www.newportri.gov/living-in-newport/parking-transportation/parkingviolationreview",
+    "https://www.newportri.gov/en-us/living-in-newport/parking-transportation"
+  ],
+  "source_basis": "Reconstructed parking violation/review notice using official review-before-payment option. No deadline has been added where the supplied notice has none.",
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "rows": [
+    [
+      "Ticket",
+      "D-DEMO-RI-002"
+    ],
+    [
+      "Issue date",
+      "October 26, 2026"
+    ],
+    [
+      "Plate / State",
+      "TESTRI / RI"
+    ],
+    [
+      "Violation",
+      "Parking beyond the permitted time"
+    ],
+    [
+      "Fine",
+      "$25.00"
+    ]
+  ],
+  "paragraphs": [
+    "Pay the fine or submit a parking violation review request.",
+    "If requesting review, provide a description and any supporting photographs before paying or requesting a court appearance.",
+    "Questions: 401-845-5718."
+  ],
+  "expected": {
+    "deadline": null,
+    "amount_due": "25.00",
+    "required_action": "Pay the fine or submit a parking violation review request. If requesting review, provide a description and any supporting photographs before paying or requesting a court appearance.",
+    "contact": "401-845-5718"
+  },
+  "expected_state": {
+    "deadline": "missing",
+    "amount_due": "present",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "expected_aliases": {},
+  "route_id": null,
+  "challenges": [
+    "no_deadline",
+    "conditional_action",
+    "unlisted_issuer"
+  ],
+  "visible_text": "SYNTHETIC TEST - NOT VALID - DO NOT PAY\nCity of Newport Parking Division\nPARKING NOTICE\nTicket: D-DEMO-RI-002\nIssue date: October 26, 2026\nPlate / State: TESTRI / RI\nViolation: Parking beyond the permitted time\nFine: $25.00\nPay the fine or submit a parking violation review request.\nIf requesting review, provide a description and any supporting photographs before paying or requesting a court appearance.\nQuestions: 401-845-5718.",
+  "variants": [
+    {
+      "name": "clean",
+      "image": "RI_02-clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "RI_02-degraded.jpg"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "RI_01",
+  "state": "RI",
+  "issuer": "Providence Municipal Court",
+  "layout": "schedule",
+  "sources": [
+    "https://ppd.providenceri.gov/parking-ticket-payments/",
+    "https://www.providenceri.gov/public-works/parkingfaqs/"
+  ],
+  "source_basis": "Instruction-based reconstruction: fourteen/twenty-eight-day escalating parking fine schedule; ticket layout synthetic.",
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "rows": [
+    [
+      "Ticket",
+      "DEMO-RI-001"
+    ],
+    [
+      "Issue date",
+      "October 26, 2026"
+    ],
+    [
+      "Plate",
+      "DEMORI / RI"
+    ],
+    [
+      "Current fine",
+      "$50.00"
+    ],
+    [
+      "After 14 days",
+      "$100.00"
+    ],
+    [
+      "After 28 days",
+      "$150.00"
+    ]
+  ],
+  "paragraphs": [
+    "Pay the current fine within 14 days of the issue date to avoid the higher amount.",
+    "Online payment adds a separate $3.50 convenience fee.",
+    "Questions: 401-243-6414."
+  ],
+  "expected": {
+    "deadline": "2026-11-09",
+    "amount_due": "50.00",
+    "required_action": "Pay the current fine within 14 days of the issue date to avoid the higher amount.",
+    "contact": "401-243-6414"
+  },
+  "expected_state": {
+    "deadline": "present",
+    "amount_due": "present",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "expected_aliases": {},
+  "route_id": "providence",
+  "challenges": [
+    "escalating_total",
+    "convenience_fee"
+  ],
+  "visible_text": "SYNTHETIC TEST - NOT VALID - DO NOT PAY\nProvidence Municipal Court\nPARKING NOTICE\nTicket: DEMO-RI-001\nIssue date: October 26, 2026\nPlate: DEMORI / RI\nCurrent fine: $50.00\nAfter 14 days: $100.00\nAfter 28 days: $150.00\nPay the current fine within 14 days of the issue date to avoid the higher amount.\nOnline payment adds a separate $3.50 convenience fee.\nQuestions: 401-243-6414.",
+  "variants": [
+    {
+      "name": "clean",
+      "image": "RI_01-clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "RI_01-degraded.jpg"
+    }
+  ]
+}

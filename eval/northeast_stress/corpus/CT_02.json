@@ -1,0 +1,65 @@
+{
+  "id": "CT_02",
+  "state": "CT",
+  "issuer": "City of New Haven",
+  "layout": "review",
+  "sources": [
+    "https://www.newhavenct.gov/home/showpublisheddocument/2356/637744742739330000"
+  ],
+  "source_basis": "Official review-form content reconstructed; form layout was not visually inspected. No fine is supplied on this page.",
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "rows": [
+    [
+      "Issue number",
+      "DEMO-CT-002"
+    ],
+    [
+      "Ticket issued",
+      "October 26, 2026"
+    ],
+    [
+      "Request type",
+      "Ticket review"
+    ],
+    [
+      "Plate / State",
+      "TESTCT / CT"
+    ]
+  ],
+  "paragraphs": [
+    "Submit this review form with the parking ticket within 15 days of the ticket issue date to pause further penalties while the review is pending.",
+    "Explain why you believe the parking citation was issued in error and include supporting documents.",
+    "Mail to: City of New Haven Parking Violation Center, PO Box 1941, New Haven, CT 06507."
+  ],
+  "expected": {
+    "deadline": "2026-11-10",
+    "amount_due": null,
+    "required_action": "Submit this review form with the parking ticket within 15 days of the ticket issue date to pause further penalties while the review is pending. Explain why you believe the parking citation was issued in error and include supporting documents.",
+    "contact": "City of New Haven Parking Violation Center, PO Box 1941, New Haven, CT 06507."
+  },
+  "expected_state": {
+    "deadline": "present",
+    "amount_due": "missing",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "expected_aliases": {},
+  "route_id": "new-haven",
+  "challenges": [
+    "relative_days",
+    "missing_amount",
+    "multi_sentence_action"
+  ],
+  "visible_text": "SYNTHETIC TEST - NOT VALID - DO NOT PAY\nCity of New Haven\nPARKING NOTICE\nIssue number: DEMO-CT-002\nTicket issued: October 26, 2026\nRequest type: Ticket review\nPlate / State: TESTCT / CT\nSubmit this review form with the parking ticket within 15 days of the ticket issue date to pause further penalties while the review is pending.\nExplain why you believe the parking citation was issued in error and include supporting documents.\nMail to: City of New Haven Parking Violation Center, PO Box 1941, New Haven, CT 06507.",
+  "variants": [
+    {
+      "name": "clean",
+      "image": "CT_02-clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "CT_02-degraded.jpg"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "NH_02",
+  "state": "NH",
+  "issuer": "Town of Hanover Parking Division",
+  "layout": "schedule",
+  "sources": [
+    "https://www.hanovernh.org/785/Payments-and-Appeals",
+    "https://www.hanovernh.org/m/faq?cat=23"
+  ],
+  "source_basis": "Instruction-based reconstruction: fourteen-day appeal/payment window and later fees; synthetic sums and absolute deadline.",
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "rows": [
+    [
+      "Ticket",
+      "DEMO-NH-002"
+    ],
+    [
+      "Fine date",
+      "10/26/2026"
+    ],
+    [
+      "Plate",
+      "DEMONH / NH"
+    ],
+    [
+      "Current fine",
+      "$30.00"
+    ],
+    [
+      "First late fee after 14 days",
+      "$20.00"
+    ],
+    [
+      "Additional late fee after 28 days",
+      "$40.00"
+    ],
+    [
+      "Respond by",
+      "November 9, 2026"
+    ]
+  ],
+  "paragraphs": [
+    "Pay this fine or file an appeal by November 9, 2026.",
+    "Use the ticket number and license plate to find this citation in the parking portal.",
+    "Questions: 603-640-3220."
+  ],
+  "expected": {
+    "deadline": "2026-11-09",
+    "amount_due": "30.00",
+    "required_action": "Pay this fine or file an appeal by November 9, 2026.",
+    "contact": "603-640-3220"
+  },
+  "expected_state": {
+    "deadline": "present",
+    "amount_due": "present",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "expected_aliases": {},
+  "route_id": "hanover",
+  "challenges": [
+    "fee_schedule",
+    "absolute_deadline"
+  ],
+  "visible_text": "SYNTHETIC TEST - NOT VALID - DO NOT PAY\nTown of Hanover Parking Division\nPARKING NOTICE\nTicket: DEMO-NH-002\nFine date: 10/26/2026\nPlate: DEMONH / NH\nCurrent fine: $30.00\nFirst late fee after 14 days: $20.00\nAdditional late fee after 28 days: $40.00\nRespond by: November 9, 2026\nPay this fine or file an appeal by November 9, 2026.\nUse the ticket number and license plate to find this citation in the parking portal.\nQuestions: 603-640-3220.",
+  "variants": [
+    {
+      "name": "clean",
+      "image": "NH_02-clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "NH_02-degraded.jpg"
+    }
+  ]
+}

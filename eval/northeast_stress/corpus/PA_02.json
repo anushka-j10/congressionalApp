@@ -1,0 +1,83 @@
+{
+  "id": "PA_02",
+  "state": "PA",
+  "issuer": "Public Parking Authority of Pittsburgh",
+  "layout": "two_panel_pink",
+  "sources": [
+    "https://www.pittsburghparking.com/files/sharedassets/public/v/1/about/documents/2049_parking_court_actual_enlarged_ticket_not_valid_for_web_3.16.18_ab.pdf",
+    "https://www.pittsburghparking.com/About/Pittsburgh-Parking-Court?lang_update=639161161072708293"
+  ],
+  "source_basis": "Visually inspected 2018 not-valid sample: pink front/reverse, fine plus cost, total and escalating amounts. Historical layout, not a current fine/rule claim. Synthetic dates and shortened instructions.",
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "rows": [
+    [
+      "Ticket",
+      "DEMO-PA-002"
+    ],
+    [
+      "Issue date",
+      "October 26, 2026"
+    ],
+    [
+      "Plate",
+      "TESTPA / PA"
+    ],
+    [
+      "Fine",
+      "$25.00"
+    ],
+    [
+      "Cost",
+      "$30.50"
+    ],
+    [
+      "Total due now",
+      "$55.50"
+    ],
+    [
+      "If paid after November 5, 2026",
+      "$78.50"
+    ],
+    [
+      "If paid after November 25, 2026",
+      "$93.50"
+    ]
+  ],
+  "paragraphs": [
+    "Pay the total due by November 5, 2026, or request a hearing within 20 days of the issue date to contest the ticket.",
+    "Do not pay if you choose to contest. A hearing request after 10 days can still incur late fees.",
+    "Questions: 866-353-7151."
+  ],
+  "expected": {
+    "deadline": null,
+    "amount_due": "55.50",
+    "required_action": "Pay the total due by November 5, 2026, or request a hearing within 20 days of the issue date to contest the ticket. Do not pay if you choose to contest. A hearing request after 10 days can still incur late fees.",
+    "contact": "866-353-7151"
+  },
+  "expected_state": {
+    "deadline": "ambiguous",
+    "amount_due": "present",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "expected_aliases": {},
+  "route_id": null,
+  "challenges": [
+    "multiple_conditional_deadlines",
+    "fine_vs_total",
+    "historical_layout",
+    "unlisted_issuer"
+  ],
+  "visible_text": "SYNTHETIC TEST - NOT VALID - DO NOT PAY\nPublic Parking Authority of Pittsburgh\nPARKING NOTICE\nTicket: DEMO-PA-002\nIssue date: October 26, 2026\nPlate: TESTPA / PA\nFine: $25.00\nCost: $30.50\nTotal due now: $55.50\nIf paid after November 5, 2026: $78.50\nIf paid after November 25, 2026: $93.50\nPay the total due by November 5, 2026, or request a hearing within 20 days of the issue date to contest the ticket.\nDo not pay if you choose to contest. A hearing request after 10 days can still incur late fees.\nQuestions: 866-353-7151.",
+  "variants": [
+    {
+      "name": "clean",
+      "image": "PA_02-clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "PA_02-degraded.jpg"
+    }
+  ]
+}

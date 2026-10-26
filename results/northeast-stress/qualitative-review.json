@@ -1,0 +1,154 @@
+{
+  "post_hoc": true,
+  "author": "Codex; not independent human adjudication",
+  "scores_changed": false,
+  "reviews": [
+    {
+      "sample": "CT_02",
+      "variant": "clean",
+      "field": "required_action",
+      "category": "supported_extra_text",
+      "note": "Complete keyed action plus the printed mailing destination; strict scorer overcounts this as wrong."
+    },
+    {
+      "sample": "CT_02",
+      "variant": "degraded",
+      "field": "required_action",
+      "category": "supported_extra_text",
+      "note": "Complete keyed action plus printed mailing destination, with final comma instead of period."
+    },
+    {
+      "sample": "ME_01",
+      "variant": "clean",
+      "field": "required_action",
+      "category": "ocr_word_error",
+      "note": "OCR changed fine to tine and registration to registraticn; copied as verified."
+    },
+    {
+      "sample": "ME_01",
+      "variant": "clean",
+      "field": "contact",
+      "category": "wrong_contact",
+      "note": "The email ends in .ccm instead of the printed .com. It is also displayed in the English explanation."
+    },
+    {
+      "sample": "ME_02",
+      "variant": "clean",
+      "field": "required_action",
+      "category": "ocr_word_error",
+      "note": "OCR changed money to moncy; constraints are otherwise retained."
+    },
+    {
+      "sample": "ME_02",
+      "variant": "degraded",
+      "field": "required_action",
+      "category": "omitted_constraints",
+      "note": "Verified action omits the printed no-cards and do-not-mail-cash sentences. The money-order option remains, but the mailing restriction is lost."
+    },
+    {
+      "sample": "NH_01",
+      "variant": "degraded",
+      "field": "required_action",
+      "category": "supported_extra_text",
+      "note": "Adds the printed agency-response timeline and possible later decision; no invented resident deadline in this action."
+    },
+    {
+      "sample": "NH_02",
+      "variant": "clean",
+      "field": "contact",
+      "category": "label_only",
+      "note": "Correct phone digits with the printed Questions label. Strict mismatch, not a wrong number."
+    },
+    {
+      "sample": "NY_01",
+      "variant": "clean",
+      "field": "required_action",
+      "category": "corrupted_timing",
+      "note": "Verified action says 3C days instead of 30. The separate deadline field is unverified, but that does not suppress this action."
+    },
+    {
+      "sample": "PA_01",
+      "variant": "clean",
+      "field": "contact",
+      "category": "ocr_word_error",
+      "note": "Correct printed URL prefixed by OCR garbage ss; URL itself is intact."
+    },
+    {
+      "sample": "PA_01",
+      "variant": "degraded",
+      "field": "contact",
+      "category": "supported_extra_text",
+      "note": "Both printed contact channels preserved, but combined differently from the predeclared aliases."
+    },
+    {
+      "sample": "PA_02",
+      "variant": "clean",
+      "field": "deadline",
+      "category": "conditional_deadline_policy",
+      "note": "Printed November 5 payment date is real; the key requires abstention because contesting has a different deadline. This is loss of conditional context, not an invented date."
+    },
+    {
+      "sample": "PA_02",
+      "variant": "degraded",
+      "field": "deadline",
+      "category": "conditional_deadline_policy",
+      "note": "Same conditional-context failure: a single verified deadline cannot represent both payment and hearing-request branches."
+    },
+    {
+      "sample": "RI_02",
+      "variant": "degraded",
+      "field": "contact",
+      "category": "label_only",
+      "note": "Correct phone digits with Questions label; harmless strict-format failure."
+    },
+    {
+      "sample": "VT_01",
+      "variant": "clean",
+      "field": "deadline",
+      "category": "wrong_year",
+      "note": "OCR anchor changes 2026 to 2926. Validator computes and verifies November 25, 2926; English repeats it."
+    },
+    {
+      "sample": "VT_01",
+      "variant": "clean",
+      "field": "required_action",
+      "category": "ocr_word_error",
+      "note": "OCR changes ticket to Licket; action remains understandable but is not an exact reproduction."
+    },
+    {
+      "sample": "VT_02",
+      "variant": "clean",
+      "field": "deadline",
+      "category": "inclusive_count_bug",
+      "note": "Printed rule counts October 26 as day 1. November 8 is day 14, but validator verifies November 9."
+    },
+    {
+      "sample": "VT_02",
+      "variant": "clean",
+      "field": "required_action",
+      "category": "ocr_word_error",
+      "note": "OCR changes citation to citahon; the day-1 condition is preserved in the action despite wrong date calculation."
+    },
+    {
+      "sample": "VT_02",
+      "variant": "degraded",
+      "field": "deadline",
+      "category": "inclusive_count_bug",
+      "note": "Validator again verifies November 9 instead of November 8. OCR additionally misreads day 1 as day I."
+    },
+    {
+      "sample": "VT_02",
+      "variant": "degraded",
+      "field": "required_action",
+      "category": "corrupted_timing",
+      "note": "The printed day 1 becomes day I and remains verified. This reinforces the need to verify the counting convention against the image."
+    },
+    {
+      "sample": "VT_02",
+      "variant": "degraded",
+      "field": "contact",
+      "category": "ocr_word_error",
+      "note": "Street is misread as Suect; address number, street name, city, state and ZIP remain intact."
+    }
+  ]
+}

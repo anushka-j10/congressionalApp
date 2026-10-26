@@ -1,0 +1,84 @@
+{
+  "id": "NY_01",
+  "state": "NY",
+  "issuer": "New York City Department of Finance",
+  "layout": "receipt",
+  "sources": [
+    "https://www.nyc.gov/pl/main/services/parking-and-camera-tickets",
+    "https://www.nyc.gov/site/finance/vehicles/dispute-web.page"
+  ],
+  "source_basis": "Reconstruction from official parking ticket fields and thirty-day dispute guidance. Printed receipt layout is synthetic, not a camera notice.",
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "rows": [
+    [
+      "Violation number",
+      "DEMO-NY-001"
+    ],
+    [
+      "Plate / State",
+      "DEMONY / NY"
+    ],
+    [
+      "Registration expires",
+      "12/31/2027"
+    ],
+    [
+      "Issue date",
+      "October 26, 2026"
+    ],
+    [
+      "Time",
+      "10:42 AM"
+    ],
+    [
+      "Location",
+      "100 Example Street"
+    ],
+    [
+      "Violation",
+      "Expired meter"
+    ],
+    [
+      "Fine",
+      "$65.00"
+    ]
+  ],
+  "paragraphs": [
+    "Pay the fine or request a hearing within 30 days after the ticket was issued to avoid late penalties.",
+    "Questions: NYC Department of Finance, 311."
+  ],
+  "expected": {
+    "deadline": "2026-11-25",
+    "amount_due": "65.00",
+    "required_action": "Pay the fine or request a hearing within 30 days after the ticket was issued to avoid late penalties.",
+    "contact": "NYC Department of Finance, 311."
+  },
+  "expected_state": {
+    "deadline": "present",
+    "amount_due": "present",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "expected_aliases": {
+    "contact": [
+      "311"
+    ]
+  },
+  "route_id": "nyc",
+  "challenges": [
+    "registration_expiry_decoy",
+    "relative_days"
+  ],
+  "visible_text": "SYNTHETIC TEST - NOT VALID - DO NOT PAY\nNew York City Department of Finance\nPARKING NOTICE\nViolation number: DEMO-NY-001\nPlate / State: DEMONY / NY\nRegistration expires: 12/31/2027\nIssue date: October 26, 2026\nTime: 10:42 AM\nLocation: 100 Example Street\nViolation: Expired meter\nFine: $65.00\nPay the fine or request a hearing within 30 days after the ticket was issued to avoid late penalties.\nQuestions: NYC Department of Finance, 311.",
+  "variants": [
+    {
+      "name": "clean",
+      "image": "NY_01-clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "NY_01-degraded.jpg"
+    }
+  ]
+}

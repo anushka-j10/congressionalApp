@@ -1,0 +1,77 @@
+{
+  "id": "PA_01",
+  "state": "PA",
+  "issuer": "City and County of Philadelphia",
+  "layout": "two_panel_blue",
+  "sources": [
+    "https://philapark.org/wp-content/uploads/RFP-No.-24-07-Addendum-3-12.30.24.pdf"
+  ],
+  "source_basis": "Visually inspected official stock, PDF page 8: blue-headed narrow thermal front and dense instruction reverse. Recreated side by side with invented ticket data and shortened original wording.",
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "rows": [
+    [
+      "Citation",
+      "DEMO-PA-001"
+    ],
+    [
+      "Issued",
+      "October 26, 2026"
+    ],
+    [
+      "Plate",
+      "DEMOPA / PA"
+    ],
+    [
+      "Location",
+      "100 Example Street"
+    ],
+    [
+      "Violation",
+      "Overtime parking"
+    ],
+    [
+      "Fine",
+      "$41.00"
+    ]
+  ],
+  "paragraphs": [
+    "Pay $41.00 or appeal this parking citation within 15 calendar days of the issue date.",
+    "Online payment and appeal information: philapark.org/violations",
+    "Questions: 1-888-591-3636."
+  ],
+  "expected": {
+    "deadline": "2026-11-10",
+    "amount_due": "41.00",
+    "required_action": "Pay $41.00 or appeal this parking citation within 15 calendar days of the issue date.",
+    "contact": "1-888-591-3636"
+  },
+  "expected_state": {
+    "deadline": "present",
+    "amount_due": "present",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "expected_aliases": {
+    "contact": [
+      "philapark.org/violations",
+      "1-888-591-3636; philapark.org/violations"
+    ]
+  },
+  "route_id": "philadelphia",
+  "challenges": [
+    "front_and_back_in_one_photo",
+    "column_reading_order"
+  ],
+  "visible_text": "SYNTHETIC TEST - NOT VALID - DO NOT PAY\nCity and County of Philadelphia\nPARKING NOTICE\nCitation: DEMO-PA-001\nIssued: October 26, 2026\nPlate: DEMOPA / PA\nLocation: 100 Example Street\nViolation: Overtime parking\nFine: $41.00\nPay $41.00 or appeal this parking citation within 15 calendar days of the issue date.\nOnline payment and appeal information: philapark.org/violations\nQuestions: 1-888-591-3636.",
+  "variants": [
+    {
+      "name": "clean",
+      "image": "PA_01-clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "PA_01-degraded.jpg"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "MA_01",
+  "state": "MA",
+  "issuer": "City of Boston Parking Clerk",
+  "layout": "letter",
+  "sources": [
+    "https://content.boston.gov/departments/parking-clerk/how-appeal-parking-ticket"
+  ],
+  "source_basis": "Reconstruction of a denied-appeal notice using official ten-day payment/hearing instructions; not a published letter specimen.",
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "rows": [
+    [
+      "Parking ticket",
+      "DEMO-MA-001"
+    ],
+    [
+      "Original issue date",
+      "October 1, 2026"
+    ],
+    [
+      "Date of this decision",
+      "October 26, 2026"
+    ],
+    [
+      "Fine remaining",
+      "$50.00"
+    ]
+  ],
+  "paragraphs": [
+    "Your parking ticket appeal has been denied.",
+    "Pay the fine or request a hearing within 10 days of the date of this decision.",
+    "Questions and hearing requests: 617-635-4410."
+  ],
+  "expected": {
+    "deadline": "2026-11-05",
+    "amount_due": "50.00",
+    "required_action": "Pay the fine or request a hearing within 10 days of the date of this decision.",
+    "contact": "617-635-4410"
+  },
+  "expected_state": {
+    "deadline": "present",
+    "amount_due": "present",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "expected_aliases": {},
+  "route_id": "boston",
+  "challenges": [
+    "decision_vs_issue_anchor"
+  ],
+  "visible_text": "SYNTHETIC TEST - NOT VALID - DO NOT PAY\nCity of Boston Parking Clerk\nPARKING NOTICE\nParking ticket: DEMO-MA-001\nOriginal issue date: October 1, 2026\nDate of this decision: October 26, 2026\nFine remaining: $50.00\nYour parking ticket appeal has been denied.\nPay the fine or request a hearing within 10 days of the date of this decision.\nQuestions and hearing requests: 617-635-4410.",
+  "variants": [
+    {
+      "name": "clean",
+      "image": "MA_01-clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "MA_01-degraded.jpg"
+    }
+  ]
+}

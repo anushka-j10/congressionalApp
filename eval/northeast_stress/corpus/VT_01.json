@@ -1,0 +1,69 @@
+{
+  "id": "VT_01",
+  "state": "VT",
+  "issuer": "City of Burlington Parking Services",
+  "layout": "receipt",
+  "sources": [
+    "https://www.burlingtonvt.gov/m/faq?cat=40",
+    "https://burlingtonvt.gov/314/Parking"
+  ],
+  "source_basis": "Instruction-based reconstruction: written/online appeal within thirty days; parking service contact. Layout and fine invented.",
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "rows": [
+    [
+      "Ticket",
+      "DEMO-VT-001"
+    ],
+    [
+      "Issue date",
+      "October 26, 2026"
+    ],
+    [
+      "Plate",
+      "DEMOVT / VT"
+    ],
+    [
+      "Violation",
+      "Parking in a restricted area"
+    ],
+    [
+      "Waiver fee",
+      "$75.00"
+    ]
+  ],
+  "paragraphs": [
+    "Pay the waiver fee or contest the parking ticket within 30 days of the issue date.",
+    "Include the ticket and supporting documents with a written appeal.",
+    "Questions: parkingservices@burlingtonvt.gov"
+  ],
+  "expected": {
+    "deadline": "2026-11-25",
+    "amount_due": "75.00",
+    "required_action": "Pay the waiver fee or contest the parking ticket within 30 days of the issue date. Include the ticket and supporting documents with a written appeal.",
+    "contact": "parkingservices@burlingtonvt.gov"
+  },
+  "expected_state": {
+    "deadline": "present",
+    "amount_due": "present",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "expected_aliases": {},
+  "route_id": "burlington",
+  "challenges": [
+    "waiver_fee_label",
+    "multi_sentence_action"
+  ],
+  "visible_text": "SYNTHETIC TEST - NOT VALID - DO NOT PAY\nCity of Burlington Parking Services\nPARKING NOTICE\nTicket: DEMO-VT-001\nIssue date: October 26, 2026\nPlate: DEMOVT / VT\nViolation: Parking in a restricted area\nWaiver fee: $75.00\nPay the waiver fee or contest the parking ticket within 30 days of the issue date.\nInclude the ticket and supporting documents with a written appeal.\nQuestions: parkingservices@burlingtonvt.gov",
+  "variants": [
+    {
+      "name": "clean",
+      "image": "VT_01-clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "VT_01-degraded.jpg"
+    }
+  ]
+}

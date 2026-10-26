@@ -1,0 +1,65 @@
+{
+  "id": "ME_02",
+  "state": "ME",
+  "issuer": "Maine Capitol Police",
+  "layout": "letter",
+  "sources": [
+    "https://www11.maine.gov/dps/capitol-police/parking/paying-tickets"
+  ],
+  "source_basis": "Instruction-based reconstruction: Capitol Police payment channel and 72-hour window excluding weekends; distinct from Augusta city tickets.",
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "rows": [
+    [
+      "Ticket",
+      "DEMO-ME-002"
+    ],
+    [
+      "Issued",
+      "October 23, 2026 at 9:00 AM"
+    ],
+    [
+      "Plate",
+      "DEMO72 / ME"
+    ],
+    [
+      "Fine",
+      "$20.00"
+    ]
+  ],
+  "paragraphs": [
+    "Pay the fine within 72 hours of issuance, excluding Saturday and Sunday, by cash, check or money order.",
+    "No debit or credit cards are accepted. Do not mail cash.",
+    "Questions: 207-287-4357."
+  ],
+  "expected": {
+    "deadline": null,
+    "amount_due": "20.00",
+    "required_action": "Pay the fine within 72 hours of issuance, excluding Saturday and Sunday, by cash, check or money order. No debit or credit cards are accepted. Do not mail cash.",
+    "contact": "207-287-4357"
+  },
+  "expected_state": {
+    "deadline": "ambiguous",
+    "amount_due": "present",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "expected_aliases": {},
+  "route_id": null,
+  "challenges": [
+    "unsupported_hour_weekend_rule",
+    "payment_restrictions",
+    "unlisted_state_agency"
+  ],
+  "visible_text": "SYNTHETIC TEST - NOT VALID - DO NOT PAY\nMaine Capitol Police\nPARKING NOTICE\nTicket: DEMO-ME-002\nIssued: October 23, 2026 at 9:00 AM\nPlate: DEMO72 / ME\nFine: $20.00\nPay the fine within 72 hours of issuance, excluding Saturday and Sunday, by cash, check or money order.\nNo debit or credit cards are accepted. Do not mail cash.\nQuestions: 207-287-4357.",
+  "variants": [
+    {
+      "name": "clean",
+      "image": "ME_02-clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "ME_02-degraded.jpg"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "CT_01",
+  "state": "CT",
+  "issuer": "Hartford Parking Authority",
+  "layout": "hearing",
+  "sources": [
+    "https://hartfordparking.com/pay-or-appeal-citations/",
+    "https://hartfordparking.com/wp-content/uploads/2024/11/Request-New-Hearing-Date__revised-11.2024.pdf"
+  ],
+  "source_basis": "Instruction-based reconstruction: citation includes a hearing date; payment and appeal are separate options.",
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "rows": [
+    [
+      "Citation",
+      "DEMO-CT-001"
+    ],
+    [
+      "Issued",
+      "October 26, 2026"
+    ],
+    [
+      "Plate",
+      "DEMOCT / CT"
+    ],
+    [
+      "Violation",
+      "Expired paid parking session"
+    ],
+    [
+      "Fine",
+      "$45.00"
+    ],
+    [
+      "Payment deadline",
+      "November 12, 2026"
+    ],
+    [
+      "Hearing date",
+      "November 19, 2026 at 9:30 AM"
+    ]
+  ],
+  "paragraphs": [
+    "Pay the fine by November 12, 2026, or attend the scheduled hearing on November 19, 2026 at 9:30 AM to contest the citation.",
+    "A denied appeal may add a $15.00 hearing fee. This fee is not included in the current fine.",
+    "Questions: 860-757-0730."
+  ],
+  "expected": {
+    "deadline": "2026-11-12",
+    "amount_due": "45.00",
+    "required_action": "Pay the fine by November 12, 2026, or attend the scheduled hearing on November 19, 2026 at 9:30 AM to contest the citation.",
+    "contact": "860-757-0730"
+  },
+  "expected_state": {
+    "deadline": "present",
+    "amount_due": "present",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "expected_aliases": {},
+  "route_id": "hartford",
+  "challenges": [
+    "payment_vs_hearing_date",
+    "conditional_fee"
+  ],
+  "visible_text": "SYNTHETIC TEST - NOT VALID - DO NOT PAY\nHartford Parking Authority\nPARKING NOTICE\nCitation: DEMO-CT-001\nIssued: October 26, 2026\nPlate: DEMOCT / CT\nViolation: Expired paid parking session\nFine: $45.00\nPayment deadline: November 12, 2026\nHearing date: November 19, 2026 at 9:30 AM\nPay the fine by November 12, 2026, or attend the scheduled hearing on November 19, 2026 at 9:30 AM to contest the citation.\nA denied appeal may add a $15.00 hearing fee. This fee is not included in the current fine.\nQuestions: 860-757-0730.",
+  "variants": [
+    {
+      "name": "clean",
+      "image": "CT_01-clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "CT_01-degraded.jpg"
+    }
+  ]
+}

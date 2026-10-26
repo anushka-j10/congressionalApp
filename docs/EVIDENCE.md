@@ -2,6 +2,23 @@
 
 Updated 2026-10-25. The user selected the original cases/results for submission reporting. No new held-out inference, OCR, rescoring or answer-key edit was performed. The final implementation remains without an independent final-version held-out measurement. All numbers here come from saved reports; no new live run was needed for this documentation step.
 
+## Supplemental exploratory evidence — October 26, 2026
+
+A separate [Northeast parking stress run](../results/northeast-stress/REPORT.md) executed 18 researched, assistant-authored notices × two image variants. Its key and image hashes were declared before model calls. This is not independent held-out evidence; sixteen layouts reconstruct official instructions and two use visually inspected official sample ticket stock. Original held-out artifacts were not rerun or changed.
+
+| Measure | Result |
+| --- | --- |
+| Strict case pass | 10/36 |
+| Correct extracted values, present truth | 92/128 |
+| Strict false-verified, all four fields | 21/144 |
+| Strict false-verified, critical fields | 15/108 |
+| Abstain when truth exists | 59/128 |
+| Correct and verified, present truth | 50/128 |
+| Routing checks (11 links / 7 fallbacks) | 18/18 |
+| Regression tests | 430 Python / 60 JavaScript pass |
+
+The strict scorer counts six harmless extra-text/label differences among its 21 false-verifications. Genuine wrong dates/contacts remain; full error review and unchanged raw outputs are linked in the report. Human amount confirmation was not simulated. English consistency checks passed 36/36 but repeated erroneous verified facts. This run did not test Spanish/Tagalog, physical phones, or the deployed HTTP boundary. The earlier dev/adversarial/baseline/ablation and original held-out numbers below retain their original scope.
+
 ## Provenance and metric definitions
 
 Critical fields are deadline, amount_due and required_action; contact is included in per-field/all-field tables. False-verified rate is a wrong verified field divided by every relevant field opportunity, including missing/ambiguous truth. Present accuracy measures correct proposed values among present answers regardless of verification status. Correct verified measures usable correct facts. Abstain-when-present counts missing/unverified output where the key contains a fact. Correct MISSING has its own denominator; zero denominators are N/A. All displayed fractions are exact.

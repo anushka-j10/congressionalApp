@@ -1,0 +1,25 @@
+{
+  "started_at": "2026-10-26T05:00:55.763880+00:00",
+  "commit": "b5422683a713760cc5b6a6d6e2c339b577fd63d5",
+  "application_sha256": "e0c7594b6edf7a5a0da971e628da4217b133466ddd67693480a5bccedcf34674",
+  "manifest_sha256": "280996a8f3a4956bd87f4b8423e02498017349c252d0dc666900d3e663e4b9bf",
+  "config": {
+    "repeats": 1,
+    "variants": [
+      "clean",
+      "degraded"
+    ],
+    "today": "2026-10-26",
+    "model": "gpt-5.4-mini-2026-03-17",
+    "reader": "preprocessed",
+    "temperature": 0,
+    "reasoning_effort": "none",
+    "language": "en",
+    "human_amount_review": false,
+    "ocr_confirmed_unchanged": true,
+    "doc_type_selected": "parking_ticket",
+    "note": "Single-field deadline scoring: CT_01 uses earliest printed response date. PA_02 must abstain because conditional deadlines differ. ME_02 must abstain on unsupported hours/weekend arithmetic. Relative dates scored as normalized ISO dates; no raw-rule aliases. Contact may be any declared complete contact channel."
+  },
+  "scorer": "proposed-reliability-v3",
+  "planned_cases": 36
+}

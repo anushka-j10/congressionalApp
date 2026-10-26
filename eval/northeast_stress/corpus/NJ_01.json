@@ -1,0 +1,80 @@
+{
+  "id": "NJ_01",
+  "state": "NJ",
+  "issuer": "Jersey City Municipal Court",
+  "layout": "summons",
+  "sources": [
+    "https://www.jerseycitynj.gov/CityHall/law/municipalcourt",
+    "https://www.njcourts.gov/self-help/legal-reference-materials/your-day-court"
+  ],
+  "source_basis": "Reconstruction from municipal/NJ Courts guidance: Court ID, ticket, payable amount and appearance condition; no visual-facsimile claim.",
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "rows": [
+    [
+      "Court ID",
+      "0906"
+    ],
+    [
+      "Ticket",
+      "DEMO-NJ-001"
+    ],
+    [
+      "Issued",
+      "October 26, 2026"
+    ],
+    [
+      "Plate",
+      "DEMONJ / NJ"
+    ],
+    [
+      "Violation",
+      "Parking beyond the permitted time"
+    ],
+    [
+      "Payable amount",
+      "$54.00"
+    ],
+    [
+      "Court appearance required",
+      "NO"
+    ],
+    [
+      "Pay by",
+      "November 16, 2026"
+    ]
+  ],
+  "paragraphs": [
+    "Pay $54.00 by November 16, 2026, or contact the municipal court before that date to request a hearing.",
+    "Questions: Jersey City Municipal Court."
+  ],
+  "expected": {
+    "deadline": "2026-11-16",
+    "amount_due": "54.00",
+    "required_action": "Pay $54.00 by November 16, 2026, or contact the municipal court before that date to request a hearing.",
+    "contact": "Jersey City Municipal Court."
+  },
+  "expected_state": {
+    "deadline": "present",
+    "amount_due": "present",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "expected_aliases": {},
+  "route_id": "jersey-city",
+  "challenges": [
+    "court_id_vs_amount",
+    "pay_or_hearing"
+  ],
+  "visible_text": "SYNTHETIC TEST - NOT VALID - DO NOT PAY\nJersey City Municipal Court\nPARKING NOTICE\nCourt ID: 0906\nTicket: DEMO-NJ-001\nIssued: October 26, 2026\nPlate: DEMONJ / NJ\nViolation: Parking beyond the permitted time\nPayable amount: $54.00\nCourt appearance required: NO\nPay by: November 16, 2026\nPay $54.00 by November 16, 2026, or contact the municipal court before that date to request a hearing.\nQuestions: Jersey City Municipal Court.",
+  "variants": [
+    {
+      "name": "clean",
+      "image": "NJ_01-clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "NJ_01-degraded.jpg"
+    }
+  ]
+}

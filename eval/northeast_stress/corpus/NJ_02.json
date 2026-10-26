@@ -1,0 +1,72 @@
+{
+  "id": "NJ_02",
+  "state": "NJ",
+  "issuer": "Hoboken Municipal Court",
+  "layout": "summons",
+  "sources": [
+    "https://www.hobokennj.gov/resources/pay-a-parking-ticket",
+    "https://www.njcourts.gov/self-help/legal-reference-materials/your-day-court"
+  ],
+  "source_basis": "Reconstruction of a parking-related summons with appearance required, based on the NJ Courts appearance distinction. No fine on the supplied page.",
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "rows": [
+    [
+      "Complaint",
+      "DEMO-NJ-002"
+    ],
+    [
+      "Issued",
+      "October 26, 2026"
+    ],
+    [
+      "Plate",
+      "TESTNJ / NJ"
+    ],
+    [
+      "Charge",
+      "Parking in a prohibited area"
+    ],
+    [
+      "Court appearance required",
+      "YES"
+    ],
+    [
+      "Hearing",
+      "November 18, 2026 at 9:00 AM"
+    ]
+  ],
+  "paragraphs": [
+    "Appear at Hoboken Municipal Court on November 18, 2026 at 9:00 AM. Payment does not replace this required appearance.",
+    "Questions: Hoboken Municipal Court."
+  ],
+  "expected": {
+    "deadline": "2026-11-18",
+    "amount_due": null,
+    "required_action": "Appear at Hoboken Municipal Court on November 18, 2026 at 9:00 AM. Payment does not replace this required appearance.",
+    "contact": "Hoboken Municipal Court."
+  },
+  "expected_state": {
+    "deadline": "present",
+    "amount_due": "missing",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "expected_aliases": {},
+  "route_id": "nj-municipal",
+  "challenges": [
+    "appearance_required",
+    "no_payable_amount"
+  ],
+  "visible_text": "SYNTHETIC TEST - NOT VALID - DO NOT PAY\nHoboken Municipal Court\nPARKING NOTICE\nComplaint: DEMO-NJ-002\nIssued: October 26, 2026\nPlate: TESTNJ / NJ\nCharge: Parking in a prohibited area\nCourt appearance required: YES\nHearing: November 18, 2026 at 9:00 AM\nAppear at Hoboken Municipal Court on November 18, 2026 at 9:00 AM. Payment does not replace this required appearance.\nQuestions: Hoboken Municipal Court.",
+  "variants": [
+    {
+      "name": "clean",
+      "image": "NJ_02-clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "NJ_02-degraded.jpg"
+    }
+  ]
+}

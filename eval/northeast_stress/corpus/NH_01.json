@@ -1,0 +1,65 @@
+{
+  "id": "NH_01",
+  "state": "NH",
+  "issuer": "City of Nashua Parking Department",
+  "layout": "review",
+  "sources": [
+    "https://nashuanh.gov/DocumentCenter/View/14602/City-of-Nashua-Parking-Appeal-Form",
+    "https://www.nashuanh.gov/978/Parking-Tickets-Violations"
+  ],
+  "source_basis": "Reconstructed appeal acknowledgement based on official appeal form. The 21-business-day response is the agency response, not a resident deadline.",
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "rows": [
+    [
+      "Citation",
+      "DEMO-NH-001"
+    ],
+    [
+      "Citation date",
+      "October 20, 2026"
+    ],
+    [
+      "Request received",
+      "October 26, 2026"
+    ],
+    [
+      "Review status",
+      "Pending"
+    ]
+  ],
+  "paragraphs": [
+    "Keep your appeal confirmation while the administrative review is pending.",
+    "The Parking Department will respond within 21 business days. If the citation is upheld, a separate decision will explain your options.",
+    "Questions: parking@nashuanh.gov"
+  ],
+  "expected": {
+    "deadline": null,
+    "amount_due": null,
+    "required_action": "Keep your appeal confirmation while the administrative review is pending.",
+    "contact": "parking@nashuanh.gov"
+  },
+  "expected_state": {
+    "deadline": "missing",
+    "amount_due": "missing",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "expected_aliases": {},
+  "route_id": "nashua",
+  "challenges": [
+    "agency_response_not_deadline",
+    "missing_amount"
+  ],
+  "visible_text": "SYNTHETIC TEST - NOT VALID - DO NOT PAY\nCity of Nashua Parking Department\nPARKING NOTICE\nCitation: DEMO-NH-001\nCitation date: October 20, 2026\nRequest received: October 26, 2026\nReview status: Pending\nKeep your appeal confirmation while the administrative review is pending.\nThe Parking Department will respond within 21 business days. If the citation is upheld, a separate decision will explain your options.\nQuestions: parking@nashuanh.gov",
+  "variants": [
+    {
+      "name": "clean",
+      "image": "NH_01-clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "NH_01-degraded.jpg"
+    }
+  ]
+}

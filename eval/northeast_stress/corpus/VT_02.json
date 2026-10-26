@@ -1,0 +1,65 @@
+{
+  "id": "VT_02",
+  "state": "VT",
+  "issuer": "Town of Brattleboro Parking Enforcement",
+  "layout": "letter",
+  "sources": [
+    "https://brattleboro.gov/parking-citation-appeal-process"
+  ],
+  "source_basis": "Instruction-based reconstruction of inclusive day counting: issue date is day one. The expected date is October 26 plus thirteen days, November 8.",
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "rows": [
+    [
+      "Citation",
+      "DEMO-VT-002"
+    ],
+    [
+      "Issue date",
+      "October 26, 2026"
+    ],
+    [
+      "Plate",
+      "TESTVT / VT"
+    ],
+    [
+      "Parking fine",
+      "$35.00"
+    ]
+  ],
+  "paragraphs": [
+    "To contest this citation, send a written appeal within 14 days of the issue date. Count the issue date as day 1.",
+    "Include your name, contact information, citation number and reason for the appeal.",
+    "Contact: Brattleboro Parking Enforcement, 77 Flat Street, Brattleboro, VT 05301."
+  ],
+  "expected": {
+    "deadline": "2026-11-08",
+    "amount_due": "35.00",
+    "required_action": "To contest this citation, send a written appeal within 14 days of the issue date. Count the issue date as day 1. Include your name, contact information, citation number and reason for the appeal.",
+    "contact": "Brattleboro Parking Enforcement, 77 Flat Street, Brattleboro, VT 05301."
+  },
+  "expected_state": {
+    "deadline": "present",
+    "amount_due": "present",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "expected_aliases": {},
+  "route_id": null,
+  "challenges": [
+    "inclusive_day_one",
+    "multi_sentence_action",
+    "unlisted_issuer"
+  ],
+  "visible_text": "SYNTHETIC TEST - NOT VALID - DO NOT PAY\nTown of Brattleboro Parking Enforcement\nPARKING NOTICE\nCitation: DEMO-VT-002\nIssue date: October 26, 2026\nPlate: TESTVT / VT\nParking fine: $35.00\nTo contest this citation, send a written appeal within 14 days of the issue date. Count the issue date as day 1.\nInclude your name, contact information, citation number and reason for the appeal.\nContact: Brattleboro Parking Enforcement, 77 Flat Street, Brattleboro, VT 05301.",
+  "variants": [
+    {
+      "name": "clean",
+      "image": "VT_02-clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "VT_02-degraded.jpg"
+    }
+  ]
+}

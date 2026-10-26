@@ -1,0 +1,72 @@
+{
+  "id": "ME_01",
+  "state": "ME",
+  "issuer": "Freeport Police Department",
+  "layout": "receipt",
+  "sources": [
+    "https://apps1.web.maine.gov/cgi-bin/ePayment/online/disclaimer?sid=1937"
+  ],
+  "source_basis": "State-hosted Freeport payment instructions identify ticket number at top and registration/state near the top; visual reconstruction.",
+  "synthetic": true,
+  "doc_type": "parking_ticket",
+  "rows": [
+    [
+      "TICKET NUMBER",
+      "DEMO-ME-001"
+    ],
+    [
+      "REGISTRATION",
+      "DEMOME / ME"
+    ],
+    [
+      "Registration expires",
+      "April 30, 2027"
+    ],
+    [
+      "Issued",
+      "10/26/2026"
+    ],
+    [
+      "Violation",
+      "Overtime parking"
+    ],
+    [
+      "Fine",
+      "$30.00"
+    ]
+  ],
+  "paragraphs": [
+    "Pay the parking fine using the ticket number and vehicle registration.",
+    "For help: jmaloy@freeportmaine.com"
+  ],
+  "expected": {
+    "deadline": null,
+    "amount_due": "30.00",
+    "required_action": "Pay the parking fine using the ticket number and vehicle registration.",
+    "contact": "jmaloy@freeportmaine.com"
+  },
+  "expected_state": {
+    "deadline": "missing",
+    "amount_due": "present",
+    "required_action": "present",
+    "contact": "present"
+  },
+  "expected_aliases": {},
+  "route_id": null,
+  "challenges": [
+    "no_deadline",
+    "registration_expiry_decoy",
+    "unlisted_issuer"
+  ],
+  "visible_text": "SYNTHETIC TEST - NOT VALID - DO NOT PAY\nFreeport Police Department\nPARKING NOTICE\nTICKET NUMBER: DEMO-ME-001\nREGISTRATION: DEMOME / ME\nRegistration expires: April 30, 2027\nIssued: 10/26/2026\nViolation: Overtime parking\nFine: $30.00\nPay the parking fine using the ticket number and vehicle registration.\nFor help: jmaloy@freeportmaine.com",
+  "variants": [
+    {
+      "name": "clean",
+      "image": "ME_01-clean.png"
+    },
+    {
+      "name": "degraded",
+      "image": "ME_01-degraded.jpg"
+    }
+  ]
+}
