@@ -1,0 +1,110 @@
+- banner:
+  - link "Notice Decoder home":
+    - /url: "#welcome"
+    - text: Notice Decoder
+  - generic: Language
+  - combobox "Language":
+    - option "English" [selected]
+    - option "Español"
+    - option "Tagalog"
+- main:
+  - heading "Read a notice" [level=1]
+  - region "Add a photo":
+    - heading "Add a photo" [level=2]
+    - paragraph: Photograph one printed English page. Include every edge and keep the words in focus.
+    - button "Take photo":
+      - generic: Take photo
+    - button "Choose a photo":
+      - generic: Choose a photo
+    - generic "+ Photo tips and supported files"
+    - img "Your prepared notice photo"
+    - paragraph: Prepared JPEG · 116 KB · Long edge up to 1600px
+    - paragraph: "Local reader: the photo goes to our server, is not sent to an AI provider, and is not saved."
+    - button "Read notice"
+    - button "Clear photo and results"
+    - paragraph: Spanish and Tagalog translations still need human review.
+    - status: Reading complete. Check the text against the photo.
+  - generic "+ Review the reading":
+    - text: +
+    - heading "Review the reading" [level=2]
+  - text: + +
+  - option "Unknown — choose a type or ask for help"
+  - option "Parking ticket" [selected]
+  - option "Court notice"
+  - option "Utility bill"
+  - option "School letter"
+  - region "Check your results":
+    - heading "Check your results" [level=2]
+    - paragraph: “Text match” means the result passed checks against your reviewed text. Reading errors, wrong dates or incomplete instructions can still pass. Confirm important details with the issuing office.
+    - status: Source checks complete. Review every card against the original.
+    - article:
+      - heading "Deadline" [level=3]
+      - generic: Text match
+      - paragraph: October 29, 2026
+      - paragraph: 3 days remaining as of October 26, 2026.
+      - generic "+ Reviewed English text"
+    - article:
+      - heading "Amount due" [level=3]
+      - generic: Text match
+      - paragraph: $45.00
+      - generic "+ Reviewed English text"
+    - article:
+      - heading "What to do" [level=3]
+      - generic: Text match
+      - paragraph: Pay the fictional parking charge by the deadline.
+      - generic "+ Reviewed English text"
+    - article:
+      - heading "Contact" [level=3]
+      - generic: Needs review
+      - paragraph: Withheld because our checks could not confirm it. Check the original or ask the issuing office.
+      - generic "+ Reviewed English text"
+    - article:
+      - heading "Issuing agency" [level=3]
+      - generic: Text match
+      - paragraph: Fictional Notice Decoder Demonstration Office
+      - generic "+ Reviewed English text"
+    - generic "+ Full reviewed text"
+  - region "Read the explanation":
+    - status
+    - paragraph: "Contact: Withheld because our checks could not confirm it. Check the original or ask the issuing office. This is not legal advice. Verify important details with the issuing office."
+    - generic "− Read the explanation":
+      - text: −
+      - heading "Read the explanation" [active] [level=2]
+    - paragraph: "You selected: Parking ticket."
+    - heading "What this says" [level=3]
+    - paragraph: The checked facts are shown below.
+    - heading "Next steps" [level=3]
+    - list:
+      - listitem: Pay the fictional parking charge by the deadline.
+    - paragraph: "Due date: October 29, 2026."
+    - paragraph: "Amount due: $45.00."
+    - button "Read aloud"
+    - button "Pause"
+    - button "Stop"
+    - button "Try explanation again"
+    - complementary "Get human help":
+      - heading "Get human help" [level=3]
+      - paragraph: Use the contact details on your original notice, or ask someone you trust to help you check them. Local support services are not listed here yet.
+  - generic "+ Parking ticket help · New Jersey"
+  - option "Choose a state"
+  - option "Connecticut"
+  - option "Maine"
+  - option "Massachusetts"
+  - option "New Hampshire"
+  - option "New Jersey" [selected]
+  - option "New York"
+  - option "Pennsylvania"
+  - option "Rhode Island"
+  - option "Vermont"
+  - option "Another state"
+  - option "I’m not sure yet"
+  - option "Choose the issuer shown on the ticket" [selected]
+  - option "New Jersey municipal court"
+  - option "Jersey City Municipal Court"
+  - option "Not listed / private or campus ticket"
+  - button "How it works"
+  - generic "+ App connection and installation"
+  - generic "+ How your notice is processed"
+  - paragraph: This is not legal advice. Verify important details with the issuing office.
+- contentinfo:
+  - button "Our story"

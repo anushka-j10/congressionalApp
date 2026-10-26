@@ -2,6 +2,12 @@
 
 Updated 2026-10-25. The original held-out failures remain part of the submission evidence. Current dev/adversarial safety numbers do not replace or erase them. The original set has not been rerun with the final code; no post-repair independent held-out accuracy is available.
 
+## Public-release follow-up — October 26
+
+Hosting passes 12/12 public checks, and one synthetic development notice completed live upload, extraction and EN/ES/TL display. **Full phone acceptance remains incomplete.** AJ's iPhone report led to a local reproduction on a publicly linked, angled ticket photo: preprocessing truncated a deadline year and corrupted a contesting-clause number. The original-image reader recovered the full date but still corrupted the clause; the generic quality heuristic added no poor-reading warning. These are not repaired by the new “Choose a notice type” selector wording. No extraction/model call was made on that real photo by the assistant, and its image/identifiers/full transcript are excluded from this public repository. The exact phone output/browser version remains unconfirmed.
+
+Deployed English fallback, unreadable-image abstention and offline checks are incomplete; the browser permission gate declined the separate blank-image upload. Physical-device installation/audio and native-language review remain unverified. [Full release record](results/release-2026-10-26/REPORT.md) and [2.0 priorities](NOTICE_DECODER_2_0_PROMPT.md) retain the distinctions between observed failures, unperformed checks and future work. No held-out rerun occurred.
+
 ## Additional Northeast stress run — October 26, 2026
 
 The new exploratory corpus has 18 assistant-authored notices, two per Northeast state, in clean/degraded versions. Its 36 runs have **21/144 strict all-field false-verifications**, including **15/108 critical false-verifications**; **10/36** cases pass strict value scoring. Six strict verification mismatches are harmless labels or supported extra text. The key, prompts and validators were not changed after observing the results.
@@ -107,7 +113,7 @@ Disabling date validation yields two false-verified deadlines on dev; full keeps
 - **Translation:** Spanish and Tagalog glossary files are unreviewed. Number/glossary/back-translation checks are mechanical safeguards, not native-speaker or legal-language approval. A correct translation can repeat a wrong extracted fact.
 - **Read-aloud:** browser/device voices determine language availability. Desktop checks do not establish working Spanish/Tagalog voices on a judge's phone. Physical-phone testing remains outstanding.
 - **Scope:** one page per request. Extra pages are not merged. English field-role, instruction and action-completeness rules are bounded heuristics; unsupported date formats and multiple obligations can cause abstention or missed distinctions.
-- **Help and deployment:** configured external help resources remain TODO in `backend/languages/help.json`; no live HTTPS deployment is verified. Host secrets, request rate limiting, origin policy, deployed quota behavior and real-device acceptance remain later milestone checks.
+- **Help and deployment:** local support-service configuration remains empty in `backend/languages/help.json`. Selected official parking routes are available separately. The October 26 HTTPS release passes 12 public checks and one synthetic language workflow; full phone acceptance and deployed fallback/offline checks remain incomplete. See `results/release-2026-10-26/REPORT.md`. Rate limits are process-local and not a dollar spend cap.
 - **Privacy:** tested normal app paths use in-memory notice processing and no-store API responses; these tests do not prove secure RAM erasure, OS/library behavior, host-log policy or provider retention. Explicit synthetic evaluation reports intentionally persist test data outside the served frontend. Vendored HEIC diagnostics are disclosed in the privacy audit.
 
 No prompt, validator, answer key or app behavior was changed in this documentation step. Any earlier milestone-local claim that held-out testing had not yet started, that repair had not yet happened, or that ablation was absent is a historical checkpoint, archived under docs/history rather than presented as current status.

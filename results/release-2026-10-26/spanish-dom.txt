@@ -1,0 +1,110 @@
+- banner:
+  - link "Inicio de Notice Decoder":
+    - /url: "#welcome"
+    - text: Notice Decoder
+  - generic: Idioma
+  - combobox "Idioma":
+    - option "English"
+    - option "Español" [selected]
+    - option "Tagalog"
+- main:
+  - heading "Lee un aviso" [level=1]
+  - region "Añade una foto":
+    - heading "Añade una foto" [level=2]
+    - paragraph: Fotografía una página impresa en inglés. Incluye todos los bordes y enfoca las palabras.
+    - button "Tomar foto":
+      - generic: Tomar foto
+    - button "Elegir una foto":
+      - generic: Elegir una foto
+    - generic "+ Consejos para la foto y archivos admitidos"
+    - img "Su foto del aviso preparada"
+    - paragraph: JPEG preparado · 116 KB · Lado largo hasta 1600px
+    - paragraph: "Lector local: la foto va a nuestro servidor, no se envía a un proveedor de IA y no se guarda."
+    - button "Leer aviso"
+    - button "Borrar foto y resultados"
+    - paragraph: Las traducciones al español y al tagalo aún necesitan revisión humana.
+    - status: Lectura terminada. Compare el texto con la foto.
+  - generic "+ Revisa la lectura":
+    - text: +
+    - heading "Revisa la lectura" [level=2]
+  - text: + +
+  - 'option "Desconocido: elija un tipo o pida ayuda"'
+  - option "Multa de estacionamiento" [selected]
+  - option "Aviso del tribunal"
+  - option "Factura de servicios"
+  - option "Carta escolar"
+  - region "Revisa los resultados":
+    - heading "Revisa los resultados" [level=2]
+    - paragraph: “Coincide con el texto” significa que el resultado pasó las comprobaciones del texto que revisaste. Pueden pasar errores de lectura, fechas incorrectas o instrucciones incompletas. Confirma lo importante con la oficina emisora.
+    - status: Fuentes comprobadas. Compare cada tarjeta con el original.
+    - article:
+      - heading "Fecha límite" [level=3]
+      - generic: Coincide con el texto
+      - paragraph: 29 de octubre de 2026
+      - paragraph: Quedan 3 días al 26 de octubre de 2026.
+      - generic "+ Texto revisado en inglés"
+    - article:
+      - heading "Monto a pagar" [level=3]
+      - generic: Coincide con el texto
+      - paragraph: $45.00
+      - generic "+ Texto revisado en inglés"
+    - article:
+      - heading "Qué hacer" [level=3]
+      - generic: Coincide con el texto
+      - paragraph: Paga el cargo ficticio de estacionamiento antes de la fecha de vencimiento.
+      - generic "+ Texto revisado en inglés"
+    - article:
+      - heading "Contacto" [level=3]
+      - generic: Necesita revisión
+      - paragraph: No se muestra porque las comprobaciones no lo confirmaron. Revisa el original o consulta a la oficina emisora.
+      - generic "+ Texto revisado en inglés"
+    - article:
+      - heading "Organismo emisor" [level=3]
+      - generic: Coincide con el texto
+      - paragraph: Fictional Notice Decoder Demonstration Office
+      - generic "+ Texto revisado en inglés"
+    - generic "+ Texto revisado completo"
+  - region "Lee la explicación":
+    - status: Las traducciones al español y al tagalo aún necesitan revisión humana. La traducción pasó las comprobaciones automáticas, pero necesita revisión humana.
+    - paragraph: "Contacto: No se muestra porque las comprobaciones no lo confirmaron. Revisa el original o consulta a la oficina emisora. No es asesoramiento legal. Confirma los datos importantes con la oficina emisora."
+    - generic "− Lee la explicación":
+      - text: −
+      - heading "Lee la explicación" [active] [level=2]
+    - paragraph: "Has seleccionado: multa de estacionamiento."
+    - heading "Qué dice" [level=3]
+    - paragraph: Los hechos comprobados se muestran abajo.
+    - heading "Próximos pasos" [level=3]
+    - list:
+      - listitem: Paga el cargo ficticio de estacionamiento antes de la fecha de vencimiento.
+    - paragraph: "Fecha de vencimiento: 29 de octubre de 2026."
+    - paragraph: "Monto adeudado: $45.00."
+    - button "Leer en voz alta"
+    - button "Pausar"
+    - button "Detener"
+    - button "Reintentar la explicación"
+    - complementary "Pida ayuda a una persona":
+      - heading "Pida ayuda a una persona" [level=3]
+      - paragraph: Usa los datos de contacto del aviso original o pide a alguien de confianza que te ayude a revisarlos. Todavía no se incluyen servicios locales de apoyo.
+  - generic "+ Ayuda de estacionamiento · New Jersey"
+  - option "Elige un estado"
+  - option "Connecticut"
+  - option "Maine"
+  - option "Massachusetts"
+  - option "New Hampshire"
+  - option "New Jersey" [selected]
+  - option "New York"
+  - option "Pennsylvania"
+  - option "Rhode Island"
+  - option "Vermont"
+  - option "Otro estado"
+  - option "Aún no lo sé"
+  - option "Elige la autoridad indicada en la multa" [selected]
+  - option "New Jersey municipal court"
+  - option "Jersey City Municipal Court"
+  - option "No aparece / multa privada o universitaria"
+  - button "Cómo funciona"
+  - generic "+ Conexión e instalación"
+  - generic "+ Cómo se procesa tu aviso"
+  - paragraph: No es asesoramiento legal. Confirma los datos importantes con la oficina emisora.
+- contentinfo:
+  - button "Nuestra historia"

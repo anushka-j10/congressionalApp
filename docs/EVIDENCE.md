@@ -2,6 +2,12 @@
 
 Updated 2026-10-25. The user selected the original cases/results for submission reporting. No new held-out inference, OCR, rescoring or answer-key edit was performed. The final implementation remains without an independent final-version held-out measurement. All numbers here come from saved reports; no new live run was needed for this documentation step.
 
+## Release evidence — October 26
+
+Application commit e25b3c1 is deployed at https://notice-decoder-ns5o.onrender.com. [Release checks](../results/release-2026-10-26/REPORT.md) record 12/12 public HTTP checks with ten matching asset hashes, 430 Python tests, 62 JavaScript tests, and actual browser English/Spanish/Tagalog output on one synthetic development notice before a copy-only selector update. Ten explicit CSS color pairs meet the normal-text contrast threshold; the earlier 63 phone-width layout checks remain scoped desktop evidence. These are deployment/implementation checks, not replacement accuracy measurements.
+
+A separate real-photo diagnostic following AJ's iPhone report found critical OCR losses; full phone acceptance remains open. Deployed failure/fallback/offline and physical audio/installation checks are incomplete. The public release does not erase the original held-out or Northeast failure counts below. No new held-out run, answer-key change or retrospective rescoring was performed. [Release checklist](../RELEASE_CHECKLIST.md).
+
 ## Supplemental exploratory evidence — October 26, 2026
 
 A separate [Northeast parking stress run](../results/northeast-stress/REPORT.md) executed 18 researched, assistant-authored notices × two image variants. Its key and image hashes were declared before model calls. This is not independent held-out evidence; sixteen layouts reconstruct official instructions and two use visually inspected official sample ticket stock. Original held-out artifacts were not rerun or changed.
@@ -140,7 +146,7 @@ Source tables: results/m4-verification/dev.md, results/m4-verification/adversari
 - **Translation:** Spanish and Tagalog glossary files are unreviewed. Number/glossary/back-translation checks are mechanical safeguards, not native-speaker or legal-language approval. A correct translation can repeat a wrong extracted fact.
 - **Read-aloud:** browser/device voices determine language availability. Desktop checks do not establish working Spanish/Tagalog voices on a judge's phone. Physical-phone testing remains outstanding.
 - **Scope:** one page per request. Extra pages are not merged. English field-role, instruction and action-completeness rules are bounded heuristics; unsupported date formats and multiple obligations can cause abstention or missed distinctions.
-- **Help and deployment:** configured external help resources remain TODO in `backend/languages/help.json`; no live HTTPS deployment is verified. Host secrets, request rate limiting, origin policy, deployed quota behavior and real-device acceptance remain later milestone checks.
+- **Help and deployment:** local support-service configuration remains empty in `backend/languages/help.json`. Selected official parking routes are available separately. The October 26 HTTPS release passes 12 public checks and one synthetic language workflow; full phone acceptance and deployed fallback/offline checks remain incomplete. See `results/release-2026-10-26/REPORT.md`. Rate limits are process-local and not a dollar spend cap.
 - **Privacy:** tested normal app paths use in-memory notice processing and no-store API responses; these tests do not prove secure RAM erasure, OS/library behavior, host-log policy or provider retention. Explicit synthetic evaluation reports intentionally persist test data outside the served frontend. Vendored HEIC diagnostics are disclosed in the privacy audit.
 
 ## Authoritative artifacts
@@ -148,4 +154,4 @@ Source tables: results/m4-verification/dev.md, results/m4-verification/adversari
 - Current live records: [dev](../results/m4-verification/dev.json), [adversarial](../results/m4-verification/adversarial.json); matching .md files retain original printed outputs/settings.
 - Current replay: [dev ablations](../results/m4-ablations/dev.json), [adversarial ablations](../results/m4-ablations/adversarial.json), [protocol and commands](../results/m4-ablations/REPORT.md).
 - Original frozen run: [raw results](../results/heldout-final.json), [protocol](../results/heldout-protocol.json), [complete Step 1 results](../HELDOUT_RESULTS.md). Raw hashes were verified at Step 1 against the recorded protocol.
-- Historical notes and superseded status statements are retained in docs/history. No new freeze tag, live URL, independent final held-out score, native review or mobile acceptance is claimed.
+- Historical notes and superseded status statements are retained in docs/history. No new freeze tag, independent final held-out score, native review or full mobile acceptance is claimed. The later deployed release is documented separately below.

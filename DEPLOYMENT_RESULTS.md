@@ -1,5 +1,13 @@
 # Step 4 — Render deployment result
 
+## Current release — October 26
+
+The polished app and manual-type wording fix are now live at https://notice-decoder-ns5o.onrender.com, commit `e25b3c118fbe05b5680b76782cf88ac7acc7afbd`, Render deploy `dep-dbferbg473hc73cto1f0`. Hosting checks pass 12/12; local tests pass 430 Python and 62 JavaScript. The previous application commit completed an actual synthetic upload/extract/English/Spanish/Tagalog browser flow. The final change is copy and cache version only. See [current release evidence](results/release-2026-10-26/REPORT.md) and [checklist](RELEASE_CHECKLIST.md).
+
+Full phone acceptance is **not passed**: the user's iPhone test exposed an unresolved reading issue, reproduced locally on the linked photo. Physical-device installation/audio, deployed English fallback, blank-image rejection and offline acceptance remain incomplete. No original held-out rerun or broad reliability claim is made. The historical first-deployment record below is retained for provenance; its old “pending Step 5” and test counts are not current release status.
+
+## First deployment — October 25 (historical)
+
 Checked 2026-10-25. **Hosting deployment: PASS. Full deployed functional/mobile acceptance: pending Step 5.**
 
 Live app: https://notice-decoder-ns5o.onrender.com

@@ -1,9 +1,32 @@
 # AI usage disclosure
 
-This log records AI assistance; it does not claim independent student authorship.
-The student must review and understand all generated code and record their own
-contributions separately. No extraction schema, deterministic validators, or eval
-scoring logic has been generated in Milestone 0.
+## Current disclosure — October 26, 2026
+
+Codex wrote much of Notice Decoder's code under Anushka Jain's (AJ's) direction, including backend and frontend implementation, proposed extraction schemas and deterministic validators, tests, proposed evaluation scoring, deployment configuration, and documentation drafts. AJ authorized the proposed validators and scorer for her review. Generated implementation is AI-assisted work; it should not be presented as independently written student code. This app also calls an OpenAI model at runtime for extraction and language processing; the default image reader uses Tesseract.
+
+AJ supplied the idea and family experience behind Notice Decoder, the Jersey City/NJ-08 focus, product priorities, interface feedback, evaluation requirements and plan, test-notice design direction, the handwritten independent held-out answer key, and review of outputs. Test assets have different origins: Codex generated the development notices and the later source-informed Northeast stress replicas. Do not describe those assistant-generated images as independently handwritten student fixtures. The user supplied the ten original held-out images and states that the answer key was written by hand independently of the app.
+
+Classifier signals in `backend/classifier/signals.py` were reserved for AJ's design/authorship. **The shipped lists are still empty.** This release requires manual document-type selection; it does not support a claim that AJ has implemented working classifier signals. Specific signal choices or unpublished work must be described by AJ, not inferred from the plan.
+
+### TODO — AJ's personal contribution record
+
+Only AJ can complete this block. Do not invent specifics or turn an assigned responsibility into completed work.
+
+- [ ] Describe the idea's origin in your own words and confirm the family story is accurate and appropriate to share.
+- [ ] List code you personally designed, wrote or substantially edited, with filenames/lines and what you changed. For `signals.py`, distinguish proposed ideas from code actually shipped.
+- [ ] Describe which test notices you designed yourself and how you produced the ten held-out images; separate this from Codex-generated development/stress cases.
+- [ ] Explain how you wrote the answer key independently, and identify any confirmed key typos without rewriting historical results.
+- [ ] Describe your evaluation-plan decisions and specific outputs you reviewed, including what you learned or corrected.
+- [ ] Record phone model/browser, installation, camera, read-aloud and accessibility checks you actually performed, with dates and results.
+- [ ] Confirm which generated components you can explain, and revise the submission's first-person answers to reflect your own understanding.
+
+The entries below are a historical assistance log. Early milestone statements describe their time only; later authorization and implementations supersede the original ownership split. No independent final-version held-out rerun or native-speaker translation review is claimed.
+
+## Historical assistance log
+
+### Release assistance — October 26
+
+Codex pushed the polished application to the deployment branch, used Render's signed-in dashboard to deploy it, ran public HTTPS checks and a synthetic browser upload/language workflow, and drafted SUBMISSION.md, DEMO_SCRIPT.md and RELEASE_CHECKLIST.md. After AJ reported “Unknown” on an iPhone, Codex changed selector wording and reran 430 Python and 62 JavaScript tests. Codex locally inspected the public ticket photo AJ linked and reproduced critical OCR losses without a model call or adding the real image/identifiers to the repository. This diagnosis does not establish a fix or completed phone acceptance. Codex wrote the release evidence and updated the 2.0 work brief. AJ's personal TODO block above remains for AJ alone to complete.
 
 | Date | Assistant contribution | Files |
 | --- | --- | --- |

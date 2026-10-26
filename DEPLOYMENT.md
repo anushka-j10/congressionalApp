@@ -1,6 +1,6 @@
 # Render deployment
 
-Deployed and HTTPS-smoke-checked, 2026-10-25. Live URL: https://notice-decoder-ns5o.onrender.com. One Docker web service serves both the phone-oriented PWA and FastAPI under the same HTTPS origin. Render reports Live for commit 96911c9, and 11 public HTTPS smoke checks pass; details are in DEPLOYMENT_RESULTS.md. Full model-backed and physical-phone acceptance remains Step 5. No held-out inference or validator/prompt change is part of this deployment.
+Latest release checked October 26: https://notice-decoder-ns5o.onrender.com. One Docker web service serves the PWA and FastAPI under the same HTTPS origin. Commit e25b3c1 is deployed and 12/12 public HTTPS checks pass. A synthetic browser upload/extraction/English/Spanish/Tagalog flow passed before the final copy-only fix. Full phone and failure-state acceptance remains incomplete, including a user-reported reading failure; see DEPLOYMENT_RESULTS.md and RELEASE_CHECKLIST.md. No held-out inference or fact-validator/model-prompt change is part of this release.
 
 ## Configuration
 

@@ -2,9 +2,11 @@
 
 Notice Decoder is a mobile-first PWA for understanding a photographed notice: read the text, check it against the photo, choose the document type, inspect extracted facts and their sources, then read a plain-English explanation or a guarded Spanish/Tagalog translation. It is intended for a Congressional App Challenge NJ-08 entry, including Jersey City. It is an explanatory tool, not legal advice; verify obligations with the issuing office.
 
-**Review branch, October 26:** final interface polish clarifies supported inputs, review steps, source matching, missing fields and language limits. The API status `verified` now displays as **Text match**. This wording does not repair the known extraction failures. The next development brief is [Notice Decoder 2.0](NOTICE_DECODER_2_0_PROMPT.md); [polish checks](results/final-polish/REPORT.md) distinguish UI verification from accuracy evidence.
+**Released October 26:** the phone interface, tutorial, parking directory and final polish are deployed. The API status `verified` displays as **Text match**. This wording does not repair known extraction failures. The next development brief is [Notice Decoder 2.0](NOTICE_DECODER_2_0_PROMPT.md); [release checks](results/release-2026-10-26/REPORT.md) distinguish hosting and UI verification from accuracy evidence.
 
-**Deployment:** [the app is live over HTTPS](https://notice-decoder-ns5o.onrender.com), but the review-branch layout, parking directory and final polish have not been deployed. Full deployed notice-flow and physical-phone acceptance remain pending. The original frozen held-out run had **4/30 critical false-verified fields**; the later exploratory Northeast run had **21/144 strict false-verified fields across four fields**. They use different versions/sets and denominators, not a before/after comparison.
+**[Open Notice Decoder](https://notice-decoder-ns5o.onrender.com)** · [Release branch](https://github.com/anushka-j10/congressionalApp/tree/fix/notice-reliability) · [Release checklist](RELEASE_CHECKLIST.md)
+
+App commit `e25b3c1` is live. Public hosting checks pass 12/12; a synthetic development notice completed upload, extraction and English/Spanish/Tagalog presentation. Local regressions pass 430 Python and 62 JavaScript tests. **Full phone acceptance has not passed:** an iPhone test led to a locally reproduced critical OCR failure on a real angled ticket photo. Installation, device audio, deployed fallback/offline checks and native translation review remain incomplete. The original frozen held-out run had **4/30 critical false-verified fields**; the later exploratory Northeast run had **21/144 strict false-verified fields across four fields**. They use different versions/sets and denominators, not a before/after comparison.
 
 ## What you can do
 
@@ -46,7 +48,7 @@ The model above is the measured evaluation snapshot; use it only if available to
 python -m uvicorn backend.main:app --env-file .env --reload --host 127.0.0.1 --port 8000 --no-access-log
 ```
 
-Open http://localhost:8000. Choose a photo, read it, compare/correct the transcript, explicitly select its type, and confirm the text and printed amounts. Review warnings and source highlights before relying on a card. All production classifier signal lists are currently empty, so automatic type output is unknown; manual selection is required. Installation/service-worker behavior on a phone requires HTTPS and remains unverified on a deployed host.
+Open http://localhost:8000. Choose a photo, read it, compare/correct the transcript, explicitly select its type, and confirm the text and printed amounts. Review warnings and source highlights before relying on a card. All production classifier signal lists are currently empty, so automatic type output is unknown; manual selection is required. The selector now starts with “Choose a notice type.” This selection is separate from photo reading. Phone installation remains unverified even though the public manifest/icons are served over HTTPS.
 
 ## Architecture
 
@@ -130,7 +132,7 @@ Ablations replay identical saved proposals/text/answers through seven field-vali
 - **Translation:** Spanish and Tagalog glossary files are unreviewed. Number/glossary/back-translation checks are mechanical safeguards, not native-speaker or legal-language approval. A correct translation can repeat a wrong extracted fact.
 - **Read-aloud:** browser/device voices determine language availability. Desktop checks do not establish working Spanish/Tagalog voices on a judge's phone. Physical-phone testing remains outstanding.
 - **Scope:** one page per request. Extra pages are not merged. English field-role, instruction and action-completeness rules are bounded heuristics; unsupported date formats and multiple obligations can cause abstention or missed distinctions.
-- **Help and deployment:** configured external help resources remain TODO in `backend/languages/help.json`; HTTPS deployment is verified at https://notice-decoder-ns5o.onrender.com; full notice-flow and real-phone acceptance remain pending. Server-only host configuration, request-limit regression tests and a live origin-policy check are recorded in DEPLOYMENT_RESULTS.md. Real model/quota behavior and device acceptance remain Step 5 checks.
+- **Help and deployment:** local support-service configuration remains empty; selected parking-authority links are available separately. HTTPS and one synthetic live language flow pass. Full phone acceptance, deployed failure-state checks and real-world reading reliability remain incomplete; see [the release checklist](RELEASE_CHECKLIST.md).
 - **Privacy:** tested normal app paths use in-memory notice processing and no-store API responses; these tests do not prove secure RAM erasure, OS/library behavior, host-log policy or provider retention. Explicit synthetic evaluation reports intentionally persist test data outside the served frontend. Vendored HEIC diagnostics are disclosed in the privacy audit.
 
 ## Evidence and project files
@@ -138,22 +140,23 @@ Ablations replay identical saved proposals/text/answers through seven field-vali
 - [EVIDENCE](docs/EVIDENCE.md): denominators, per-field baselines, translation outcomes and test/provenance links.
 - [FAILURES](FAILURES.md): original held-out failures and current dev/adversarial discrepancies, including safe abstentions.
 - [DESIGN_NOTES](DESIGN_NOTES.md): current pipeline, verification policies and tradeoffs.
-- [AI_USAGE](AI_USAGE.md): generated work and contribution history; Milestone 5 disclosure review is the next step.
+- [AI_USAGE](AI_USAGE.md): plain disclosure, contribution history and a personal TODO block for AJ.
+- [SUBMISSION](SUBMISSION.md), [demo script](DEMO_SCRIPT.md) and [release checklist](RELEASE_CHECKLIST.md): drafts and remaining human checks before submission.
 - Older README/design/evidence/failure snapshots are preserved in [docs/history](docs/history). Their milestone-local status statements are historical, not current acceptance claims.
 
 Application source is under backend/ and frontend/; tests are under tests/. The server serves frontend/ only. Keep .env private and access/body logging disabled. Normal notice requests are tested for in-memory processing and no-store responses; synthetic evaluation artifacts are intentionally saved outside the public frontend. See the privacy findings in [the verification report](results/m4-verification/REPORT.md).
 
 
-## Deployment preparation
+## Deployment
 
-[DEPLOYMENT.md](DEPLOYMENT.md) gives the free Render setup, exact server-only environment variables, security controls and numbered dashboard steps. Deployment-boundary tests now pass: 422 Python and 21 JavaScript checks (results/deployment/). The live URL is https://notice-decoder-ns5o.onrender.com. Its page/health/manifest/private-file/origin smoke checks pass (results/deployment/https-smoke.json); actual phone installation/read-aloud and model-backed notice-flow acceptance remain pending.
+[DEPLOYMENT.md](DEPLOYMENT.md) gives the free Render setup, server-only environment variables, security controls and numbered dashboard steps. The latest release passes 430 Python and 62 JavaScript tests, plus 12 public HTTPS checks; [the release report](results/release-2026-10-26/REPORT.md) records the exact deployed commit and actual browser workflow. A free instance can pause when idle, so a first visit can be slow. Physical-phone installation/audio and the unresolved real-photo reading issue remain open. Earlier first-deployment evidence is preserved under results/deployment/.
 
 
-## Parking-ticket websites (review branch)
+## Parking-ticket websites
 
 The tutorial now begins with the **state that issued the notice**. The reader’s “Parking ticket help” section provides a researched directory of **12 issuer-specific routes across nine Northeast states**: CT, ME, MA, NH, NJ, NY, PA, RI and VT. Users must choose the matching issuer before any payment route is shown. This includes NJMCdirect, selected cities, and Maine’s participating-municipality portal; it is not complete municipal or 50-state coverage. Other/unknown issuers get contact guidance. The directory is separate from extracted facts and does not infer a payment obligation.
 
-Sources, coverage limits, maintenance instructions, and the October 26 checks are in [the parking-resource research record](docs/parking-resources/RESEARCH.md). New directions are available in English, Spanish and Tagalog; proposed translations remain unreviewed by native speakers. State and issuer choices stay in page memory. This update has not been deployed.
+Sources, coverage limits, maintenance instructions, and the October 26 checks are in [the parking-resource research record](docs/parking-resources/RESEARCH.md). Directions are available in English, Spanish and Tagalog; proposed translations remain unreviewed by native speakers. State and issuer choices stay in page memory. This directory is included in the current deployed release.
 
 ## Northeast stress test — October 26, 2026
 

@@ -1,0 +1,76 @@
+{
+  "checks": [
+    {
+      "pair": "body on page",
+      "foreground": "#172b4d",
+      "background": "#f4f7fc",
+      "ratio": 13.132741204373838,
+      "passes_normal_text_4_5": true
+    },
+    {
+      "pair": "body on white",
+      "foreground": "#172b4d",
+      "background": "#ffffff",
+      "ratio": 14.102034448456891,
+      "passes_normal_text_4_5": true
+    },
+    {
+      "pair": "muted text on page",
+      "foreground": "#52647c",
+      "background": "#f4f7fc",
+      "ratio": 5.6315469693356635,
+      "passes_normal_text_4_5": true
+    },
+    {
+      "pair": "muted text on white",
+      "foreground": "#52647c",
+      "background": "#ffffff",
+      "ratio": 6.047196706596568,
+      "passes_normal_text_4_5": true
+    },
+    {
+      "pair": "primary button",
+      "foreground": "#ffffff",
+      "background": "#205bb4",
+      "ratio": 6.528009813232838,
+      "passes_normal_text_4_5": true
+    },
+    {
+      "pair": "secondary/link on white",
+      "foreground": "#205bb4",
+      "background": "#ffffff",
+      "ratio": 6.528009813232838,
+      "passes_normal_text_4_5": true
+    },
+    {
+      "pair": "link on page",
+      "foreground": "#205bb4",
+      "background": "#f4f7fc",
+      "ratio": 6.079311731236106,
+      "passes_normal_text_4_5": true
+    },
+    {
+      "pair": "uncertain badge",
+      "foreground": "#704800",
+      "background": "#f4f7fc",
+      "ratio": 7.476057443849938,
+      "passes_normal_text_4_5": true
+    },
+    {
+      "pair": "warning text",
+      "foreground": "#603c00",
+      "background": "#fff8e9",
+      "ratio": 9.262291210566858,
+      "passes_normal_text_4_5": true
+    },
+    {
+      "pair": "error text",
+      "foreground": "#9b2319",
+      "background": "#f4f7fc",
+      "ratio": 7.384961909526381,
+      "passes_normal_text_4_5": true
+    }
+  ],
+  "scope": "Ten explicit CSS text-color pairs, not a full computed-state or WCAG conformance audit. Disabled controls, decorative graphics and every hover/focus composite not measured.",
+  "all_passed": true
+}

@@ -1,0 +1,111 @@
+- banner:
+  - link "Home ng Notice Decoder":
+    - /url: "#welcome"
+    - text: Notice Decoder
+  - generic: Wika
+  - combobox "Wika":
+    - option "English"
+    - option "Español"
+    - option "Tagalog" [selected]
+- main:
+  - heading "Basahin ang abiso" [level=1]
+  - region "Magdagdag ng larawan":
+    - heading "Magdagdag ng larawan" [level=2]
+    - paragraph: Kunan ang isang nakalimbag na pahina sa Ingles. Isama ang lahat ng gilid at linawin ang mga salita.
+    - button "Kumuha ng larawan":
+      - generic: Kumuha ng larawan
+    - button "Pumili ng larawan":
+      - generic: Pumili ng larawan
+    - generic "+ Mga tip sa larawan at mga suportadong file"
+    - img "Inihandang larawan ng iyong abiso"
+    - paragraph: Handang JPEG · 116 KB · Mahabang gilid hanggang 1600px
+    - paragraph: "Lokal na tagabasa: napupunta ang larawan sa aming server, hindi ipinapadala sa AI provider, at hindi sine-save."
+    - button "Basahin ang abiso"
+    - button "Burahin ang larawan at mga resulta"
+    - paragraph: Kailangan pa ring suriin ng tao ang mga salin sa Espanyol at Tagalog.
+    - status: Tapos nang basahin. Ihambing ang teksto sa larawan.
+  - generic "+ Suriin ang nabasang teksto":
+    - text: +
+    - heading "Suriin ang nabasang teksto" [level=2]
+  - text: + +
+  - option "Hindi matukoy — pumili ng uri o humingi ng tulong"
+  - option "Tiket sa pagparada" [selected]
+  - option "Abiso ng hukuman"
+  - option "Bayarin sa serbisyo"
+  - option "Liham ng paaralan"
+  - region "Suriin ang mga resulta":
+    - heading "Suriin ang mga resulta" [level=2]
+    - paragraph: Ang “Tugma sa teksto” ay nangangahulugang pumasa ang resulta sa mga pagsusuri batay sa tekstong nirepaso mo. Maaari pa ring pumasa ang maling pagbasa, maling petsa o kulang na tagubilin. Kumpirmahin ang mahahalaga sa tanggapang nagbigay ng abiso.
+    - status: Nasuri na ang pinagmulan. Ihambing ang bawat kard sa orihinal.
+    - article:
+      - heading "Takdang petsa" [level=3]
+      - generic: Tugma sa teksto
+      - paragraph: Oktubre 29, 2026
+      - paragraph: May 3 araw pang natitira mula Oktubre 26, 2026.
+      - generic "+ Nirepasong teksto sa Ingles"
+    - article:
+      - heading "Halagang babayaran" [level=3]
+      - generic: Tugma sa teksto
+      - paragraph: $45.00
+      - generic "+ Nirepasong teksto sa Ingles"
+    - article:
+      - heading "Ano ang dapat gawin" [level=3]
+      - generic: Tugma sa teksto
+      - paragraph: Bayaran ang kathang-isip na singil sa paradahan bago ang takdang petsa.
+      - generic "+ Nirepasong teksto sa Ingles"
+    - article:
+      - heading "Makipag-ugnayan" [level=3]
+      - generic: Kailangang suriin
+      - paragraph: Hindi ipinapakita dahil hindi ito nakumpirma ng mga pagsusuri. Tingnan ang orihinal o magtanong sa tanggapang nagbigay ng abiso.
+      - generic "+ Nirepasong teksto sa Ingles"
+    - article:
+      - heading "Nagpadalang ahensiya" [level=3]
+      - generic: Tugma sa teksto
+      - paragraph: Fictional Notice Decoder Demonstration Office
+      - generic "+ Nirepasong teksto sa Ingles"
+    - generic "+ Buong nirepasong teksto"
+  - region "Basahin ang paliwanag":
+    - status: Kailangan pa ring suriin ng tao ang mga salin sa Espanyol at Tagalog. Nakapasa ang salin sa awtomatikong pagsusuri ngunit kailangan pa rin ng pagsusuri ng tao.
+    - paragraph: "Makipag-ugnayan: Hindi ipinapakita dahil hindi ito nakumpirma ng mga pagsusuri. Tingnan ang orihinal o magtanong sa tanggapang nagbigay ng abiso. Hindi ito legal na payo. Kumpirmahin ang mahahalagang detalye sa tanggapang nagbigay ng abiso."
+    - generic "− Basahin ang paliwanag":
+      - text: −
+      - heading "Basahin ang paliwanag" [active] [level=2]
+    - paragraph: "Napili mo: Tiket sa paradahan."
+    - heading "Ano ang nakasaad" [level=3]
+    - paragraph: Ang mga nasuring katotohanan ay ipinapakita sa ibaba.
+    - heading "Mga susunod na hakbang" [level=3]
+    - list:
+      - listitem: Bayaran ang kathang-isip na singil sa paradahan bago ang takdang petsa.
+    - paragraph: "Takdang petsa: Oktubre 29, 2026."
+    - paragraph: "Halagang dapat bayaran: $45.00."
+    - button "Basahin nang malakas" [disabled]
+    - button "I-pause" [disabled]
+    - button "Ihinto" [disabled]
+    - status: Walang boses na tugma sa wikang ito sa aparatong ito.
+    - button "Subukang muli ang paliwanag"
+    - complementary "Humingi ng tulong sa isang tao":
+      - heading "Humingi ng tulong sa isang tao" [level=3]
+      - paragraph: Gamitin ang detalye ng kontak sa orihinal na abiso o magpatulong sa taong pinagkakatiwalaan mong suriin ito. Wala pang nakalistang lokal na serbisyong pantulong dito.
+  - generic "+ Tulong sa tiket · New Jersey"
+  - option "Pumili ng estado"
+  - option "Connecticut"
+  - option "Maine"
+  - option "Massachusetts"
+  - option "New Hampshire"
+  - option "New Jersey" [selected]
+  - option "New York"
+  - option "Pennsylvania"
+  - option "Rhode Island"
+  - option "Vermont"
+  - option "Ibang estado"
+  - option "Hindi pa ako sigurado"
+  - option "Piliin ang awtoridad na nakasaad sa tiket" [selected]
+  - option "New Jersey municipal court"
+  - option "Jersey City Municipal Court"
+  - option "Wala sa listahan / pribado o pangkampus na tiket"
+  - button "Paano ito gumagana"
+  - generic "+ Koneksyon at pag-install"
+  - generic "+ Paano pinoproseso ang iyong abiso"
+  - paragraph: Hindi ito legal na payo. Kumpirmahin ang mahahalagang detalye sa tanggapang nagbigay ng abiso.
+- contentinfo:
+  - button "Ang aming kuwento"

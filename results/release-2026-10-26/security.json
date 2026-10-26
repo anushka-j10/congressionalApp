@@ -1,0 +1,17 @@
+{
+  "audited_head": "e25b3c118fbe05b5680b76782cf88ac7acc7afbd",
+  "working_files_scanned": 604,
+  "history_blobs_scanned": 707,
+  "configured_key_working_matches": 0,
+  "credential_like_working_files": 0,
+  "configured_key_history_matches": 0,
+  "credential_like_history_blobs": 0,
+  "env_tracked": false,
+  "env_ignored": true,
+  "env_mode": "0o600",
+  "freeze_tag": "24d729a540ed3913ced09ee42af89765fd921c4b",
+  "freeze_tag_unchanged": true,
+  "historical_evaluations_unchanged": true,
+  "secret_values_printed_or_saved": false,
+  "scope": "Current configured key equality and long OpenAI-like token patterns in reachable Git blobs and tracked/unignored working files. Does not prove absence of every possible credential or audit host/provider retention."
+}
