@@ -2,7 +2,21 @@
 
 Notice Decoder is a mobile-first PWA for understanding a photographed notice: read the text, check it against the photo, choose the document type, inspect extracted facts and their sources, then read a plain-English explanation or a guarded Spanish/Tagalog translation. It is intended for a Congressional App Challenge NJ-08 entry, including Jersey City. It is an explanatory tool, not legal advice; verify obligations with the issuing office.
 
-**Status, 2026-10-25:** [The app is live over HTTPS](https://notice-decoder-ns5o.onrender.com). Physical-phone and full deployed notice-flow acceptance remain pending. The deployment-boundary regression run passed **422 Python tests and 21 JavaScript tests** ([Python logs](results/deployment/pytest.txt), [JavaScript](results/deployment/node.txt)); the earlier clean-install evidence is retained separately. The original held-out run had **4/30 critical false-verified fields**. That result is retained for the earlier frozen version; the final version has no independent held-out measurement. Judge URL: https://notice-decoder-ns5o.onrender.com.
+**Review branch, October 26:** final interface polish clarifies supported inputs, review steps, source matching, missing fields and language limits. The API status `verified` now displays as **Text match**. This wording does not repair the known extraction failures. The next development brief is [Notice Decoder 2.0](NOTICE_DECODER_2_0_PROMPT.md); [polish checks](results/final-polish/REPORT.md) distinguish UI verification from accuracy evidence.
+
+**Deployment:** [the app is live over HTTPS](https://notice-decoder-ns5o.onrender.com), but the review-branch layout, parking directory and final polish have not been deployed. Full deployed notice-flow and physical-phone acceptance remain pending. The original frozen held-out run had **4/30 critical false-verified fields**; the later exploratory Northeast run had **21/144 strict false-verified fields across four fields**. They use different versions/sets and denominators, not a before/after comparison.
+
+## What you can do
+
+| Function | What to expect |
+|---|---|
+| Photograph or upload | One printed English page: parking ticket, court notice, utility bill or school letter. Multiple pages are not combined |
+| Review the reading | Correct the text, choose its type, and confirm text and amounts against the photo. Automatic type detection is currently unconfigured |
+| Check key details | Agency, deadline, amount, instructions and contact, with source text. “Text match” means checks against reviewed text; errors can still pass. Missing/uncertain results need checking |
+| Read or listen | Plain-English explanation; Spanish/Tagalog with English fallback on failed checks. Read-aloud needs a matching device voice. Translations still require human review |
+| Find parking resources | Manually match the issuing state and office to selected official websites in nine Northeast states. No ticket lookup, payment or appeal is performed by this app |
+
+Normal processing requires an internet connection. The default OCR runs on our server; reviewed text goes to OpenAI for extraction and language processing. Check important details with the issuing office before acting.
 
 ## Run locally
 
@@ -43,8 +57,8 @@ flowchart TD
     C --> D[Human transcript/type/amount review]
     D --> E[Server-side model proposes facts and source snippets]
     E --> F[Deterministic source, role, date, amount and action checks]
-    F --> G[Verified / unverified / missing cards with sources]
-    G --> H[Verified-only English explanation]
+    F --> G[Text match / needs review / not identified cards with sources]
+    G --> H[English explanation from fields that passed checks]
     H --> I[Spanish or Tagalog checks and English fallback]
     I --> J[Browser matching-voice read-aloud]
 ```

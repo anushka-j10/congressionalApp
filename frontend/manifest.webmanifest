@@ -2,7 +2,7 @@
   "id": "/",
   "name": "Notice Decoder",
   "short_name": "Notice Decoder",
-  "description": "Understand official notices in plain language.",
+  "description": "Read one English notice, review its text, and check key details with a plain-language explanation.",
   "lang": "en",
   "start_url": "/",
   "scope": "/",

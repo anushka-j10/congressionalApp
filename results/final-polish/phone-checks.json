@@ -1,0 +1,3412 @@
+{
+  "scope": "Desktop browser phone-width layout checks; synthetic result fixtures; no model calls or physical phone testing",
+  "checks": [
+    {
+      "view": "welcome",
+      "lang": "en",
+      "height": 844,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 49.5,
+          "id": "get-started",
+          "width": 288
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "welcome",
+      "lang": "es",
+      "height": 844,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 49.5,
+          "id": "get-started",
+          "width": 288
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "welcome",
+      "lang": "tl",
+      "height": 844,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 49.5,
+          "id": "get-started",
+          "width": 288
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "welcome",
+      "lang": "en",
+      "height": 844,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 49.5,
+          "id": "get-started",
+          "width": 358
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "welcome",
+      "lang": "es",
+      "height": 844,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 49.5,
+          "id": "get-started",
+          "width": 358
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "welcome",
+      "lang": "tl",
+      "height": 844,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 49.5,
+          "id": "get-started",
+          "width": 358
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "welcome",
+      "lang": "en",
+      "height": 844,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 49.5,
+          "id": "get-started",
+          "width": 398
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "welcome",
+      "lang": "es",
+      "height": 844,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 49.5,
+          "id": "get-started",
+          "width": 398
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "welcome",
+      "lang": "tl",
+      "height": 844,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 49.5,
+          "id": "get-started",
+          "width": 398
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "tutorial-1",
+      "lang": "en",
+      "height": 844,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 103.4140625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 73.390625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 202.609375
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "tutorial-1",
+      "lang": "es",
+      "height": 844,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 115.3046875
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 76.375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 199.625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "tutorial-1",
+      "lang": "tl",
+      "height": 844,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 158.7890625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 97.609375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 178.390625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "tutorial-1",
+      "lang": "en",
+      "height": 844,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 103.4140625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 73.390625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 272.609375
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "tutorial-1",
+      "lang": "es",
+      "height": 844,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 115.3046875
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 76.375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 269.625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "tutorial-1",
+      "lang": "tl",
+      "height": 844,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 158.7890625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 97.609375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 248.390625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "tutorial-1",
+      "lang": "en",
+      "height": 844,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 103.4140625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 73.390625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 312.609375
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "tutorial-1",
+      "lang": "es",
+      "height": 844,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 115.3046875
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 76.375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 309.625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "tutorial-1",
+      "lang": "tl",
+      "height": 844,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 158.7890625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 97.609375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 288.390625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "tutorial-2",
+      "lang": "en",
+      "height": 844,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 103.4140625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 73.390625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 202.609375
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "tutorial-2",
+      "lang": "es",
+      "height": 844,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 115.3046875
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 76.375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 199.625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "tutorial-2",
+      "lang": "tl",
+      "height": 844,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 158.7890625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 97.609375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 178.390625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "tutorial-2",
+      "lang": "en",
+      "height": 844,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 103.4140625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 73.390625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 272.609375
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "tutorial-2",
+      "lang": "es",
+      "height": 844,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 115.3046875
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 76.375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 269.625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "tutorial-2",
+      "lang": "tl",
+      "height": 844,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 158.7890625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 97.609375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 248.390625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "tutorial-2",
+      "lang": "en",
+      "height": 844,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 103.4140625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 73.390625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 312.609375
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "tutorial-2",
+      "lang": "es",
+      "height": 844,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 115.3046875
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 76.375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 309.625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "tutorial-2",
+      "lang": "tl",
+      "height": 844,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 158.7890625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 97.609375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 288.390625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "tutorial-3",
+      "lang": "en",
+      "height": 844,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 103.4140625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 73.390625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 202.609375
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "tutorial-3",
+      "lang": "es",
+      "height": 844,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 115.3046875
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 76.375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 199.625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "tutorial-3",
+      "lang": "tl",
+      "height": 844,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 158.7890625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 97.609375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 178.390625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "tutorial-3",
+      "lang": "en",
+      "height": 844,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 103.4140625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 73.390625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 272.609375
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "tutorial-3",
+      "lang": "es",
+      "height": 844,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 115.3046875
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 76.375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 269.625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "tutorial-3",
+      "lang": "tl",
+      "height": 844,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 158.7890625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 97.609375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 248.390625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "tutorial-3",
+      "lang": "en",
+      "height": 844,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 103.4140625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 73.390625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 312.609375
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "tutorial-3",
+      "lang": "es",
+      "height": 844,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 115.3046875
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 76.375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 309.625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "tutorial-3",
+      "lang": "tl",
+      "height": 844,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 158.7890625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 97.609375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 288.390625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "tutorial-4",
+      "lang": "en",
+      "height": 844,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 103.4140625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 73.390625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 202.609375
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "tutorial-4",
+      "lang": "es",
+      "height": 844,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 115.3046875
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 76.375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 199.625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "tutorial-4",
+      "lang": "tl",
+      "height": 844,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 158.7890625
+        },
+        {
+          "height": 75,
+          "id": "tutorial-back",
+          "width": 97.609375
+        },
+        {
+          "height": 75,
+          "id": "tutorial-next",
+          "width": 178.390625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "tutorial-4",
+      "lang": "en",
+      "height": 844,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 103.4140625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 73.390625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 272.609375
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "tutorial-4",
+      "lang": "es",
+      "height": 844,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 115.3046875
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 76.375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 269.625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "tutorial-4",
+      "lang": "tl",
+      "height": 844,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 158.7890625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 97.609375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 248.390625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "tutorial-4",
+      "lang": "en",
+      "height": 844,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 103.4140625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 73.390625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 312.609375
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "tutorial-4",
+      "lang": "es",
+      "height": 844,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 115.3046875
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 76.375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 309.625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "tutorial-4",
+      "lang": "tl",
+      "height": 844,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 44,
+          "id": "skip-tutorial",
+          "width": 158.7890625
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-back",
+          "width": 97.609375
+        },
+        {
+          "height": 49.5,
+          "id": "tutorial-next",
+          "width": 288.390625
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "reader",
+      "lang": "en",
+      "height": 996,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 64,
+          "id": "take-photo",
+          "width": 246
+        },
+        {
+          "height": 52,
+          "id": "choose-photo",
+          "width": 246
+        },
+        {
+          "height": 48,
+          "id": "Photo tips and supported files",
+          "width": 288
+        },
+        {
+          "height": 52.5,
+          "id": "parking-summary",
+          "width": 288
+        },
+        {
+          "height": 48,
+          "id": "parking-state-picker",
+          "width": 288
+        },
+        {
+          "height": 48,
+          "id": "parking-issuer",
+          "width": 288
+        },
+        {
+          "height": 44,
+          "id": "replay-tutorial",
+          "width": 84.7109375
+        },
+        {
+          "height": 48,
+          "id": "App connection and installation",
+          "width": 288
+        },
+        {
+          "height": 49.5,
+          "id": "check-connection",
+          "width": 177.5234375
+        },
+        {
+          "height": 48,
+          "id": "How your notice is processed",
+          "width": 288
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "reader",
+      "lang": "es",
+      "height": 1018,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 64,
+          "id": "take-photo",
+          "width": 246
+        },
+        {
+          "height": 52,
+          "id": "choose-photo",
+          "width": 246
+        },
+        {
+          "height": 48,
+          "id": "Consejos para la foto y archivos admitidos",
+          "width": 288
+        },
+        {
+          "height": 75,
+          "id": "parking-summary",
+          "width": 288
+        },
+        {
+          "height": 48,
+          "id": "parking-state-picker",
+          "width": 288
+        },
+        {
+          "height": 48,
+          "id": "parking-issuer",
+          "width": 288
+        },
+        {
+          "height": 44,
+          "id": "replay-tutorial",
+          "width": 99.625
+        },
+        {
+          "height": 48,
+          "id": "Conexión e instalación",
+          "width": 288
+        },
+        {
+          "height": 49.5,
+          "id": "check-connection",
+          "width": 200.1640625
+        },
+        {
+          "height": 48,
+          "id": "Cómo se procesa tu aviso",
+          "width": 288
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "reader",
+      "lang": "tl",
+      "height": 1017,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 64,
+          "id": "take-photo",
+          "width": 246
+        },
+        {
+          "height": 52,
+          "id": "choose-photo",
+          "width": 246
+        },
+        {
+          "height": 48,
+          "id": "Mga tip sa larawan at mga suportadong file",
+          "width": 288
+        },
+        {
+          "height": 52.5,
+          "id": "parking-summary",
+          "width": 288
+        },
+        {
+          "height": 48,
+          "id": "parking-state-picker",
+          "width": 288
+        },
+        {
+          "height": 48,
+          "id": "parking-issuer",
+          "width": 288
+        },
+        {
+          "height": 44,
+          "id": "replay-tutorial",
+          "width": 133.953125
+        },
+        {
+          "height": 48,
+          "id": "Koneksyon at pag-install",
+          "width": 288
+        },
+        {
+          "height": 49.5,
+          "id": "check-connection",
+          "width": 203.0703125
+        },
+        {
+          "height": 48,
+          "id": "Paano pinoproseso ang iyong abiso",
+          "width": 288
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "reader",
+      "lang": "en",
+      "height": 975,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 64,
+          "id": "take-photo",
+          "width": 316
+        },
+        {
+          "height": 52,
+          "id": "choose-photo",
+          "width": 316
+        },
+        {
+          "height": 48,
+          "id": "Photo tips and supported files",
+          "width": 358
+        },
+        {
+          "height": 52.5,
+          "id": "parking-summary",
+          "width": 358
+        },
+        {
+          "height": 48,
+          "id": "parking-state-picker",
+          "width": 358
+        },
+        {
+          "height": 48,
+          "id": "parking-issuer",
+          "width": 358
+        },
+        {
+          "height": 44,
+          "id": "replay-tutorial",
+          "width": 84.7109375
+        },
+        {
+          "height": 48,
+          "id": "App connection and installation",
+          "width": 358
+        },
+        {
+          "height": 49.5,
+          "id": "check-connection",
+          "width": 177.5234375
+        },
+        {
+          "height": 48,
+          "id": "How your notice is processed",
+          "width": 358
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "reader",
+      "lang": "es",
+      "height": 975,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 64,
+          "id": "take-photo",
+          "width": 316
+        },
+        {
+          "height": 52,
+          "id": "choose-photo",
+          "width": 316
+        },
+        {
+          "height": 48,
+          "id": "Consejos para la foto y archivos admitidos",
+          "width": 358
+        },
+        {
+          "height": 52.5,
+          "id": "parking-summary",
+          "width": 358
+        },
+        {
+          "height": 48,
+          "id": "parking-state-picker",
+          "width": 358
+        },
+        {
+          "height": 48,
+          "id": "parking-issuer",
+          "width": 358
+        },
+        {
+          "height": 44,
+          "id": "replay-tutorial",
+          "width": 99.625
+        },
+        {
+          "height": 48,
+          "id": "Conexión e instalación",
+          "width": 358
+        },
+        {
+          "height": 49.5,
+          "id": "check-connection",
+          "width": 200.1640625
+        },
+        {
+          "height": 48,
+          "id": "Cómo se procesa tu aviso",
+          "width": 358
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "reader",
+      "lang": "tl",
+      "height": 1017,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 64,
+          "id": "take-photo",
+          "width": 316
+        },
+        {
+          "height": 52,
+          "id": "choose-photo",
+          "width": 316
+        },
+        {
+          "height": 48,
+          "id": "Mga tip sa larawan at mga suportadong file",
+          "width": 358
+        },
+        {
+          "height": 52.5,
+          "id": "parking-summary",
+          "width": 358
+        },
+        {
+          "height": 48,
+          "id": "parking-state-picker",
+          "width": 358
+        },
+        {
+          "height": 48,
+          "id": "parking-issuer",
+          "width": 358
+        },
+        {
+          "height": 44,
+          "id": "replay-tutorial",
+          "width": 133.953125
+        },
+        {
+          "height": 48,
+          "id": "Koneksyon at pag-install",
+          "width": 358
+        },
+        {
+          "height": 49.5,
+          "id": "check-connection",
+          "width": 203.0703125
+        },
+        {
+          "height": 48,
+          "id": "Paano pinoproseso ang iyong abiso",
+          "width": 358
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "reader",
+      "lang": "en",
+      "height": 954,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 64,
+          "id": "take-photo",
+          "width": 356
+        },
+        {
+          "height": 52,
+          "id": "choose-photo",
+          "width": 356
+        },
+        {
+          "height": 48,
+          "id": "Photo tips and supported files",
+          "width": 398
+        },
+        {
+          "height": 52.5,
+          "id": "parking-summary",
+          "width": 398
+        },
+        {
+          "height": 48,
+          "id": "parking-state-picker",
+          "width": 398
+        },
+        {
+          "height": 48,
+          "id": "parking-issuer",
+          "width": 398
+        },
+        {
+          "height": 44,
+          "id": "replay-tutorial",
+          "width": 84.7109375
+        },
+        {
+          "height": 48,
+          "id": "App connection and installation",
+          "width": 398
+        },
+        {
+          "height": 49.5,
+          "id": "check-connection",
+          "width": 177.5234375
+        },
+        {
+          "height": 48,
+          "id": "How your notice is processed",
+          "width": 398
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "reader",
+      "lang": "es",
+      "height": 975,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 64,
+          "id": "take-photo",
+          "width": 356
+        },
+        {
+          "height": 52,
+          "id": "choose-photo",
+          "width": 356
+        },
+        {
+          "height": 48,
+          "id": "Consejos para la foto y archivos admitidos",
+          "width": 398
+        },
+        {
+          "height": 52.5,
+          "id": "parking-summary",
+          "width": 398
+        },
+        {
+          "height": 48,
+          "id": "parking-state-picker",
+          "width": 398
+        },
+        {
+          "height": 48,
+          "id": "parking-issuer",
+          "width": 398
+        },
+        {
+          "height": 44,
+          "id": "replay-tutorial",
+          "width": 99.625
+        },
+        {
+          "height": 48,
+          "id": "Conexión e instalación",
+          "width": 398
+        },
+        {
+          "height": 49.5,
+          "id": "check-connection",
+          "width": 200.1640625
+        },
+        {
+          "height": 48,
+          "id": "Cómo se procesa tu aviso",
+          "width": 398
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "reader",
+      "lang": "tl",
+      "height": 975,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 64,
+          "id": "take-photo",
+          "width": 356
+        },
+        {
+          "height": 52,
+          "id": "choose-photo",
+          "width": 356
+        },
+        {
+          "height": 48,
+          "id": "Mga tip sa larawan at mga suportadong file",
+          "width": 398
+        },
+        {
+          "height": 52.5,
+          "id": "parking-summary",
+          "width": 398
+        },
+        {
+          "height": 48,
+          "id": "parking-state-picker",
+          "width": 398
+        },
+        {
+          "height": 48,
+          "id": "parking-issuer",
+          "width": 398
+        },
+        {
+          "height": 44,
+          "id": "replay-tutorial",
+          "width": 133.953125
+        },
+        {
+          "height": 48,
+          "id": "Koneksyon at pag-install",
+          "width": 398
+        },
+        {
+          "height": 49.5,
+          "id": "check-connection",
+          "width": 203.0703125
+        },
+        {
+          "height": 48,
+          "id": "Paano pinoproseso ang iyong abiso",
+          "width": 398
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "results-fixture",
+      "lang": "en",
+      "height": 2068,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 64,
+          "id": "take-photo",
+          "width": 246
+        },
+        {
+          "height": 52,
+          "id": "choose-photo",
+          "width": 246
+        },
+        {
+          "height": 48,
+          "id": "Photo tips and supported files",
+          "width": 288
+        },
+        {
+          "height": 44,
+          "id": "Reviewed English text",
+          "width": 271
+        },
+        {
+          "height": 44,
+          "id": "Reviewed English text",
+          "width": 271
+        },
+        {
+          "height": 49.5,
+          "id": "Find in reviewed text",
+          "width": 197.625
+        },
+        {
+          "height": 44,
+          "id": "Reviewed English text",
+          "width": 288
+        },
+        {
+          "height": 49.5,
+          "id": "Find in reviewed text",
+          "width": 197.625
+        },
+        {
+          "height": 44,
+          "id": "Reviewed English text",
+          "width": 288
+        },
+        {
+          "height": 49.5,
+          "id": "Find in reviewed text",
+          "width": 197.625
+        },
+        {
+          "height": 44,
+          "id": "Reviewed English text",
+          "width": 288
+        },
+        {
+          "height": 49.5,
+          "id": "Find in reviewed text",
+          "width": 197.625
+        },
+        {
+          "height": 48,
+          "id": "source-title",
+          "width": 288
+        },
+        {
+          "height": 52.5,
+          "id": "parking-summary",
+          "width": 288
+        },
+        {
+          "height": 48,
+          "id": "parking-state-picker",
+          "width": 288
+        },
+        {
+          "height": 44,
+          "id": "replay-tutorial",
+          "width": 84.7109375
+        },
+        {
+          "height": 48,
+          "id": "App connection and installation",
+          "width": 288
+        },
+        {
+          "height": 49.5,
+          "id": "check-connection",
+          "width": 177.5234375
+        },
+        {
+          "height": 48,
+          "id": "How your notice is processed",
+          "width": 288
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "results-fixture",
+      "lang": "es",
+      "height": 2156,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 64,
+          "id": "take-photo",
+          "width": 246
+        },
+        {
+          "height": 52,
+          "id": "choose-photo",
+          "width": 246
+        },
+        {
+          "height": 48,
+          "id": "Consejos para la foto y archivos admitidos",
+          "width": 288
+        },
+        {
+          "height": 44,
+          "id": "Texto revisado en inglés",
+          "width": 271
+        },
+        {
+          "height": 44,
+          "id": "Texto revisado en inglés",
+          "width": 271
+        },
+        {
+          "height": 49.5,
+          "id": "Buscar en el texto revisado",
+          "width": 248.1640625
+        },
+        {
+          "height": 44,
+          "id": "Texto revisado en inglés",
+          "width": 288
+        },
+        {
+          "height": 49.5,
+          "id": "Buscar en el texto revisado",
+          "width": 248.1640625
+        },
+        {
+          "height": 44,
+          "id": "Texto revisado en inglés",
+          "width": 288
+        },
+        {
+          "height": 49.5,
+          "id": "Buscar en el texto revisado",
+          "width": 248.1640625
+        },
+        {
+          "height": 44,
+          "id": "Texto revisado en inglés",
+          "width": 288
+        },
+        {
+          "height": 49.5,
+          "id": "Buscar en el texto revisado",
+          "width": 248.1640625
+        },
+        {
+          "height": 48,
+          "id": "source-title",
+          "width": 288
+        },
+        {
+          "height": 75,
+          "id": "parking-summary",
+          "width": 288
+        },
+        {
+          "height": 48,
+          "id": "parking-state-picker",
+          "width": 288
+        },
+        {
+          "height": 44,
+          "id": "replay-tutorial",
+          "width": 99.625
+        },
+        {
+          "height": 48,
+          "id": "Conexión e instalación",
+          "width": 288
+        },
+        {
+          "height": 49.5,
+          "id": "check-connection",
+          "width": 200.1640625
+        },
+        {
+          "height": 48,
+          "id": "Cómo se procesa tu aviso",
+          "width": 288
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "results-fixture",
+      "lang": "tl",
+      "height": 2225,
+      "scroll": 320,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 64,
+          "id": "take-photo",
+          "width": 246
+        },
+        {
+          "height": 52,
+          "id": "choose-photo",
+          "width": 246
+        },
+        {
+          "height": 48,
+          "id": "Mga tip sa larawan at mga suportadong file",
+          "width": 288
+        },
+        {
+          "height": 44,
+          "id": "Nirepasong teksto sa Ingles",
+          "width": 271
+        },
+        {
+          "height": 44,
+          "id": "Nirepasong teksto sa Ingles",
+          "width": 271
+        },
+        {
+          "height": 49.5,
+          "id": "Hanapin sa nirepasong teksto",
+          "width": 269.7578125
+        },
+        {
+          "height": 44,
+          "id": "Nirepasong teksto sa Ingles",
+          "width": 288
+        },
+        {
+          "height": 49.5,
+          "id": "Hanapin sa nirepasong teksto",
+          "width": 269.7578125
+        },
+        {
+          "height": 44,
+          "id": "Nirepasong teksto sa Ingles",
+          "width": 288
+        },
+        {
+          "height": 49.5,
+          "id": "Hanapin sa nirepasong teksto",
+          "width": 269.7578125
+        },
+        {
+          "height": 44,
+          "id": "Nirepasong teksto sa Ingles",
+          "width": 288
+        },
+        {
+          "height": 49.5,
+          "id": "Hanapin sa nirepasong teksto",
+          "width": 269.7578125
+        },
+        {
+          "height": 48,
+          "id": "source-title",
+          "width": 288
+        },
+        {
+          "height": 75,
+          "id": "parking-summary",
+          "width": 288
+        },
+        {
+          "height": 48,
+          "id": "parking-state-picker",
+          "width": 288
+        },
+        {
+          "height": 44,
+          "id": "replay-tutorial",
+          "width": 133.953125
+        },
+        {
+          "height": 48,
+          "id": "Koneksyon at pag-install",
+          "width": 288
+        },
+        {
+          "height": 49.5,
+          "id": "check-connection",
+          "width": 203.0703125
+        },
+        {
+          "height": 48,
+          "id": "Paano pinoproseso ang iyong abiso",
+          "width": 288
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 320
+    },
+    {
+      "view": "results-fixture",
+      "lang": "en",
+      "height": 2015,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 64,
+          "id": "take-photo",
+          "width": 316
+        },
+        {
+          "height": 52,
+          "id": "choose-photo",
+          "width": 316
+        },
+        {
+          "height": 48,
+          "id": "Photo tips and supported files",
+          "width": 358
+        },
+        {
+          "height": 44,
+          "id": "Reviewed English text",
+          "width": 341
+        },
+        {
+          "height": 44,
+          "id": "Reviewed English text",
+          "width": 341
+        },
+        {
+          "height": 49.5,
+          "id": "Find in reviewed text",
+          "width": 197.625
+        },
+        {
+          "height": 44,
+          "id": "Reviewed English text",
+          "width": 358
+        },
+        {
+          "height": 49.5,
+          "id": "Find in reviewed text",
+          "width": 197.625
+        },
+        {
+          "height": 44,
+          "id": "Reviewed English text",
+          "width": 358
+        },
+        {
+          "height": 49.5,
+          "id": "Find in reviewed text",
+          "width": 197.625
+        },
+        {
+          "height": 44,
+          "id": "Reviewed English text",
+          "width": 358
+        },
+        {
+          "height": 49.5,
+          "id": "Find in reviewed text",
+          "width": 197.625
+        },
+        {
+          "height": 48,
+          "id": "source-title",
+          "width": 358
+        },
+        {
+          "height": 52.5,
+          "id": "parking-summary",
+          "width": 358
+        },
+        {
+          "height": 48,
+          "id": "parking-state-picker",
+          "width": 358
+        },
+        {
+          "height": 44,
+          "id": "replay-tutorial",
+          "width": 84.7109375
+        },
+        {
+          "height": 48,
+          "id": "App connection and installation",
+          "width": 358
+        },
+        {
+          "height": 49.5,
+          "id": "check-connection",
+          "width": 177.5234375
+        },
+        {
+          "height": 48,
+          "id": "How your notice is processed",
+          "width": 358
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "results-fixture",
+      "lang": "es",
+      "height": 2036,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 64,
+          "id": "take-photo",
+          "width": 316
+        },
+        {
+          "height": 52,
+          "id": "choose-photo",
+          "width": 316
+        },
+        {
+          "height": 48,
+          "id": "Consejos para la foto y archivos admitidos",
+          "width": 358
+        },
+        {
+          "height": 44,
+          "id": "Texto revisado en inglés",
+          "width": 341
+        },
+        {
+          "height": 44,
+          "id": "Texto revisado en inglés",
+          "width": 341
+        },
+        {
+          "height": 49.5,
+          "id": "Buscar en el texto revisado",
+          "width": 248.1640625
+        },
+        {
+          "height": 44,
+          "id": "Texto revisado en inglés",
+          "width": 358
+        },
+        {
+          "height": 49.5,
+          "id": "Buscar en el texto revisado",
+          "width": 248.1640625
+        },
+        {
+          "height": 44,
+          "id": "Texto revisado en inglés",
+          "width": 358
+        },
+        {
+          "height": 49.5,
+          "id": "Buscar en el texto revisado",
+          "width": 248.1640625
+        },
+        {
+          "height": 44,
+          "id": "Texto revisado en inglés",
+          "width": 358
+        },
+        {
+          "height": 49.5,
+          "id": "Buscar en el texto revisado",
+          "width": 248.1640625
+        },
+        {
+          "height": 48,
+          "id": "source-title",
+          "width": 358
+        },
+        {
+          "height": 52.5,
+          "id": "parking-summary",
+          "width": 358
+        },
+        {
+          "height": 48,
+          "id": "parking-state-picker",
+          "width": 358
+        },
+        {
+          "height": 44,
+          "id": "replay-tutorial",
+          "width": 99.625
+        },
+        {
+          "height": 48,
+          "id": "Conexión e instalación",
+          "width": 358
+        },
+        {
+          "height": 49.5,
+          "id": "check-connection",
+          "width": 200.1640625
+        },
+        {
+          "height": 48,
+          "id": "Cómo se procesa tu aviso",
+          "width": 358
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "results-fixture",
+      "lang": "tl",
+      "height": 2078,
+      "scroll": 390,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 64,
+          "id": "take-photo",
+          "width": 316
+        },
+        {
+          "height": 52,
+          "id": "choose-photo",
+          "width": 316
+        },
+        {
+          "height": 48,
+          "id": "Mga tip sa larawan at mga suportadong file",
+          "width": 358
+        },
+        {
+          "height": 44,
+          "id": "Nirepasong teksto sa Ingles",
+          "width": 341
+        },
+        {
+          "height": 44,
+          "id": "Nirepasong teksto sa Ingles",
+          "width": 341
+        },
+        {
+          "height": 49.5,
+          "id": "Hanapin sa nirepasong teksto",
+          "width": 269.7578125
+        },
+        {
+          "height": 44,
+          "id": "Nirepasong teksto sa Ingles",
+          "width": 358
+        },
+        {
+          "height": 49.5,
+          "id": "Hanapin sa nirepasong teksto",
+          "width": 269.7578125
+        },
+        {
+          "height": 44,
+          "id": "Nirepasong teksto sa Ingles",
+          "width": 358
+        },
+        {
+          "height": 49.5,
+          "id": "Hanapin sa nirepasong teksto",
+          "width": 269.7578125
+        },
+        {
+          "height": 44,
+          "id": "Nirepasong teksto sa Ingles",
+          "width": 358
+        },
+        {
+          "height": 49.5,
+          "id": "Hanapin sa nirepasong teksto",
+          "width": 269.7578125
+        },
+        {
+          "height": 48,
+          "id": "source-title",
+          "width": 358
+        },
+        {
+          "height": 52.5,
+          "id": "parking-summary",
+          "width": 358
+        },
+        {
+          "height": 48,
+          "id": "parking-state-picker",
+          "width": 358
+        },
+        {
+          "height": 44,
+          "id": "replay-tutorial",
+          "width": 133.953125
+        },
+        {
+          "height": 48,
+          "id": "Koneksyon at pag-install",
+          "width": 358
+        },
+        {
+          "height": 49.5,
+          "id": "check-connection",
+          "width": 203.0703125
+        },
+        {
+          "height": 48,
+          "id": "Paano pinoproseso ang iyong abiso",
+          "width": 358
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 390
+    },
+    {
+      "view": "results-fixture",
+      "lang": "en",
+      "height": 1994,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 64,
+          "id": "take-photo",
+          "width": 356
+        },
+        {
+          "height": 52,
+          "id": "choose-photo",
+          "width": 356
+        },
+        {
+          "height": 48,
+          "id": "Photo tips and supported files",
+          "width": 398
+        },
+        {
+          "height": 44,
+          "id": "Reviewed English text",
+          "width": 381
+        },
+        {
+          "height": 44,
+          "id": "Reviewed English text",
+          "width": 381
+        },
+        {
+          "height": 49.5,
+          "id": "Find in reviewed text",
+          "width": 197.625
+        },
+        {
+          "height": 44,
+          "id": "Reviewed English text",
+          "width": 398
+        },
+        {
+          "height": 49.5,
+          "id": "Find in reviewed text",
+          "width": 197.625
+        },
+        {
+          "height": 44,
+          "id": "Reviewed English text",
+          "width": 398
+        },
+        {
+          "height": 49.5,
+          "id": "Find in reviewed text",
+          "width": 197.625
+        },
+        {
+          "height": 44,
+          "id": "Reviewed English text",
+          "width": 398
+        },
+        {
+          "height": 49.5,
+          "id": "Find in reviewed text",
+          "width": 197.625
+        },
+        {
+          "height": 48,
+          "id": "source-title",
+          "width": 398
+        },
+        {
+          "height": 52.5,
+          "id": "parking-summary",
+          "width": 398
+        },
+        {
+          "height": 48,
+          "id": "parking-state-picker",
+          "width": 398
+        },
+        {
+          "height": 44,
+          "id": "replay-tutorial",
+          "width": 84.7109375
+        },
+        {
+          "height": 48,
+          "id": "App connection and installation",
+          "width": 398
+        },
+        {
+          "height": 49.5,
+          "id": "check-connection",
+          "width": 177.5234375
+        },
+        {
+          "height": 48,
+          "id": "How your notice is processed",
+          "width": 398
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 109.9453125
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "results-fixture",
+      "lang": "es",
+      "height": 2015,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 64,
+          "id": "take-photo",
+          "width": 356
+        },
+        {
+          "height": 52,
+          "id": "choose-photo",
+          "width": 356
+        },
+        {
+          "height": 48,
+          "id": "Consejos para la foto y archivos admitidos",
+          "width": 398
+        },
+        {
+          "height": 44,
+          "id": "Texto revisado en inglés",
+          "width": 381
+        },
+        {
+          "height": 44,
+          "id": "Texto revisado en inglés",
+          "width": 381
+        },
+        {
+          "height": 49.5,
+          "id": "Buscar en el texto revisado",
+          "width": 248.1640625
+        },
+        {
+          "height": 44,
+          "id": "Texto revisado en inglés",
+          "width": 398
+        },
+        {
+          "height": 49.5,
+          "id": "Buscar en el texto revisado",
+          "width": 248.1640625
+        },
+        {
+          "height": 44,
+          "id": "Texto revisado en inglés",
+          "width": 398
+        },
+        {
+          "height": 49.5,
+          "id": "Buscar en el texto revisado",
+          "width": 248.1640625
+        },
+        {
+          "height": 44,
+          "id": "Texto revisado en inglés",
+          "width": 398
+        },
+        {
+          "height": 49.5,
+          "id": "Buscar en el texto revisado",
+          "width": 248.1640625
+        },
+        {
+          "height": 48,
+          "id": "source-title",
+          "width": 398
+        },
+        {
+          "height": 52.5,
+          "id": "parking-summary",
+          "width": 398
+        },
+        {
+          "height": 48,
+          "id": "parking-state-picker",
+          "width": 398
+        },
+        {
+          "height": 44,
+          "id": "replay-tutorial",
+          "width": 99.625
+        },
+        {
+          "height": 48,
+          "id": "Conexión e instalación",
+          "width": 398
+        },
+        {
+          "height": 49.5,
+          "id": "check-connection",
+          "width": 200.1640625
+        },
+        {
+          "height": 48,
+          "id": "Cómo se procesa tu aviso",
+          "width": 398
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 153.0078125
+        }
+      ],
+      "width": 430
+    },
+    {
+      "view": "results-fixture",
+      "lang": "tl",
+      "height": 2036,
+      "scroll": 430,
+      "targets": [
+        {
+          "height": 44,
+          "id": "Notice Decoder",
+          "width": 130.9765625
+        },
+        {
+          "height": 44,
+          "id": "language-picker",
+          "width": 104
+        },
+        {
+          "height": 64,
+          "id": "take-photo",
+          "width": 356
+        },
+        {
+          "height": 52,
+          "id": "choose-photo",
+          "width": 356
+        },
+        {
+          "height": 48,
+          "id": "Mga tip sa larawan at mga suportadong file",
+          "width": 398
+        },
+        {
+          "height": 44,
+          "id": "Nirepasong teksto sa Ingles",
+          "width": 381
+        },
+        {
+          "height": 44,
+          "id": "Nirepasong teksto sa Ingles",
+          "width": 381
+        },
+        {
+          "height": 49.5,
+          "id": "Hanapin sa nirepasong teksto",
+          "width": 269.7578125
+        },
+        {
+          "height": 44,
+          "id": "Nirepasong teksto sa Ingles",
+          "width": 398
+        },
+        {
+          "height": 49.5,
+          "id": "Hanapin sa nirepasong teksto",
+          "width": 269.7578125
+        },
+        {
+          "height": 44,
+          "id": "Nirepasong teksto sa Ingles",
+          "width": 398
+        },
+        {
+          "height": 49.5,
+          "id": "Hanapin sa nirepasong teksto",
+          "width": 269.7578125
+        },
+        {
+          "height": 44,
+          "id": "Nirepasong teksto sa Ingles",
+          "width": 398
+        },
+        {
+          "height": 49.5,
+          "id": "Hanapin sa nirepasong teksto",
+          "width": 269.7578125
+        },
+        {
+          "height": 48,
+          "id": "source-title",
+          "width": 398
+        },
+        {
+          "height": 52.5,
+          "id": "parking-summary",
+          "width": 398
+        },
+        {
+          "height": 48,
+          "id": "parking-state-picker",
+          "width": 398
+        },
+        {
+          "height": 44,
+          "id": "replay-tutorial",
+          "width": 133.953125
+        },
+        {
+          "height": 48,
+          "id": "Koneksyon at pag-install",
+          "width": 398
+        },
+        {
+          "height": 49.5,
+          "id": "check-connection",
+          "width": 203.0703125
+        },
+        {
+          "height": 48,
+          "id": "Paano pinoproseso ang iyong abiso",
+          "width": 398
+        },
+        {
+          "height": 44,
+          "id": "open-story",
+          "width": 178.2734375
+        }
+      ],
+      "width": 430
+    }
+  ],
+  "sourceCheck": {
+    "open": "",
+    "highlight": "Contact: (201) 555-0100.",
+    "focused": true
+  }
+}

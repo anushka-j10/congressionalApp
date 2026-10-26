@@ -38,7 +38,10 @@ function show(data) {
   for (const text of bundle.what_to_do) { const li = document.createElement('li'); li.textContent = text; steps.append(li); }
   body.append(steps);
   add('p', bundle.deadline_note); add('p', bundle.amount_note);
-  document.querySelector('#explanation-cautions').textContent = [...bundle.confidence_notes, data.target_disclaimer].join(' ');
+  // The same fixed definition is already visible above the result cards.
+  // Keep every notice-specific caution, including unfamiliar model wording.
+  const cautions = bundle.confidence_notes.filter(note => note !== t('verified_meaning', {}, data.display_language));
+  document.querySelector('#explanation-cautions').textContent = [...cautions, data.target_disclaimer].join(' ');
   const translation = data.translation;
   document.querySelector('#translation-note').textContent = data.notice + ' ' +
     (translation.translation_confidence === 'low' ? t('confidence_low') : data.requested_language !== 'en' ? t('confidence_medium') : '');

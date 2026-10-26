@@ -111,3 +111,12 @@ test('explanation cautions stay outside the expandable copy and clear with the n
   app.context.clearExplanation();
   assert.equal(app.node('explanation-cautions').textContent,'');
 });
+
+test('only the repeated fixed definition is omitted; specific cautions and disclaimer remain visible', async () => {
+  const app=setup(); app.context.setExplanationSource(app.data,'Synthetic original');
+  const result=app.result('es'); const payload=await result.json();
+  payload.localized.confidence_notes=['verified_meaning','Confirm the issue year with the office.'];
+  result.json=async()=>payload;
+  app.pending.shift().resolve(result); await tick();
+  assert.equal(app.node('explanation-cautions').textContent,'Confirm the issue year with the office. No legal advice');
+});

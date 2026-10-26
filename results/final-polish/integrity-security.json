@@ -1,0 +1,17 @@
+{
+  "base_commit": "bbfb6c6ce7b8ce1a654817199e56aa4337ccfcb0",
+  "branch": "design/mobile-format-review",
+  "freeze_tag": "24d729a540ed3913ced09ee42af89765fd921c4b",
+  "freeze_tag_unchanged": true,
+  "historical_evaluation_files_unchanged": true,
+  "extraction_validation_model_instructions_unchanged": true,
+  "env_ignored": true,
+  "env_untracked": true,
+  "env_mode": "0o600",
+  "changed_files_scanned": 21,
+  "configured_key_matches": [],
+  "key_pattern_matches": [],
+  "offline_english_matches": true,
+  "catalog_keys_match": true,
+  "diff_whitespace_check": true
+}

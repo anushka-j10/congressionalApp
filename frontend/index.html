@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f7fc"><meta name="description" content="Understand notices with checked sources and plain-language explanations.">
+  <meta name="theme-color" content="#f4f7fc"><meta name="description" content="Read one English notice, review its text, and check key details with a plain-language explanation.">
   <link rel="manifest" href="/manifest.webmanifest"><link rel="icon" href="/icons/icon-192.png" type="image/png">
   <link rel="apple-touch-icon" href="/icons/icon-192.png"><link rel="stylesheet" href="/styles.css">
   <script src="/app.js" type="module"></script><script src="/onboarding.js" type="module"></script><title>Notice Decoder</title>
@@ -17,13 +17,14 @@
   <button id="skip-intro" class="text-button" type="button" data-i18n="intro_continue">Continue</button>
 </section>
 <div id="app-shell" hidden>
-<header class="topbar"><a href="#welcome" aria-label="Notice Decoder home">Notice Decoder</a><div class="language-control"><label for="language-picker" data-i18n="language">Language</label>
+<header class="topbar"><a href="#welcome" aria-label="Notice Decoder home" data-i18n-aria="home_label">Notice Decoder</a><div class="language-control"><label for="language-picker" data-i18n="language">Language</label>
   <select id="language-picker"><option value="en">English</option></select></div></header>
 <main id="main">
 <section id="welcome-screen" class="welcome-screen" aria-labelledby="welcome-title">
   <div class="welcome-art"><svg viewBox="0 0 240 190" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect x="67" y="22" width="106" height="146" rx="12" fill="#ffffff" stroke="currentColor" stroke-width="2"/><path d="M86 49h48M86 65h68M86 81h60M86 112h68M86 128h48" stroke="#91a6bd" stroke-width="3" stroke-linecap="round"/><path d="m142 132 10 10 23-27" stroke="#49634f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
   <h1 id="welcome-title" tabindex="-1" data-i18n="welcome_title">Understand your notice</h1>
-  <p data-i18n="welcome_body">Start with a photo. Check the text. Find the details you need.</p>
+  <p data-i18n="welcome_body">Photograph one English notice. Review the text, then get key details and a plain-language explanation.</p>
+  <p class="welcome-scope" data-i18n="welcome_scope">Parking tickets · Court notices · Utility bills · School letters</p>
   <button id="get-started" class="flow-primary" type="button" data-i18n="get_started">Get started</button>
 </section>
 <section id="state-screen" class="state-screen" aria-labelledby="state-title" hidden>
@@ -46,20 +47,20 @@
   <div class="reader-heading"><h1 id="reader-title" tabindex="-1" data-i18n="headline">Read a notice</h1></div>
   <section class="panel photo-panel" aria-labelledby="photo-title">
     <h2 class="sr-only" id="photo-title" data-i18n="photo_title">Add a photo</h2>
-    <div class="capture-workspace"><p class="capture-instruction" data-i18n="photo_help">Include the whole page with the words in focus.</p><div class="photo-actions capture-actions"><button id="take-photo" type="button" ><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="7" width="26" height="20" rx="5"/><path d="m10 7 2-3h8l2 3"/><circle cx="16" cy="17" r="5"/></svg><span data-i18n="take_photo">Take photo</span></button><button id="choose-photo" type="button" class="secondary" ><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="24" height="24" rx="5"/><circle cx="11" cy="11" r="2"/><path d="m5 24 8-8 5 5 4-4 6 7"/></svg><span data-i18n="choose_photo">Choose a photo</span></button></div>
+    <div class="capture-workspace"><p class="capture-instruction" data-i18n="photo_help">Photograph one printed English page. Include every edge and keep the words in focus.</p><div class="photo-actions capture-actions"><button id="take-photo" type="button" ><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="7" width="26" height="20" rx="5"/><path d="m10 7 2-3h8l2 3"/><circle cx="16" cy="17" r="5"/></svg><span data-i18n="take_photo">Take photo</span></button><button id="choose-photo" type="button" class="secondary" ><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="24" height="24" rx="5"/><circle cx="11" cy="11" r="2"/><path d="m5 24 8-8 5 5 4-4 6 7"/></svg><span data-i18n="choose_photo">Choose a photo</span></button></div>
     </div>
     <input id="camera-input" type="file" accept="image/*,.heic,.heif" capture="environment" hidden>
     <input id="library-input" type="file" accept="image/*,.heic,.heif" hidden>
-    <details class="photo-tips"><summary data-i18n="photo_tips">Photo tips and supported files</summary><p data-i18n="photo_help">Include the whole page with the words in focus.</p><p class="hint" data-i18n="upload_hint">JPEG, PNG, WebP, or HEIC · Up to 25 MB before preparation.</p></details>
+    <details class="photo-tips"><summary data-i18n="photo_tips">Photo tips and supported files</summary><p data-i18n="photo_tips_body">Use good light without glare or shadows. Keep the page flat. Handwriting and blurry photos can be misread. Pages are read separately.</p><p class="hint" data-i18n="upload_hint">JPEG, PNG, WebP, or HEIC · Up to 25 MB before preparation.</p></details>
     <img id="photo-preview" alt="Your prepared notice photo" data-i18n-alt="photo_alt" hidden><p id="photo-details" class="hint"></p>
     <p id="reader-note" data-i18n="checking_reader">Checking reader settings…</p>
     <div id="photo-process-actions" class="photo-actions" hidden><button id="read-photo" type="button" disabled data-i18n="read_photo">Read notice</button><button id="clear-photo" type="button" class="secondary" disabled data-i18n="clear">Clear photo and results</button></div>
-    <p class="hint language-review" data-i18n="review_warning">Proposed translations have not been reviewed by native speakers.</p>
+    <p class="hint language-review" data-i18n="review_warning">Spanish and Tagalog translations still need human review.</p>
     <p id="read-status" role="status" aria-live="polite"></p><p id="read-error" role="alert"></p>
   </section>
   <details id="review-panel" class="review-panel" hidden open><summary><h2 id="results-title" tabindex="-1" data-i18n="check_title">Review the reading</h2></summary>
   <section id="results" class="panel" aria-labelledby="results-title" hidden>
-    <p class="hint" data-i18n="warning_review">Check all reader warnings against the photo. The original English warnings are shown below.</p>
+    <p class="hint" data-i18n="warning_review">Check these reader warnings against the photo.</p>
     <ul id="warnings" class="warnings"></ul>
     <details class="reading-details"><summary data-i18n="reading_details">Reading details</summary>
     <p id="classifier-note" class="hint"></p>
@@ -69,26 +70,26 @@
     </details>
     <details class="original-reading"><summary id="text-title" data-i18n="original_ocr">Original OCR reading</summary>
     <pre id="notice-text" tabindex="0" aria-labelledby="text-title" lang="en" dir="ltr"></pre></details>
-    <section id="token-reviews" aria-label="Reader agreement and alternatives" hidden></section>
+    <section id="token-reviews" aria-label="Reading differences to check against the photo" data-i18n-aria="reader_reviews_label" hidden></section>
     <p class="hint" data-i18n="handwriting_help">Highlights are hints, not a detector of every error. Handwriting accuracy has not been measured; compare every word with the photo.</p>
-    <label for="doc-type-choice"><strong data-i18n="choose_type">Document type for extraction</strong></label>
+    <label for="doc-type-choice"><strong data-i18n="choose_type">Choose your notice type</strong></label>
     <select id="doc-type-choice"><option value="unknown" data-i18n="unknown">Unknown — choose a type or ask for help</option><option value="parking_ticket" data-i18n="parking_ticket">Parking ticket</option><option value="court_notice" data-i18n="court_notice">Court notice</option><option value="utility_bill" data-i18n="utility_bill">Utility bill</option><option value="school_letter" data-i18n="school_letter">School letter</option></select>
-    <p class="hint" data-i18n="choose_type_help">Check the type against the original. Choosing it here does not change the classifier result.</p>
+    <p class="hint" data-i18n="choose_type_help">Choose the type that matches the original. Leave it as unknown if you are unsure; the app will not extract facts for an unknown type.</p>
     <label for="confirmed-text"><strong data-i18n="edit_text">Edit the reading</strong></label>
-    <p id="edit-help" class="hint" data-i18n="edit_help">Correct dates, amounts, IDs, and missing words. The original OCR above stays unchanged for comparison.</p>
+    <p id="edit-help" class="hint" data-i18n="edit_help">Correct dates, amounts, contact details, IDs and missing words. The original reading above stays unchanged for comparison.</p>
     <textarea id="confirmed-text" rows="12" maxlength="30000" aria-describedby="edit-help" spellcheck="false" autocomplete="off" autocapitalize="off" lang="en" dir="ltr"></textarea>
-    <label class="confirm-label"><input id="text-checked" type="checkbox"><span data-i18n="confirmation">I checked this text against the photo, including dates, amounts, and IDs.</span></label>
+    <label class="confirm-label"><input id="text-checked" type="checkbox"><span data-i18n="confirmation">I compared this text with the photo and corrected dates, amounts, contact details, IDs and missing words.</span></label>
     <label class="confirm-label"><input id="amounts-checked" type="checkbox"><span data-i18n="amount_confirmation">I compared every printed amount with the original photo and corrected any wrong digits, or no amount is shown. Matching reader results can still be wrong.</span></label>
     <p class="hint" data-i18n="extraction_privacy">Extraction sends edited text to OpenAI. Our server does not save it; provider retention rules apply. No photo is sent for this step.</p>
-    <button id="confirm-text" type="button" disabled data-i18n="confirm_extract">Confirm text and extract facts</button>
+    <button id="confirm-text" type="button" disabled data-i18n="confirm_extract">Check the key details</button>
     <p id="confirmation-status" role="status" aria-live="polite"></p>
   </section></details>
-  <section id="field-results" class="panel result-panel" aria-labelledby="fields-title" hidden>
-    <h2 id="fields-title" tabindex="-1" data-i18n="facts_title">Your results</h2>
-    <p id="verified-definition" class="hint" data-i18n="verified_meaning">Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected.</p>
+  <section id="field-results" class="panel result-panel" aria-labelledby="fields-title" aria-describedby="verified-definition" hidden>
+    <h2 id="fields-title" tabindex="-1" data-i18n="facts_title">Check your results</h2>
+    <p id="verified-definition" class="hint" data-i18n="verified_meaning">“Text match” means the result passed checks against your reviewed text. Reading errors, wrong dates or incomplete instructions can still pass. Confirm important details with the issuing office.</p>
     <p id="field-status" role="status" aria-live="polite"></p><p id="field-error" role="alert"></p>
     <ul id="field-warnings" class="warnings"></ul><div id="field-cards"></div>
-    <details id="source-panel"><summary id="source-title" data-i18n="source_title">Full source text</summary>
+    <details id="source-panel"><summary id="source-title" data-i18n="source_title">Full reviewed text</summary>
     <pre id="field-source" tabindex="0" aria-labelledby="source-title" lang="en" dir="ltr"></pre></details>
   </section>
   <section id="explanation-results" class="panel result-panel" aria-labelledby="explanation-title" hidden>
@@ -113,10 +114,10 @@
   </details>
   <div class="reader-tools"><button id="replay-tutorial" class="text-button" type="button" data-i18n="how_it_works">How it works</button></div>
   <details class="install"><summary data-i18n="connection_install">App connection and installation</summary>
-    <section class="panel" aria-labelledby="setup-title"><h2 id="setup-title" data-i18n="connection_title">API connection</h2><div class="connection"><span class="status-dot" aria-hidden="true"></span><p id="api-status" role="status" data-i18n="checking">Checking the connection…</p></div><button id="check-connection" type="button" data-i18n="check_connection">Check connection</button><p id="offline-status" role="status"></p></section>
+    <section class="panel" aria-labelledby="setup-title"><h2 id="setup-title" data-i18n="connection_title">Service connection</h2><div class="connection"><span class="status-dot" aria-hidden="true"></span><p id="api-status" role="status" data-i18n="checking">Checking the connection…</p></div><button id="check-connection" type="button" data-i18n="check_connection">Check connection</button><p id="offline-status" role="status"></p></section>
     <section class="install" aria-labelledby="install-title"><h2 id="install-title" data-i18n="install_title">Keep it on your phone</h2><p data-i18n="install_help">On HTTPS, use Install app or Add to Home Screen in your browser menu. On iPhone, use Safari’s Share menu.</p><p id="install-status" role="status"></p></section>
   </details>
-<div class="reader-privacy"><details><summary data-i18n="privacy_title">How your notice is processed</summary><p data-i18n="privacy">We do not save notices on our server. Photos and results stay in browser memory until cleared or you leave. Only the language preference is stored on this device.</p></details><p data-i18n="disclaimer">This is an explanatory tool, not legal advice.</p></div></div>
+<div class="reader-privacy"><details><summary data-i18n="privacy_title">How your notice is processed</summary><p data-i18n="privacy">Normal app requests are processed without saving notices on our server. Your photo and results stay in browser memory until cleared or you leave. Reviewed text is sent to OpenAI for extraction and language processing; provider retention rules apply. Only your language preference is stored on this device.</p></details><p data-i18n="disclaimer">This is not legal advice. Verify important details with the issuing office.</p></div></div>
 </main>
 <footer class="app-footer"><button id="open-story" class="text-button story-link" type="button" aria-haspopup="dialog" data-i18n="story_title">Our story</button></footer>
 <dialog id="story-dialog" aria-labelledby="story-title"><button id="close-story" class="text-button story-close" type="button" data-i18n="close_story">Close story</button><section class="our-story" aria-labelledby="story-title"><h2 id="story-title" data-i18n="story_title">Our story</h2><p data-i18n="story_origin">After a health emergency, Anushka Jain’s parents asked her to help read a parking ticket. Even as a native English speaker, she struggled to understand it and figure out what to do next.</p><p data-i18n="story_purpose">Growing up in Jersey City’s vibrant, diverse community, Anushka saw how confusing notices could create barriers for many families. That experience inspired her to create Notice Decoder, using machine learning to make notices easier to understand.</p></section></dialog>

@@ -6,12 +6,7 @@ export function renderFields(data, text, cards, source, warnings, presentation =
   const code = presentation?.display_language || 'en';
   cards.lang = code;
   cards.dir = languageConfig(code).direction;
-  for (const [name, field] of Object.entries(data.fields)) {
-    if (field.status === 'verified') continue;
-    const item = document.createElement("li");
-    item.textContent = t(`field_${field.status}`, { field: t(name) });
-    warnings.append(item);
-  }
+  // Each uncertainty is visible in its card; don't repeat the same list above it.
   const names = ['deadline', 'amount_due', 'required_action', 'contact', 'issuing_agency'];
   function showSource(field) {
     source.textContent = "";
@@ -41,15 +36,19 @@ export function renderFields(data, text, cards, source, warnings, presentation =
     const card = document.createElement("article");
     card.className = `field-card ${field.status}`;
     const heading = document.createElement("h3");
+    heading.lang = languageConfig().code;
     heading.textContent = label;
     const badge = document.createElement("span");
     badge.className = "field-badge";
+    badge.lang = languageConfig().code;
     badge.textContent = t(field.status);
     const value = document.createElement("p");
     value.className = "field-value";
     if (presentation) value.textContent = presentation.localized.cards[name];
-    else if (field.status !== "verified") value.textContent = t(`field_${field.status}`, { field: label }, 'en');
+    else if (field.status !== "verified") value.textContent = t(`field_${field.status}`, { field: t(name, {}, 'en') }, 'en');
     else value.textContent = name === 'amount_due' ? `$${field.normalized_value}` : name === 'deadline' ? formatDate(field.normalized_value, 'en') : field.value;
+    const prefix = `${t(name, {}, code)}: `;
+    if (field.status !== 'verified' && value.textContent.startsWith(prefix)) value.textContent = value.textContent.slice(prefix.length);
     // The shared verification definition is shown once above the facts.
     card.append(heading, badge, value);
     if (field.status === "verified" && Number.isInteger(field.days_remaining)) {
@@ -59,6 +58,7 @@ export function renderFields(data, text, cards, source, warnings, presentation =
       card.append(days);
     }
     const original = document.createElement('details');
+    original.lang = languageConfig().code;
     const toggle = document.createElement('summary'); toggle.textContent = t('show_english');
     const snippet = document.createElement('pre'); snippet.lang = 'en'; snippet.dir = 'ltr';
     snippet.textContent = field.source_snippet || t('field_missing', { field: t(name, {}, 'en') }, 'en');
@@ -68,6 +68,7 @@ export function renderFields(data, text, cards, source, warnings, presentation =
       button.type = "button";
       button.className = "secondary";
       button.textContent = t('show_source');
+      button.setAttribute('aria-label', t('show_source_for', { field: label }));
       button.addEventListener("click", () => showSource(field));
       original.append(button);
     }

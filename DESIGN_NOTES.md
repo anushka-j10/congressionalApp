@@ -91,3 +91,12 @@ The replay uses identical captured text/proposals and answer states for each mod
 - **Privacy:** tested normal app paths use in-memory notice processing and no-store API responses; these tests do not prove secure RAM erasure, OS/library behavior, host-log policy or provider retention. Explicit synthetic evaluation reports intentionally persist test data outside the served frontend. Vendored HEIC diagnostics are disclosed in the privacy audit.
 
 The latest clean-checkout implementation check passed 407 Python tests and 17 JavaScript tests. It is documented at results/m4-ablations/REPORT.md, with exact setup and localhost smoke commands. Runtime/provider deployment and actual mobile use require separate acceptance. This Step 2 update consolidates documentation only; AI disclosure review, hosting, deployed checks, accessibility review and submission materials remain later steps, with a stop after each as requested.
+
+
+## Final interface polish — October 26, 2026
+
+The UI now calls the API's `verified` status “Text match.” This is a presentation change: the same source/role/date checks still run and the known Northeast errors remain. The visible definition explains that wrong readings, dates and incomplete instructions can pass. Missing means the app did not identify the field, not proof the notice lacks it. Sources are labeled reviewed English text, because users can edit OCR before extraction.
+
+The welcome and tutorial define one-page printed-English input, the four supported notice categories, manual type/text/amount review, language fallback and device-voice limits. Home and source controls have language-aware accessible labels; pending English placeholders keep English field names. The explanation omits only an exact duplicate of the shared status definition and retains specific cautions. Source status enums, validation logic, receipts, original evidence and API contracts are unchanged. Catalog copy also appears in deterministic explanation templates; no new model accuracy claim is made.
+
+See [the final-polish record](results/final-polish/REPORT.md) and [the 2.0 implementation brief](NOTICE_DECODER_2_0_PROMPT.md). Future work prioritizes the recorded date, contact, action-completeness and multi-obligation failures before broader coverage.
