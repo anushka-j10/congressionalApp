@@ -8,18 +8,15 @@
   <script src="/app.js" type="module"></script><title>Notice Decoder</title>
 </head>
 <body>
-<header class="topbar"><a href="/" aria-label="Notice Decoder home">ND <span>Notice Decoder</span></a></header>
+<header class="topbar"><a href="/" aria-label="Notice Decoder home">Notice Decoder</a><div class="language-control"><label for="language-picker" data-i18n="language">Language</label>
+  <select id="language-picker"><option value="en">English</option></select></div></header>
 <main id="main">
-  <p class="eyebrow">Jersey City · Hudson County, NJ</p>
-  <h1 data-i18n="headline">Official notices. Clear next steps.</h1>
-  <p class="intro" data-i18n="intro">Photograph a notice, check the text, and review its explanation with English sources.</p>
-  <label for="language-picker" data-i18n="language">Language</label>
-  <select id="language-picker"><option value="en">English</option></select>
-  <p class="hint" data-i18n="review_warning">Proposed translations have not been reviewed by native speakers.</p>
+  <h1 data-i18n="headline">Read a notice</h1>
+  <p class="intro" data-i18n="intro">Upload one page. Check the reading before using the results.</p>
   <section class="panel" aria-labelledby="photo-title">
-    <div class="section-label" data-i18n="step_photo">Step 1 / Add a notice</div>
-    <h2 id="photo-title" data-i18n="photo_title">One page, clearly in view.</h2>
-    <p data-i18n="photo_help">Place the page flat in good light. Include every edge and keep the words in focus.</p>
+    <div class="section-label" data-i18n="step_photo">1. Photo</div>
+    <h2 id="photo-title" data-i18n="photo_title">Add a photo</h2>
+    <p data-i18n="photo_help">Include the whole page with the words in focus.</p>
     <div class="photo-actions"><button id="take-photo" type="button" data-i18n="take_photo">Take photo</button><button id="choose-photo" type="button" class="secondary" data-i18n="choose_photo">Choose from library</button></div>
     <input id="camera-input" type="file" accept="image/*,.heic,.heif" capture="environment" hidden>
     <input id="library-input" type="file" accept="image/*,.heic,.heif" hidden>
@@ -27,16 +24,19 @@
     <img id="photo-preview" alt="Your prepared notice photo" data-i18n-alt="photo_alt" hidden><p id="photo-details" class="hint"></p>
     <p id="reader-note" data-i18n="checking_reader">Checking reader settings…</p><p id="classifier-note" class="hint"></p>
     <div class="photo-actions"><button id="read-photo" type="button" disabled data-i18n="read_photo">Read notice</button><button id="clear-photo" type="button" class="secondary" disabled data-i18n="clear">Clear photo and results</button></div>
+    <p class="hint language-review" data-i18n="review_warning">Proposed translations have not been reviewed by native speakers.</p>
     <p id="read-status" role="status" aria-live="polite"></p><p id="read-error" role="alert"></p>
   </section>
   <section id="results" class="panel result-panel" aria-labelledby="results-title" hidden>
-    <div class="section-label" data-i18n="step_check">Step 2 / Check the reading</div>
+    <div class="section-label" data-i18n="step_check">2. Review text</div>
     <h2 id="results-title" tabindex="-1" data-i18n="check_title">Check the text against your photo.</h2>
-    <dl class="facts"><dt data-i18n="doc_type">Document type</dt><dd id="doc-type"></dd><dt data-i18n="confidence">Confidence</dt><dd id="confidence"></dd><dt data-i18n="reader">Text reader</dt><dd id="reader-used"></dd></dl>
-    <p class="hint" data-i18n="confidence_help">Confidence estimates document type, not text accuracy.</p>
     <p class="hint" data-i18n="warning_review">Check all reader warnings against the photo. The original English warnings are shown below.</p>
     <ul id="warnings" class="warnings"></ul>
+    <details class="reading-details"><summary data-i18n="reading_details">Reading details</summary>
+    <dl class="facts"><dt data-i18n="doc_type">Document type</dt><dd id="doc-type"></dd><dt data-i18n="confidence">Confidence</dt><dd id="confidence"></dd><dt data-i18n="reader">Text reader</dt><dd id="reader-used"></dd></dl>
+    <p class="hint" data-i18n="confidence_help">Confidence estimates document type, not text accuracy.</p>
     <h3 data-i18n="signals">Matched signals</h3><ul id="signals" class="signals" lang="en" dir="ltr"></ul>
+    </details>
     <h3 id="text-title" data-i18n="original_ocr">Original OCR reading</h3>
     <pre id="notice-text" tabindex="0" aria-labelledby="text-title" lang="en" dir="ltr"></pre>
     <section id="token-reviews" aria-label="Reader agreement and alternatives" hidden></section>
@@ -54,7 +54,7 @@
     <p id="confirmation-status" role="status" aria-live="polite"></p>
   </section>
   <section id="field-results" class="panel result-panel" aria-labelledby="fields-title" hidden>
-    <div class="section-label" data-i18n="step_facts">Step 3 / Check the facts</div>
+    <div class="section-label" data-i18n="step_facts">3. Results</div>
     <h2 id="fields-title" tabindex="-1" data-i18n="facts_title">Facts with sources</h2>
     <p class="hint" data-i18n="verified_meaning">Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected.</p>
     <p id="field-status" role="status" aria-live="polite"></p><p id="field-error" role="alert"></p>
@@ -76,6 +76,6 @@
     <section class="install" aria-labelledby="install-title"><h2 id="install-title" data-i18n="install_title">Keep it on your phone</h2><p data-i18n="install_help">On HTTPS, use Install app or Add to Home Screen in your browser menu. On iPhone, use Safari’s Share menu.</p><p id="install-status" role="status"></p></section>
   </details>
 </main>
-<footer><strong data-i18n="privacy_title">Your notice stays yours.</strong><p data-i18n="privacy">We do not save notices on our server. Photos and results stay in browser memory until cleared or you leave. Only the language preference is stored on this device.</p><p data-i18n="disclaimer">This is an explanatory tool, not legal advice.</p></footer>
+<footer><strong data-i18n="privacy_title">How your notice is processed</strong><p data-i18n="privacy">We do not save notices on our server. Photos and results stay in browser memory until cleared or you leave. Only the language preference is stored on this device.</p><p data-i18n="disclaimer">This is an explanatory tool, not legal advice.</p></footer>
 <noscript><p class="noscript">Enable JavaScript to prepare and read a notice photo.</p></noscript>
 </body></html>

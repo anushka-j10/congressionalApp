@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_NAME = "notice-decoder-shell-v10";
+const CACHE_NAME = "notice-decoder-shell-v11";
 const SHELL = ["/", "/index.html", "/styles.css", "/app.js", "/image-prep.js", "/token-review.js", "/field-cards.js", "/i18n.js", "/explanation.js", "/speech.js", "/en.json", "/vendor/heic-to.js", "/manifest.webmanifest", "/icons/icon-192.png", "/icons/icon-512.png"];
 
 self.addEventListener("install", (event) => {

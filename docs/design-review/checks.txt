@@ -1,0 +1,10 @@
+Formatting review checks, 2026-10-25
+PASS: 422 Python tests and 21 JavaScript tests (retained stdout alongside this file).
+PASS: all 59 existing element IDs preserved, with no duplicate IDs.
+PASS: 18 preview combinations = 3 styles x 2 example screens x 3 phone widths (320/390/430).
+PASS: no horizontal document overflow in any measured preview.
+PASS: visible buttons at least 49.5px tall in every measured preview, exceeding 44px.
+PASS: English offline catalog byte-identical to backend English catalog.
+PASS: eight review pages have no app script/fetch calls and all local links/assets resolve.
+LIMIT: static formatting examples only; no provider calls, held-out reads, key access, real-phone capture, native translation review or deployment in this pass.
+Production app source remains on fix/notice-reliability; draft is design/mobile-format-review.

@@ -1,0 +1,14 @@
+/* C — document reader. */
+:root { --accent:#38302b; color:#302923; --muted:#655d55; --line:#cfc7bb; --surface:#f3eee5; background:#faf7f0; }
+.topbar { background:#faf7f0; border-bottom:1px solid #302923; }
+.topbar a { font-family:Georgia,serif; font-size:21px; font-weight:400; }
+h1,h2 { font-family:Georgia,serif; font-weight:400; letter-spacing:-.02em; }
+h1 { font-size:34px; }
+h2 { font-size:25px; }
+.intro { font-family:Georgia,serif; font-size:19px; color:#4f463e; }
+button { border-radius:2px; }
+#language-picker { background:#faf7f0; border-radius:0; border:0; border-bottom:1px solid #8b8074; }
+.section-label { font-family:Georgia,serif; font-style:italic; }
+.field-value { font-family:Georgia,serif; font-size:23px; font-weight:400; }
+.field-card { padding-top:22px; padding-bottom:22px; }
+footer strong { color:#302923; }

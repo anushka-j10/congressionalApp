@@ -1,0 +1,11 @@
+/* A — plain civic form, no government marks or affiliation. */
+:root { --accent:#174b86; color:#17212b; background:#fff; }
+.topbar { border-bottom:3px solid #174b86; }
+main { padding-top:28px; }
+h1 { font-size:30px; font-weight:700; letter-spacing:0; }
+button, select, #language-picker { border-radius:0; }
+button { box-shadow:0 2px 0 #0d2c51; }
+.secondary { box-shadow:none; }
+section[aria-labelledby="photo-title"] { padding-top:18px; border-top:1px solid var(--line); }
+.section-label { font-weight:600; color:#174b86; }
+.field-card { border-top:2px solid #c3c9ce; }

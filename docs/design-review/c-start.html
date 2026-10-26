@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#163e37"><meta name="description" content="Understand notices with checked sources and plain-language explanations.">
+  
+  <style>:root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #202327; background: #fff; font-size: 17px; line-height: 1.5; --accent: #202327; --line: #d4d7da; --muted: #515860; --surface: #f5f6f7; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.topbar { max-width: 720px; margin: auto; padding: 14px 20px; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.topbar a { color: inherit; font-weight: 650; text-decoration: none; font-size: 17px; }
+.language-control { display: flex; align-items: center; gap: 8px; }
+.language-control label { font-size: 14px; color: var(--muted); }
+#language-picker { width: auto; max-width: 150px; margin: 0; min-height: 44px; padding: 7px 24px 7px 8px; font-size: 15px; }
+main { max-width: 720px; margin: auto; padding: 28px 20px 20px; }
+h1 { font-size: 30px; font-weight: 650; line-height: 1.2; letter-spacing: -.02em; margin: 0 0 10px; }
+h2 { font-size: 22px; font-weight: 650; line-height: 1.3; margin: 0 0 12px; }
+h3 { font-size: 18px; line-height: 1.4; margin: 20px 0 8px; }
+p { margin: 10px 0; }
+.intro { color: var(--muted); max-width: 42ch; margin: 0 0 26px; }
+.panel { padding: 0; border: 0; border-radius: 0; box-shadow: none; background: transparent; }
+.section-label { color: var(--muted); font-size: 14px; font-weight: 500; margin: 0 0 7px; }
+.section-label + h2 { margin-top: 0; }
+.photo-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0; }
+button { background: var(--accent); color: #fff; border: 1px solid var(--accent); border-radius: 4px; padding: 11px 16px; min-height: 48px; font: inherit; font-weight: 600; cursor: pointer; }
+button:hover { filter: brightness(.88); }
+button:disabled { color: #676b71; background: #f0f1f2; border-color: #d2d5d8; cursor: not-allowed; }
+.secondary { color: var(--accent); background: #fff; border-color: #999fa6; }
+.secondary:hover { background: var(--surface); filter: none; }
+:focus-visible { outline: 3px solid #8c4800; outline-offset: 3px; }
+.hint { font-size: 14px; line-height: 1.5; color: var(--muted); }
+#reader-note { font-size: 14px; color: var(--muted); }
+#classifier-note { border-inline-start: 2px solid #91969e; padding-inline-start: 10px; }
+.language-review { margin-top: 20px; }
+#photo-preview { width: 100%; max-height: 420px; object-fit: contain; border: 1px solid var(--line); background: var(--surface); border-radius: 2px; }
+.result-panel { border-top: 1px solid var(--line); padding-top: 24px; margin-top: 28px; }
+ul { list-style: none; padding: 0; }
+li { margin: 5px 0; }
+.facts { display: grid; grid-template-columns: 1fr 1.3fr; gap: 8px; font-size: 15px; }
+dt { color: var(--muted); }
+dd { margin: 0; overflow-wrap: anywhere; }
+.warnings, .signals { list-style: disc; padding-inline-start: 22px; }
+.warnings { border-inline-start: 3px solid #9b640e; background: #fff8e9; padding: 10px 12px 10px 30px; color: #603c00; border-radius: 0; }
+.warnings li, .signals li { font-weight: 400; }
+.warnings:empty, p:empty { display: none; }
+pre { font: inherit; white-space: pre-wrap; overflow-wrap: anywhere; max-height: 24rem; overflow-y: auto; padding: 14px; border: 1px solid var(--line); border-radius: 2px; background: var(--surface); }
+summary { display: flex; align-items: center; gap: 8px; cursor: pointer; min-height: 48px; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+summary::before { content: '+'; font-size: 19px; width: 16px; flex-shrink: 0; }
+details[open] > summary::before { content: '−'; }
+mark { background: #ffe19c; color: #412b00; border-bottom: 2px solid #815200; }
+.token-card { border: 1px solid var(--line); border-radius: 2px; padding: 12px; margin: 12px 0; overflow-wrap: anywhere; }
+.token-card.disputed { border-inline-start: 3px solid #9b640e; background: #fff8e9; }
+.token-card p { margin: 5px 0; }
+textarea { display: block; width: 100%; resize: vertical; min-height: 14rem; font: inherit; line-height: 1.55; border: 1px solid #7c838c; border-radius: 2px; padding: 12px; margin: 10px 0 18px; color: inherit; background: #fff; }
+.confirm-label { display: flex; align-items: flex-start; gap: 12px; min-height: 44px; margin: 16px 0; padding: 6px 0; }
+.confirm-label input { flex-shrink: 0; width: 22px; height: 22px; margin-top: 2px; accent-color: var(--accent); }
+select { width: 100%; font: inherit; padding: 10px; min-height: 48px; margin: 10px 0; color: inherit; background: #fff; border: 1px solid #7c838c; border-radius: 4px; }
+#field-cards { display: block; margin: 20px 0; }
+.field-card { position: relative; padding: 20px 0; border: 0; border-top: 1px solid var(--line); border-radius: 0; overflow-wrap: anywhere; }
+.field-card h3 { margin: 0 0 6px; }
+.field-badge { display: inline-block; font-size: 14px; font-weight: 500; color: var(--muted); border: 0; border-radius: 0; padding: 0; }
+.field-card.unverified, .field-card.missing { border-inline-start: 3px solid #9b640e; padding-inline-start: 14px; }
+.field-card.unverified .field-badge, .field-card.missing .field-badge { color: #704800; }
+.field-value { font-size: 19px; font-weight: 600; margin: 10px 0; }
+.field-card button { margin-top: 8px; }
+.field-card details { margin-top: 10px; }
+.field-card details pre { max-height: 14rem; font-size: 15px; }
+.connection { display: flex; align-items: baseline; gap: 8px; }
+.status-dot { width: 7px; height: 7px; border-radius: 50%; background: #52745e; flex-shrink: 0; }
+.install { margin-top: 24px; border-top: 1px solid var(--line); padding-top: 12px; }
+footer { max-width: 720px; margin: auto; padding: 16px 20px 28px; color: var(--muted); font-size: 14px; }
+footer strong { font-weight: 600; color: #202327; }
+#explanation-results { overflow-wrap: anywhere; }
+#explanation-body ol { padding-inline-start: 24px; }
+#help-contacts { border-inline-start: 2px solid var(--line); padding-inline-start: 12px; }
+#read-error, #field-error, #explanation-error { color: #9b2319; font-weight: 600; }
+[hidden] { display: none !important; }
+[dir="rtl"] { text-align: start; }
+[dir="rtl"] .facts { direction: rtl; }
+.noscript { padding: 20px; }
+@media (max-width: 480px) {
+  .topbar { padding: 10px 16px; gap: 8px; }
+  .language-control label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .topbar a { font-size: 16px; }
+  #language-picker { max-width: 136px; }
+  main { padding: 24px 16px 16px; }
+  .photo-actions { display: grid; grid-template-columns: 1fr; }
+  .photo-actions button { width: 100%; }
+  .facts { grid-template-columns: 1fr 1fr; }
+  h1 { font-size: 28px; }
+  footer { padding-inline: 16px; }
+}
+
+/* C — document reader. */
+:root { --accent:#38302b; color:#302923; --muted:#655d55; --line:#cfc7bb; --surface:#f3eee5; background:#faf7f0; }
+.topbar { background:#faf7f0; border-bottom:1px solid #302923; }
+.topbar a { font-family:Georgia,serif; font-size:21px; font-weight:400; }
+h1,h2 { font-family:Georgia,serif; font-weight:400; letter-spacing:-.02em; }
+h1 { font-size:34px; }
+h2 { font-size:25px; }
+.intro { font-family:Georgia,serif; font-size:19px; color:#4f463e; }
+button { border-radius:2px; }
+#language-picker { background:#faf7f0; border-radius:0; border:0; border-bottom:1px solid #8b8074; }
+.section-label { font-family:Georgia,serif; font-style:italic; }
+.field-value { font-family:Georgia,serif; font-size:23px; font-weight:400; }
+.field-card { padding-top:22px; padding-bottom:22px; }
+footer strong { color:#302923; }
+</style>
+  <title>Option C — formatting preview</title>
+</head>
+<body>
+<header class="topbar"><a href="/" aria-label="Notice Decoder home">Notice Decoder</a><div class="language-control"><label for="language-picker" data-i18n="language">Language</label>
+  <select id="language-picker"><option value="en">English</option><option value="es">Español</option><option value="tl">Tagalog</option></select></div></header>
+<main id="main">
+  <h1 data-i18n="headline">Read a notice</h1>
+  <p class="intro" data-i18n="intro">Upload one page. Check the reading before using the results.</p>
+  <section class="panel" aria-labelledby="photo-title">
+    <div class="section-label" data-i18n="step_photo">1. Photo</div>
+    <h2 id="photo-title" data-i18n="photo_title">Add a photo</h2>
+    <p data-i18n="photo_help">Include the whole page with the words in focus.</p>
+    <div class="photo-actions"><button id="take-photo" type="button" data-i18n="take_photo">Take photo</button><button id="choose-photo" type="button" class="secondary" data-i18n="choose_photo">Choose from library</button></div>
+    <input id="camera-input" type="file" accept="image/*,.heic,.heif" capture="environment" hidden>
+    <input id="library-input" type="file" accept="image/*,.heic,.heif" hidden>
+    <p class="hint" data-i18n="upload_hint">JPEG, PNG, WebP, or HEIC · Up to 25 MB before preparation.</p>
+    <img id="photo-preview" alt="Your prepared notice photo" data-i18n-alt="photo_alt" hidden><p id="photo-details" class="hint"></p>
+    <p id="reader-note" data-i18n="checking_reader">The photo is read on the server. Explanations use OpenAI.</p><p id="classifier-note" class="hint">Choose the notice type after checking the text.</p>
+    <div class="photo-actions"><button id="read-photo" type="button" disabled data-i18n="read_photo">Read notice</button><button id="clear-photo" type="button" class="secondary" disabled data-i18n="clear">Clear photo and results</button></div>
+    <p class="hint language-review" data-i18n="review_warning">Proposed translations have not been reviewed by native speakers.</p>
+    <p id="read-status" role="status" aria-live="polite"></p><p id="read-error" role="alert"></p>
+  </section>
+  <section id="results" class="panel result-panel" aria-labelledby="results-title" hidden>
+    <div class="section-label" data-i18n="step_check">2. Review text</div>
+    <h2 id="results-title" tabindex="-1" data-i18n="check_title">Check the text against your photo.</h2>
+    <p class="hint" data-i18n="warning_review">Check all reader warnings against the photo. The original English warnings are shown below.</p>
+    <ul id="warnings" class="warnings"></ul>
+    <details class="reading-details"><summary data-i18n="reading_details">Reading details</summary>
+    <dl class="facts"><dt data-i18n="doc_type">Document type</dt><dd id="doc-type"></dd><dt data-i18n="confidence">Confidence</dt><dd id="confidence"></dd><dt data-i18n="reader">Text reader</dt><dd id="reader-used"></dd></dl>
+    <p class="hint" data-i18n="confidence_help">Confidence estimates document type, not text accuracy.</p>
+    <h3 data-i18n="signals">Matched signals</h3><ul id="signals" class="signals" lang="en" dir="ltr"></ul>
+    </details>
+    <h3 id="text-title" data-i18n="original_ocr">Original OCR reading</h3>
+    <pre id="notice-text" tabindex="0" aria-labelledby="text-title" lang="en" dir="ltr"></pre>
+    <section id="token-reviews" aria-label="Reader agreement and alternatives" hidden></section>
+    <p class="hint" data-i18n="handwriting_help">Highlights are hints, not a detector of every error. Handwriting accuracy has not been measured; compare every word with the photo.</p>
+    <label for="doc-type-choice"><strong data-i18n="choose_type">Document type for extraction</strong></label>
+    <select id="doc-type-choice"><option value="unknown" data-i18n="unknown">Unknown — choose a type or ask for help</option><option value="parking_ticket" data-i18n="parking_ticket">Parking ticket</option><option value="court_notice" data-i18n="court_notice">Court notice</option><option value="utility_bill" data-i18n="utility_bill">Utility bill</option><option value="school_letter" data-i18n="school_letter">School letter</option></select>
+    <p class="hint" data-i18n="choose_type_help">Check the type against the original. Choosing it here does not change the classifier result.</p>
+    <label for="confirmed-text"><strong data-i18n="edit_text">Edit the reading</strong></label>
+    <p id="edit-help" class="hint" data-i18n="edit_help">Correct dates, amounts, IDs, and missing words. The original OCR above stays unchanged for comparison.</p>
+    <textarea id="confirmed-text" rows="12" maxlength="30000" aria-describedby="edit-help" spellcheck="false" autocomplete="off" autocapitalize="off" lang="en" dir="ltr"></textarea>
+    <label class="confirm-label"><input id="text-checked" type="checkbox"><span data-i18n="confirmation">I checked this text against the photo, including dates, amounts, and IDs.</span></label>
+    <label class="confirm-label"><input id="amounts-checked" type="checkbox"><span data-i18n="amount_confirmation">I compared every printed amount with the original photo and corrected any wrong digits, or no amount is shown. Matching reader results can still be wrong.</span></label>
+    <p class="hint" data-i18n="extraction_privacy">Extraction sends edited text to OpenAI. Our server does not save it; provider retention rules apply. No photo is sent for this step.</p>
+    <button id="confirm-text" type="button" disabled data-i18n="confirm_extract">Confirm text and extract facts</button>
+    <p id="confirmation-status" role="status" aria-live="polite"></p>
+  </section>
+  <section id="field-results" class="panel result-panel" aria-labelledby="fields-title" hidden>
+    <div class="section-label" data-i18n="step_facts">3. Results</div>
+    <h2 id="fields-title" tabindex="-1" data-i18n="facts_title">Facts with sources</h2>
+    <p class="hint" data-i18n="verified_meaning">Verified means matched to your confirmed text. Check the original notice; this does not guarantee the right fact was selected.</p>
+    <p id="field-status" role="status" aria-live="polite"></p><p id="field-error" role="alert"></p>
+    <ul id="field-warnings" class="warnings"></ul><div id="field-cards"></div>
+    <h3 id="source-title" data-i18n="source_title">Your confirmed English source text</h3>
+    <pre id="field-source" tabindex="0" aria-labelledby="source-title" lang="en" dir="ltr"></pre>
+  </section>
+  <section id="explanation-results" class="panel result-panel" aria-labelledby="explanation-title" hidden>
+    <h2 id="explanation-title" tabindex="-1" data-i18n="explanation_title">Plain-language explanation</h2>
+    <p id="explanation-status" role="status" aria-live="polite"></p><p id="explanation-error" role="alert"></p>
+    <p id="translation-note" class="warnings" role="status"></p>
+    <div id="explanation-body"></div>
+    <div class="photo-actions"><button id="speech-play" type="button" disabled data-i18n="read_aloud">Read aloud</button><button id="speech-pause" type="button" disabled class="secondary" data-i18n="pause">Pause</button><button id="speech-stop" type="button" disabled class="secondary" data-i18n="stop">Stop</button></div>
+    <p id="speech-note" role="status"></p><button id="retry-explanation" type="button" class="secondary" data-i18n="retry_explain">Try explanation again</button>
+    <aside aria-labelledby="help-title"><h3 id="help-title" data-i18n="help_title">Get human help</h3><div id="help-contacts"></div></aside>
+  </section>
+  <details class="install"><summary data-i18n="connection_install">App connection and installation</summary>
+    <section class="panel" aria-labelledby="setup-title"><h2 id="setup-title" data-i18n="connection_title">API connection</h2><div class="connection"><span class="status-dot" aria-hidden="true"></span><p id="api-status" role="status" data-i18n="checking">Checking the connection…</p></div><button id="check-connection" type="button" data-i18n="check_connection">Check connection</button><p id="offline-status" role="status"></p></section>
+    <section class="install" aria-labelledby="install-title"><h2 id="install-title" data-i18n="install_title">Keep it on your phone</h2><p data-i18n="install_help">On HTTPS, use Install app or Add to Home Screen in your browser menu. On iPhone, use Safari’s Share menu.</p><p id="install-status" role="status"></p></section>
+  </details>
+</main>
+<footer><strong data-i18n="privacy_title">How your notice is processed</strong><p data-i18n="privacy">We do not save notices on our server. Photos and results stay in browser memory until cleared or you leave. Only the language preference is stored on this device.</p><p data-i18n="disclaimer">This is an explanatory tool, not legal advice.</p></footer>
+<noscript><p class="noscript">Enable JavaScript to prepare and read a notice photo.</p></noscript>
+</body></html>
