@@ -1,0 +1,272 @@
+[
+  {
+    "width": 320,
+    "screen": "start",
+    "lang": "en",
+    "height": 992,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Our story"
+  },
+  {
+    "width": 320,
+    "screen": "start",
+    "lang": "es",
+    "height": 1040,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Nuestra historia"
+  },
+  {
+    "width": 320,
+    "screen": "start",
+    "lang": "tl",
+    "height": 1145,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Ang aming kuwento"
+  },
+  {
+    "width": 320,
+    "screen": "review",
+    "lang": "en",
+    "height": 2250,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Our story"
+  },
+  {
+    "width": 320,
+    "screen": "review",
+    "lang": "es",
+    "height": 2319,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Nuestra historia"
+  },
+  {
+    "width": 320,
+    "screen": "review",
+    "lang": "tl",
+    "height": 2515,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Ang aming kuwento"
+  },
+  {
+    "width": 320,
+    "screen": "results",
+    "lang": "en",
+    "height": 2612,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Our story"
+  },
+  {
+    "width": 320,
+    "screen": "results",
+    "lang": "es",
+    "height": 2660,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Nuestra historia"
+  },
+  {
+    "width": 320,
+    "screen": "results",
+    "lang": "tl",
+    "height": 2832,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Ang aming kuwento"
+  },
+  {
+    "width": 390,
+    "screen": "start",
+    "lang": "en",
+    "height": 914,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Our story"
+  },
+  {
+    "width": 390,
+    "screen": "start",
+    "lang": "es",
+    "height": 961,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Nuestra historia"
+  },
+  {
+    "width": 390,
+    "screen": "start",
+    "lang": "tl",
+    "height": 1040,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Ang aming kuwento"
+  },
+  {
+    "width": 390,
+    "screen": "review",
+    "lang": "en",
+    "height": 2037,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Our story"
+  },
+  {
+    "width": 390,
+    "screen": "review",
+    "lang": "es",
+    "height": 2105,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Nuestra historia"
+  },
+  {
+    "width": 390,
+    "screen": "review",
+    "lang": "tl",
+    "height": 2256,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Ang aming kuwento"
+  },
+  {
+    "width": 390,
+    "screen": "results",
+    "lang": "en",
+    "height": 2421,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Our story"
+  },
+  {
+    "width": 390,
+    "screen": "results",
+    "lang": "es",
+    "height": 2528,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Nuestra historia"
+  },
+  {
+    "width": 390,
+    "screen": "results",
+    "lang": "tl",
+    "height": 2607,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Ang aming kuwento"
+  },
+  {
+    "width": 430,
+    "screen": "start",
+    "lang": "en",
+    "height": 887,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Our story"
+  },
+  {
+    "width": 430,
+    "screen": "start",
+    "lang": "es",
+    "height": 961,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Nuestra historia"
+  },
+  {
+    "width": 430,
+    "screen": "start",
+    "lang": "tl",
+    "height": 987,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Ang aming kuwento"
+  },
+  {
+    "width": 430,
+    "screen": "review",
+    "lang": "en",
+    "height": 1985,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Our story"
+  },
+  {
+    "width": 430,
+    "screen": "review",
+    "lang": "es",
+    "height": 2059,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Nuestra historia"
+  },
+  {
+    "width": 430,
+    "screen": "review",
+    "lang": "tl",
+    "height": 2136,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Ang aming kuwento"
+  },
+  {
+    "width": 430,
+    "screen": "results",
+    "lang": "en",
+    "height": 2395,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Our story"
+  },
+  {
+    "width": 430,
+    "screen": "results",
+    "lang": "es",
+    "height": 2469,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Nuestra historia"
+  },
+  {
+    "width": 430,
+    "screen": "results",
+    "lang": "tl",
+    "height": 2529,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "storyFont": "16px",
+    "storyHeading": "Ang aming kuwento"
+  }
+]

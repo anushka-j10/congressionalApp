@@ -156,7 +156,10 @@
     "rate_limit_error": "La demostración está ocupada o alcanzó su límite de solicitudes. Espera un minuto e inténtalo de nuevo; el límite por hora puede tardar más en restablecerse.",
     "service_unavailable_error": "El servicio de IA no está disponible o alcanzó su cuota de uso. Inténtalo más tarde o contacta a la persona responsable de la app. No se adivinó ningún resultado.",
     "reading_details": "Detalles de la lectura",
-    "photo_tips": "Consejos para la foto y archivos admitidos"
+    "photo_tips": "Consejos para la foto y archivos admitidos",
+    "story_title": "Nuestra historia",
+    "story_origin": "Después de una emergencia de salud, los padres de Anushka Jain le pidieron ayuda para leer una multa de estacionamiento. Aunque el inglés es su lengua materna, le costó entenderla y saber qué hacer después.",
+    "story_purpose": "Al crecer en la comunidad diversa y llena de vida de Jersey City, Anushka vio cómo los avisos confusos podían crear barreras para muchas familias. Esa experiencia la inspiró a crear Notice Decoder, usando aprendizaje automático para facilitar la comprensión de los avisos."
   },
   "reader_warning_patterns": [
     {

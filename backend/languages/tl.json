@@ -160,7 +160,10 @@
     "rate_limit_error": "Abala ang demo o naabot na ang limitasyon ng mga kahilingan. Maghintay ng isang minuto at subukan muli; maaaring mas matagal bago ma-reset ang limitasyon kada oras.",
     "service_unavailable_error": "Hindi available ang serbisyo ng AI o naabot na ang quota nito. Subukan mamaya o makipag-ugnayan sa may-ari ng app. Walang hinulaang resulta.",
     "reading_details": "Mga detalye ng pagbasa",
-    "photo_tips": "Mga tip sa larawan at mga suportadong file"
+    "photo_tips": "Mga tip sa larawan at mga suportadong file",
+    "story_title": "Ang aming kuwento",
+    "story_origin": "Matapos ang isang emerhensiya sa kalusugan, hiniling ng mga magulang ni Anushka Jain na tulungan silang basahin ang isang tiket sa paradahan. Kahit katutubong nagsasalita ng Ingles, nahirapan siyang unawain ito at malaman ang susunod na gagawin.",
+    "story_purpose": "Lumaki si Anushka sa masigla at magkakaibang komunidad ng Jersey City. Nakita niya kung paano nagiging hadlang para sa maraming pamilya ang mga abisong mahirap unawain. Ang karanasang iyon ang nagbigay-inspirasyon sa kanya na likhain ang Notice Decoder, gamit ang machine learning upang mas madaling maunawaan ang mga abiso."
   },
   "reader_warning_patterns": [
     {

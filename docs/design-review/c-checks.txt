@@ -10,3 +10,9 @@ No horizontal overflow; no measured visible button/select/summary target under 4
 Source disclosure clicked: Full source text opened and contained one highlighted mark.
 These are presentation/controller checks with synthetic data, not a model run or physical-phone usability study.
 No held-out inputs reopened, no model requests, no deployment, no secret file read.
+
+Final pass after adding Our story:
+Same test commands rerun: 422 Python passed, 25 JavaScript passed.
+27 layout combinations rerun; no horizontal overflow or measured visible control/confirmation-label target under 44px.
+Story text measured 16px in all combinations. English story visually reviewed at 390px.
+Evidence: c-final-layout-checks.json, c-our-story.png.

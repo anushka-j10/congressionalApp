@@ -135,3 +135,7 @@ footer > details > summary { font-size: 14px; }
   h1 { font-size: 31px; margin-bottom: 14px; }
   .field-value { font-size: 21px; }
 }
+
+.our-story { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 16px; line-height: 1.65; color: #4f463e; }
+.our-story h2 { font-size: 24px; color: #302923; margin-bottom: 12px; }
+.our-story p { max-width: 60ch; }

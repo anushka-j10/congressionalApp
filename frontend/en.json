@@ -156,7 +156,10 @@
     "rate_limit_error": "The demo is busy or has reached its request limit. Wait a minute and try again; the hourly limit may take longer to reset.",
     "service_unavailable_error": "The AI service is unavailable or its usage quota has been reached. Please try later or contact the app owner. No result was guessed.",
     "reading_details": "Reading details",
-    "photo_tips": "Photo tips and supported files"
+    "photo_tips": "Photo tips and supported files",
+    "story_title": "Our story",
+    "story_origin": "After a health emergency, Anushka Jain’s parents asked her to help read a parking ticket. Even as a native English speaker, she struggled to understand it and figure out what to do next.",
+    "story_purpose": "Growing up in Jersey City’s vibrant, diverse community, Anushka saw how confusing notices could create barriers for many families. That experience inspired her to create Notice Decoder, using machine learning to make notices easier to understand."
   },
   "reader_warning_patterns": [
     {
