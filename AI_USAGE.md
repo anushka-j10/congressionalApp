@@ -252,3 +252,11 @@ this log alone does not establish eligibility.
 - Restarted the localhost preview after sandbox permission was granted. A background real-browser smoke test verified the separate confirmation gate on a synthetic dev image; the image/results were cleared afterward and the existing language preference was preserved. Saved reliability-preview.png as evidence, without a physical-phone/native-review claim.
 - Completed new development/adversarial live evaluations at three repetitions, unchanged corpus and model settings, scorer v3, with no unavailable methods/language outputs. New amount confirmation is intentionally not simulated; zero observed unsafe amounts in that path does not prove corrected OCR. Current rates and Verified coverage are in reliability-summary.md; old held-out 4/30 remains unchanged.
 - Updated README, DESIGN_NOTES, FAILURES, EVIDENCE and M4_FILE_GUIDE with current behavior, evidence and limitations. No new independent student code authorship, native review, phone acceptance, fresh held-out result, push or deployment is claimed.
+
+
+## Milestone 4 verification audit — 2026-10-25
+
+- User requested PASS/FAIL verification without features, fixes only for demonstrated bugs, no held-out run and a new eval-freeze only if all prerequisite checks pass. Original freeze/tag and held-out artifacts are preserved.
+- Created a clean local clone and installed pinned requirements into a fresh ARM Python 3.12.14 environment. The default Intel Python 3.9 install attempted an OpenCV source build; its separate attempt log is retained rather than mislabeled successful.
+- All 383 existing Python and 17 JavaScript tests passed in the fresh environment. Added tests/test_m4_audit.py with eight new synthetic source-not-found/missing-deadline/all-absent/bad-issue-date proof tests; these call the real validator/API with a deterministic extractor double, not a live model or held-out input. No production behavior was changed.
+- Per-validator leave-one-out ablations are absent: only the all-on/all-off baseline is implemented. This is listed as a capability gap and is not added under the no-feature instruction. Final live audit outputs/checklist will be recorded after verification.
