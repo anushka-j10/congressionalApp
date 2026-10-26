@@ -4,10 +4,11 @@ import re
 import unicodedata
 from decimal import Decimal, InvalidOperation
 from difflib import SequenceMatcher
+from backend.ocr_safety import NUMERIC_DATE, DURATION, timing_issues
 
 # Keep common OCR letter/digit confusions as literal candidates, not corrections.
 DIGIT = r"[0-9OIlS]"
-DATE = re.compile(rf"(?<!\w)(?:{DIGIT}{{4}}[ \t]*[-/.][ \t]*{DIGIT}{{1,2}}[ \t]*[-/.][ \t]*{DIGIT}{{1,2}}|{DIGIT}{{1,2}}[ \t]*[-/.][ \t]*{DIGIT}{{1,2}}[ \t]*[-/.][ \t]*{DIGIT}{{2,4}})(?!\w)")
+DATE = NUMERIC_DATE
 MONTH_DATE = re.compile(rf"(?i)(?<!\w)(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\.?[ \t]+{DIGIT}{{1,2}}(?:st|nd|rd|th)?(?:[ \t]*,[ \t]*|[ \t]+){DIGIT}{{4}}(?!\w)")
 MONEY = re.compile(rf"(?<![\w.])(?:[-+][ \t]*)?\$[ \t]*(?:[-+][ \t]*)?{DIGIT}+(?:[ \t]*,[ \t]*{DIGIT}{{3}})*(?:[ \t]*\.[ \t]*{DIGIT}{{2}})?(?!\w|[.,]\w)")
 LABELED_MONEY = re.compile(rf"(?im)\b(?:amount(?:[ \t]+due)?|balance(?:[ \t]+due)?)[ \t]*:[ \t]*(?P<value>(?:[-+][ \t]*)?\$?[ \t]*(?:[-+][ \t]*)?{DIGIT}+(?:[ \t]*,[ \t]*{DIGIT}{{3}})*(?:\.{DIGIT}{{2}})?)(?!\w|[.,]\w)")
@@ -29,7 +30,7 @@ def candidates(text, reader):
     found = []
     patterns = [("date", DATE, None), ("date", MONTH_DATE, None),
                 ("amount", MONEY, None), ("amount", LABELED_MONEY, "value"),
-                ("id", IDENTIFIER, "value")]
+                ("id", IDENTIFIER, "value"), ("duration", DURATION, None)]
     seen = set()
     for kind, pattern, group in patterns:
         for match in pattern.finditer(text):
@@ -38,7 +39,7 @@ def candidates(text, reader):
                 continue
             seen.add((kind, end))
             value = text[start:end]
-            if not any(char.isdigit() for char in value):
+            if kind != "duration" and not any(char.isdigit() for char in value):
                 continue
             found.append({"kind": kind, "value": value, "normalized": normalize_candidate(kind, value),
                           "reader": reader, "start": start, "end": end})
@@ -59,10 +60,15 @@ def compare_candidates(local_text, other_text, local_reader, other_reader):
         else:
             # Pair only by kind within the unmatched block. These are OCR choices,
             # not claims that a particular date is a deadline or issue date.
-            for kind in ("date", "amount", "id"):
+            for kind in ("date", "amount", "id", "duration"):
                 a = [item for item in left[i:j] if item["kind"] == kind]
                 b = [item for item in right[k:m] if item["kind"] == kind]
                 for index in range(max(len(a), len(b))):
                     values = ([a[index]] if index < len(a) else []) + ([b[index]] if index < len(b) else [])
                     reviews.append({"kind": kind, "status": "disputed", "candidates": values})
+    for review in reviews:
+        if any(timing_issues(item['value']) for item in review['candidates']):
+            # Agreement between correlated OCR passes cannot validate a broken
+            # date or letter in place of a duration's number.
+            review['status'] = 'uncertain'
     return reviews

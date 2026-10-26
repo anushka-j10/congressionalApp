@@ -32,7 +32,7 @@ def test_wrong_date_digit_is_disputed_and_both_candidates_are_kept(wrong):
     left, right = "Deadline: 2026-10-29", "Deadline: " + wrong
     reading = HybridReader(stub("local", left), stub("vision", right)).read(b"synthetic")
     review = reading.token_reviews[0]
-    assert review["status"] == "disputed"
+    assert review["status"] == ("disputed" if wrong == "2026-10-28" else "uncertain")
     assert {item["value"] for item in review["candidates"]} == {"2026-10-29", wrong}
     for item in review["candidates"]:
         source = left if item["reader"] == "local" else right

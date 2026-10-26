@@ -1,0 +1,32 @@
+{
+  "photos": [
+    {
+      "variant": "clean",
+      "key_token_checks": {
+        "amount": true,
+        "complete_due_date": true,
+        "complete_timing": true
+      },
+      "passed": 3,
+      "total": 3,
+      "timing_issues": [],
+      "warnings": []
+    },
+    {
+      "variant": "angled-compressed",
+      "key_token_checks": {
+        "amount": true,
+        "complete_due_date": true,
+        "complete_timing": true
+      },
+      "passed": 3,
+      "total": 3,
+      "timing_issues": [],
+      "warnings": []
+    }
+  ],
+  "control_passes": 8,
+  "control_total": 8,
+  "before_unsafe_actions_verified": 6,
+  "after_unsafe_actions_verified": 0
+}

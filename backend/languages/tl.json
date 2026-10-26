@@ -226,9 +226,15 @@
     "photo_tips_body": "Gumamit ng sapat na ilaw na walang silaw o anino. Ilatag nang patag ang pahina. Maaaring mali ang pagbasa sa sulat-kamay at malabong larawan. Hiwalay na binabasa ang mga pahina.",
     "show_source_for": "Hanapin ang {field} sa nirepasong teksto",
     "home_label": "Home ng Notice Decoder",
-    "reader_reviews_label": "Mga pagkakaiba sa pagbasa na ihahambing sa larawan"
+    "reader_reviews_label": "Mga pagkakaiba sa pagbasa na ihahambing sa larawan",
+    "reader_duration": "Takdang panahon",
+    "reader_timing_warning": "Hindi mabasa nang maaasahan ang isang petsa o takdang panahon. Kunan muli ng malinaw na larawan ang buong abiso, o itama ang teksto gamit ang larawan. Huwag hulaan ang mga nawawalang numero."
   },
   "reader_warning_patterns": [
+    {
+      "pattern": "A date or time limit",
+      "key": "reader_timing_warning"
+    },
     {
       "pattern": "Little readable text",
       "key": "reader_quality_warning"

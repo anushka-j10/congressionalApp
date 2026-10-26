@@ -222,9 +222,15 @@
     "photo_tips_body": "Usa buena luz, sin reflejos ni sombras. Mantén la página plana. La escritura a mano y las fotos borrosas pueden leerse mal. Las páginas se leen por separado.",
     "show_source_for": "Buscar {field} en el texto revisado",
     "home_label": "Inicio de Notice Decoder",
-    "reader_reviews_label": "Diferencias de lectura para comparar con la foto"
+    "reader_reviews_label": "Diferencias de lectura para comparar con la foto",
+    "reader_duration": "Plazo",
+    "reader_timing_warning": "No se pudo leer una fecha o un plazo con confianza. Vuelva a fotografiar el aviso completo y enfocado, o corrija el texto usando la foto. No adivine los dígitos que faltan."
   },
   "reader_warning_patterns": [
+    {
+      "pattern": "A date or time limit",
+      "key": "reader_timing_warning"
+    },
     {
       "pattern": "Little readable text",
       "key": "reader_quality_warning"

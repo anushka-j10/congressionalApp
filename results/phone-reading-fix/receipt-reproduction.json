@@ -1,0 +1,291 @@
+{
+  "baseline_commit": "eccb39bcd3d683eb4bc357dc8dd52895790ac4f0",
+  "synthetic_only": true,
+  "model_calls": 0,
+  "tesseract_version": "tesseract 5.5.3",
+  "photo_ocr": [
+    {
+      "variant": "clean",
+      "key_token_checks": {
+        "amount": true,
+        "complete_due_date": true,
+        "complete_timing": true
+      },
+      "passed": 3,
+      "total": 3,
+      "timing_issues": [],
+      "warnings": []
+    },
+    {
+      "variant": "angled-compressed",
+      "key_token_checks": {
+        "amount": true,
+        "complete_due_date": true,
+        "complete_timing": true
+      },
+      "passed": 3,
+      "total": 3,
+      "timing_issues": [],
+      "warnings": []
+    }
+  ],
+  "controlled_failures": [
+    {
+      "case": "clean_duration",
+      "simulated_ocr": "If you dispute this charge, notify the office at least 7 days before payment.",
+      "expected_status": "verified",
+      "before": {
+        "value": "If you dispute this charge, notify the office at least 7 days before payment.",
+        "source_snippet": "If you dispute this charge, notify the office at least 7 days before payment.",
+        "status": "verified",
+        "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+        "source_start": 0,
+        "source_end": 77,
+        "normalized_value": null,
+        "days_remaining": null,
+        "anchor_source_snippet": null,
+        "anchor_start": null,
+        "anchor_end": null
+      },
+      "after": {
+        "value": "If you dispute this charge, notify the office at least 7 days before payment.",
+        "source_snippet": "If you dispute this charge, notify the office at least 7 days before payment.",
+        "status": "verified",
+        "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+        "source_start": 0,
+        "source_end": 77,
+        "normalized_value": null,
+        "days_remaining": null,
+        "anchor_source_snippet": null,
+        "anchor_start": null,
+        "anchor_end": null
+      },
+      "pass": true
+    },
+    {
+      "case": "letter_for_digit",
+      "simulated_ocr": "If you dispute this charge, notify the office at least S days before payment.",
+      "expected_status": "unverified",
+      "before": {
+        "value": "If you dispute this charge, notify the office at least S days before payment.",
+        "source_snippet": "If you dispute this charge, notify the office at least S days before payment.",
+        "status": "verified",
+        "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+        "source_start": 0,
+        "source_end": 77,
+        "normalized_value": null,
+        "days_remaining": null,
+        "anchor_source_snippet": null,
+        "anchor_start": null,
+        "anchor_end": null
+      },
+      "after": {
+        "value": "If you dispute this charge, notify the office at least S days before payment.",
+        "source_snippet": "If you dispute this charge, notify the office at least S days before payment.",
+        "status": "unverified",
+        "reason": "A date or time limit in the reading is incomplete or ambiguous. Retake the whole notice or correct the text from the photo before using these details.",
+        "source_start": 0,
+        "source_end": 77,
+        "normalized_value": null,
+        "days_remaining": null,
+        "anchor_source_snippet": null,
+        "anchor_start": null,
+        "anchor_end": null
+      },
+      "pass": true
+    },
+    {
+      "case": "wrapped_punctuation",
+      "simulated_ocr": "If you dispute this charge, notify the office at least\u2019\u2019S |\ndays before payment.",
+      "expected_status": "unverified",
+      "before": {
+        "value": "If you dispute this charge, notify the office at least\u2019\u2019S |\ndays before payment.",
+        "source_snippet": "If you dispute this charge, notify the office at least\u2019\u2019S |\ndays before payment.",
+        "status": "verified",
+        "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+        "source_start": 0,
+        "source_end": 80,
+        "normalized_value": null,
+        "days_remaining": null,
+        "anchor_source_snippet": null,
+        "anchor_start": null,
+        "anchor_end": null
+      },
+      "after": {
+        "value": "If you dispute this charge, notify the office at least\u2019\u2019S |\ndays before payment.",
+        "source_snippet": "If you dispute this charge, notify the office at least\u2019\u2019S |\ndays before payment.",
+        "status": "unverified",
+        "reason": "A date or time limit in the reading is incomplete or ambiguous. Retake the whole notice or correct the text from the photo before using these details.",
+        "source_start": 0,
+        "source_end": 80,
+        "normalized_value": null,
+        "days_remaining": null,
+        "anchor_source_snippet": null,
+        "anchor_start": null,
+        "anchor_end": null
+      },
+      "pass": true
+    },
+    {
+      "case": "mixed_duration",
+      "simulated_ocr": "File a response within 3C days of receipt.",
+      "expected_status": "unverified",
+      "before": {
+        "value": "File a response within 3C days of receipt.",
+        "source_snippet": "File a response within 3C days of receipt.",
+        "status": "verified",
+        "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+        "source_start": 0,
+        "source_end": 42,
+        "normalized_value": null,
+        "days_remaining": null,
+        "anchor_source_snippet": null,
+        "anchor_start": null,
+        "anchor_end": null
+      },
+      "after": {
+        "value": "File a response within 3C days of receipt.",
+        "source_snippet": "File a response within 3C days of receipt.",
+        "status": "unverified",
+        "reason": "A date or time limit in the reading is incomplete or ambiguous. Retake the whole notice or correct the text from the photo before using these details.",
+        "source_start": 0,
+        "source_end": 42,
+        "normalized_value": null,
+        "days_remaining": null,
+        "anchor_source_snippet": null,
+        "anchor_start": null,
+        "anchor_end": null
+      },
+      "pass": true
+    },
+    {
+      "case": "one_digit_year",
+      "simulated_ocr": "Pay the current balance by 11/29/2.",
+      "expected_status": "unverified",
+      "before": {
+        "value": "Pay the current balance by 11/29/2.",
+        "source_snippet": "Pay the current balance by 11/29/2.",
+        "status": "verified",
+        "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+        "source_start": 0,
+        "source_end": 35,
+        "normalized_value": null,
+        "days_remaining": null,
+        "anchor_source_snippet": null,
+        "anchor_start": null,
+        "anchor_end": null
+      },
+      "after": {
+        "value": "Pay the current balance by 11/29/2.",
+        "source_snippet": "Pay the current balance by 11/29/2.",
+        "status": "unverified",
+        "reason": "A date or time limit in the reading is incomplete or ambiguous. Retake the whole notice or correct the text from the photo before using these details.",
+        "source_start": 0,
+        "source_end": 35,
+        "normalized_value": null,
+        "days_remaining": null,
+        "anchor_source_snippet": null,
+        "anchor_start": null,
+        "anchor_end": null
+      },
+      "pass": true
+    },
+    {
+      "case": "three_digit_year",
+      "simulated_ocr": "Pay the current balance by 11/29/202.",
+      "expected_status": "unverified",
+      "before": {
+        "value": "Pay the current balance by 11/29/202.",
+        "source_snippet": "Pay the current balance by 11/29/202.",
+        "status": "verified",
+        "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+        "source_start": 0,
+        "source_end": 37,
+        "normalized_value": null,
+        "days_remaining": null,
+        "anchor_source_snippet": null,
+        "anchor_start": null,
+        "anchor_end": null
+      },
+      "after": {
+        "value": "Pay the current balance by 11/29/202.",
+        "source_snippet": "Pay the current balance by 11/29/202.",
+        "status": "unverified",
+        "reason": "A date or time limit in the reading is incomplete or ambiguous. Retake the whole notice or correct the text from the photo before using these details.",
+        "source_start": 0,
+        "source_end": 37,
+        "normalized_value": null,
+        "days_remaining": null,
+        "anchor_source_snippet": null,
+        "anchor_start": null,
+        "anchor_end": null
+      },
+      "pass": true
+    },
+    {
+      "case": "impossible_date",
+      "simulated_ocr": "Pay the current balance by 02/30/2027.",
+      "expected_status": "unverified",
+      "before": {
+        "value": "Pay the current balance by 02/30/2027.",
+        "source_snippet": "Pay the current balance by 02/30/2027.",
+        "status": "verified",
+        "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+        "source_start": 0,
+        "source_end": 38,
+        "normalized_value": null,
+        "days_remaining": null,
+        "anchor_source_snippet": null,
+        "anchor_start": null,
+        "anchor_end": null
+      },
+      "after": {
+        "value": "Pay the current balance by 02/30/2027.",
+        "source_snippet": "Pay the current balance by 02/30/2027.",
+        "status": "unverified",
+        "reason": "A date or time limit in the reading is incomplete or ambiguous. Retake the whole notice or correct the text from the photo before using these details.",
+        "source_start": 0,
+        "source_end": 38,
+        "normalized_value": null,
+        "days_remaining": null,
+        "anchor_source_snippet": null,
+        "anchor_start": null,
+        "anchor_end": null
+      },
+      "pass": true
+    },
+    {
+      "case": "valid_date",
+      "simulated_ocr": "Pay the current balance by 11/29/2027.",
+      "expected_status": "verified",
+      "before": {
+        "value": "Pay the current balance by 11/29/2027.",
+        "source_snippet": "Pay the current balance by 11/29/2027.",
+        "status": "verified",
+        "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+        "source_start": 0,
+        "source_end": 38,
+        "normalized_value": null,
+        "days_remaining": null,
+        "anchor_source_snippet": null,
+        "anchor_start": null,
+        "anchor_end": null
+      },
+      "after": {
+        "value": "Pay the current balance by 11/29/2027.",
+        "source_snippet": "Pay the current balance by 11/29/2027.",
+        "status": "verified",
+        "reason": "Matches the confirmed text. Check that this is the right fact on your original notice.",
+        "source_start": 0,
+        "source_end": 38,
+        "normalized_value": null,
+        "days_remaining": null,
+        "anchor_source_snippet": null,
+        "anchor_start": null,
+        "anchor_end": null
+      },
+      "pass": true
+    }
+  ],
+  "limits": "New development regressions, not the exact iPhone file or an independent held-out evaluation. A calendar-valid but wrong OCR number can still evade these checks."
+}

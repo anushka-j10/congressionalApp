@@ -6,6 +6,7 @@ from dataclasses import dataclass, field
 from typing import Protocol
 
 import httpx
+from backend.ocr_safety import timing_issues
 
 
 class ReaderError(Exception):
@@ -128,6 +129,9 @@ def quality_warnings(text: str) -> list[str]:
     characters = [char for char in text if not char.isspace()]
     words = [word for word in text.split() if any(char.isalpha() for char in word)]
     alpha_ratio = sum(char.isalpha() for char in characters) / max(1, len(characters))
+    warnings = []
     if len(characters) < 30 or len(words) < 5 or alpha_ratio < 0.45 or "[unreadable]" in text.lower():
-        return ["Little readable text was found. Retake the photo in good light with the whole page in focus."]
-    return []
+        warnings.append("Little readable text was found. Retake the photo in good light with the whole page in focus.")
+    if timing_issues(text):
+        warnings.append("A date or time limit is incomplete or ambiguous. Retake the whole notice in focus, or correct the text from the photo. Do not guess missing digits.")
+    return warnings

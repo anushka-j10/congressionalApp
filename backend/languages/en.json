@@ -222,9 +222,15 @@
     "photo_tips_body": "Use good light without glare or shadows. Keep the page flat. Handwriting and blurry photos can be misread. Pages are read separately.",
     "show_source_for": "Find {field} in the reviewed text",
     "home_label": "Notice Decoder home",
-    "reader_reviews_label": "Reading differences to check against the photo"
+    "reader_reviews_label": "Reading differences to check against the photo",
+    "reader_duration": "Time limit",
+    "reader_timing_warning": "A date or time limit could not be read reliably. Retake the whole notice in focus, or correct the text using the photo. Do not guess missing digits."
   },
   "reader_warning_patterns": [
+    {
+      "pattern": "A date or time limit",
+      "key": "reader_timing_warning"
+    },
     {
       "pattern": "Little readable text",
       "key": "reader_quality_warning"

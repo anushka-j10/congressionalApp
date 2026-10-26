@@ -1,0 +1,252 @@
+[
+  {
+    "sample": "parking_01",
+    "variant": "clean",
+    "field": "amount_due",
+    "expected": "45.00",
+    "expected_state": "present",
+    "got": "$45.00",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  },
+  {
+    "sample": "parking_01",
+    "variant": "degraded",
+    "field": "amount_due",
+    "expected": "45.00",
+    "expected_state": "present",
+    "got": "$45.00",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  },
+  {
+    "sample": "parking_02",
+    "variant": "degraded",
+    "field": "amount_due",
+    "expected": "65.00",
+    "expected_state": "present",
+    "got": "$65.00",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  },
+  {
+    "sample": "parking_02",
+    "variant": "clean",
+    "field": "amount_due",
+    "expected": "65.00",
+    "expected_state": "present",
+    "got": "$65.00",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  },
+  {
+    "sample": "utility_01",
+    "variant": "clean",
+    "field": "amount_due",
+    "expected": "82.35",
+    "expected_state": "present",
+    "got": "$82.35",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  },
+  {
+    "sample": "utility_01",
+    "variant": "degraded",
+    "field": "amount_due",
+    "expected": "82.35",
+    "expected_state": "present",
+    "got": "$82.35",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  },
+  {
+    "sample": "utility_02",
+    "variant": "clean",
+    "field": "amount_due",
+    "expected": "37.20",
+    "expected_state": "present",
+    "got": "$37.20",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  },
+  {
+    "sample": "utility_02",
+    "variant": "degraded",
+    "field": "amount_due",
+    "expected": "37.20",
+    "expected_state": "present",
+    "got": "$37.20",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  },
+  {
+    "sample": "utility_02",
+    "variant": "degraded",
+    "field": "contact",
+    "expected": "placeholder only; do not send money or personal data.",
+    "expected_state": "present",
+    "got": "placeholder only; do not send money or personal data.",
+    "status": "unverified",
+    "reason": "The value could not be checked against its source."
+  },
+  {
+    "sample": "parking_03",
+    "variant": "clean",
+    "field": "amount_due",
+    "expected": "48.50",
+    "expected_state": "present",
+    "got": "$48.50",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  },
+  {
+    "sample": "parking_03",
+    "variant": "degraded",
+    "field": "amount_due",
+    "expected": "48.50",
+    "expected_state": "present",
+    "got": "$48.50",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  },
+  {
+    "sample": "parking_04",
+    "variant": "clean",
+    "field": "amount_due",
+    "expected": "72.00",
+    "expected_state": "present",
+    "got": "$72.00",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  },
+  {
+    "sample": "parking_04",
+    "variant": "degraded",
+    "field": "amount_due",
+    "expected": "72.00",
+    "expected_state": "present",
+    "got": "$72.00",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  },
+  {
+    "sample": "court_03",
+    "variant": "clean",
+    "field": "deadline",
+    "expected": null,
+    "expected_state": "ambiguous",
+    "got": "November 4, 2026",
+    "status": "unverified",
+    "reason": "The value could not be checked against its source."
+  },
+  {
+    "sample": "court_03",
+    "variant": "degraded",
+    "field": "deadline",
+    "expected": null,
+    "expected_state": "ambiguous",
+    "got": "November 4, 2026",
+    "status": "unverified",
+    "reason": "The value could not be checked against its source."
+  },
+  {
+    "sample": "utility_03",
+    "variant": "clean",
+    "field": "amount_due",
+    "expected": "85.20",
+    "expected_state": "present",
+    "got": "$85.20",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  },
+  {
+    "sample": "utility_03",
+    "variant": "degraded",
+    "field": "amount_due",
+    "expected": "85.20",
+    "expected_state": "present",
+    "got": "$85.20",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  },
+  {
+    "sample": "utility_04",
+    "variant": "clean",
+    "field": "amount_due",
+    "expected": "24.60",
+    "expected_state": "present",
+    "got": "$24.60",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  },
+  {
+    "sample": "utility_04",
+    "variant": "clean",
+    "field": "contact",
+    "expected": "Fictional help desk; use this notice only for testing.",
+    "expected_state": "present",
+    "got": null,
+    "status": "missing",
+    "reason": "The extractor did not find this field. Check the photo."
+  },
+  {
+    "sample": "utility_04",
+    "variant": "degraded",
+    "field": "amount_due",
+    "expected": "24.60",
+    "expected_state": "present",
+    "got": "$24.60",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  },
+  {
+    "sample": "utility_04",
+    "variant": "degraded",
+    "field": "contact",
+    "expected": "Fictional help desk; use this notice only for testing.",
+    "expected_state": "present",
+    "got": null,
+    "status": "missing",
+    "reason": "The extractor did not find this field. Check the photo."
+  },
+  {
+    "sample": "utility_05",
+    "variant": "degraded",
+    "field": "amount_due",
+    "expected": "39.90",
+    "expected_state": "present",
+    "got": "$39.90",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  },
+  {
+    "sample": "utility_05",
+    "variant": "clean",
+    "field": "amount_due",
+    "expected": "39.90",
+    "expected_state": "present",
+    "got": "$39.90",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  },
+  {
+    "sample": "school_04",
+    "variant": "clean",
+    "field": "amount_due",
+    "expected": "12.00",
+    "expected_state": "present",
+    "got": "$12.00",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  },
+  {
+    "sample": "school_04",
+    "variant": "degraded",
+    "field": "amount_due",
+    "expected": "12.00",
+    "expected_state": "present",
+    "got": "$12.00",
+    "status": "unverified",
+    "reason": "Check every printed amount against the original photo before confirming amounts."
+  }
+]

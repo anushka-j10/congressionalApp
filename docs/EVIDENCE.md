@@ -155,3 +155,8 @@ Source tables: results/m4-verification/dev.md, results/m4-verification/adversari
 - Current replay: [dev ablations](../results/m4-ablations/dev.json), [adversarial ablations](../results/m4-ablations/adversarial.json), [protocol and commands](../results/m4-ablations/REPORT.md).
 - Original frozen run: [raw results](../results/heldout-final.json), [protocol](../results/heldout-protocol.json), [complete Step 1 results](../HELDOUT_RESULTS.md). Raw hashes were verified at Step 1 against the recorded protocol.
 - Historical notes and superseded status statements are retained in docs/history. No new freeze tag, independent final held-out score, native review or full mobile acceptance is claimed. The later deployed release is documented separately below.
+
+
+## 2026-10-26 phone OCR safety repair
+
+New timing-corruption checks withhold deadline, amount and action when a numeric date is incomplete/invalid or a time limit contains confused letters. No automatic digit correction or OCR-engine switch. Targeted controls: 6 unsafe actions previously verified, now 0; 2 legible controls preserved. Fresh dev run: 0/120 critical false verifications; all-field present accuracy 128/130, verified-correct coverage 107/130, abstention 23/130. Adversarial: 0/48 critical false verifications. Python 452 passed; JavaScript 62 passed. These are development results; the original held-out evidence is unchanged. Full limits, failure outputs, baseline/ablation tables and commands: [phone OCR repair report](../results/phone-reading-fix/REPORT.md).

@@ -117,3 +117,8 @@ Disabling date validation yields two false-verified deadlines on dev; full keeps
 - **Privacy:** tested normal app paths use in-memory notice processing and no-store API responses; these tests do not prove secure RAM erasure, OS/library behavior, host-log policy or provider retention. Explicit synthetic evaluation reports intentionally persist test data outside the served frontend. Vendored HEIC diagnostics are disclosed in the privacy audit.
 
 No prompt, validator, answer key or app behavior was changed in this documentation step. Any earlier milestone-local claim that held-out testing had not yet started, that repair had not yet happened, or that ablation was absent is a historical checkpoint, archived under docs/history rather than presented as current status.
+
+
+## 2026-10-26 phone OCR safety repair
+
+New timing-corruption checks withhold deadline, amount and action when a numeric date is incomplete/invalid or a time limit contains confused letters. No automatic digit correction or OCR-engine switch. Targeted controls: 6 unsafe actions previously verified, now 0; 2 legible controls preserved. Fresh dev run: 0/120 critical false verifications; all-field present accuracy 128/130, verified-correct coverage 107/130, abstention 23/130. Adversarial: 0/48 critical false verifications. Python 452 passed; JavaScript 62 passed. These are development results; the original held-out evidence is unchanged. Full limits, failure outputs, baseline/ablation tables and commands: [phone OCR repair report](results/phone-reading-fix/REPORT.md).

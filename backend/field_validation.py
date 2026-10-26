@@ -7,6 +7,7 @@ from decimal import Decimal, InvalidOperation
 from difflib import SequenceMatcher
 
 from backend.extraction_models import CheckedField
+from backend.ocr_safety import timing_issues
 
 # Unsupported signs are rejected, never removed to produce a positive amount.
 AMOUNT_SIGNS = '-+−﹣－⁻₋–—'
@@ -347,6 +348,13 @@ def _checked_field(name, proposed, text, today, disabled):
             result.reason = 'The confirmed source explicitly says this field is not stated.'
             return result
     if 'readability' not in disabled and ('[unreadable]' in actual.casefold() or '\ufffd' in actual):
+        return result
+    if ('readability' not in disabled and name in {'deadline', 'amount_due', 'required_action'}
+            and timing_issues(text)):
+        # A clipped snippet must not hide a damaged competing deadline or
+        # contest window elsewhere. Ask for a corrected reading, not a guess.
+        result.reason = ('A date or time limit in the reading is incomplete or ambiguous. '
+                         'Retake the whole notice or correct the text from the photo before using these details.')
         return result
     try:
         if name == 'deadline' and 'date_validation' not in disabled:

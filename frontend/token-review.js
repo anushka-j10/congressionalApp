@@ -5,7 +5,7 @@ export function renderReading(text, reviews, primaryReader, transcript, panel) {
   panel.textContent = "";
   panel.hidden = reviews.length === 0;
   const chars = Array.from(text);
-  const ranges = reviews.filter((review) => review.status === "disputed")
+  const ranges = reviews.filter((review) => review.status !== "agreed")
     .flatMap((review) => review.candidates)
     .filter((candidate) => candidate.reader === primaryReader &&
       chars.slice(candidate.start, candidate.end).join('') === candidate.value)
@@ -38,7 +38,7 @@ export function renderReading(text, reviews, primaryReader, transcript, panel) {
     const card = document.createElement("div");
     card.className = `token-card ${review.status === "agreed" ? "agreed" : "disputed"}`;
     const label = document.createElement("strong");
-    label.textContent = `${t('reader_' + review.kind)} · ${review.status === "agreed" ? t("agreed") : t("disputed")}`;
+    label.textContent = `${t('reader_' + review.kind)} · ${t(review.status === "agreed" ? "agreed" : review.status === "uncertain" ? "uncertain_reading" : "disputed")}`;
     card.append(label);
     for (const candidate of review.candidates) {
       const line = document.createElement("p");
