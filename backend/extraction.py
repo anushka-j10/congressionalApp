@@ -124,6 +124,13 @@ def extract_and_verify(text, doc_type, extractor, today, amounts_confirmed=False
                 'usage': None, 'attempts': 0}
     extracted = extractor.extract(text, doc_type)
     fields, warnings = verify_notice(extracted.proposed, text, today)
+    apply_amount_review(fields, warnings, amounts_confirmed)
+    return {'doc_type': doc_type, 'today': today.isoformat(),
+            'fields': {name: value.model_dump() for name, value in fields.items()},
+            'warnings': warnings, 'usage': extracted.usage, 'attempts': extracted.attempts}
+
+
+def apply_amount_review(fields, warnings, amounts_confirmed=False):
     # A perfect source match can repeat an OCR error. Default closed for API and
     # unattended evaluation; only explicit human photo review permits the amount.
     if not amounts_confirmed:
@@ -135,6 +142,3 @@ def extract_and_verify(text, doc_type, extractor, today, amounts_confirmed=False
                 field.normalized_value = None
                 field.reason = 'Check every printed amount against the original photo before confirming amounts.'
         warnings.append('Printed amounts have not been separately checked against the original photo. Reader agreement is not verification.')
-    return {'doc_type': doc_type, 'today': today.isoformat(),
-            'fields': {name: value.model_dump() for name, value in fields.items()},
-            'warnings': warnings, 'usage': extracted.usage, 'attempts': extracted.attempts}

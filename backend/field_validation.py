@@ -302,7 +302,20 @@ def unsafe_evidence(name,text,start,end,snippet):
     return False
 
 
+VALIDATOR_GROUPS = frozenset({'source_match', 'evidence_context', 'readability',
+                              'date_validation', 'amount_validation',
+                              'text_copy', 'action_completeness'})
+
+
 def checked_field(name, proposed, text, today):
+    # Production entry point always enables every validator.
+    return _checked_field(name, proposed, text, today, frozenset())
+
+
+def _checked_field(name, proposed, text, today, disabled):
+    """Internal evaluation seam; never accepted from a request or model output."""
+    if not disabled <= VALIDATOR_GROUPS:
+        raise ValueError('Unknown validator group')
     value, snippet = proposed.value, proposed.source_snippet
     if value is None:
         # A model's absence decision is not proof the document lacks the fact.
@@ -310,13 +323,15 @@ def checked_field(name, proposed, text, today):
                             reason='The extractor did not find this field. Check the photo.')
     result = CheckedField(value=value, source_snippet=snippet, status='unverified',
                           reason='The value could not be checked against its source.')
+    snippet = snippet or ''
     span = find_source(text, snippet)
-    if not span or not value.strip():
+    if not value.strip() or (not span and 'source_match' not in disabled):
         return result
-    start, end = span
-    result.source_start, result.source_end = span
-    actual = text[start:end]
-    if unsafe_evidence(name,text,start,end,snippet):
+    start, end = span if span else (0, 0)
+    if span:
+        result.source_start, result.source_end = span
+    actual = text[start:end] if span else (snippet or '')
+    if 'evidence_context' not in disabled and unsafe_evidence(name,text,start,end,snippet):
         result.reason = 'The source has conflicting field-role or instruction-like context. Check the original notice.'
         return result
     # Explicit labeled absence is different from an unparsable numeric proposal.
@@ -331,10 +346,10 @@ def checked_field(name, proposed, text, today):
             result.status = 'missing'
             result.reason = 'The confirmed source explicitly says this field is not stated.'
             return result
-    if '[unreadable]' in actual.casefold() or '\ufffd' in actual:
+    if 'readability' not in disabled and ('[unreadable]' in actual.casefold() or '\ufffd' in actual):
         return result
     try:
-        if name == 'deadline':
+        if name == 'deadline' and 'date_validation' not in disabled:
             if conflicting_obligation_dates(text):
                 raise ValueError('Conflicting explicit obligation dates')
             if proposed.kind == 'absolute':
@@ -368,21 +383,21 @@ def checked_field(name, proposed, text, today):
                 raise ValueError('Missing deadline kind')
             result.normalized_value = deadline.isoformat()
             result.days_remaining = (deadline - today).days
-        elif name == 'amount_due':
+        elif name == 'amount_due' and 'amount_validation' not in disabled:
             amount = parse_amount(value)
             if amount != one_amount(snippet) or amount != one_amount(actual):
                 raise ValueError('Amount differs from source')
             result.normalized_value = format(amount, '.2f')
-        else:
+        elif name not in {'deadline', 'amount_due'}:
             # Text fields are copied, not paraphrased into claims by the model.
             target, source = normalize(value), normalize(snippet)
             index = source.find(target)
-            if index < 0 or not whole_span(source, index, index + len(target)):
+            if 'text_copy' not in disabled and (index < 0 or not whole_span(source, index, index + len(target))):
                 raise ValueError('Text value is not a whole source phrase')
             # When fuzzy letters match, all numeric sequences still must agree.
-            if digits(snippet) != digits(actual):
+            if 'text_copy' not in disabled and digits(snippet) != digits(actual):
                 raise ValueError('Source digits differ')
-            if name == 'required_action':
+            if name == 'required_action' and 'action_completeness' not in disabled:
                 value_span = find_source(actual, value)
                 if not value_span:
                     raise ValueError('Action not found in actual source')
