@@ -1,0 +1,956 @@
+[
+  {
+    "lang": "en",
+    "state": "welcome",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "width": 320
+  },
+  {
+    "lang": "en",
+    "state": "tutorial1",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "width": 320
+  },
+  {
+    "lang": "en",
+    "state": "tutorial2",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "width": 320
+  },
+  {
+    "lang": "en",
+    "state": "tutorial3",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "width": 320
+  },
+  {
+    "lang": "en",
+    "state": "tutorial4",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "width": 320
+  },
+  {
+    "lang": "en",
+    "state": "notice",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "en",
+    "state": "story",
+    "open": true,
+    "scrollWidth": 286,
+    "width": 286
+  },
+  {
+    "lang": "en",
+    "state": "review",
+    "height": 1972,
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "lang": "en",
+    "state": "results",
+    "height": 2332,
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "lang": "es",
+    "state": "welcome",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "width": 320
+  },
+  {
+    "lang": "es",
+    "state": "tutorial1",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "width": 320
+  },
+  {
+    "lang": "es",
+    "state": "tutorial2",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "width": 320
+  },
+  {
+    "lang": "es",
+    "state": "tutorial3",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "width": 320
+  },
+  {
+    "lang": "es",
+    "state": "tutorial4",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "width": 320
+  },
+  {
+    "lang": "es",
+    "state": "notice",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "es",
+    "state": "story",
+    "open": true,
+    "scrollWidth": 286,
+    "width": 286
+  },
+  {
+    "lang": "es",
+    "state": "review",
+    "height": 2014,
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "lang": "es",
+    "state": "results",
+    "height": 2353,
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "lang": "tl",
+    "state": "welcome",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "width": 320
+  },
+  {
+    "lang": "tl",
+    "state": "tutorial1",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "width": 320
+  },
+  {
+    "lang": "tl",
+    "state": "tutorial2",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "width": 320
+  },
+  {
+    "lang": "tl",
+    "state": "tutorial3",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "width": 320
+  },
+  {
+    "lang": "tl",
+    "state": "tutorial4",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "width": 320
+  },
+  {
+    "lang": "tl",
+    "state": "notice",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": [],
+    "width": 320
+  },
+  {
+    "phoneWidth": "320",
+    "lang": "tl",
+    "state": "story",
+    "open": true,
+    "scrollWidth": 286,
+    "width": 286
+  },
+  {
+    "lang": "tl",
+    "state": "review",
+    "height": 2108,
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "lang": "tl",
+    "state": "results",
+    "height": 2438,
+    "scrollWidth": 320,
+    "width": 320
+  },
+  {
+    "lang": "en",
+    "state": "welcome",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "width": 390
+  },
+  {
+    "lang": "en",
+    "state": "tutorial1",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "width": 390
+  },
+  {
+    "lang": "en",
+    "state": "tutorial2",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "width": 390
+  },
+  {
+    "lang": "en",
+    "state": "tutorial3",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "width": 390
+  },
+  {
+    "lang": "en",
+    "state": "tutorial4",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "width": 390
+  },
+  {
+    "lang": "en",
+    "state": "notice",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "en",
+    "state": "story",
+    "open": true,
+    "scrollWidth": 356,
+    "width": 356
+  },
+  {
+    "lang": "en",
+    "state": "review",
+    "height": 1837,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "lang": "en",
+    "state": "results",
+    "height": 2220,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "lang": "es",
+    "state": "welcome",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "width": 390
+  },
+  {
+    "lang": "es",
+    "state": "tutorial1",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "width": 390
+  },
+  {
+    "lang": "es",
+    "state": "tutorial2",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "width": 390
+  },
+  {
+    "lang": "es",
+    "state": "tutorial3",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "width": 390
+  },
+  {
+    "lang": "es",
+    "state": "tutorial4",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "width": 390
+  },
+  {
+    "lang": "es",
+    "state": "notice",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "es",
+    "state": "story",
+    "open": true,
+    "scrollWidth": 356,
+    "width": 356
+  },
+  {
+    "lang": "es",
+    "state": "review",
+    "height": 1879,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "lang": "es",
+    "state": "results",
+    "height": 2301,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "lang": "tl",
+    "state": "welcome",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "width": 390
+  },
+  {
+    "lang": "tl",
+    "state": "tutorial1",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "width": 390
+  },
+  {
+    "lang": "tl",
+    "state": "tutorial2",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "width": 390
+  },
+  {
+    "lang": "tl",
+    "state": "tutorial3",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "width": 390
+  },
+  {
+    "lang": "tl",
+    "state": "tutorial4",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "width": 390
+  },
+  {
+    "lang": "tl",
+    "state": "notice",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": [],
+    "width": 390
+  },
+  {
+    "phoneWidth": "390",
+    "lang": "tl",
+    "state": "story",
+    "open": true,
+    "scrollWidth": 356,
+    "width": 356
+  },
+  {
+    "lang": "tl",
+    "state": "review",
+    "height": 1951,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "lang": "tl",
+    "state": "results",
+    "height": 2301,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  {
+    "lang": "en",
+    "state": "welcome",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "width": 430
+  },
+  {
+    "lang": "en",
+    "state": "tutorial1",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "width": 430
+  },
+  {
+    "lang": "en",
+    "state": "tutorial2",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "width": 430
+  },
+  {
+    "lang": "en",
+    "state": "tutorial3",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "width": 430
+  },
+  {
+    "lang": "en",
+    "state": "tutorial4",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "width": 430
+  },
+  {
+    "lang": "en",
+    "state": "notice",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "en",
+    "state": "story",
+    "open": true,
+    "scrollWidth": 396,
+    "width": 396
+  },
+  {
+    "lang": "en",
+    "state": "review",
+    "height": 1811,
+    "scrollWidth": 430,
+    "width": 430
+  },
+  {
+    "lang": "en",
+    "state": "results",
+    "height": 2220,
+    "scrollWidth": 430,
+    "width": 430
+  },
+  {
+    "lang": "es",
+    "state": "welcome",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "width": 430
+  },
+  {
+    "lang": "es",
+    "state": "tutorial1",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "width": 430
+  },
+  {
+    "lang": "es",
+    "state": "tutorial2",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "width": 430
+  },
+  {
+    "lang": "es",
+    "state": "tutorial3",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "width": 430
+  },
+  {
+    "lang": "es",
+    "state": "tutorial4",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "width": 430
+  },
+  {
+    "lang": "es",
+    "state": "notice",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "es",
+    "state": "story",
+    "open": true,
+    "scrollWidth": 396,
+    "width": 396
+  },
+  {
+    "lang": "es",
+    "state": "review",
+    "height": 1832,
+    "scrollWidth": 430,
+    "width": 430
+  },
+  {
+    "lang": "es",
+    "state": "results",
+    "height": 2241,
+    "scrollWidth": 430,
+    "width": 430
+  },
+  {
+    "lang": "tl",
+    "state": "welcome",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "width": 430
+  },
+  {
+    "lang": "tl",
+    "state": "tutorial1",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "width": 430
+  },
+  {
+    "lang": "tl",
+    "state": "tutorial2",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "width": 430
+  },
+  {
+    "lang": "tl",
+    "state": "tutorial3",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "width": 430
+  },
+  {
+    "lang": "tl",
+    "state": "tutorial4",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "width": 430
+  },
+  {
+    "lang": "tl",
+    "state": "notice",
+    "headings": [
+      {
+        "alignment": "center",
+        "font": "system-ui, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif"
+      }
+    ],
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": [],
+    "width": 430
+  },
+  {
+    "phoneWidth": "430",
+    "lang": "tl",
+    "state": "story",
+    "open": true,
+    "scrollWidth": 396,
+    "width": 396
+  },
+  {
+    "lang": "tl",
+    "state": "review",
+    "height": 1883,
+    "scrollWidth": 430,
+    "width": 430
+  },
+  {
+    "lang": "tl",
+    "state": "results",
+    "height": 2275,
+    "scrollWidth": 430,
+    "width": 430
+  }
+]

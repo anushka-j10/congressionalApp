@@ -26,3 +26,11 @@ One active screen at a time; welcome/tutorial fit tested 820px viewport height.
 Native story modal opened; Close and Escape returned to the app.
 CSS animations are finite and disabled under prefers-reduced-motion; OS preference not toggled.
 Preview photo processing/audio remain inactive. No live deployment or model requests.
+
+Color/type revision — 2026-10-26:
+Native sans-serif, blue palette, centered primary headings, rounded photo actions.
+node --test tests/*.mjs: 29 passed.
+../../work/m4-audit-venv/bin/python -m pytest -q: 422 passed, one dependency warning.
+81 browser layout checks: blue-layout-checks.json. No horizontal overflow; centered visible h1 headings; measured visible controls >=44px.
+Sampled text contrast ratios: blue-contrast.json, all four pairs >4.5:1.
+Synthetic browser fixtures only, not a complete accessibility or physical-device audit.

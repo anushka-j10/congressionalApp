@@ -1,0 +1,26 @@
+[
+  {
+    "role": "body",
+    "foreground": "#172b4d",
+    "background": "#f4f7fc",
+    "contrast": 13.132741204373838
+  },
+  {
+    "role": "muted",
+    "foreground": "#52647c",
+    "background": "#f4f7fc",
+    "contrast": 5.6315469693356635
+  },
+  {
+    "role": "button",
+    "foreground": "#ffffff",
+    "background": "#205bb4",
+    "contrast": 6.528009813232838
+  },
+  {
+    "role": "secondary button",
+    "foreground": "#205bb4",
+    "background": "#ffffff",
+    "contrast": 6.528009813232838
+  }
+]
