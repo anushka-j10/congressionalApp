@@ -15,7 +15,7 @@ export function clearExplanation() {
   controller?.abort(); controller = null;
   extraction = null; sourceText = '';
   speech.clear(); section.hidden = true;
-  for (const id of ['explanation-body', 'explanation-status', 'explanation-error', 'translation-note', 'help-contacts']) document.getElementById(id).textContent = '';
+  for (const id of ['explanation-body', 'explanation-status', 'explanation-error', 'translation-note', 'help-contacts', 'explanation-cautions']) document.getElementById(id).textContent = '';
 }
 
 export function setExplanationSource(data, text) {
@@ -38,9 +38,7 @@ function show(data) {
   for (const text of bundle.what_to_do) { const li = document.createElement('li'); li.textContent = text; steps.append(li); }
   body.append(steps);
   add('p', bundle.deadline_note); add('p', bundle.amount_note);
-  add('h3', t('confidence_notes'));
-  for (const text of bundle.confidence_notes) add('p', text);
-  add('p', data.target_disclaimer);
+  document.querySelector('#explanation-cautions').textContent = [...bundle.confidence_notes, data.target_disclaimer].join(' ');
   const translation = data.translation;
   document.querySelector('#translation-note').textContent = data.notice + ' ' +
     (translation.translation_confidence === 'low' ? t('confidence_low') : data.requested_language !== 'en' ? t('confidence_medium') : '');
@@ -67,6 +65,7 @@ async function generate() {
   const timeout = setTimeout(() => localController.abort(), 190000);
   section.hidden = false;
   document.querySelector('#explanation-body').textContent = '';
+  document.querySelector('#explanation-cautions').textContent = '';
   document.querySelector('#translation-note').textContent = t('english_pending');
   document.querySelector('#explanation-error').textContent = '';
   document.querySelector('#explanation-status').textContent = t('explaining');

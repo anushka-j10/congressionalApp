@@ -1,0 +1,12 @@
+C layout refinement — 2026-10-25
+Commands run from the repository:
+  node --test tests/*.mjs
+  ../../work/m4-audit-venv/bin/python -m pytest -q
+  git diff --check
+Results: 25 JavaScript tests passed; 422 Python tests passed (one dependency deprecation warning).
+Browser: docs/design-review/index.html served locally on port 8022.
+27 fixture states checked: start/review/results x 320/390/430 CSS px x en/es/tl interface labels.
+No horizontal overflow; no measured visible button/select/summary target under 44px.
+Source disclosure clicked: Full source text opened and contained one highlighted mark.
+These are presentation/controller checks with synthetic data, not a model run or physical-phone usability study.
+No held-out inputs reopened, no model requests, no deployment, no secret file read.

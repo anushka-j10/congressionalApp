@@ -1,0 +1,245 @@
+[
+  {
+    "width": 320,
+    "screen": "start",
+    "lang": "en",
+    "cards": 0,
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": []
+  },
+  {
+    "width": 320,
+    "screen": "start",
+    "lang": "es",
+    "cards": 0,
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": []
+  },
+  {
+    "width": 320,
+    "screen": "start",
+    "lang": "tl",
+    "cards": 0,
+    "height": 820,
+    "scrollWidth": 320,
+    "shortTargets": []
+  },
+  {
+    "width": 320,
+    "screen": "review",
+    "lang": "en",
+    "cards": 0,
+    "height": 1835,
+    "scrollWidth": 320,
+    "shortTargets": []
+  },
+  {
+    "width": 320,
+    "screen": "review",
+    "lang": "es",
+    "cards": 0,
+    "height": 1851,
+    "scrollWidth": 320,
+    "shortTargets": []
+  },
+  {
+    "width": 320,
+    "screen": "review",
+    "lang": "tl",
+    "cards": 0,
+    "height": 1968,
+    "scrollWidth": 320,
+    "shortTargets": []
+  },
+  {
+    "width": 320,
+    "screen": "results",
+    "lang": "en",
+    "cards": 5,
+    "height": 2197,
+    "scrollWidth": 320,
+    "shortTargets": []
+  },
+  {
+    "width": 320,
+    "screen": "results",
+    "lang": "es",
+    "cards": 5,
+    "height": 2192,
+    "scrollWidth": 320,
+    "shortTargets": []
+  },
+  {
+    "width": 320,
+    "screen": "results",
+    "lang": "tl",
+    "cards": 5,
+    "height": 2285,
+    "scrollWidth": 320,
+    "shortTargets": []
+  },
+  {
+    "width": 390,
+    "screen": "start",
+    "lang": "en",
+    "cards": 0,
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": []
+  },
+  {
+    "width": 390,
+    "screen": "start",
+    "lang": "es",
+    "cards": 0,
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": []
+  },
+  {
+    "width": 390,
+    "screen": "start",
+    "lang": "tl",
+    "cards": 0,
+    "height": 820,
+    "scrollWidth": 390,
+    "shortTargets": []
+  },
+  {
+    "width": 390,
+    "screen": "review",
+    "lang": "en",
+    "cards": 0,
+    "height": 1674,
+    "scrollWidth": 390,
+    "shortTargets": []
+  },
+  {
+    "width": 390,
+    "screen": "review",
+    "lang": "es",
+    "cards": 0,
+    "height": 1716,
+    "scrollWidth": 390,
+    "shortTargets": []
+  },
+  {
+    "width": 390,
+    "screen": "review",
+    "lang": "tl",
+    "cards": 0,
+    "height": 1788,
+    "scrollWidth": 390,
+    "shortTargets": []
+  },
+  {
+    "width": 390,
+    "screen": "results",
+    "lang": "en",
+    "cards": 5,
+    "height": 2059,
+    "scrollWidth": 390,
+    "shortTargets": []
+  },
+  {
+    "width": 390,
+    "screen": "results",
+    "lang": "es",
+    "cards": 5,
+    "height": 2140,
+    "scrollWidth": 390,
+    "shortTargets": []
+  },
+  {
+    "width": 390,
+    "screen": "results",
+    "lang": "tl",
+    "cards": 5,
+    "height": 2140,
+    "scrollWidth": 390,
+    "shortTargets": []
+  },
+  {
+    "width": 430,
+    "screen": "start",
+    "lang": "en",
+    "cards": 0,
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": []
+  },
+  {
+    "width": 430,
+    "screen": "start",
+    "lang": "es",
+    "cards": 0,
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": []
+  },
+  {
+    "width": 430,
+    "screen": "start",
+    "lang": "tl",
+    "cards": 0,
+    "height": 820,
+    "scrollWidth": 430,
+    "shortTargets": []
+  },
+  {
+    "width": 430,
+    "screen": "review",
+    "lang": "en",
+    "cards": 0,
+    "height": 1649,
+    "scrollWidth": 430,
+    "shortTargets": []
+  },
+  {
+    "width": 430,
+    "screen": "review",
+    "lang": "es",
+    "cards": 0,
+    "height": 1670,
+    "scrollWidth": 430,
+    "shortTargets": []
+  },
+  {
+    "width": 430,
+    "screen": "review",
+    "lang": "tl",
+    "cards": 0,
+    "height": 1721,
+    "scrollWidth": 430,
+    "shortTargets": []
+  },
+  {
+    "width": 430,
+    "screen": "results",
+    "lang": "en",
+    "cards": 5,
+    "height": 2059,
+    "scrollWidth": 430,
+    "shortTargets": []
+  },
+  {
+    "width": 430,
+    "screen": "results",
+    "lang": "es",
+    "cards": 5,
+    "height": 2080,
+    "scrollWidth": 430,
+    "shortTargets": []
+  },
+  {
+    "width": 430,
+    "screen": "results",
+    "lang": "tl",
+    "cards": 5,
+    "height": 2114,
+    "scrollWidth": 430,
+    "shortTargets": []
+  }
+]

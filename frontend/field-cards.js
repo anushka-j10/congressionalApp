@@ -12,7 +12,7 @@ export function renderFields(data, text, cards, source, warnings, presentation =
     item.textContent = t(`field_${field.status}`, { field: t(name) });
     warnings.append(item);
   }
-  const names = ['issuing_agency', 'deadline', 'amount_due', 'required_action', 'contact'];
+  const names = ['deadline', 'amount_due', 'required_action', 'contact', 'issuing_agency'];
   function showSource(field) {
     source.textContent = "";
     // Python offsets count Unicode code points; JS string indices count UTF-16.
@@ -30,6 +30,8 @@ export function renderFields(data, text, cards, source, warnings, presentation =
       cursor = end;
     }
     source.append(document.createTextNode(chars.slice(cursor).join("")));
+    const panel = source.closest?.('details');
+    if (panel) panel.open = true;
     source.focus();
     source.querySelector("mark")?.scrollIntoView({ block: "nearest" });
   }
@@ -48,29 +50,28 @@ export function renderFields(data, text, cards, source, warnings, presentation =
     if (presentation) value.textContent = presentation.localized.cards[name];
     else if (field.status !== "verified") value.textContent = t(`field_${field.status}`, { field: label }, 'en');
     else value.textContent = name === 'amount_due' ? `$${field.normalized_value}` : name === 'deadline' ? formatDate(field.normalized_value, 'en') : field.value;
-    const reason = document.createElement("p");
-    reason.className = "hint";
-    reason.textContent = t('verified_meaning');
-    card.append(heading, badge, value, reason);
+    // The shared verification definition is shown once above the facts.
+    card.append(heading, badge, value);
     if (field.status === "verified" && Number.isInteger(field.days_remaining)) {
       const days = document.createElement("p");
       days.textContent = t(field.days_remaining < 0 ? 'days_past' : field.days_remaining === 0 ? 'due_today' : 'days_remaining',
         { days: Math.abs(field.days_remaining), date: formatDate(data.today, code) });
       card.append(days);
     }
+    const original = document.createElement('details');
+    const toggle = document.createElement('summary'); toggle.textContent = t('show_english');
+    const snippet = document.createElement('pre'); snippet.lang = 'en'; snippet.dir = 'ltr';
+    snippet.textContent = field.source_snippet || t('field_missing', { field: t(name, {}, 'en') }, 'en');
+    original.append(toggle, snippet);
     if (Number.isInteger(field.source_start)) {
       const button = document.createElement("button");
       button.type = "button";
       button.className = "secondary";
       button.textContent = t('show_source');
       button.addEventListener("click", () => showSource(field));
-      card.append(button);
+      original.append(button);
     }
-    const original = document.createElement('details');
-    const toggle = document.createElement('summary'); toggle.textContent = t('show_english');
-    const snippet = document.createElement('pre'); snippet.lang = 'en'; snippet.dir = 'ltr';
-    snippet.textContent = field.source_snippet || t('field_missing', { field: t(name, {}, 'en') }, 'en');
-    original.append(toggle, snippet); card.append(original);
+    card.append(original);
     cards.append(card);
   }
 }

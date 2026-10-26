@@ -85,6 +85,7 @@ function updateButtons() {
   confirmButton.disabled = busy || !textChecked.checked || !amountsChecked.checked || !textEditor.value.trim();
   readButton.disabled = busy || !preparedPhoto || !config;
   clearButton.disabled = !preparedPhoto && results.hidden;
+  document.querySelector('#photo-process-actions').hidden = !preparedPhoto && results.hidden;
 }
 
 async function loadReaderConfig() {
@@ -108,6 +109,8 @@ async function loadReaderConfig() {
 function clearResults() {
   lastReading = null;
   results.hidden = true;
+  document.querySelector('#review-panel').hidden = true;
+  document.querySelector('#review-panel').open = true;
   clearFields();
   typeChoice.value = "unknown";
   confirmedText = null;
@@ -216,6 +219,8 @@ readButton.addEventListener("click", async () => {
     textEditor.value = data.text;
     typeChoice.value = data.doc_type || "unknown";
     results.hidden = false;
+    document.querySelector('#review-panel').hidden = false;
+    document.querySelector('#review-panel').open = true;
     document.querySelector("#results-title").focus();
     message(readStatus, "read_done");
   } catch (error) {
@@ -235,6 +240,7 @@ readButton.addEventListener("click", async () => {
 function clearFields() {
   clearExplanation();
   fieldResults.hidden = true;
+  document.querySelector('#source-panel').open = false;
   for (const id of ["field-status", "field-error", "field-cards", "field-source", "field-warnings"]) {
     document.getElementById(id).textContent = "";
   }
@@ -284,6 +290,7 @@ confirmButton.addEventListener("click", async () => {
     renderFields(data, confirmedText, document.querySelector("#field-cards"),
       document.querySelector("#field-source"), document.querySelector("#field-warnings"));
     message(document.querySelector("#field-status"), selectedType === "unknown" ? "unknown_skipped" : "extract_done");
+    document.querySelector('#review-panel').open = false;
     document.querySelector("#fields-title").focus();
     setExplanationSource(data, confirmedText);
   } catch (error) {

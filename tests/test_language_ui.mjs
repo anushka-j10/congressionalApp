@@ -101,3 +101,13 @@ for (const failure of ['timeout','rate-limit','malformed-json']) {
     assert.equal(app.spoken.length,0);
   });
 }
+
+
+test('explanation cautions stay outside the expandable copy and clear with the notice', async () => {
+  const app=setup(); app.context.setExplanationSource(app.data,'Synthetic original');
+  app.pending.shift().resolve(app.result('es')); await tick();
+  assert.equal(app.node('explanation-cautions').textContent,'Double-check No legal advice');
+  assert.equal(app.node('explanation-body').children.some(n=>n.textContent==='Double-check'),false);
+  app.context.clearExplanation();
+  assert.equal(app.node('explanation-cautions').textContent,'');
+});

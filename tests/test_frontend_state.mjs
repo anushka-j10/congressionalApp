@@ -196,3 +196,30 @@ for (const [status, key] of [[429, 'rate_limit_error'], [503, 'service_unavailab
     assert.equal(app.el('field-cards').textContent,'');
   });
 }
+
+
+test('successful extraction folds review; reopening and editing invalidates old results', async () => {
+  const app = await setup(); await app.read();
+  assert.equal(app.el('review-panel').hidden, false);
+  assert.equal(app.el('review-panel').open, true);
+  const task = app.extract();
+  app.pending.shift().resolve(response({fields:{},warnings:[]})); await task;
+  assert.equal(app.el('review-panel').open, false);
+  assert.equal(app.el('field-results').hidden, false);
+  app.el('review-panel').open = true;
+  app.el('confirmed-text').value += ' correction';
+  app.el('confirmed-text').emit('input');
+  assert.equal(app.el('field-results').hidden, true);
+  assert.equal(app.el('confirm-text').disabled, true);
+  app.el('clear-photo').emit('click');
+  assert.equal(app.el('review-panel').hidden, true);
+  assert.equal(app.el('source-panel').open, false);
+});
+
+test('failed extraction keeps the reading open for correction', async () => {
+  const app = await setup(); await app.read(); const task = app.extract();
+  app.pending.shift().resolve({ok:false,status:503,json:async()=>({})}); await task;
+  assert.equal(app.el('review-panel').open, true);
+  assert.equal(app.el('field-results').hidden, false);
+  assert.equal(app.el('field-error').textContent, 'service_unavailable_error');
+});
