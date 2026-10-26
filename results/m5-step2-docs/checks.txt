@@ -1,0 +1,5 @@
+PASS: 4 current documents checked; 21 local links resolve; 4 archived versions byte-identical to previous Git versions.
+PASS: all three source result artifacts unchanged; documentation contains no credential-like tokens.
+PASS: 9 baseline/full metric rows and 36 per-field rows match saved summaries; all six translation outcome pairs match saved outputs.
+PASS: all nine ablation table rows match saved reports; prior 407 Python/17 JavaScript checks verified from logs; original freeze tag unchanged.
+Scope: documentation only. No suite or model rerun, held-out input access, key access, source/prompt/validator change, or deployment.

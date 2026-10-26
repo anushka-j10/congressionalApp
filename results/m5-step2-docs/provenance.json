@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-25",
+  "action": "Documentation only; original cases/results reused without rerun or rescoring",
+  "source_reports": {
+    "results/m4-verification/dev.json": "0a98f4522ea0b17c4ff09a05960b86f7032b805c76cbe18e246dc3cebbad06b8",
+    "results/m4-verification/adversarial.json": "2cba88804447742aa975e944a33cd58db528132dc82a0ec3253fa8aa960f9ad6",
+    "results/heldout-final.json": "f2187dcaaec2feb85b9bb4e5563c740490986f378b9eeecc46b5bd81f026a7e2"
+  },
+  "documents": [
+    "README.md",
+    "FAILURES.md",
+    "docs/EVIDENCE.md",
+    "DESIGN_NOTES.md"
+  ],
+  "current_discrepancy_rows": 49,
+  "heldout_new_runs": 0,
+  "model_calls": 0,
+  "api_key_access": false
+}

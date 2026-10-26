@@ -1,57 +1,77 @@
-# Current Milestone 4 evidence — verification audit
+# Evaluation evidence — Milestone 5 Step 2
 
-Follow-up 2026-10-25: individual field-validator group ablations are implemented and measured; see results/m4-ablations/REPORT.md. Current implementation commit 81661e4 passes 407 Python and 17 JavaScript tests in a clean checkout. Prior fresh-install/live-run provenance below remains unchanged; no new live model or held-out run occurred.
+Updated 2026-10-25. The user selected the original cases/results for submission reporting. No new held-out inference, OCR, rescoring or answer-key edit was performed. The final implementation remains without an independent final-version held-out measurement. All numbers here come from saved reports; no new live run was needed for this documentation step.
 
-391 Python tests (383 existing + eight audit proofs) and 17 JavaScript tests pass. Install, app startup, nine explicit proofs and 25 privacy-targeted cases passed in the clean ARM Python 3.12.14 environment. Exact commands/logs: results/m4-verification/commands.md and REPORT.md.
+## Provenance and metric definitions
 
-| Set | B1 critical false-verified | B2 | Full | Full present accuracy | Full correct and Verified |
-| --- | --- | --- | --- | --- | --- |
-| dev | 2/120 (1.7%) | 2/120 (1.7%) | 0/120 (0.0%) | 92/92 (100.0%) | 72/92 (78.3%) |
-| adversarial | 0/48 (0.0%) | 0/48 (0.0%) | 0/48 (0.0%) | 48/48 (100.0%) | 32/48 (66.7%) |
+Critical fields are deadline, amount_due and required_action; contact is included in per-field/all-field tables. False-verified rate is a wrong verified field divided by every relevant field opportunity, including missing/ambiguous truth. Present accuracy measures correct proposed values among present answers regardless of verification status. Correct verified measures usable correct facts. Abstain-when-present counts missing/unverified output where the key contains a fact. Correct MISSING has its own denominator; zero denominators are N/A. All displayed fractions are exact.
 
-Config: gpt-5.4-mini-2026-03-17, temperature 0, reasoning none, today 2026-10-24, local preprocessed/original comparison, clean/degraded, one repetition, scorer proposed-reliability-v3. Human amount review is not simulated; unreviewed amounts are withheld, so low false-verification is not evidence of corrected OCR or universal safety. Same cases/OCR/scorer are used for B1/B2/full. All methods/language outputs were available.
+B1 explains/translates the whole OCR notice and treats its returned fields as displayed facts. B2 bypasses validators in offline evaluation and shares the full pipeline's raw extraction proposal for known types; unknown-type abstention is separately bypassed in B2. Full uses production validation and explanation/translation guards. These are different language-output scopes, and shared proposals are not independent model samples or separately additive costs.
 
-## Per-field latest results
+The current dev/adversarial live audit contains 20/8 synthetic source documents × two variants × one repetition (40/16 records). Its settings are pinned in each report: gpt-5.4-mini-2026-03-17, temperature 0, reasoning none, evaluation date 2026-10-24, local preprocessed reading, proposed-reliability-v3 scorer. Actual run date is 2026-10-25. One repetition cannot measure repeatability, and clean/degraded versions of a text are correlated.
 
-| Set | Mode | Field | Accuracy | False-verified | Abstain with truth present | Correct missing |
-| --- | --- | --- | --- | --- | --- | --- |
-| dev | B1 | deadline | 34/34 (100.0%) | 2/40 (5.0%) | 0/34 (0.0%) | 4/4 (100.0%) |
-| dev | B1 | amount_due | 20/20 (100.0%) | 0/40 (0.0%) | 0/20 (0.0%) | 20/20 (100.0%) |
-| dev | B1 | required_action | 38/38 (100.0%) | 0/40 (0.0%) | 0/38 (0.0%) | 2/2 (100.0%) |
-| dev | B1 | contact | 36/38 (94.7%) | 2/40 (5.0%) | 0/38 (0.0%) | 2/2 (100.0%) |
-| dev | B2 | deadline | 34/34 (100.0%) | 2/40 (5.0%) | 0/34 (0.0%) | 4/4 (100.0%) |
-| dev | B2 | amount_due | 20/20 (100.0%) | 0/40 (0.0%) | 0/20 (0.0%) | 20/20 (100.0%) |
-| dev | B2 | required_action | 38/38 (100.0%) | 0/40 (0.0%) | 0/38 (0.0%) | 2/2 (100.0%) |
-| dev | B2 | contact | 36/38 (94.7%) | 0/40 (0.0%) | 2/38 (5.3%) | 2/2 (100.0%) |
-| dev | full | deadline | 34/34 (100.0%) | 0/40 (0.0%) | 0/34 (0.0%) | 4/4 (100.0%) |
-| dev | full | amount_due | 20/20 (100.0%) | 0/40 (0.0%) | 20/20 (100.0%) | 20/20 (100.0%) |
-| dev | full | required_action | 38/38 (100.0%) | 0/40 (0.0%) | 0/38 (0.0%) | 2/2 (100.0%) |
-| dev | full | contact | 36/38 (94.7%) | 0/40 (0.0%) | 3/38 (7.9%) | 2/2 (100.0%) |
-| adversarial | B1 | deadline | 16/16 (100.0%) | 0/16 (0.0%) | 0/16 (0.0%) | N/A (zero denominator) |
-| adversarial | B1 | amount_due | 16/16 (100.0%) | 0/16 (0.0%) | 0/16 (0.0%) | N/A (zero denominator) |
-| adversarial | B1 | required_action | 16/16 (100.0%) | 0/16 (0.0%) | 0/16 (0.0%) | N/A (zero denominator) |
-| adversarial | B1 | contact | 16/16 (100.0%) | 0/16 (0.0%) | 0/16 (0.0%) | N/A (zero denominator) |
-| adversarial | B2 | deadline | 16/16 (100.0%) | 0/16 (0.0%) | 0/16 (0.0%) | N/A (zero denominator) |
-| adversarial | B2 | amount_due | 16/16 (100.0%) | 0/16 (0.0%) | 0/16 (0.0%) | N/A (zero denominator) |
-| adversarial | B2 | required_action | 16/16 (100.0%) | 0/16 (0.0%) | 0/16 (0.0%) | N/A (zero denominator) |
-| adversarial | B2 | contact | 16/16 (100.0%) | 0/16 (0.0%) | 0/16 (0.0%) | N/A (zero denominator) |
-| adversarial | full | deadline | 16/16 (100.0%) | 0/16 (0.0%) | 0/16 (0.0%) | N/A (zero denominator) |
-| adversarial | full | amount_due | 16/16 (100.0%) | 0/16 (0.0%) | 16/16 (100.0%) | N/A (zero denominator) |
-| adversarial | full | required_action | 16/16 (100.0%) | 0/16 (0.0%) | 0/16 (0.0%) | N/A (zero denominator) |
-| adversarial | full | contact | 16/16 (100.0%) | 0/16 (0.0%) | 0/16 (0.0%) | N/A (zero denominator) |
+The original ten-case held-out run was completed once on 2026-10-24 at eval-freeze commit 24d729a540ed3913ced09ee42af89765fd921c4b, using proposed-m4-strict-v2 and the earlier amount-review behavior. Only one original image per case was processed under the harness label clean. The user states the answers were handwritten independently of the app; their recorded expected strings/states remain unchanged. No final-version held-out rerun or retrospective v3 rescoring is reported. Subsequent repairs were informed by those failures, so the original ten cases are no longer independent of final development. Differences between current dev and original held-out results reflect different cases, code, coverage policy and scorer versions; they do not measure a controlled generalization gap or a proven repair gain.
 
-## Audit limitations and provenance
+## Baselines and full pipeline
 
-The historical item 5 gap is resolved by the authorized validator-group ablation follow-up. Full-reference replay must exactly match prior checked values/status/normalization. Date subchecks are explicitly grouped; schema/unknown-type abstention and later explanation guards are outside this field-only experiment. The original eval-freeze still points to 24d729a540ed3913ced09ee42af89765fd921c4b; no new freeze is claimed.
+| Version / set | Records | Method | Critical false verified | Present accuracy | Correct verified | Abstain when present |
+|---|---|---|---|---|---|---|
+| dev | 40 | B1 | 2/120 | 92/92 | 92/92 | 0/92 |
+| dev | 40 | B2 | 2/120 | 92/92 | 92/92 | 0/92 |
+| dev | 40 | full | 0/120 | 92/92 | 72/92 | 20/92 |
+| adversarial | 16 | B1 | 0/48 | 48/48 | 48/48 | 0/48 |
+| adversarial | 16 | B2 | 0/48 | 48/48 | 48/48 | 0/48 |
+| adversarial | 16 | full | 0/48 | 48/48 | 32/48 | 16/48 |
+| heldout_original | 10 | B1 | 17/30 | 11/24 | 11/24 | 0/24 |
+| heldout_original | 10 | B2 | 8/30 | 17/24 | 17/24 | 0/24 |
+| heldout_original | 10 | full | 4/30 | 18/24 | 14/24 | 6/24 |
 
-No held-out set was run, reread or rescored in this audit. Earlier held-out results remain historical and unchanged. Native reviews, phone/handwriting evidence and student classifier signals remain separate outstanding work; no independent student coding claim is added. Raw outputs, translations, usage, timing, strict and limited-equivalence tables are in results/m4-verification/{dev,adversarial}.{json,md}.
+B1/B2/full have zero unavailable methods in these reports. Original all-field full false verification is 5/40; current dev is 0/160 and adversarial is 0/64. Correct values can still be unverified; safety and coverage must be read together.
 
-Prior checkpoint history is archived intact in docs/history/EVIDENCE-before-verification.md and docs/history/FAILURES-before-verification.md. AI_USAGE.md identifies generated code/tests. This file reports only current measured numbers; no contest narrative is written.
+## Per-field scores
 
+| Version / set | Method | Field | Present accuracy | Correct verified | False verified | Abstain when present | Correct MISSING |
+|---|---|---|---|---|---|---|---|
+| dev | B1 | deadline | 34/34 | 34/34 | 2/40 | 0/34 | 4/4 |
+| dev | B1 | amount_due | 20/20 | 20/20 | 0/40 | 0/20 | 20/20 |
+| dev | B1 | required_action | 38/38 | 38/38 | 0/40 | 0/38 | 2/2 |
+| dev | B1 | contact | 36/38 | 36/38 | 2/40 | 0/38 | 2/2 |
+| dev | B2 | deadline | 34/34 | 34/34 | 2/40 | 0/34 | 4/4 |
+| dev | B2 | amount_due | 20/20 | 20/20 | 0/40 | 0/20 | 20/20 |
+| dev | B2 | required_action | 38/38 | 38/38 | 0/40 | 0/38 | 2/2 |
+| dev | B2 | contact | 36/38 | 36/38 | 0/40 | 2/38 | 2/2 |
+| dev | full | deadline | 34/34 | 34/34 | 0/40 | 0/34 | 4/4 |
+| dev | full | amount_due | 20/20 | 0/20 | 0/40 | 20/20 | 20/20 |
+| dev | full | required_action | 38/38 | 38/38 | 0/40 | 0/38 | 2/2 |
+| dev | full | contact | 36/38 | 35/38 | 0/40 | 3/38 | 2/2 |
+| adversarial | B1 | deadline | 16/16 | 16/16 | 0/16 | 0/16 | N/A |
+| adversarial | B1 | amount_due | 16/16 | 16/16 | 0/16 | 0/16 | N/A |
+| adversarial | B1 | required_action | 16/16 | 16/16 | 0/16 | 0/16 | N/A |
+| adversarial | B1 | contact | 16/16 | 16/16 | 0/16 | 0/16 | N/A |
+| adversarial | B2 | deadline | 16/16 | 16/16 | 0/16 | 0/16 | N/A |
+| adversarial | B2 | amount_due | 16/16 | 16/16 | 0/16 | 0/16 | N/A |
+| adversarial | B2 | required_action | 16/16 | 16/16 | 0/16 | 0/16 | N/A |
+| adversarial | B2 | contact | 16/16 | 16/16 | 0/16 | 0/16 | N/A |
+| adversarial | full | deadline | 16/16 | 16/16 | 0/16 | 0/16 | N/A |
+| adversarial | full | amount_due | 16/16 | 0/16 | 0/16 | 16/16 | N/A |
+| adversarial | full | required_action | 16/16 | 16/16 | 0/16 | 0/16 | N/A |
+| adversarial | full | contact | 16/16 | 16/16 | 0/16 | 0/16 | N/A |
+| heldout_original | B1 | deadline | 4/7 | 4/7 | 6/10 | 0/7 | 0/2 |
+| heldout_original | B1 | amount_due | 6/7 | 6/7 | 2/10 | 0/7 | 2/3 |
+| heldout_original | B1 | required_action | 1/10 | 1/10 | 9/10 | 0/10 | N/A |
+| heldout_original | B1 | contact | 7/10 | 7/10 | 3/10 | 0/10 | N/A |
+| heldout_original | B2 | deadline | 4/7 | 4/7 | 4/10 | 0/7 | 2/2 |
+| heldout_original | B2 | amount_due | 6/7 | 6/7 | 1/10 | 0/7 | 3/3 |
+| heldout_original | B2 | required_action | 7/10 | 7/10 | 3/10 | 0/10 | N/A |
+| heldout_original | B2 | contact | 9/10 | 9/10 | 1/10 | 0/10 | N/A |
+| heldout_original | full | deadline | 5/7 | 3/7 | 0/10 | 4/7 | 2/2 |
+| heldout_original | full | amount_due | 6/7 | 4/7 | 1/10 | 2/7 | 3/3 |
+| heldout_original | full | required_action | 7/10 | 7/10 | 3/10 | 0/10 | N/A |
+| heldout_original | full | contact | 9/10 | 9/10 | 1/10 | 0/10 | N/A |
 
-## Authorized ablation follow-up
+## Validator-group ablation
 
-| Mode | Dev critical false verified | Adversarial critical false verified |
+| Disabled validator group | Dev critical false verified | Adversarial critical false verified |
 |---|---|---|
 | full | 0/120 | 0/48 |
 | without_action_completeness | 0/120 | 0/48 |
@@ -63,4 +83,52 @@ Prior checkpoint history is archived intact in docs/history/EVIDENCE-before-veri
 | without_text_copy | 0/120 | 0/48 |
 | without_human_amount_review | 0/120 | 0/48 |
 
-Full tables, per-field accuracy, abstain/MISSING denominators, raw scored records, commands and current 407 Python / 17 JavaScript test outputs: results/m4-ablations/. These are deterministic replays of the latest saved live proposals, not new model runs. All seven field-validator groups plus the separate human-review gate are measured. The held-out set and historical freeze remain untouched.
+The ablation uses current checks with saved dev/adversarial proposals and refuses full-reference value/status/normalization drift. All reference records matched. No model/OCR calls are made. Schema checks, unknown-type abstention, null handling and later explanation guards are not disabled. Date parsing, equality, conflicting obligations and relative anchors are one named date-validation group; individual subchecks are not separately ablated.
+
+Human amount-review removal raises current correct-verified critical coverage from 72/92 to 92/92 (dev) and 32/48 to 48/48 (adversarial). This is a counterfactual gate removal, not evidence of a person's review or corrected OCR. Source/money/context checks can overlap; an unchanged row is not proof of redundancy. Exact per-field and abstention tables, raw scores and the 16 new regression controls are linked in results/m4-ablations/REPORT.md.
+
+## Translation outcomes
+
+The following are recorded full-pipeline mechanical-check outcomes. They are not human translation ratings. Number/glossary passes can be vacuous on all-missing notices. Each cell counts requested outputs, not independent users/documents.
+
+| Version / set | Spanish outputs accepted / requested | Spanish English fallback | Tagalog outputs accepted / requested | Tagalog English fallback |
+|---|---|---|---|---|
+| Current dev | 38/40 | 2/40 | 31/40 | 9/40 |
+| Current adversarial | 16/16 | 0/16 | 16/16 | 0/16 |
+| Original held-out | 7/10 | 3/10 | 7/10 | 3/10 |
+
+Source tables: results/m4-verification/dev.md, results/m4-verification/adversarial.md and results/heldout-final.md. Glossaries remain unreviewed; a checked translation can faithfully repeat an extraction error.
+
+## Verification evidence
+
+| Claim | Evidence | Boundary |
+|---|---|---|
+| 407 Python tests pass | results/m4-ablations/clean-pytest.txt | Clean implementation checkout 81661e4; one dependency deprecation warning |
+| 17 JavaScript tests pass | results/m4-ablations/clean-node.txt | Node/controller tests, not physical-phone acceptance |
+| Fresh pinned install and app startup | results/m4-verification/install-arm.txt and commands.md | Fresh ARM Python 3.12.14 install; stopped Intel build not counted as success |
+| Refactored clean app smoke passes | results/m4-ablations/app-smoke.txt | HTTP shell/read/extract/explain success, no-store, no new notice files; unknown-type/static output |
+| Missing source remains unverified | tests/test_m4_audit.py::test_absent_source_snippet_can_never_verify | Five field types; generated synthetic cases |
+| No deadline is invented in tested absent cases | tests/test_m4_audit.py | Includes issue-date-as-deadline rejection; not a universal semantic guarantee |
+| Extra explanation number rejected | tests/test_explanation.py::test_bad_english_number_regenerates_once_then_template_fallback | Injected $999.00 rejected and excluded from returned template |
+| Bad translation falls back to English | tests/test_explanation.py::test_bad_translation_number_falls_back_to_english | Synthetic mocked failure controls for es/tl |
+| Application privacy paths tested | results/m4-verification/targeted-tests.txt and privacy-grep.txt; results/m4-ablations/privacy-grep.txt | 25 targeted cases; tested logs lack sentinel/filename; vendor/host/provider limits disclosed |
+| Individual switches are isolated and unavailable to requests | tests/test_ablations.py | Seven validator groups and separate human gate; 16 tests including replay/refusal controls |
+
+## Known limits
+
+- **Handwriting:** no measured handwriting acceptance result. Printed synthetic documents do not establish handwriting reliability.
+- **Poor photos:** dev uses generated clean/degraded variants; no representative real-phone capture or mobile-browser acceptance study. Blur, glare, cropping and tiny text can still produce plausible wrong OCR.
+- **Classification:** all four production signal lists in `backend/classifier/signals.py` are empty. Automatic classification returns unknown; the measured pipeline uses explicit fixture type selection. This is not automatic type-classification accuracy.
+- **Amounts:** current unattended evaluation withholds unreviewed amounts. All 20 present dev amounts and all 16 present adversarial amounts remain unverified. Human confirmation can still miss an OCR error; matching the text does not authenticate the photo or obligation.
+- **Translation:** Spanish and Tagalog glossary files are unreviewed. Number/glossary/back-translation checks are mechanical safeguards, not native-speaker or legal-language approval. A correct translation can repeat a wrong extracted fact.
+- **Read-aloud:** browser/device voices determine language availability. Desktop checks do not establish working Spanish/Tagalog voices on a judge's phone. Physical-phone testing remains outstanding.
+- **Scope:** one page per request. Extra pages are not merged. English field-role, instruction and action-completeness rules are bounded heuristics; unsupported date formats and multiple obligations can cause abstention or missed distinctions.
+- **Help and deployment:** configured external help resources remain TODO in `backend/languages/help.json`; no live HTTPS deployment is verified. Host secrets, request rate limiting, origin policy, deployed quota behavior and real-device acceptance remain later milestone checks.
+- **Privacy:** tested normal app paths use in-memory notice processing and no-store API responses; these tests do not prove secure RAM erasure, OS/library behavior, host-log policy or provider retention. Explicit synthetic evaluation reports intentionally persist test data outside the served frontend. Vendored HEIC diagnostics are disclosed in the privacy audit.
+
+## Authoritative artifacts
+
+- Current live records: [dev](../results/m4-verification/dev.json), [adversarial](../results/m4-verification/adversarial.json); matching .md files retain original printed outputs/settings.
+- Current replay: [dev ablations](../results/m4-ablations/dev.json), [adversarial ablations](../results/m4-ablations/adversarial.json), [protocol and commands](../results/m4-ablations/REPORT.md).
+- Original frozen run: [raw results](../results/heldout-final.json), [protocol](../results/heldout-protocol.json), [complete Step 1 results](../HELDOUT_RESULTS.md). Raw hashes were verified at Step 1 against the recorded protocol.
+- Historical notes and superseded status statements are retained in docs/history. No new freeze tag, live URL, independent final held-out score, native review or mobile acceptance is claimed.
