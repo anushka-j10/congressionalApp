@@ -34,3 +34,11 @@ node --test tests/*.mjs: 29 passed.
 81 browser layout checks: blue-layout-checks.json. No horizontal overflow; centered visible h1 headings; measured visible controls >=44px.
 Sampled text contrast ratios: blue-contrast.json, all four pairs >4.5:1.
 Synthetic browser fixtures only, not a complete accessibility or physical-device audit.
+
+Opening title update:
+node --test tests/*.mjs: 33 passed.
+../../work/m4-audit-venv/bin/python -m pytest -q: 422 passed, one dependency warning.
+Automatic intro -> welcome verified in browser at 320, 390, 430 CSS px; title-intro-checks.json.
+Continue and returning from tutorial verified; title does not replay during back-navigation.
+Reduced-motion clock path unit-tested; OS setting not toggled.
+Screenshot title-wordmark.png uses the labeled static title design preview.

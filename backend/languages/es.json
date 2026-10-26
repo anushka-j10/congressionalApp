@@ -177,7 +177,8 @@
     "tutorial_3_title": "Encuentra los datos clave",
     "tutorial_3_body": "Consulta la fecha límite, el importe y los próximos pasos. Abre una fuente para compararla con el aviso. Si algo no se puede verificar, te lo indicaremos.",
     "tutorial_4_title": "Lee o escucha",
-    "tutorial_4_body": "Elige inglés, español o tagalo, o usa Leer en voz alta si hay una voz compatible. Las traducciones no están revisadas; verifica los datos importantes con la oficina emisora."
+    "tutorial_4_body": "Elige inglés, español o tagalo, o usa Leer en voz alta si hay una voz compatible. Las traducciones no están revisadas; verifica los datos importantes con la oficina emisora.",
+    "intro_continue": "Continuar"
   },
   "reader_warning_patterns": [
     {

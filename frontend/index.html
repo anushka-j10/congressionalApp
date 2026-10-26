@@ -8,6 +8,15 @@
   <script src="/app.js" type="module"></script><script src="/onboarding.js" type="module"></script><title>Notice Decoder</title>
 </head>
 <body>
+<section id="brand-intro" class="brand-intro" aria-labelledby="brand-title">
+  <div class="brand-lockup">
+    <div class="brand-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+    <h1 id="brand-title" class="brand-wordmark"><span class="brand-notice">Notice</span> <span class="brand-decoder">Decoder<span class="brand-period" aria-hidden="true">.</span></span></h1>
+    <div class="brand-rule" aria-hidden="true"></div>
+  </div>
+  <button id="skip-intro" class="text-button" type="button" data-i18n="intro_continue">Continue</button>
+</section>
+<div id="app-shell" hidden>
 <header class="topbar"><a href="#welcome" aria-label="Notice Decoder home">Notice Decoder</a><div class="language-control"><label for="language-picker" data-i18n="language">Language</label>
   <select id="language-picker"><option value="en">English</option></select></div></header>
 <main id="main">
@@ -89,5 +98,6 @@
 </main>
 <footer class="app-footer"><button id="open-story" class="text-button story-link" type="button" aria-haspopup="dialog" data-i18n="story_title">Our story</button></footer>
 <dialog id="story-dialog" aria-labelledby="story-title"><button id="close-story" class="text-button story-close" type="button" data-i18n="close_story">Close story</button><section class="our-story" aria-labelledby="story-title"><h2 id="story-title" data-i18n="story_title">Our story</h2><p data-i18n="story_origin">After a health emergency, Anushka Jain’s parents asked her to help read a parking ticket. Even as a native English speaker, she struggled to understand it and figure out what to do next.</p><p data-i18n="story_purpose">Growing up in Jersey City’s vibrant, diverse community, Anushka saw how confusing notices could create barriers for many families. That experience inspired her to create Notice Decoder, using machine learning to make notices easier to understand.</p></section></dialog>
+</div>
 <noscript><p class="noscript">Enable JavaScript to prepare and read a notice photo.</p></noscript>
 </body></html>

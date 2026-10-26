@@ -1,0 +1,32 @@
+[
+  {
+    "appHidden": true,
+    "height": 820,
+    "scrollWidth": 320,
+    "skipHeight": 44,
+    "width": 320,
+    "wordmarkWidth": 178.3828125,
+    "introHidden": true,
+    "shellHidden": false
+  },
+  {
+    "appHidden": true,
+    "height": 820,
+    "scrollWidth": 390,
+    "skipHeight": 44,
+    "width": 390,
+    "wordmarkWidth": 202.203125,
+    "introHidden": true,
+    "shellHidden": false
+  },
+  {
+    "appHidden": true,
+    "height": 820,
+    "scrollWidth": 430,
+    "skipHeight": 44,
+    "width": 430,
+    "wordmarkWidth": 222.2890625,
+    "introHidden": true,
+    "shellHidden": false
+  }
+]

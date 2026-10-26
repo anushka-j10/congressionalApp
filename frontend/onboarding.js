@@ -3,6 +3,24 @@ import { t } from '/i18n.js';
 const flowNode = id => document.getElementById(id);
 const flowScreens = ['welcome-screen', 'tutorial-screen', 'notice-screen'];
 let tutorialStep = 1;
+let introShowing = !window.location.hash;
+let introTimer = null;
+let exitTimer = null;
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+function finishIntro(focus = true) {
+  window.clearTimeout(introTimer);
+  window.clearTimeout(exitTimer);
+  introShowing = false;
+  flowNode('brand-intro').hidden = true;
+  flowNode('app-shell').hidden = false;
+  renderFlow(focus);
+}
+function fadeIntro() {
+  if (!introShowing) return;
+  if (motionPreference.matches) { finishIntro(); return; }
+  flowNode('brand-intro').dataset.leaving = 'true';
+  exitTimer = window.setTimeout(() => finishIntro(), 240);
+}
 function renderFlow(focus = true) {
   const hash = window.location.hash;
   const match = /^#tutorial\/([1-4])$/.exec(hash);
@@ -17,7 +35,7 @@ function renderFlow(focus = true) {
     flowNode('tutorial-screen').dataset.step = String(tutorialStep);
     for (let i = 1; i <= 4; i++) flowNode(`tutorial-art-${i}`).hidden = i !== tutorialStep;
   }
-  if (focus) flowNode(screen === 'notice-screen' ? 'reader-title' : screen === 'tutorial-screen' ? 'tutorial-title' : 'welcome-title').focus();
+  if (focus && !introShowing) flowNode(screen === 'notice-screen' ? 'reader-title' : screen === 'tutorial-screen' ? 'tutorial-title' : 'welcome-title').focus();
 }
 const navigateFlow = hash => { window.location.hash = hash; };
 flowNode('get-started').addEventListener('click', () => navigateFlow('#tutorial/1'));
@@ -25,10 +43,16 @@ flowNode('replay-tutorial').addEventListener('click', () => navigateFlow('#tutor
 flowNode('skip-tutorial').addEventListener('click', () => navigateFlow('#notice'));
 flowNode('tutorial-next').addEventListener('click', () => navigateFlow(tutorialStep === 4 ? '#notice' : `#tutorial/${tutorialStep + 1}`));
 flowNode('tutorial-back').addEventListener('click', () => navigateFlow(tutorialStep === 1 ? '#welcome' : `#tutorial/${tutorialStep - 1}`));
-window.addEventListener('hashchange', () => renderFlow());
+window.addEventListener('hashchange', () => { if (introShowing) finishIntro(); else renderFlow(); });
 window.addEventListener('notice-language', () => renderFlow(false));
 const storyDialog = flowNode('story-dialog');
 flowNode('open-story').addEventListener('click', () => storyDialog.showModal());
 flowNode('close-story').addEventListener('click', () => storyDialog.close());
 storyDialog.addEventListener('close', () => flowNode('open-story').focus());
-renderFlow(false);
+flowNode('skip-intro').addEventListener('click', () => finishIntro());
+flowNode('brand-intro').addEventListener('keydown', event => { if (event.key === 'Escape') finishIntro(); });
+window.addEventListener('pagehide', () => finishIntro(false));
+if (introShowing) {
+  renderFlow(false);
+  introTimer = window.setTimeout(fadeIntro, motionPreference.matches ? 1200 : 2200);
+} else finishIntro(false);

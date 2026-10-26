@@ -177,7 +177,8 @@
     "tutorial_3_title": "Find the key details",
     "tutorial_3_body": "See the deadline, amount and next steps. Open a source to compare it with the notice. If something cannot be verified, we will flag it for you.",
     "tutorial_4_title": "Read or listen",
-    "tutorial_4_body": "Choose English, Spanish or Tagalog, or listen with Read aloud when a matching voice is available. Translations are unreviewed; verify important details with the issuing office."
+    "tutorial_4_body": "Choose English, Spanish or Tagalog, or listen with Read aloud when a matching voice is available. Translations are unreviewed; verify important details with the issuing office.",
+    "intro_continue": "Continue"
   },
   "reader_warning_patterns": [
     {

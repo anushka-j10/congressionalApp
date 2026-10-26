@@ -186,3 +186,27 @@ body { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: col
 @keyframes speak { 0%,100% { transform: scaleY(1); } 25%,75% { transform: scaleY(.45); } 50% { transform: scaleY(1.15); } }
 @media (max-height: 650px) { .welcome-art { max-width: 140px; margin-bottom: 12px; } .tutorial-art { max-width: 150px; margin-bottom: 12px; } .tutorial-screen > p { min-height: 0; } .tutorial-dots { margin: 14px 0; } .tutorial-nav { margin-top: 14px; } }
 @media (prefers-reduced-motion: reduce) { .scan-line, .review-highlight, .review-tick, .result-row, .voice-line { animation: none; } .scan-line { opacity: 0; } }
+
+/* A brief wordmark reveal on a fresh launch; deep links open their screen directly. */
+#app-shell { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; width: 100%; }
+.brand-intro { min-height: 100vh; min-height: 100svh; padding: max(24px, env(safe-area-inset-top)) 24px max(20px, env(safe-area-inset-bottom)); display: flex; flex-direction: column; align-items: center; justify-content: center; background: #f4f7fc; opacity: 1; transition: opacity 240ms ease; }
+.brand-intro[data-leaving="true"] { opacity: 0; }
+.brand-lockup { margin-block: auto; width: max-content; max-width: 100%; padding-block: 28px; }
+.brand-wordmark { text-align: left; margin: 0; font-size: clamp(48px, 14vw, 76px); line-height: .98; letter-spacing: -.065em; }
+.brand-notice, .brand-decoder { display: block; }
+.brand-notice { font-weight: 500; color: #172b4d; animation: brand-arrive 600ms ease-out both; }
+.brand-decoder { font-weight: 800; color: #205bb4; animation: brand-uncover 800ms 180ms cubic-bezier(.2,.7,.3,1) both; }
+.brand-period { color: #172b4d; }
+.brand-lines { display: grid; gap: 5px; margin-bottom: 24px; width: 38px; }
+.brand-lines span { height: 3px; border-radius: 3px; background: #91a6bd; animation: brand-arrive 450ms ease-out both; }
+.brand-lines span:nth-child(2) { width: 28px; animation-delay: 80ms; }
+.brand-lines span:nth-child(3) { width: 18px; animation-delay: 160ms; }
+.brand-rule { height: 4px; width: 48px; background: #205bb4; border-radius: 4px; margin-top: 26px; transform-origin: left; animation: brand-rule 600ms 500ms ease-out both; }
+#skip-intro { min-width: 120px; }
+@keyframes brand-arrive { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes brand-uncover { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes brand-rule { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (prefers-reduced-motion: reduce) {
+  .brand-intro { transition: none; }
+  .brand-notice, .brand-decoder, .brand-lines span, .brand-rule { animation: none; }
+}
