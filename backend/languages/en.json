@@ -152,7 +152,9 @@
     "reader_amount": "amount",
     "reader_id": "ID",
     "photo_alt": "Your prepared notice photo",
-    "amount_confirmation": "I compared every printed amount with the original photo and corrected any wrong digits, or no amount is shown. Matching reader results can still be wrong."
+    "amount_confirmation": "I compared every printed amount with the original photo and corrected any wrong digits, or no amount is shown. Matching reader results can still be wrong.",
+    "rate_limit_error": "The demo is busy or has reached its request limit. Wait a minute and try again; the hourly limit may take longer to reset.",
+    "service_unavailable_error": "The AI service is unavailable or its usage quota has been reached. Please try later or contact the app owner. No result was guessed."
   },
   "reader_warning_patterns": [
     {

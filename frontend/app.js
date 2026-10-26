@@ -210,7 +210,7 @@ readButton.addEventListener("click", async () => {
     const response = await fetch("/api/read", { method: "POST", body, signal: controller.signal, cache: "no-store" });
     const data = await response.json();
     if (generation !== requestGeneration) return;
-    if (!response.ok) throw new Error(typeof data.detail === "string" ? data.detail : "We could not read this photo. Please try again.");
+    if (!response.ok) throw Object.assign(new Error("Request failed"), { status: response.status });
     lastReading = data;
     showReading(data);
     textEditor.value = data.text;
@@ -221,7 +221,7 @@ readButton.addEventListener("click", async () => {
   } catch (error) {
     if (generation !== requestGeneration) return;
     readStatus.textContent = "";
-    message(readError, error?.name === 'AbortError' ? 'read_timeout' : error instanceof TypeError ? 'connection_error' : 'read_error');
+    message(readError, error?.status === 429 ? 'rate_limit_error' : error?.status === 503 ? 'service_unavailable_error' : error?.name === 'AbortError' ? 'read_timeout' : error instanceof TypeError ? 'connection_error' : 'read_error');
   } finally {
     clearTimeout(timeout);
     if (generation === requestGeneration) {
@@ -280,7 +280,7 @@ confirmButton.addEventListener("click", async () => {
     });
     const data = await response.json();
     if (generation !== requestGeneration) return;
-    if (!response.ok) throw new Error(typeof data.detail === "string" ? data.detail : "Extraction could not finish. Try again.");
+    if (!response.ok) throw Object.assign(new Error("Request failed"), { status: response.status });
     renderFields(data, confirmedText, document.querySelector("#field-cards"),
       document.querySelector("#field-source"), document.querySelector("#field-warnings"));
     message(document.querySelector("#field-status"), selectedType === "unknown" ? "unknown_skipped" : "extract_done");
@@ -291,7 +291,7 @@ confirmButton.addEventListener("click", async () => {
     document.querySelector("#field-status").textContent = "";
     // No partial cards remain after a timeout, provider error, or bad JSON.
     document.querySelector("#field-cards").textContent = "";
-    message(document.querySelector("#field-error"), error?.name === 'AbortError' ? 'extract_timeout' : error instanceof TypeError ? 'connection_error' : 'extract_error');
+    message(document.querySelector("#field-error"), error?.status === 429 ? 'rate_limit_error' : error?.status === 503 ? 'service_unavailable_error' : error?.name === 'AbortError' ? 'extract_timeout' : error instanceof TypeError ? 'connection_error' : 'extract_error');
   } finally {
     clearTimeout(timeout);
     if (generation === requestGeneration) {

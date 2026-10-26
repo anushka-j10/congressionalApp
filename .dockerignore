@@ -1,0 +1,11 @@
+**
+!requirements.txt
+!backend/
+!backend/**
+!frontend/
+!frontend/**
+**/__pycache__/
+**/*.pyc
+**/.env*
+**/*.key
+**/*.pem

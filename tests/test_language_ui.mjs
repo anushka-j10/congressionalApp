@@ -59,7 +59,7 @@ test('page leave erases the explanation and prevents late speech',async()=>{
 test('a network failure never displays partial translated output',async()=>{
   const app=setup();app.context.setExplanationSource(app.data,'Synthetic original');
   app.pending.shift().resolve({ok:false,status:503,json:async()=>({detail:'synthetic error'})});await tick();
-  assert.equal(app.shown.length,0);assert.equal(app.node('explanation-error').textContent,'explain_error');
+  assert.equal(app.shown.length,0);assert.equal(app.node('explanation-error').textContent,'service_unavailable_error');
 });
 
 test('voice selection refuses another language and supports configured aliases',()=>{
@@ -96,7 +96,7 @@ for (const failure of ['timeout','rate-limit','malformed-json']) {
       {ok:true,json:async()=>{const error=new Error('PRIVATE-STACK-PROVIDER');error.name=failure==='timeout'?'AbortError':'SyntaxError';throw error;}});
     await tick();
     assert.equal(app.shown.length,0);
-    assert.equal(app.node('explanation-error').textContent,'explain_error');
+    assert.equal(app.node('explanation-error').textContent,failure==='rate-limit'?'rate_limit_error':'explain_error');
     assert.equal(app.node('explanation-error').textContent.includes('PRIVATE'),false);
     assert.equal(app.spoken.length,0);
   });

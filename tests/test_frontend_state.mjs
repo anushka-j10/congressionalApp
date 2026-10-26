@@ -177,3 +177,22 @@ test('unchecking amount review removes previous verified cards and explanation',
   assert.equal(app.el('field-cards').textContent,'');
   assert.equal(app.el('confirm-text').disabled,true);
 });
+
+for (const [status, key] of [[429, 'rate_limit_error'], [503, 'service_unavailable_error']]) {
+  test(`read ${status} shows a clear fixed service message without echoing server content`, async () => {
+    const app = await setup(); await app.photo();
+    const task = app.el('read-photo').emit('click');
+    app.pending.shift().resolve({ok:false,status,json:async()=>({detail:'PRIVATE PROVIDER BODY'})});
+    await task;
+    assert.equal(app.el('read-error').textContent,key);
+    assert.equal(app.el('read-photo').disabled,false);
+  });
+  test(`extract ${status} shows a clear fixed service message and no partial cards`, async () => {
+    const app = await setup(); await app.read();
+    const task = app.extract();
+    app.pending.shift().resolve({ok:false,status,json:async()=>({detail:'PRIVATE PROVIDER BODY'})});
+    await task;
+    assert.equal(app.el('field-error').textContent,key);
+    assert.equal(app.el('field-cards').textContent,'');
+  });
+}

@@ -156,7 +156,9 @@
     "reader_amount": "halaga",
     "reader_id": "ID",
     "photo_alt": "Inihandang larawan ng iyong abiso",
-    "amount_confirmation": "Inihambing ko ang bawat nakalimbag na halaga sa orihinal na larawan at itinama ang mga maling numero, o walang halagang nakalagay. Maaaring mali pa rin ang magkatugmang pagbasa."
+    "amount_confirmation": "Inihambing ko ang bawat nakalimbag na halaga sa orihinal na larawan at itinama ang mga maling numero, o walang halagang nakalagay. Maaaring mali pa rin ang magkatugmang pagbasa.",
+    "rate_limit_error": "Abala ang demo o naabot na ang limitasyon ng mga kahilingan. Maghintay ng isang minuto at subukan muli; maaaring mas matagal bago ma-reset ang limitasyon kada oras.",
+    "service_unavailable_error": "Hindi available ang serbisyo ng AI o naabot na ang quota nito. Subukan mamaya o makipag-ugnayan sa may-ari ng app. Walang hinulaang resulta."
   },
   "reader_warning_patterns": [
     {

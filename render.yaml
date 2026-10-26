@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: notice-decoder
+    runtime: docker
+    plan: free
+    branch: fix/notice-reliability
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    autoDeployTrigger: "off"
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: TEXT_READER
+        value: preprocessed
+      - key: TESSERACT_CMD
+        value: /usr/bin/tesseract
+      - key: OPENAI_MODEL
+        value: gpt-5.4-mini-2026-03-17
+      - key: OPENAI_API_KEY
+        sync: false

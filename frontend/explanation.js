@@ -78,13 +78,13 @@ async function generate() {
       signal: localController.signal, cache: 'no-store' });
     const result = await response.json();
     if (version !== generation) return;
-    if (!response.ok) throw new Error(response.status === 409 ? 'receipt' : 'explain');
+    if (!response.ok) throw Object.assign(new Error(response.status === 409 ? 'receipt' : 'explain'), { status: response.status });
     show(result);
     document.querySelector('#explanation-status').textContent = '';
   } catch (error) {
     if (version !== generation) return;
     document.querySelector('#explanation-status').textContent = '';
-    document.querySelector('#explanation-error').textContent = t(error.message === 'receipt' ? 'receipt_error' : 'explain_error');
+    document.querySelector('#explanation-error').textContent = t(error?.status === 429 ? 'rate_limit_error' : error?.status === 503 ? 'service_unavailable_error' : error.message === 'receipt' ? 'receipt_error' : 'explain_error');
     document.querySelector('#translation-note').textContent = t('english_pending');
   } finally {
     clearTimeout(timeout);

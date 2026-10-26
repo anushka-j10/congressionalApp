@@ -128,3 +128,8 @@ Ablations replay identical saved proposals/text/answers through seven field-vali
 - Older README/design/evidence/failure snapshots are preserved in [docs/history](docs/history). Their milestone-local status statements are historical, not current acceptance claims.
 
 Application source is under backend/ and frontend/; tests are under tests/. The server serves frontend/ only. Keep .env private and access/body logging disabled. Normal notice requests are tested for in-memory processing and no-store responses; synthetic evaluation artifacts are intentionally saved outside the public frontend. See the privacy findings in [the verification report](results/m4-verification/REPORT.md).
+
+
+## Deployment preparation
+
+[DEPLOYMENT.md](DEPLOYMENT.md) gives the free Render setup, exact server-only environment variables, security controls and numbered dashboard steps. Deployment-boundary tests now pass: 422 Python and 21 JavaScript checks (results/deployment/). A live HTTPS URL and real-phone acceptance are still pending; these local checks do not claim either.

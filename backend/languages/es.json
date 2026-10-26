@@ -152,7 +152,9 @@
     "reader_amount": "monto",
     "reader_id": "identificador",
     "photo_alt": "Su foto del aviso preparada",
-    "amount_confirmation": "Comparé cada importe impreso con la foto original y corregí los dígitos incorrectos, o no aparece ningún importe. Las lecturas coincidentes aún pueden ser incorrectas."
+    "amount_confirmation": "Comparé cada importe impreso con la foto original y corregí los dígitos incorrectos, o no aparece ningún importe. Las lecturas coincidentes aún pueden ser incorrectas.",
+    "rate_limit_error": "La demostración está ocupada o alcanzó su límite de solicitudes. Espera un minuto e inténtalo de nuevo; el límite por hora puede tardar más en restablecerse.",
+    "service_unavailable_error": "El servicio de IA no está disponible o alcanzó su cuota de uso. Inténtalo más tarde o contacta a la persona responsable de la app. No se adivinó ningún resultado."
   },
   "reader_warning_patterns": [
     {

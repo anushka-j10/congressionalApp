@@ -13,6 +13,8 @@ from pathlib import Path
 
 from fastapi import Depends, FastAPI, HTTPException, Request
 from fastapi.staticfiles import StaticFiles
+from starlette.responses import JSONResponse
+from backend.deployment import DeploymentPolicy, AnalysisBudget, ANALYSIS_PATHS
 from starlette.concurrency import run_in_threadpool
 
 from pydantic import ValidationError
@@ -54,11 +56,41 @@ class Settings:
 app = FastAPI(title="Notice Decoder", docs_url=None, redoc_url=None)
 app.state.settings = Settings.from_environment()
 app.state.receipt_secret = secrets.token_bytes(32)
+app.state.deployment = DeploymentPolicy.from_environment()
+app.state.analysis_budget = AnalysisBudget(app.state.deployment)
 
 
 @app.middleware("http")
 async def private_api_responses(request, call_next):
-    response = await call_next(request)
+    policy = app.state.deployment
+    analysis = request.url.path.rstrip('/') in ANALYSIS_PATHS
+    origin = request.headers.get('origin')
+    acquired = False
+    response = None
+    if policy.enabled and analysis:
+        if origin is not None and origin != policy.origin:
+            response = JSONResponse({'detail': 'Open Notice Decoder at its published address to analyze a notice.'}, status_code=403)
+        elif request.method == 'OPTIONS':
+            headers = {h.strip().lower() for h in request.headers.get('access-control-request-headers', '').split(',') if h.strip()}
+            if origin != policy.origin or request.headers.get('access-control-request-method') != 'POST' or not headers <= {'content-type', 'x-notice-language'}:
+                response = JSONResponse({'detail': 'This browser request is not allowed.'}, status_code=403)
+            else:
+                response = JSONResponse({}, headers={'Access-Control-Allow-Methods': 'POST',
+                    'Access-Control-Allow-Headers': 'Content-Type, X-Notice-Language'})
+        elif request.method == 'POST':
+            acquired = app.state.analysis_budget.acquire()
+            if not acquired:
+                response = JSONResponse({'detail': 'The demo is busy or has reached its request limit. Please wait a minute and try again; the hourly limit may take longer to reset.'}, status_code=429,
+                                        headers={'Retry-After': '60'})
+    try:
+        if response is None:
+            response = await call_next(request)
+    finally:
+        if acquired:
+            app.state.analysis_budget.release()
+    if policy.enabled and analysis and origin == policy.origin:
+        response.headers['Access-Control-Allow-Origin'] = policy.origin
+        response.headers['Vary'] = 'Origin'
     if request.url.path.startswith("/api/"):
         response.headers["Cache-Control"] = "no-store"
     response.headers["X-Content-Type-Options"] = "nosniff"
