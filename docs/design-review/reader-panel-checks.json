@@ -1,0 +1,272 @@
+[
+  {
+    "state": "start",
+    "lang": "en",
+    "choosePhotoHeight": 52,
+    "height": 825,
+    "scrollWidth": 320,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 320
+  },
+  {
+    "state": "start",
+    "lang": "es",
+    "choosePhotoHeight": 52,
+    "height": 846,
+    "scrollWidth": 320,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 320
+  },
+  {
+    "state": "start",
+    "lang": "tl",
+    "choosePhotoHeight": 52,
+    "height": 846,
+    "scrollWidth": 320,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 320
+  },
+  {
+    "state": "review",
+    "lang": "en",
+    "choosePhotoHeight": 52,
+    "height": 2083,
+    "scrollWidth": 320,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 320
+  },
+  {
+    "state": "review",
+    "lang": "es",
+    "choosePhotoHeight": 52,
+    "height": 2125,
+    "scrollWidth": 320,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 320
+  },
+  {
+    "state": "review",
+    "lang": "tl",
+    "choosePhotoHeight": 52,
+    "height": 2216,
+    "scrollWidth": 320,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 320
+  },
+  {
+    "state": "results",
+    "lang": "en",
+    "choosePhotoHeight": 52,
+    "height": 2443,
+    "scrollWidth": 320,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 320
+  },
+  {
+    "state": "results",
+    "lang": "es",
+    "choosePhotoHeight": 52,
+    "height": 2464,
+    "scrollWidth": 320,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 320
+  },
+  {
+    "state": "results",
+    "lang": "tl",
+    "choosePhotoHeight": 52,
+    "height": 2546,
+    "scrollWidth": 320,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 320
+  },
+  {
+    "state": "start",
+    "lang": "en",
+    "choosePhotoHeight": 52,
+    "height": 825,
+    "scrollWidth": 390,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 390
+  },
+  {
+    "state": "start",
+    "lang": "es",
+    "choosePhotoHeight": 52,
+    "height": 846,
+    "scrollWidth": 390,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 390
+  },
+  {
+    "state": "start",
+    "lang": "tl",
+    "choosePhotoHeight": 52,
+    "height": 846,
+    "scrollWidth": 390,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 390
+  },
+  {
+    "state": "review",
+    "lang": "en",
+    "choosePhotoHeight": 52,
+    "height": 1948,
+    "scrollWidth": 390,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 390
+  },
+  {
+    "state": "review",
+    "lang": "es",
+    "choosePhotoHeight": 52,
+    "height": 1990,
+    "scrollWidth": 390,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 390
+  },
+  {
+    "state": "review",
+    "lang": "tl",
+    "choosePhotoHeight": 52,
+    "height": 2062,
+    "scrollWidth": 390,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 390
+  },
+  {
+    "state": "results",
+    "lang": "en",
+    "choosePhotoHeight": 52,
+    "height": 2331,
+    "scrollWidth": 390,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 390
+  },
+  {
+    "state": "results",
+    "lang": "es",
+    "choosePhotoHeight": 52,
+    "height": 2412,
+    "scrollWidth": 390,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 390
+  },
+  {
+    "state": "results",
+    "lang": "tl",
+    "choosePhotoHeight": 52,
+    "height": 2412,
+    "scrollWidth": 390,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 390
+  },
+  {
+    "state": "start",
+    "lang": "en",
+    "choosePhotoHeight": 52,
+    "height": 825,
+    "scrollWidth": 430,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 430
+  },
+  {
+    "state": "start",
+    "lang": "es",
+    "choosePhotoHeight": 52,
+    "height": 846,
+    "scrollWidth": 430,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 430
+  },
+  {
+    "state": "start",
+    "lang": "tl",
+    "choosePhotoHeight": 52,
+    "height": 846,
+    "scrollWidth": 430,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 430
+  },
+  {
+    "state": "review",
+    "lang": "en",
+    "choosePhotoHeight": 52,
+    "height": 1922,
+    "scrollWidth": 430,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 430
+  },
+  {
+    "state": "review",
+    "lang": "es",
+    "choosePhotoHeight": 52,
+    "height": 1943,
+    "scrollWidth": 430,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 430
+  },
+  {
+    "state": "review",
+    "lang": "tl",
+    "choosePhotoHeight": 52,
+    "height": 1994,
+    "scrollWidth": 430,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 430
+  },
+  {
+    "state": "results",
+    "lang": "en",
+    "choosePhotoHeight": 52,
+    "height": 2331,
+    "scrollWidth": 430,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 430
+  },
+  {
+    "state": "results",
+    "lang": "es",
+    "choosePhotoHeight": 52,
+    "height": 2352,
+    "scrollWidth": 430,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 430
+  },
+  {
+    "state": "results",
+    "lang": "tl",
+    "choosePhotoHeight": 52,
+    "height": 2386,
+    "scrollWidth": 430,
+    "smallControls": [],
+    "takePhotoHeight": 64,
+    "width": 430
+  }
+]

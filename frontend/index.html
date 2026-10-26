@@ -34,10 +34,11 @@
   <div class="tutorial-nav"><button id="tutorial-back" class="secondary" type="button" data-i18n="tutorial_back">Back</button><button id="tutorial-next" type="button">Next</button></div>
 </section>
 <div id="notice-screen" hidden>
-  <div class="reader-heading"><h1 id="reader-title" tabindex="-1" data-i18n="headline">Read a notice</h1><button id="replay-tutorial" class="text-button" type="button" data-i18n="how_it_works">How it works</button></div>
-  <section class="panel" aria-labelledby="photo-title">
+  <div class="reader-heading"><h1 id="reader-title" tabindex="-1" data-i18n="headline">Read a notice</h1></div>
+  <section class="panel photo-panel" aria-labelledby="photo-title">
     <h2 class="sr-only" id="photo-title" data-i18n="photo_title">Add a photo</h2>
-    <div class="photo-actions capture-actions"><button id="take-photo" type="button" ><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="7" width="26" height="20" rx="5"/><path d="m10 7 2-3h8l2 3"/><circle cx="16" cy="17" r="5"/></svg><span data-i18n="take_photo">Take photo</span></button><button id="choose-photo" type="button" class="secondary" ><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="24" height="24" rx="5"/><circle cx="11" cy="11" r="2"/><path d="m5 24 8-8 5 5 4-4 6 7"/></svg><span data-i18n="choose_photo">Choose a photo</span></button></div>
+    <div class="capture-workspace"><p class="capture-instruction" data-i18n="photo_help">Include the whole page with the words in focus.</p><div class="photo-actions capture-actions"><button id="take-photo" type="button" ><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="7" width="26" height="20" rx="5"/><path d="m10 7 2-3h8l2 3"/><circle cx="16" cy="17" r="5"/></svg><span data-i18n="take_photo">Take photo</span></button><button id="choose-photo" type="button" class="secondary" ><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="24" height="24" rx="5"/><circle cx="11" cy="11" r="2"/><path d="m5 24 8-8 5 5 4-4 6 7"/></svg><span data-i18n="choose_photo">Choose a photo</span></button></div>
+    </div>
     <input id="camera-input" type="file" accept="image/*,.heic,.heif" capture="environment" hidden>
     <input id="library-input" type="file" accept="image/*,.heic,.heif" hidden>
     <details class="photo-tips"><summary data-i18n="photo_tips">Photo tips and supported files</summary><p data-i18n="photo_help">Include the whole page with the words in focus.</p><p class="hint" data-i18n="upload_hint">JPEG, PNG, WebP, or HEIC · Up to 25 MB before preparation.</p></details>
@@ -90,6 +91,7 @@
     <p id="speech-note" role="status"></p><button id="retry-explanation" type="button" class="secondary" data-i18n="retry_explain">Try explanation again</button>
     <aside aria-labelledby="help-title"><h3 id="help-title" data-i18n="help_title">Get human help</h3><div id="help-contacts"></div></aside>
   </section>
+  <div class="reader-tools"><button id="replay-tutorial" class="text-button" type="button" data-i18n="how_it_works">How it works</button></div>
   <details class="install"><summary data-i18n="connection_install">App connection and installation</summary>
     <section class="panel" aria-labelledby="setup-title"><h2 id="setup-title" data-i18n="connection_title">API connection</h2><div class="connection"><span class="status-dot" aria-hidden="true"></span><p id="api-status" role="status" data-i18n="checking">Checking the connection…</p></div><button id="check-connection" type="button" data-i18n="check_connection">Check connection</button><p id="offline-status" role="status"></p></section>
     <section class="install" aria-labelledby="install-title"><h2 id="install-title" data-i18n="install_title">Keep it on your phone</h2><p data-i18n="install_help">On HTTPS, use Install app or Add to Home Screen in your browser menu. On iPhone, use Safari’s Share menu.</p><p id="install-status" role="status"></p></section>

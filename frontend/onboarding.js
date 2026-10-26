@@ -4,22 +4,11 @@ const flowNode = id => document.getElementById(id);
 const flowScreens = ['welcome-screen', 'tutorial-screen', 'notice-screen'];
 let tutorialStep = 1;
 let introShowing = !window.location.hash;
-let introTimer = null;
-let exitTimer = null;
-const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 function finishIntro(focus = true) {
-  window.clearTimeout(introTimer);
-  window.clearTimeout(exitTimer);
   introShowing = false;
   flowNode('brand-intro').hidden = true;
   flowNode('app-shell').hidden = false;
   renderFlow(focus);
-}
-function fadeIntro() {
-  if (!introShowing) return;
-  if (motionPreference.matches) { finishIntro(); return; }
-  flowNode('brand-intro').dataset.leaving = 'true';
-  exitTimer = window.setTimeout(() => finishIntro(), 240);
 }
 function renderFlow(focus = true) {
   const hash = window.location.hash;
@@ -50,9 +39,5 @@ flowNode('open-story').addEventListener('click', () => storyDialog.showModal());
 flowNode('close-story').addEventListener('click', () => storyDialog.close());
 storyDialog.addEventListener('close', () => flowNode('open-story').focus());
 flowNode('skip-intro').addEventListener('click', () => finishIntro());
-flowNode('brand-intro').addEventListener('keydown', event => { if (event.key === 'Escape') finishIntro(); });
-window.addEventListener('pagehide', () => finishIntro(false));
-if (introShowing) {
-  renderFlow(false);
-  introTimer = window.setTimeout(fadeIntro, motionPreference.matches ? 1200 : 2200);
-} else finishIntro(false);
+if (introShowing) renderFlow(false);
+else finishIntro(false);

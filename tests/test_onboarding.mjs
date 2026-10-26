@@ -40,21 +40,20 @@ test('story uses a modal and returns focus to its opener on close',()=>{
 });
 
 
-test('fresh launch reveals the wordmark, then automatically opens welcome and clears timers',()=>{
- const a=setup('');assert.equal(a.node('app-shell').hidden,true);
- assert.equal(a.timers.size,1);assert.equal([...a.timers.values()][0].delay,2200);
- a.runTimer();assert.equal(a.node('brand-intro').dataset.leaving,'true');assert.equal([...a.timers.values()][0].delay,240);
- a.runTimer();assert.equal(a.node('brand-intro').hidden,true);assert.equal(a.node('app-shell').hidden,false);assert.equal(a.node('welcome-title').focused,true);assert.equal(a.timers.size,0);
+test('fresh launch holds the wordmark without scheduling any automatic advance',()=>{
+ for(const reduced of [false,true]) {
+  const a=setup('',reduced);assert.equal(a.node('app-shell').hidden,true);assert.equal(a.node('brand-intro').hidden,false);assert.equal(a.timers.size,0);
+  a.events.get('notice-language')();assert.equal(a.node('app-shell').hidden,true);assert.equal(a.timers.size,0);
+ }
 });
-test('Continue cancels the intro timer; returning through history does not replay it',()=>{
- const a=setup('');a.node('skip-intro').listeners.click();assert.equal(a.node('brand-intro').hidden,true);assert.equal(a.timers.size,0);
+test('Continue reveals welcome and returning through history does not replay the title',()=>{
+ const a=setup('');a.node('skip-intro').listeners.click();assert.equal(a.node('brand-intro').hidden,true);assert.equal(a.node('app-shell').hidden,false);assert.equal(a.node('welcome-title').focused,true);
  a.click('get-started');a.click('tutorial-back');assert.equal(a.node('welcome-screen').hidden,false);assert.equal(a.node('brand-intro').hidden,true);assert.equal(a.timers.size,0);
 });
-test('reduced motion uses a static brief title and no fade; routes bypass the intro',()=>{
- const a=setup('',true);assert.equal([...a.timers.values()][0].delay,1200);a.runTimer();assert.equal(a.node('brand-intro').hidden,true);assert.equal(a.node('brand-intro').dataset.leaving,undefined);assert.equal(a.timers.size,0);
- const direct=setup('#notice');assert.equal(direct.node('brand-intro').hidden,true);assert.equal(direct.node('notice-screen').hidden,false);assert.equal(direct.timers.size,0);
+test('leaving the page does not implicitly accept Continue',()=>{
+ const a=setup('');a.events.get('pagehide')?.();assert.equal(a.node('brand-intro').hidden,false);assert.equal(a.node('app-shell').hidden,true);
 });
-test('navigation during the intro cancels its timer and page leave cannot strand the splash',()=>{
- const a=setup('');a.win.location.hash='#tutorial/3';a.events.get('hashchange')();assert.equal(a.node('tutorial-screen').dataset.step,'3');assert.equal(a.node('brand-intro').hidden,true);assert.equal(a.timers.size,0);
- const b=setup('');b.events.get('pagehide')();assert.equal(b.node('brand-intro').hidden,true);assert.equal(b.node('app-shell').hidden,false);assert.equal(b.timers.size,0);
+test('direct screen navigation bypasses the title without a timer',()=>{
+ const a=setup('#notice');assert.equal(a.node('brand-intro').hidden,true);assert.equal(a.node('notice-screen').hidden,false);assert.equal(a.timers.size,0);
+ const b=setup('');b.win.location.hash='#tutorial/3';b.events.get('hashchange')();assert.equal(b.node('tutorial-screen').dataset.step,'3');assert.equal(b.node('brand-intro').hidden,true);
 });

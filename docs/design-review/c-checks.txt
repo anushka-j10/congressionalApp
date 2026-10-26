@@ -42,3 +42,10 @@ Automatic intro -> welcome verified in browser at 320, 390, 430 CSS px; title-in
 Continue and returning from tutorial verified; title does not replay during back-navigation.
 Reduced-motion clock path unit-tested; OS setting not toggled.
 Screenshot title-wordmark.png uses the labeled static title design preview.
+
+Manual title / reader panel revision (supersedes the timed title behavior above):
+Intro schedules no timer and waits for Continue; reduced-motion mode also waits.
+Browser confirmed title remained visible until Continue, then welcome/tutorial/reader navigation succeeded.
+33 JavaScript and 422 Python tests passed.
+27 reader layout combinations: reader-panel-checks.json; no horizontal overflow or measured visible control/confirmation label <44px.
+Screenshot: reader-panel.png. No deployment, model calls or held-out processing.
